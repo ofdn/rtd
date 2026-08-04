@@ -1,0 +1,20 @@
+{
+  "id": "RTD-T-000012",
+  "slug": "lini",
+  "name": {
+    "preferred": "Lini",
+    "alternates": []
+  },
+  "designers": [
+    { "id": "RTD-P-000013", "role": "designer" }
+  ],
+  "era": "digital",
+  "description": "A typeface awarded a Certificate of Excellence by the Type Directors Club (TDC67).",
+  "sources": [
+    { "url": "https://tdc.org/work/kimya-gandhi/", "title": "Kimya Gandhi — The Type Directors Club" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

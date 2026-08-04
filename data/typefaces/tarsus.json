@@ -1,0 +1,26 @@
+{
+  "id": "RTD-T-000010",
+  "slug": "tarsus",
+  "name": {
+    "preferred": "Tarsus",
+    "alternates": []
+  },
+  "designers": [
+    { "id": "RTD-P-000012", "role": "designer" }
+  ],
+  "foundry": [
+    { "name": "Indian Type Foundry", "url": "https://www.indiantypefoundry.com" }
+  ],
+  "scripts": ["Latin"],
+  "classification": "serif",
+  "release_year": "2015",
+  "era": "digital",
+  "description": "A sturdy Latin-script text serif typeface optimized for demanding print environments, including newsprint.",
+  "sources": [
+    { "url": "https://khyatitrehan.com/tarsus-typeface", "title": "Tarsus Typeface — Khyati Trehan" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

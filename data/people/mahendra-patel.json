@@ -1,0 +1,25 @@
+{
+  "id": "RTD-P-000015",
+  "slug": "mahendra-patel",
+  "name": {
+    "preferred": "Mahendra Patel",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer", "educator"],
+  "birth_year": "1943",
+  "affiliations": [
+    { "name": "National Institute of Design, Ahmedabad" }
+  ],
+  "bio": "Type designer and teacher, born 21 February 1943. Studied at the Faculty of Fine Arts, University of Baroda, and at the National Institute of Design, Ahmedabad. During a year in Paris in 1971, worked in Adrian Frutiger's typeface workshop, developing a modern Devanagari type design. His work spans type design for Devanagari, Gujarati, Bengali, Tamil, Malayalam, Kannada, and Telugu scripts, including a 1972 Devanagari design for Monotype Corporation, England, and a 1981 Gujarati design for Gujarat Type Foundry, Bombay. Retired senior faculty at NID Ahmedabad; awarded the Gutenberg Prize of the International Gutenberg Society and the City of Mainz in 2010.",
+  "external_ids": { "wikidata_qid": "Q113568531" },
+  "sources": [
+    { "url": "https://www.gutenberg-gesellschaft.de/en/gutenberg-prize/former-prize-winners/2010-mahendra-patel", "title": "2010 Mahendra Patel — Gutenberg-Gesellschaft" },
+    { "url": "https://dsource.in/showcase/mahendra-patel/biography", "title": "Mahendra Patel — D'Source Biography" },
+    { "url": "https://www.printweek.in/features/mahendra-patel-understanding-typefaces-29204", "title": "Understanding typefaces — PrintWeek India" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

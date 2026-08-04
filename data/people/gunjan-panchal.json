@@ -1,0 +1,20 @@
+{
+  "id": "RTD-P-000007",
+  "slug": "gunjan-panchal",
+  "name": {
+    "preferred": "Gunjan Panchal",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer", "graphic designer", "calligrapher"],
+  "bio": "Graphic and typeface designer with a Bachelor's in Visual Arts from MSU Vadodara. Began as an art director in advertising, where he connected typeface design with calligraphy, then developed an interest in Gujarati, Devanagari, Gurmukhi, and Latin scripts while working at an Indian typeface design studio. Runs the Gunjan Font Foundry and has produced typefaces including the Kalkal and Vayu Sans families, as well as the Switzer Gujarati and Switzer Gurmukhi families for the Indian Type Foundry.",
+  "external_ids": { "wikidata_qid": "Q125430736" },
+  "sources": [
+    { "url": "https://www.myfonts.com/collections/gunjan-foundry", "title": "Gunjan Font Foundry — MyFonts" },
+    { "url": "https://fontsinuse.com/type_designers/5936/gunjan-panchal", "title": "Gunjan Panchal — Fonts In Use" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

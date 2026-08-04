@@ -1,0 +1,25 @@
+{
+  "id": "RTD-P-000008",
+  "slug": "hitesh-malaviya",
+  "name": {
+    "preferred": "Hitesh Malaviya",
+    "alternates": ["Rocky Malaviya"]
+  },
+  "countries": ["India"],
+  "roles": ["type designer", "graphic designer"],
+  "affiliations": [
+    { "name": "Indian Type Foundry", "start_year": "2014" },
+    { "name": "Universal Thirst", "start_year": "2019", "end_year": "2022" }
+  ],
+  "bio": "Type and graphic designer trained under a sign painter as a high-school student, and later at the Faculty of Fine Arts, M.S. University, Baroda. Worked as an art director, including five years at Wieden+Kennedy, before moving into type design. Joined the Indian Type Foundry in 2014, working on Latin and South Asian scripts including Devanagari, Gujarati, Bengali, Kannada, Malayalam, Tamil, and Thai. Consulted for Universal Thirst from 2019, and has worked independently since 2022, collaborating with foundries internationally and teaching type design in India. Designed the Devanagari component of the Laila typeface.",
+  "external_ids": { "wikidata_qid": "Q125430730" },
+  "sources": [
+    { "url": "https://www.indiantypefoundry.com/designers/hitesh-malaviya", "title": "Hitesh Malaviya (Rocky) — Indian Type Foundry designer profile" },
+    { "url": "https://commercialtype.com/about/rocky_malaviya", "title": "Hitesh Malaviya — Commercial Type" },
+    { "url": "https://www.typotheque.com/authors/hitesh-malaviya", "title": "Hitesh Malaviya — Typotheque" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

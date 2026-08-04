@@ -1,0 +1,22 @@
+{
+  "id": "RTD-T-000011",
+  "slug": "fit",
+  "name": {
+    "preferred": "Fit",
+    "alternates": []
+  },
+  "designers": [
+    { "id": "RTD-P-000013", "role": "Devanagari design" }
+  ],
+  "scripts": ["Devanagari", "Latin"],
+  "release_year": "2021",
+  "era": "digital",
+  "description": "A variable typeface family; Devanagari design by Kimya Gandhi, in collaboration with David Jonathan Ross.",
+  "sources": [
+    { "url": "https://wepresent.wetransfer.com/stories/kimya-gandhi-indic-typefaces", "title": "Kimya Gandhi is breaking new ground with Indic typefaces — WePresent" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}
