@@ -1,0 +1,23 @@
+{
+  "id": "RTD-P-000006",
+  "slug": "girish-dalvi",
+  "name": {
+    "preferred": "Girish Dalvi",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer", "researcher", "educator"],
+  "affiliations": [
+    { "name": "Industrial Design Centre, IIT Bombay" }
+  ],
+  "bio": "Faculty at the Industrial Design Centre (IDC), IIT Bombay, working across visual design, interaction design, and design research. Holds a PhD from IIT Bombay on theoretical modeling of Devanagari typefaces. Co-created several Indian-script typefaces, including the Ek multi-script family, the open-source Ek Mukta family, LifeOk Devanagari, and Star Bengali, and contributed font engineering and type design assistance to Baloo 2 Devanagari.",
+  "external_ids": { "wikidata_qid": "Q62109294" },
+  "sources": [
+    { "url": "https://www.idc.iitb.ac.in/people/faculty/dalvi-girish", "title": "Girish Dalvi — IDC School of Design, IIT Bombay" },
+    { "url": "https://fonts.adobe.com/designers/girish-dalvi", "title": "Girish Dalvi — Adobe Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

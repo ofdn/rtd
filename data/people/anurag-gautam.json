@@ -1,0 +1,20 @@
+{
+  "id": "RTD-P-000003",
+  "slug": "anurag-gautam",
+  "name": {
+    "preferred": "Anurag Gautam",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "bio": "Bangalore-based type designer and graduate of the National Institute of Design, Ahmedabad. Worked on a script-digitization project for the Wancho community of Arunachal Pradesh, developing typeface forms for their recently created script.",
+  "external_ids": { "wikidata_qid": "Q125400262" },
+  "sources": [
+    { "url": "https://gazette.universalthirst.com/home/designing-a-font-for-india-s-indigenous-wancho-community", "title": "Designing a font for India's indigenous Wancho community — Universal Thirst Gazette" },
+    { "url": "https://www.myfonts.com/collections/anurag-gautam", "title": "Anurag Gautam — MyFonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "RTD-P-000001",
+  "slug": "aditi-pimprikar",
+  "name": {
+    "preferred": "Aditi Pimprikar",
+    "alternates": []
+  },
+  "countries": ["India", "Australia"],
+  "roles": ["type designer", "graphic designer"],
+  "affiliations": [
+    { "name": "Indian Type Foundry" }
+  ],
+  "bio": "Type and communication designer from Aurangabad, Maharashtra. Worked at the Indian Type Foundry, where she designed Sinhala-script typefaces, before relocating to Melbourne to pursue a master's degree at RMIT University.",
+  "external_ids": { "wikidata_qid": "Q125400263" },
+  "sources": [
+    { "url": "https://www.indiantypefoundry.com/designers/aditi-pimprikar", "title": "Aditi Pimprikar — Indian Type Foundry designer profile" },
+    { "url": "https://fonts.adobe.com/designers/aditi-pimprikar", "title": "Aditi Pimprikar — Adobe Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}
