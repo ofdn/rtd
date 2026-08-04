@@ -1,0 +1,15 @@
+{
+  "name": "registry-of-type-design",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Global registry of type design professionals and typefaces, digital and pre-digital.",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.js",
+    "build": "node scripts/build.js"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}

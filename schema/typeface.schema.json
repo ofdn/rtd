@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.org/schema/typeface.schema.json",
+  "title": "Typeface",
+  "description": "A typeface, digital or pre-digital.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "slug",
+    "name",
+    "designers",
+    "sources",
+    "record_status",
+    "created_at",
+    "updated_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^RTD-T-[0-9]{6}$",
+      "description": "Permanent opaque identifier. Never reused, never changed once assigned."
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["preferred"],
+      "properties": {
+        "preferred": { "type": "string", "minLength": 1 },
+        "alternates": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "default": []
+        }
+      }
+    },
+    "designers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "role"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^RTD-P-[0-9]{6}$" },
+          "role": { "type": "string", "minLength": 1 }
+        }
+      },
+      "description": "Points at person ids. The reverse ('typefaces by this person') is computed at build time, not hand-maintained on the person record."
+    },
+    "foundry": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    },
+    "design_year": { "type": "string" },
+    "release_year": { "type": "string" },
+    "classification": { "type": "string" },
+    "scripts": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "era": {
+      "type": "string",
+      "enum": ["digital", "metal", "phototype", "wood", "other"]
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1000
+    },
+    "external_ids": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "wikidata_qid": { "type": "string", "pattern": "^Q[0-9]+$" }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["url", "title"],
+        "properties": {
+          "url": { "type": "string", "format": "uri" },
+          "title": { "type": "string", "minLength": 1 }
+        }
+      },
+      "description": "Independent, verifiable sources. Must never be Wikidata, Wikipedia, or any Wikimedia project — enforced by scripts/validate.js."
+    },
+    "record_status": {
+      "type": "string",
+      "enum": ["active", "merged", "deprecated"]
+    },
+    "superseded_by": {
+      "type": ["string", "null"],
+      "pattern": "^RTD-T-[0-9]{6}$"
+    },
+    "created_at": { "type": "string", "format": "date" },
+    "updated_at": { "type": "string", "format": "date" }
+  }
+}

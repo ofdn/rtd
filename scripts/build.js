@@ -1,0 +1,291 @@
+#!/usr/bin/env node
+// Compiles data/people/*.json and data/typefaces/*.json into the published
+// static site: human pages (with embedded JSON-LD), a canonical JSON API,
+// CSV/NDJSON bulk dumps, and a client-side search index.
+//
+// Usage: node scripts/build.js [dataDir] [outDir]
+// SITE_URL env var sets the absolute base URL used in canonical links and
+// JSON-LD (defaults to a placeholder until a real domain is chosen).
+import {
+  readFileSync,
+  readdirSync,
+  existsSync,
+  mkdirSync,
+  writeFileSync,
+  rmSync,
+} from "node:fs";
+import { join, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import { toCsv } from "./csv.js";
+import { renderPersonPage, renderTombstonePage } from "../site-templates/person.js";
+import { renderTypefacePage } from "../site-templates/typeface.js";
+import { renderHomePage } from "../site-templates/home.js";
+
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
+const repoRoot = join(__dirname, "..");
+const SITE_URL = (process.env.SITE_URL || "https://example.org/").replace(
+  /\/?$/,
+  "/"
+);
+
+function loadJson(path) {
+  return JSON.parse(readFileSync(path, "utf8"));
+}
+
+function listRecords(dir) {
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir)
+    .filter((f) => f.endsWith(".json"))
+    .map((f) => loadJson(join(dir, f)));
+}
+
+function writeFile(outDir, relPath, content) {
+  const full = join(outDir, relPath);
+  mkdirSync(full.split("/").slice(0, -1).join("/"), { recursive: true });
+  writeFileSync(full, content);
+}
+
+function build(dataDir, outDir) {
+  const people = listRecords(join(dataDir, "people"));
+  const typefaces = listRecords(join(dataDir, "typefaces"));
+
+  const personById = new Map(people.map((p) => [p.id, p]));
+  const typefaceById = new Map(typefaces.map((t) => [t.id, t]));
+
+  // Reverse index: person id -> typefaces they're credited on. Computed
+  // here, not stored on the person record, so the relationship only has to
+  // be edited in one place (the typeface's `designers` field).
+  const worksByPerson = new Map();
+  for (const tf of typefaces) {
+    for (const d of tf.designers ?? []) {
+      const list = worksByPerson.get(d.id) ?? [];
+      list.push({ id: tf.id, slug: tf.slug, name: tf.name.preferred, role: d.role });
+      worksByPerson.set(d.id, list);
+    }
+  }
+
+  if (existsSync(outDir)) rmSync(outDir, { recursive: true, force: true });
+  mkdirSync(outDir, { recursive: true });
+  writeFile(outDir, ".nojekyll", "");
+
+  // --- People ---
+  const peopleApiIndex = [];
+  for (const record of people) {
+    const canonicalUrl = `${SITE_URL}people/${record.slug}/`;
+    const apiUrl = `${SITE_URL}api/people/${record.id}.json`;
+
+    if (record.record_status === "active") {
+      const works = worksByPerson.get(record.id) ?? [];
+      const html = renderPersonPage(record, { canonicalUrl, works });
+      writeFile(outDir, `people/${record.slug}/index.html`, html);
+      writeFile(
+        outDir,
+        `api/people/${record.id}.json`,
+        JSON.stringify(
+          { ...record, canonical_url: canonicalUrl, api_url: apiUrl, typefaces: works },
+          null,
+          2
+        )
+      );
+    } else {
+      const target = record.superseded_by
+        ? personById.get(record.superseded_by)
+        : null;
+      const html = renderTombstonePage(record, {
+        canonicalUrl,
+        targetSlug: target?.slug,
+      });
+      writeFile(outDir, `people/${record.slug}/index.html`, html);
+      writeFile(
+        outDir,
+        `api/people/${record.id}.json`,
+        JSON.stringify(
+          { ...record, canonical_url: canonicalUrl, api_url: apiUrl },
+          null,
+          2
+        )
+      );
+    }
+
+    peopleApiIndex.push({
+      id: record.id,
+      slug: record.slug,
+      name: record.name.preferred,
+      sort_name: record.sort_name ?? record.name.preferred,
+      alternates: record.name.alternates ?? [],
+      record_status: record.record_status,
+      api_url: apiUrl,
+      canonical_url: canonicalUrl,
+    });
+  }
+  writeFile(outDir, "api/people.json", JSON.stringify(peopleApiIndex, null, 2));
+
+  // --- Typefaces ---
+  const typefacesApiIndex = [];
+  for (const record of typefaces) {
+    const canonicalUrl = `${SITE_URL}typefaces/${record.slug}/`;
+    const apiUrl = `${SITE_URL}api/typefaces/${record.id}.json`;
+
+    if (record.record_status === "active") {
+      const designers = (record.designers ?? []).map((d) => {
+        const person = personById.get(d.id);
+        return {
+          id: d.id,
+          role: d.role,
+          name: person?.name?.preferred ?? d.id,
+          slug: person?.slug ?? d.id,
+        };
+      });
+      const html = renderTypefacePage(record, { canonicalUrl, designers });
+      writeFile(outDir, `typefaces/${record.slug}/index.html`, html);
+      writeFile(
+        outDir,
+        `api/typefaces/${record.id}.json`,
+        JSON.stringify(
+          { ...record, canonical_url: canonicalUrl, api_url: apiUrl },
+          null,
+          2
+        )
+      );
+    } else {
+      const target = record.superseded_by
+        ? typefaceById.get(record.superseded_by)
+        : null;
+      const html = renderTombstonePage(record, {
+        canonicalUrl,
+        targetSlug: target?.slug,
+      });
+      writeFile(outDir, `typefaces/${record.slug}/index.html`, html);
+      writeFile(
+        outDir,
+        `api/typefaces/${record.id}.json`,
+        JSON.stringify(
+          { ...record, canonical_url: canonicalUrl, api_url: apiUrl },
+          null,
+          2
+        )
+      );
+    }
+
+    typefacesApiIndex.push({
+      id: record.id,
+      slug: record.slug,
+      name: record.name.preferred,
+      alternates: record.name.alternates ?? [],
+      record_status: record.record_status,
+      api_url: apiUrl,
+      canonical_url: canonicalUrl,
+    });
+  }
+  writeFile(
+    outDir,
+    "api/typefaces.json",
+    JSON.stringify(typefacesApiIndex, null, 2)
+  );
+
+  // --- Search index (active records only) ---
+  const searchIndex = [
+    ...peopleApiIndex
+      .filter((p) => p.record_status === "active")
+      .map((p) => ({ ...p, kind: "person" })),
+    ...typefacesApiIndex
+      .filter((t) => t.record_status === "active")
+      .map((t) => ({ ...t, kind: "typeface" })),
+  ];
+  writeFile(outDir, "search-index.json", JSON.stringify(searchIndex));
+
+  // --- Dumps ---
+  const peopleDumpRows = people.map((r) => ({
+    id: r.id,
+    slug: r.slug,
+    preferred_name: r.name.preferred,
+    alternates: r.name.alternates ?? [],
+    sort_name: r.sort_name ?? "",
+    birth_year: r.birth_year ?? "",
+    death_year: r.death_year ?? "",
+    countries: r.countries ?? [],
+    roles: r.roles ?? [],
+    active_years_start: r.active_years?.start ?? "",
+    active_years_end: r.active_years?.end ?? "",
+    scripts: r.scripts ?? [],
+    wikidata_qid: r.external_ids?.wikidata_qid ?? "",
+    record_status: r.record_status,
+    superseded_by: r.superseded_by ?? "",
+    canonical_url: `${SITE_URL}people/${r.slug}/`,
+  }));
+  writeFile(
+    outDir,
+    "dumps/people.csv",
+    toCsv(peopleDumpRows, Object.keys(peopleDumpRows[0] ?? { id: 1 }))
+  );
+  writeFile(
+    outDir,
+    "dumps/people.ndjson",
+    people.map((r) => JSON.stringify(r)).join("\n") + (people.length ? "\n" : "")
+  );
+
+  const typefacesDumpRows = typefaces.map((r) => ({
+    id: r.id,
+    slug: r.slug,
+    preferred_name: r.name.preferred,
+    alternates: r.name.alternates ?? [],
+    designers: (r.designers ?? []).map(
+      (d) => `${personById.get(d.id)?.name?.preferred ?? d.id} (${d.role})`
+    ),
+    foundry: (r.foundry ?? []).map((f) => f.name),
+    design_year: r.design_year ?? "",
+    release_year: r.release_year ?? "",
+    classification: r.classification ?? "",
+    era: r.era ?? "",
+    wikidata_qid: r.external_ids?.wikidata_qid ?? "",
+    record_status: r.record_status,
+    superseded_by: r.superseded_by ?? "",
+    canonical_url: `${SITE_URL}typefaces/${r.slug}/`,
+  }));
+  writeFile(
+    outDir,
+    "dumps/typefaces.csv",
+    toCsv(typefacesDumpRows, Object.keys(typefacesDumpRows[0] ?? { id: 1 }))
+  );
+  writeFile(
+    outDir,
+    "dumps/typefaces.ndjson",
+    typefaces.map((r) => JSON.stringify(r)).join("\n") +
+      (typefaces.length ? "\n" : "")
+  );
+
+  // --- Home page ---
+  const homeHtml = renderHomePage({
+    canonicalUrl: SITE_URL,
+    people: peopleApiIndex
+      .filter((p) => p.record_status === "active")
+      .map((p) => ({ slug: p.slug, name: p.name })),
+    typefaces: typefacesApiIndex
+      .filter((t) => t.record_status === "active")
+      .map((t) => ({ slug: t.slug, name: t.name })),
+  });
+  writeFile(outDir, "index.html", homeHtml);
+
+  return {
+    peopleCount: people.length,
+    typefacesCount: typefaces.length,
+  };
+}
+
+function main() {
+  const dataDir = process.argv[2]
+    ? resolve(process.cwd(), process.argv[2])
+    : join(repoRoot, "data");
+  const outDir = process.argv[3]
+    ? resolve(process.cwd(), process.argv[3])
+    : join(repoRoot, "dist");
+
+  const { peopleCount, typefacesCount } = build(dataDir, outDir);
+  console.log(
+    `Built ${peopleCount} people and ${typefacesCount} typefaces into ${outDir}`
+  );
+}
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}

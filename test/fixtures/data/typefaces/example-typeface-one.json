@@ -1,0 +1,28 @@
+{
+  "id": "RTD-T-000001",
+  "slug": "example-typeface-one",
+  "name": {
+    "preferred": "Example Testface One",
+    "alternates": ["Testface One Regular"]
+  },
+  "designers": [
+    { "id": "RTD-P-000001", "role": "designer" }
+  ],
+  "foundry": [
+    { "name": "Example Foundry", "url": "https://example.org/foundry" }
+  ],
+  "design_year": "1932",
+  "release_year": "1935",
+  "classification": "serif",
+  "scripts": ["Latin"],
+  "era": "metal",
+  "description": "Synthetic fixture record used only to test the build and validation pipeline. Not a real typeface.",
+  "external_ids": { "wikidata_qid": "Q2" },
+  "sources": [
+    { "url": "https://example.org/sources/testface-one", "title": "Example Source, Testface One" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

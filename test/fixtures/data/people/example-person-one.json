@@ -1,0 +1,27 @@
+{
+  "id": "RTD-P-000001",
+  "slug": "example-person-one",
+  "name": {
+    "preferred": "Example Testperson One",
+    "alternates": ["Testperson One"]
+  },
+  "sort_name": "Testperson One, Example",
+  "birth_year": "1900",
+  "death_year": "1970",
+  "countries": ["Testland"],
+  "roles": ["type designer", "punchcutter"],
+  "active_years": { "start": "1925", "end": "1968" },
+  "scripts": ["Latin"],
+  "affiliations": [
+    { "name": "Example Foundry", "start_year": "1930", "end_year": "1960" }
+  ],
+  "bio": "Synthetic fixture record used only to test the build and validation pipeline. Not a real person.",
+  "external_ids": { "wikidata_qid": "Q1" },
+  "sources": [
+    { "url": "https://example.org/sources/testperson-one", "title": "Example Source, Testperson One" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}
