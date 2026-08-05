@@ -1,0 +1,10 @@
+name = "rtd-reconcile"
+main = "src/index.js"
+compatibility_date = "2026-08-05"
+
+[vars]
+RTD_API_BASE = "https://rtd.theofdn.org/"
+
+[[routes]]
+pattern = "rtd.theofdn.org/reconcile*"
+zone_name = "theofdn.org"
