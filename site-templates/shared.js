@@ -97,7 +97,7 @@ ${jsonLd ? jsonLdScript(jsonLd) : ""}
 <header class="site-header">
 <a class="logo" href="${escapeHtml(homePath)}">Registry of Type Design</a>
 ${showHeaderSearch ? headerSearchForm(homePath) : ""}
-<a class="info-icon${showHeaderSearch ? "" : " info-icon-solo"}" href="${escapeHtml(homePath)}info/" aria-label="About this registry">${INFO_ICON}</a>
+<a class="info-icon${showHeaderSearch ? "" : " info-icon-solo"}" href="${escapeHtml(homePath)}info/">${INFO_ICON}<span>About</span></a>
 </header>
 ${body}
 <footer class="site-footer">
