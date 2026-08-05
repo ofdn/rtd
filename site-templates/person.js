@@ -1,4 +1,4 @@
-import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, nationalityLabel } from "./shared.js";
+import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, nationalityLabel } from "./shared.js";
 
 // `works` is the computed reverse index (typefaces this person is credited
 // on), passed in by build.js, it is never stored on the person record
@@ -44,6 +44,7 @@ ${record.countries?.length ? `<dt>Nationality</dt><dd>${escapeHtml(nationalityLa
 </dl>
 ${worksHtml}
 ${sourcesList(record.sources)}
+${identifiersList(record.external_ids)}
 <p><a href="../../api/people/${escapeHtml(record.id)}.json">JSON</a></p>
 `;
 

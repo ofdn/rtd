@@ -42,26 +42,43 @@ export function verificationNote(record) {
   return `<p><strong>Needs verification:</strong> sources for this record are thin or low-confidence. Help improve it by <a href="https://github.com/ofdn/rtd/blob/main/CONTRIBUTING.md">contributing a stronger source</a>.</p>`;
 }
 
-// Resolves external_ids into canonical linked-data URIs for JSON-LD sameAs.
-export function sameAsUris(externalIds) {
-  if (!externalIds) return undefined;
-  const uris = [];
+// Resolves external_ids into {label, url} pairs, one per authority file
+// that's actually present on the record. Single source of truth for both
+// the visible "Identifiers" list on each page and the JSON-LD sameAs
+// array, so the two can never drift out of sync with each other.
+export function identifierLinks(externalIds) {
+  if (!externalIds) return [];
+  const links = [];
   if (externalIds.wikidata_qid) {
-    uris.push(`https://www.wikidata.org/wiki/${externalIds.wikidata_qid}`);
+    links.push({ label: "Wikidata", url: `https://www.wikidata.org/wiki/${externalIds.wikidata_qid}` });
   }
   if (externalIds.viaf) {
-    uris.push(`https://viaf.org/viaf/${externalIds.viaf}`);
+    links.push({ label: "VIAF", url: `https://viaf.org/viaf/${externalIds.viaf}` });
   }
   if (externalIds.isni) {
-    uris.push(`https://isni.org/isni/${externalIds.isni.replaceAll(" ", "")}`);
+    links.push({ label: "ISNI", url: `https://isni.org/isni/${externalIds.isni.replaceAll(" ", "")}` });
   }
   if (externalIds.lc_naf) {
-    uris.push(`https://id.loc.gov/authorities/names/${externalIds.lc_naf}`);
+    links.push({ label: "LC/NAF", url: `https://id.loc.gov/authorities/names/${externalIds.lc_naf}` });
   }
   if (externalIds.gnd) {
-    uris.push(`https://d-nb.info/gnd/${externalIds.gnd}`);
+    links.push({ label: "GND", url: `https://d-nb.info/gnd/${externalIds.gnd}` });
   }
-  return uris.length ? uris : undefined;
+  return links;
+}
+
+export function sameAsUris(externalIds) {
+  const links = identifierLinks(externalIds);
+  return links.length ? links.map((l) => l.url) : undefined;
+}
+
+export function identifiersList(externalIds) {
+  const links = identifierLinks(externalIds);
+  if (!links.length) return "";
+  const items = links
+    .map((l) => `<li>${escapeHtml(l.label)}: <a href="${escapeHtml(l.url)}">${escapeHtml(l.url)}</a></li>`)
+    .join("\n");
+  return `<h2>Identifiers</h2>\n<ul>\n${items}\n</ul>`;
 }
 
 // Computes a single human-readable nationality label from a countries[]

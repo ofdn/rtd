@@ -1,4 +1,4 @@
-import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris } from "./shared.js";
+import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList } from "./shared.js";
 
 // `designers` is the input record's designers[] enriched with each
 // person's current name/slug (resolved by build.js), so the page can link
@@ -52,6 +52,7 @@ ${record.classification ? `<dt>Classification</dt><dd>${escapeHtml(record.classi
 </dl>
 ${designersHtml}
 ${sourcesList(record.sources)}
+${identifiersList(record.external_ids)}
 <p><a href="../../api/typefaces/${escapeHtml(record.id)}.json">JSON</a></p>
 `;
 
