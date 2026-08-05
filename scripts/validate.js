@@ -96,6 +96,19 @@ export function validateRoot(rootDir) {
       }
       if (kind === "person") personIds.add(record.id);
     }
+    // Bio style convention, see CONTRIBUTING.md: a bio is a short lead,
+    // not a biography, capped at 30 words so every record reads at a
+    // glance and stays realistic to translate later. JSON Schema's
+    // maxLength is character-based and can't express a word count, hence
+    // the separate check here rather than in the schema itself.
+    if (kind === "person" && record.bio) {
+      const wordCount = record.bio.trim().split(/\s+/).filter(Boolean).length;
+      if (wordCount > 30) {
+        errors.push(
+          `${file}: bio is ${wordCount} words, over the 30-word limit, see CONTRIBUTING.md`
+        );
+      }
+    }
     for (const source of record.sources ?? []) {
       if (isBlockedSourceUrl(source.url)) {
         errors.push(

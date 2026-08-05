@@ -7,7 +7,7 @@
   },
   "countries": ["India"],
   "roles": ["type designer"],
-  "bio": "Led the design of Chapakala19, a digital revival of the 19th-century Odia typeface used by the Orissa Mission Press, following letterforms from books printed between approximately 1810 and 1875, focused on body text rather than display styles.",
+  "bio": "Led the design of Chapakala19, a digital revival of the 19th-century Odia typeface used by Orissa Mission Press, following letterforms from books printed between 1810 and 1875, for body text.",
   "sources": [
     { "url": "https://github.com/ofdn/Chapakala", "title": "Chapakala: Revival Odia typeface family, GitHub" },
     { "url": "https://theofdn.org/activities/type/", "title": "Type design activities, O Foundation" }

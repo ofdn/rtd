@@ -134,10 +134,38 @@ flags these records so a stronger source can be added later. This is
 different from having *no* independent source at all: if you can't find
 anything to cite, the record doesn't belong here yet, flagged or not.
 
-Bios should state facts plainly. Don't narrate your research process or
-sourcing confidence in the `bio` text itself (no "independent
-corroboration has not been found" type language) - that belongs in the
-verification flag, not the biography.
+## Bio style
+
+A `bio` is a caption, not a biography. Every person record follows the
+same shape so the registry reads consistently at scale and stays easy to
+translate later (plain, short, similarly-structured sentences translate
+far more predictably than long ones with nested clauses):
+
+1. **30 words maximum**, one or two sentences. `npm run validate` enforces
+   this as a hard error (word count, not `maxLength`, since character
+   count doesn't track word count reliably). Aim for 25-30, tighter is
+   fine for a thin record.
+2. **Lead with the type-design contribution**: what they designed or
+   built, and for what script or project, as the first clause. Biographical
+   framing (where they studied, their general job title) comes after, if
+   it fits the word budget, never before.
+3. **Cut anything that isn't about the type-design work**, even if
+   true and sourced. "While studying calligraphy at X" is relevant
+   context for *how* the work happened. "Before relocating to Melbourne
+   for an unrelated master's degree" is a biographical detail about their
+   life, not their type design work, and doesn't belong here even if a
+   source mentions it. When in doubt, ask whether the clause explains the
+   type-design contribution or just narrates the person's life; only the
+   former earns a place in 30 words.
+4. **Plain, simple sentence structure.** Short declarative sentences,
+   minimal subordinate clauses, no idioms. Don't narrate your research
+   process or sourcing confidence in the `bio` text itself (no
+   "independent corroboration has not been found" type language) - that
+   belongs in the verification flag, not the biography.
+5. Trimming for length can mean dropping a secondary fact (a full script
+   list, a co-designer's name, a location) in favor of the most notable
+   one or two. That's expected, the full picture belongs in `sources`,
+   the `bio` is a pointer to it, not a substitute for it.
 
 ## Nationality
 
@@ -160,6 +188,25 @@ of links with titles - this keeps records reviewable and keeps the
 registry from becoming unmaintainable at scale. If a fact needs an
 interview to verify during review, link it in the PR description rather
 than adding it as a permanent field.
+
+## Schema versioning
+
+`schema/VERSION` is the schema's own semantic version (currently 1.0.0),
+shown in the site footer. It's separate from `package.json`'s version,
+which tracks the site/tooling, not the data shape. Bump it when you
+change `schema/*.schema.json`:
+
+- **Patch** (1.0.0 -> 1.0.1): a new optional field, a widened enum, a
+  clarified description, anything an existing valid record already
+  satisfies without changes.
+- **Minor** (1.0.0 -> 1.1.0): a new required field with a sensible
+  default that doesn't invalidate existing records once schema
+  migrations catch up, or a meaningfully new capability.
+- **Major** (1.0.0 -> 2.0.0): anything that could make a currently-valid
+  record fail validation, a renamed/removed field, a narrowed pattern, a
+  new required field with no default. Bulk-editing `data/` to match is
+  part of the same PR, don't leave existing records failing `npm run
+  validate` after a major bump.
 
 ## Review
 

@@ -63,6 +63,8 @@ function headerSearchForm(homePath) {
 // page), used for the logo link, the stylesheet, and the search form's
 // fallback target. `showHeaderSearch` is off on the home page, which
 // already has its own large hero search box, see home.js.
+const REPO_URL = "https://github.com/ofdn/rtd";
+
 export function pageShell({
   title,
   canonicalUrl,
@@ -70,6 +72,7 @@ export function pageShell({
   body,
   homePath = "",
   showHeaderSearch = true,
+  schemaVersion,
 }) {
   return `<!doctype html>
 <html lang="en">
@@ -91,7 +94,7 @@ ${showHeaderSearch ? headerSearchForm(homePath) : ""}
 </header>
 ${body}
 <footer class="site-footer">
-<p>&copy; ${new Date().getFullYear()} Subhashish Panigrahi. Site and data licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
+<p>&copy; ${new Date().getFullYear()} Subhashish Panigrahi. Site and data licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.${schemaVersion ? ` Schema v${escapeHtml(schemaVersion)}.` : ""} <a href="${REPO_URL}">Source on GitHub</a>.</p>
 </footer>
 </body>
 </html>

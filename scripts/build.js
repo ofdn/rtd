@@ -20,7 +20,7 @@ import { toCsv } from "./csv.js";
 import { renderPersonPage, renderTombstonePage } from "../site-templates/person.js";
 import { renderTypefacePage } from "../site-templates/typeface.js";
 import { renderHomePage } from "../site-templates/home.js";
-import { renderRedirectPage, nationalityLabel } from "../site-templates/shared.js";
+import { renderRedirectPage, nationalityLabel, pageShell } from "../site-templates/shared.js";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const repoRoot = join(__dirname, "..");
@@ -60,8 +60,24 @@ function writeSlugRedirects(outDir, kindDir, record, canonicalUrl) {
   }
 }
 
+// ARK support: `ark:<NAAN>/RTD-P-000026` resolves (via N2T.net, once a NAAN
+// is registered) to `${SITE_URL}ark/RTD-P-000026`, which redirects here to
+// the record's real current URL. The RTD id itself is reused as the ARK
+// "blade" rather than minting a second id scheme, since it's already
+// permanent and globally unique across people and typefaces (validated in
+// scripts/validate.js), and kind is already derivable from the id's own
+// RTD-P-/RTD-T- prefix, so one flat ark/<id>/ namespace covers both.
+function writeArkRedirect(outDir, record, canonicalUrl) {
+  const html = renderRedirectPage({
+    name: record.name?.preferred ?? record.id,
+    targetUrl: canonicalUrl,
+  });
+  writeFile(outDir, `ark/${record.id}/index.html`, html);
+}
+
 function build(dataDir, outDir) {
   const demonyms = loadJson(join(repoRoot, "schema/demonyms.json"));
+  const schemaVersion = readFileSync(join(repoRoot, "schema/VERSION"), "utf8").trim();
   const people = listRecords(join(dataDir, "people"));
   const typefaces = listRecords(join(dataDir, "typefaces"));
 
@@ -170,6 +186,23 @@ function build(dataDir, outDir) {
     readFileSync(join(repoRoot, "site-templates/styles.css"), "utf8")
   );
 
+  // Dedicated health-check page for the ARK NAAN registry's periodic test
+  // ARK (ark:<NAAN>/servicestatus), kept separate from any real record so
+  // renaming, merging, or deprecating a person/typeface can never make the
+  // registry's automated test start failing.
+  writeFile(
+    outDir,
+    "ark/servicestatus/index.html",
+    pageShell({
+      title: "ARK service status",
+      canonicalUrl: `${SITE_URL}ark/servicestatus/`,
+      jsonLd: null,
+      body: `<main><h1>ARK service status</h1><p>OK. This endpoint exists only to answer the ARK NAAN registry's periodic test ARK, it is not a registry record.</p></main>`,
+      homePath: "../../",
+      schemaVersion,
+    })
+  );
+
   // --- People ---
   const peopleApiIndex = [];
   for (const record of people) {
@@ -183,6 +216,7 @@ function build(dataDir, outDir) {
         works,
         demonyms,
         related: relatedPeople(record),
+        schemaVersion,
       });
       writeFile(outDir, `people/${record.slug}/index.html`, html);
       writeFile(
@@ -201,6 +235,7 @@ function build(dataDir, outDir) {
       const html = renderTombstonePage(record, {
         canonicalUrl,
         targetSlug: target?.slug,
+        schemaVersion,
       });
       writeFile(outDir, `people/${record.slug}/index.html`, html);
       writeFile(
@@ -214,6 +249,7 @@ function build(dataDir, outDir) {
       );
     }
     writeSlugRedirects(outDir, "people", record, canonicalUrl);
+    writeArkRedirect(outDir, record, canonicalUrl);
 
     peopleApiIndex.push({
       id: record.id,
@@ -249,6 +285,7 @@ function build(dataDir, outDir) {
         canonicalUrl,
         designers,
         related: relatedTypefaces(record),
+        schemaVersion,
       });
       writeFile(outDir, `typefaces/${record.slug}/index.html`, html);
       writeFile(
@@ -267,6 +304,7 @@ function build(dataDir, outDir) {
       const html = renderTombstonePage(record, {
         canonicalUrl,
         targetSlug: target?.slug,
+        schemaVersion,
       });
       writeFile(outDir, `typefaces/${record.slug}/index.html`, html);
       writeFile(
@@ -280,6 +318,7 @@ function build(dataDir, outDir) {
       );
     }
     writeSlugRedirects(outDir, "typefaces", record, canonicalUrl);
+    writeArkRedirect(outDir, record, canonicalUrl);
 
     typefacesApiIndex.push({
       id: record.id,
@@ -374,6 +413,7 @@ function build(dataDir, outDir) {
     canonicalUrl: SITE_URL,
     peopleCount: peopleApiIndex.filter((p) => p.record_status === "active").length,
     typefacesCount: typefacesApiIndex.filter((t) => t.record_status === "active").length,
+    schemaVersion,
   });
   writeFile(outDir, "index.html", homeHtml);
 

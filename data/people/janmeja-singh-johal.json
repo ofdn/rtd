@@ -7,7 +7,7 @@
   },
   "countries": ["India"],
   "roles": ["type designer", "photographer"],
-  "bio": "Punjabi photographer and self-taught type designer known for an early body of free ASCII-encoded fonts covering Gurmukhi and other Indian scripts, including Gujarati, Kannada, Malayalam, Odia, Sinhala, and Telugu, produced from the mid-1990s into the 2000s.",
+  "bio": "Self-taught type designer known for an early body of free ASCII-encoded fonts covering Gurmukhi and other Indian scripts, produced from the mid-1990s into the 2000s. Also a Punjabi photographer.",
   "external_ids": { "wikidata_qid": "Q20607074" },
   "sources": [
     { "url": "https://luc.devroye.org/punjabi.html", "title": "Punjabi/Gurmukhi fonts - Luc Devroye" },

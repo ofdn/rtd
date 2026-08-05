@@ -14,7 +14,7 @@ import { pageShell, SEARCH_ICON } from "./shared.js";
 // filter, it's never required for the search to function at all. This is
 // also the page that a person/typeface page's header search form submits
 // to, landing here with the same ?q= convention.
-export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount }) {
+export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount, schemaVersion }) {
   const body = `
 <div class="home-hero">
 <p class="tagline">A global registry of typefaces and the people who made them, digital and pre-digital.</p>
@@ -191,5 +191,6 @@ ${SEARCH_ICON}
     body,
     homePath: "",
     showHeaderSearch: false,
+    schemaVersion,
   });
 }

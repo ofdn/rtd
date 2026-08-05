@@ -3,7 +3,7 @@ import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, ident
 // `works` is the computed reverse index (typefaces this person is credited
 // on), passed in by build.js, it is never stored on the person record
 // itself, to avoid the same relationship being hand-maintained in two files.
-export function renderPersonPage(record, { canonicalUrl, works, demonyms, related }) {
+export function renderPersonPage(record, { canonicalUrl, works, demonyms, related, schemaVersion }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -68,10 +68,11 @@ ${identifiersList(record.external_ids)}
     jsonLd,
     body,
     homePath: "../../",
+    schemaVersion,
   });
 }
 
-export function renderTombstonePage(record, { canonicalUrl, targetSlug }) {
+export function renderTombstonePage(record, { canonicalUrl, targetSlug, schemaVersion }) {
   const message =
     record.record_status === "merged" && targetSlug
       ? `This record has been merged into <a href="../${escapeHtml(
@@ -96,5 +97,6 @@ export function renderTombstonePage(record, { canonicalUrl, targetSlug }) {
     jsonLd: null,
     body,
     homePath: "../../",
+    schemaVersion,
   });
 }

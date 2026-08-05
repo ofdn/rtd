@@ -3,7 +3,7 @@ import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, ident
 // `designers` is the input record's designers[] enriched with each
 // person's current name/slug (resolved by build.js), so the page can link
 // to them without duplicating name data into the typeface record itself.
-export function renderTypefacePage(record, { canonicalUrl, designers, related }) {
+export function renderTypefacePage(record, { canonicalUrl, designers, related, schemaVersion }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
@@ -76,5 +76,6 @@ ${identifiersList(record.external_ids)}
     jsonLd,
     body,
     homePath: "../../",
+    schemaVersion,
   });
 }

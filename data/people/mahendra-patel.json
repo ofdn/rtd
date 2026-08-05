@@ -11,8 +11,8 @@
   "affiliations": [
     { "name": "National Institute of Design, Ahmedabad" }
   ],
-  "bio": "Type designer and retired NID Ahmedabad faculty. Worked in Adrian Frutiger's Paris workshop in 1971, developing a modern Devanagari design. Designed type for Devanagari, Gujarati, Bengali, Tamil, Malayalam, Kannada, and Telugu. Awarded the Gutenberg Prize in 2010.",
-  "external_ids": { "wikidata_qid": "Q113568531" },
+  "bio": "Type designer and retired NID Ahmedabad faculty. Worked in Adrian Frutiger's Paris workshop in 1971, developing a modern Devanagari design across multiple Indian scripts. Awarded the 2010 Gutenberg Prize.",
+  "external_ids": { "wikidata_qid": "Q113568531", "viaf": "13573709", "isni": "0000000024231285", "lc_naf": "n78075115" },
   "sources": [
     { "url": "https://www.gutenberg-gesellschaft.de/en/gutenberg-prize/former-prize-winners/2010-mahendra-patel", "title": "2010 Mahendra Patel - Gutenberg-Gesellschaft" },
     { "url": "https://dsource.in/showcase/mahendra-patel/biography", "title": "Mahendra Patel - D'Source Biography" },
