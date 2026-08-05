@@ -1,0 +1,23 @@
+{
+  "id": "RTD-P-000024",
+  "slug": "neha-bahuguna",
+  "name": {
+    "preferred": "Neha Bahuguna",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer", "writer"],
+  "affiliations": [
+    { "name": "Indian Type Foundry" }
+  ],
+  "bio": "Graduate of the National Institute of Design, Ahmedabad, with an interest in the writing, design, and art of the Hindi language. Designed the KunKun Devanagari typeface family during an internship at the Indian Type Foundry, basing its handwritten-sans forms on her own handwriting.",
+  "external_ids": { "wikidata_qid": "Q125430715" },
+  "sources": [
+    { "url": "https://www.indiantypefoundry.com/designers/neha-bahuguna", "title": "Neha Bahuguna — Indian Type Foundry designer profile" },
+    { "url": "https://fonts.adobe.com/designers/neha-bahuguna", "title": "Neha Bahuguna — Adobe Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

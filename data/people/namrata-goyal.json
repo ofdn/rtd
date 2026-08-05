@@ -1,0 +1,24 @@
+{
+  "id": "RTD-P-000023",
+  "slug": "namrata-goyal",
+  "name": {
+    "preferred": "Namrata Goyal",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "affiliations": [
+    { "name": "Indian Type Foundry", "start_year": "2014" }
+  ],
+  "bio": "Type designer based in Alwar, India, working across Latin, Devanagari, and Gurmukhi scripts. Began at Fitch in Bombay as a graphic designer before joining the Indian Type Foundry in 2014. Studied further at Cooper Union, New York, and received a Master's in Type and Media from KABK Den Haag in 2018. Has contributed to font suites for clients including Google, Instagram, and Samsung. Designed the Volte typeface family (2015), along with Biblio and Splinter.",
+  "external_ids": { "wikidata_qid": "Q125430719" },
+  "sources": [
+    { "url": "https://typenetwork.com/font-designers/namrata-goyal", "title": "Namrata Goyal — Type Network" },
+    { "url": "https://www.futurefonts.com/namrata-goyal", "title": "Namrata Goyal — Future Fonts" },
+    { "url": "https://namratagoyal.in/", "title": "Namrata Goyal — personal website" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}
