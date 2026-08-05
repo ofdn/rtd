@@ -222,6 +222,29 @@ button.copy-inline {
 button.copy-inline:hover { color: var(--color-text); }
 button.copy-inline.copied { color: var(--color-info-accent); text-decoration: none; }
 
+.ark-permalink {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin: -1rem 0 1.5rem;
+}
+.ark-permalink code {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  word-break: break-all;
+}
+button.copy-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem;
+  line-height: 0;
+  flex: none;
+}
+
 .callout {
   background: var(--color-callout-bg);
   border-left: 2px solid var(--color-primary);

@@ -29,6 +29,8 @@ const SITE_URL = (process.env.SITE_URL || "https://example.org/").replace(
   /\/?$/,
   "/"
 );
+// N2T resolves ark:54728/<id> to ${SITE_URL}ark/<id>/.
+const ARK_NAAN = "54728";
 
 function loadJson(path) {
   return JSON.parse(readFileSync(path, "utf8"));
@@ -233,6 +235,7 @@ function build(dataDir, outDir) {
       peopleCount: people.filter((p) => p.record_status === "active").length,
       typefacesCount: typefaces.filter((t) => t.record_status === "active").length,
       schemaVersion,
+      arkNaan: ARK_NAAN,
     })
   );
 
@@ -250,6 +253,7 @@ function build(dataDir, outDir) {
         demonyms,
         related: relatedPeople(record),
         schemaVersion,
+        arkUrl: `https://n2t.net/ark:${ARK_NAAN}/${record.id}`,
       });
       writeFile(outDir, `people/${record.slug}/index.html`, html);
       writeFile(
@@ -320,6 +324,7 @@ function build(dataDir, outDir) {
         designers,
         related: relatedTypefaces(record),
         schemaVersion,
+        arkUrl: `https://n2t.net/ark:${ARK_NAAN}/${record.id}`,
       });
       writeFile(outDir, `typefaces/${record.slug}/index.html`, html);
       writeFile(

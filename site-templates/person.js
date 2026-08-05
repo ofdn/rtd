@@ -1,9 +1,9 @@
-import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, nationalityLabel, copyableId } from "./shared.js";
+import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, nationalityLabel, copyableId, arkPermalink } from "./shared.js";
 
 // `works` is the computed reverse index (typefaces this person is credited
 // on), passed in by build.js, it is never stored on the person record
 // itself, to avoid the same relationship being hand-maintained in two files.
-export function renderPersonPage(record, { canonicalUrl, works, demonyms, related, schemaVersion }) {
+export function renderPersonPage(record, { canonicalUrl, works, demonyms, related, schemaVersion, arkUrl }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -17,7 +17,7 @@ export function renderPersonPage(record, { canonicalUrl, works, demonyms, relate
     nationality: record.countries?.length ? record.countries : undefined,
     jobTitle: record.roles?.length ? record.roles : undefined,
     url: canonicalUrl,
-    sameAs: sameAsUris(record.external_ids),
+    sameAs: [...(sameAsUris(record.external_ids) ?? []), arkUrl],
   };
 
   const worksHtml = works.length
@@ -47,6 +47,7 @@ export function renderPersonPage(record, { canonicalUrl, works, demonyms, relate
 <h1>${escapeHtml(record.name.preferred)}</h1>
 ${copyableId(record.id)}
 </div>
+${arkPermalink(arkUrl)}
 ${verificationNote(record)}
 <dl class="facts">
 ${record.roles?.length ? `<dt>Roles</dt><dd>${escapeHtml(record.roles.join(", "))}</dd>` : ""}

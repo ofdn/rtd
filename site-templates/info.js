@@ -1,11 +1,11 @@
-import { pageShell } from "./shared.js";
+import { pageShell, escapeHtml } from "./shared.js";
 
 // Static content page, not data-driven, so unlike person.js/typeface.js
 // this has no per-record inputs beyond the counts already computed for
 // the home page. Kept as its own template file (rather than an inline
 // string in build.js like the smaller preservation/servicestatus pages)
 // because it's long enough to be worth editing on its own.
-export function renderInfoPage({ canonicalUrl, peopleCount, typefacesCount, schemaVersion }) {
+export function renderInfoPage({ canonicalUrl, peopleCount, typefacesCount, schemaVersion, arkNaan }) {
   const body = `
 <main>
 <h1>About the registry</h1>
@@ -21,7 +21,7 @@ export function renderInfoPage({ canonicalUrl, peopleCount, typefacesCount, sche
 
 <h2>RTD ids and the schema</h2>
 <p class="description">Every record has a permanent, opaque id (<code>rtd-p-000001</code> for people, <code>rtd-t-000001</code> for typefaces): six digits, assigned sequentially, never reused or reassigned once published, even if a record is later merged or deprecated. The <code>slug</code> used in a page's URL can change if a record is renamed, the id never does. The full validation rules are public: <a href="https://github.com/ofdn/rtd/blob/main/schema/person.schema.json">person.schema.json</a> and <a href="https://github.com/ofdn/rtd/blob/main/schema/typeface.schema.json">typeface.schema.json</a> on GitHub define exactly what a valid record looks like, currently schema v${schemaVersion}, versioned separately from the site itself so a change to the data shape is always visible and dated.</p>
-<p class="description">RTD ids also resolve as ARK identifiers once a NAAN is assigned (<code>ark:&lt;naan&gt;/rtd-p-000001</code>), and the registry commits to keeping identifiers and data available long-term, see the <a href="../preservation/">preservation and persistence statement</a> for specifics.</p>
+<p class="description">RTD ids also resolve as ARK identifiers under NAAN <code>${escapeHtml(arkNaan)}</code> (<code>ark:${escapeHtml(arkNaan)}/rtd-p-000001</code>, resolvable at <a href="https://n2t.net/ark:${escapeHtml(arkNaan)}/rtd-p-000001">n2t.net/ark:${escapeHtml(arkNaan)}/rtd-p-000001</a>), and the registry commits to keeping identifiers and data available long-term, see the <a href="../preservation/">preservation and persistence statement</a> for specifics.</p>
 
 <p class="stat-line">Currently tracking <strong>${peopleCount}</strong> people, <strong>${typefacesCount}</strong> typefaces.</p>
 </main>

@@ -1,9 +1,9 @@
-import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, copyableId } from "./shared.js";
+import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, copyableId, arkPermalink } from "./shared.js";
 
 // `designers` is the input record's designers[] enriched with each
 // person's current name/slug (resolved by build.js), so the page can link
 // to them without duplicating name data into the typeface record itself.
-export function renderTypefacePage(record, { canonicalUrl, designers, related, schemaVersion }) {
+export function renderTypefacePage(record, { canonicalUrl, designers, related, schemaVersion, arkUrl }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
@@ -24,7 +24,7 @@ export function renderTypefacePage(record, { canonicalUrl, designers, related, s
       ? record.foundry.map((f) => ({ "@type": "Organization", name: f.name }))
       : undefined,
     url: canonicalUrl,
-    sameAs: sameAsUris(record.external_ids),
+    sameAs: [...(sameAsUris(record.external_ids) ?? []), arkUrl],
   };
 
   const designersHtml = designers.length
@@ -54,6 +54,7 @@ export function renderTypefacePage(record, { canonicalUrl, designers, related, s
 <h1>${escapeHtml(record.name.preferred)}</h1>
 ${copyableId(record.id)}
 </div>
+${arkPermalink(arkUrl)}
 ${verificationNote(record)}
 <dl class="facts">
 ${record.foundry?.length ? `<dt>Foundry</dt><dd>${escapeHtml(record.foundry.map((f) => f.name).join(", "))}</dd>` : ""}
