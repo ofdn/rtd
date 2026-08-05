@@ -16,12 +16,13 @@ import {
 } from "node:fs";
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
 import { toCsv } from "./csv.js";
 import { renderPersonPage, renderTombstonePage } from "../site-templates/person.js";
 import { renderTypefacePage } from "../site-templates/typeface.js";
 import { renderHomePage } from "../site-templates/home.js";
 import { renderInfoPage } from "../site-templates/info.js";
-import { renderRedirectPage, nationalityLabel, pageShell } from "../site-templates/shared.js";
+import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion } from "../site-templates/shared.js";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const repoRoot = join(__dirname, "..");
@@ -193,11 +194,9 @@ function build(dataDir, outDir) {
   if (existsSync(outDir)) rmSync(outDir, { recursive: true, force: true });
   mkdirSync(outDir, { recursive: true });
   writeFile(outDir, ".nojekyll", "");
-  writeFile(
-    outDir,
-    "styles.css",
-    readFileSync(join(repoRoot, "site-templates/styles.css"), "utf8")
-  );
+  const cssContent = readFileSync(join(repoRoot, "site-templates/styles.css"), "utf8");
+  writeFile(outDir, "styles.css", cssContent);
+  setCssVersion(createHash("md5").update(cssContent).digest("hex").slice(0, 8));
 
   writeFile(
     outDir,
@@ -467,6 +466,27 @@ function build(dataDir, outDir) {
     "dumps/typefaces.ndjson",
     typefaces.map((r) => JSON.stringify(r)).join("\n") +
       (typefaces.length ? "\n" : "")
+  );
+  writeFile(
+    outDir,
+    "dumps/index.html",
+    pageShell({
+      title: "Bulk data dumps",
+      canonicalUrl: `${SITE_URL}dumps/`,
+      jsonLd: null,
+      body: `<main>
+<h1>Bulk data dumps</h1>
+<p class="description">The full dataset, for mirroring or offline analysis without hitting the API record by record. Same data as the <a href="../api/people.json">People API</a> and <a href="../api/typefaces.json">Typefaces API</a>, exported as flat files.</p>
+<ul class="plain-list">
+<li><a href="people.csv">people.csv</a> &mdash; one row per person record</li>
+<li><a href="people.ndjson">people.ndjson</a> &mdash; one JSON object per line, full record</li>
+<li><a href="typefaces.csv">typefaces.csv</a> &mdash; one row per typeface record</li>
+<li><a href="typefaces.ndjson">typefaces.ndjson</a> &mdash; one JSON object per line, full record</li>
+</ul>
+</main>`,
+      homePath: "../",
+      schemaVersion,
+    })
   );
 
   // --- Home page ---

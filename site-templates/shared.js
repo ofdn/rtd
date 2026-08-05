@@ -14,6 +14,17 @@ export function copyableId(id) {
   return `<button type="button" class="record-id copy-id" data-copy="${escapeHtml(id)}">${escapeHtml(id)}</button>`;
 }
 
+// A hash of styles.css's own content, set once by build.js and appended to
+// the stylesheet link as a cache-buster (`?v=<hash>`). Without this,
+// browsers and the CDN in front of the custom domain hold onto a cached
+// copy for up to their max-age (hours) after every deploy, so a CSS-only
+// change doesn't actually reach visitors until that cache expires or they
+// hard-refresh.
+let cssVersion = "";
+export function setCssVersion(hash) {
+  cssVersion = hash;
+}
+
 const COPY_ICON = `<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>`;
 
 export function arkPermalink(arkUrl) {
@@ -148,7 +159,7 @@ export function pageShell({
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="${escapeHtml(homePath)}styles.css">
+<link rel="stylesheet" href="${escapeHtml(homePath)}styles.css${cssVersion ? `?v=${cssVersion}` : ""}">
 ${jsonLd ? jsonLdScript(jsonLd) : ""}
 </head>
 <body>
