@@ -3,7 +3,7 @@ import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, ident
 // `works` is the computed reverse index (typefaces this person is credited
 // on), passed in by build.js, it is never stored on the person record
 // itself, to avoid the same relationship being hand-maintained in two files.
-export function renderPersonPage(record, { canonicalUrl, works, demonyms }) {
+export function renderPersonPage(record, { canonicalUrl, works, demonyms, related }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -21,31 +21,45 @@ export function renderPersonPage(record, { canonicalUrl, works, demonyms }) {
   };
 
   const worksHtml = works.length
-    ? `<h2>Typefaces</h2>\n<ul>\n${works
+    ? `<h2>Typefaces</h2>\n<ul class="record-list">\n${works
         .map(
           (w) =>
             `<li><a href="../../typefaces/${escapeHtml(w.slug)}/">${escapeHtml(
               w.name
-            )}</a>, ${escapeHtml(w.role)}</li>`
+            )}</a><span class="role">${escapeHtml(w.role)}</span></li>`
         )
         .join("\n")}\n</ul>`
     : "";
 
+  const relatedHtml = related?.length
+    ? `<section class="see-also">\n<h2>See also</h2>\n<ul>\n${related
+        .map(
+          (r) =>
+            `<li><a href="../../people/${escapeHtml(r.slug)}/">${escapeHtml(r.name)}</a></li>`
+        )
+        .join("\n")}\n</ul>\n</section>`
+    : "";
+
   const body = `
-<p><a href="../../">Registry of Type Design</a></p>
+<main>
+<nav class="breadcrumb"><a href="../../">Registry Home</a> &rsaquo; ${escapeHtml(record.name.preferred)}</nav>
+<div class="record-header">
 <h1>${escapeHtml(record.name.preferred)}</h1>
-<p><small>${escapeHtml(record.id)}</small></p>
+<span class="record-id">${escapeHtml(record.id)}</span>
+</div>
 ${verificationNote(record)}
-${record.bio ? `<p>${escapeHtml(record.bio)}</p>` : ""}
-<dl>
+<dl class="facts">
 ${record.roles?.length ? `<dt>Roles</dt><dd>${escapeHtml(record.roles.join(", "))}</dd>` : ""}
 ${record.birth_year || record.death_year ? `<dt>Dates</dt><dd>${escapeHtml(record.birth_year ?? "?")} – ${escapeHtml(record.death_year ?? "")}</dd>` : ""}
 ${record.countries?.length ? `<dt>Nationality</dt><dd>${escapeHtml(nationalityLabel(record.countries, demonyms))}</dd>` : ""}
 </dl>
+${record.bio ? `<p class="bio">${escapeHtml(record.bio)}</p>` : ""}
 ${worksHtml}
+${relatedHtml}
 ${sourcesList(record.sources)}
 ${identifiersList(record.external_ids)}
-<p><a href="../../api/people/${escapeHtml(record.id)}.json">JSON</a></p>
+<p class="json-link"><a href="../../api/people/${escapeHtml(record.id)}.json">JSON</a></p>
+</main>
 `;
 
   return pageShell({
@@ -53,6 +67,7 @@ ${identifiersList(record.external_ids)}
     canonicalUrl,
     jsonLd,
     body,
+    homePath: "../../",
   });
 }
 
@@ -66,15 +81,20 @@ export function renderTombstonePage(record, { canonicalUrl, targetSlug }) {
       ? `This record has been merged into ${escapeHtml(record.superseded_by)}.`
       : "This record has been deprecated.";
   const body = `
-<p><a href="../../">Registry of Type Design</a></p>
+<main>
+<nav class="breadcrumb"><a href="../../">Registry Home</a> &rsaquo; ${escapeHtml(record.name?.preferred ?? record.id)}</nav>
+<div class="record-header">
 <h1>${escapeHtml(record.name?.preferred ?? record.id)}</h1>
-<p><small>${escapeHtml(record.id)}</small></p>
+<span class="record-id">${escapeHtml(record.id)}</span>
+</div>
 <p>${message}</p>
+</main>
 `;
   return pageShell({
     title: `${record.name?.preferred ?? record.id} (${record.record_status})`,
     canonicalUrl,
     jsonLd: null,
     body,
+    homePath: "../../",
   });
 }

@@ -1,4 +1,4 @@
-import { pageShell } from "./shared.js";
+import { pageShell, SEARCH_ICON } from "./shared.js";
 
 // The home page doesn't print full people/typeface lists inline: at
 // registry scale (thousands of entries expected) that would bloat every
@@ -7,22 +7,36 @@ import { pageShell } from "./shared.js";
 // an A-Z letter picker. Both are driven by escapeHtml'd output built from
 // the index, which is already public JSON, not user input, so no server
 // round trip is needed per interaction.
+//
+// The search box is a plain GET form first (action=""), so pressing Enter
+// works even with JS disabled (it reloads with ?q=..., which the script
+// below reads on load). JS only upgrades this into a live, no-reload
+// filter, it's never required for the search to function at all. This is
+// also the page that a person/typeface page's header search form submits
+// to, landing here with the same ?q= convention.
 export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount }) {
   const body = `
-<h1>Registry of Type Design</h1>
-<p>A global registry of typefaces and the people who made them, digital and pre-digital.</p>
-<input id="search" type="search" placeholder="Search people and typefaces&hellip;" aria-label="Search">
-<p><a href="api/people.json">People API</a> &middot; <a href="api/typefaces.json">Typefaces API</a> &middot; <a href="dumps/">Bulk dumps</a></p>
-<p>${peopleCount} people, ${typefacesCount} typefaces.</p>
-<nav id="letters" aria-label="Browse by first letter"></nav>
+<div class="home-hero">
+<p class="tagline">A global registry of typefaces and the people who made them, digital and pre-digital.</p>
+<form id="home-search-form" class="home-search" action="" method="get" role="search">
+<label class="visually-hidden" for="search">Search people and typefaces</label>
+<input id="search" type="search" name="q" placeholder="Search by typeface, designer, or foundry&hellip;" autocomplete="off">
+${SEARCH_ICON}
+</form>
+<nav id="letters" class="letters" aria-label="Browse by first letter"></nav>
+<p class="stat-line">Currently tracking <strong>${peopleCount}</strong> people, <strong>${typefacesCount}</strong> typefaces.</p>
+</div>
 <div id="results"></div>
+<p class="utility-links"><a href="api/people.json">People API</a> &middot; <a href="api/typefaces.json">Typefaces API</a> &middot; <a href="dumps/">Bulk dumps</a></p>
 <script>
 (function () {
+  var form = document.getElementById("home-search-form");
   var input = document.getElementById("search");
   var results = document.getElementById("results");
   var lettersNav = document.getElementById("letters");
   var index = null;
   var indexPromise = null;
+  var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
   function escapeHtml(value) {
     return String(value)
@@ -46,7 +60,12 @@ export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount }) {
       items
         .map(function (m) {
           var href = (m.kind === "person" ? "people/" : "typefaces/") + m.slug + "/";
-          return '<li><a href="' + href + '">' + escapeHtml(m.name) + "</a></li>";
+          return (
+            '<li><a href="' + href + '">' + escapeHtml(m.name) +
+            '<span class="kind-tag">' + m.kind + "</span>" +
+            (m.subtitle ? '<span class="subtitle">' + escapeHtml(m.subtitle) + "</span>" : "") +
+            "</a></li>"
+          );
         })
         .join("") +
       "</ul>"
@@ -68,17 +87,17 @@ export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount }) {
   }
 
   function renderLetterNav() {
-    var letters = {};
+    var present = {};
     index.forEach(function (item) {
       var key = foldedFirstLetter(item.sort_name || item.name);
-      if (key) letters[key] = true;
+      if (key) present[key] = true;
     });
-    var present = Object.keys(letters).sort();
-    lettersNav.innerHTML = present
-      .map(function (l) {
+    lettersNav.innerHTML = ALPHABET.map(function (l) {
+      if (present[l]) {
         return '<button type="button" data-letter="' + l + '">' + l + "</button>";
-      })
-      .join(" ");
+      }
+      return '<span class="letter-disabled" aria-disabled="true">' + l + "</span>";
+    }).join("");
     lettersNav.querySelectorAll("button").forEach(function (btn) {
       btn.addEventListener("click", function () {
         showLetter(btn.getAttribute("data-letter"));
@@ -86,8 +105,16 @@ export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount }) {
     });
   }
 
+  function markActiveLetter(letter) {
+    lettersNav.querySelectorAll("button").forEach(function (btn) {
+      if (btn.getAttribute("data-letter") === letter) btn.setAttribute("aria-current", "true");
+      else btn.removeAttribute("aria-current");
+    });
+  }
+
   function showLetter(letter) {
     input.value = "";
+    markActiveLetter(letter);
     var matches = index
       .filter(function (item) {
         return foldedFirstLetter(item.sort_name || item.name) === letter;
@@ -110,6 +137,7 @@ export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount }) {
   }
 
   function runSearch(q) {
+    markActiveLetter(null);
     var needle = q.toLowerCase();
     var matches = index.filter(function (item) {
       return (
@@ -120,7 +148,9 @@ export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount }) {
       );
     });
     results.innerHTML =
-      "<h2>Search results (" + matches.length + ")</h2>" + renderList(matches);
+      '<h2>Results for &ldquo;' + escapeHtml(q) + '&rdquo;</h2>' +
+      '<p class="results-meta">Showing ' + matches.length + " cataloged " + (matches.length === 1 ? "entry" : "entries") + ".</p>" +
+      renderList(matches);
   }
 
   input.addEventListener("input", function () {
@@ -134,7 +164,22 @@ export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount }) {
     });
   });
 
-  loadIndex();
+  // The form's plain GET action already works without JS (it reloads with
+  // ?q=...); once JS is running, results appear live as you type, so a
+  // full-page reload on Enter would just be redundant, not broken.
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+  });
+
+  var initialQuery = new URLSearchParams(window.location.search).get("q");
+  if (initialQuery) {
+    input.value = initialQuery;
+    loadIndex().then(function () {
+      runSearch(initialQuery);
+    });
+  } else {
+    loadIndex();
+  }
 })();
 </script>
 `;
@@ -144,5 +189,7 @@ export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount }) {
     canonicalUrl,
     jsonLd: null,
     body,
+    homePath: "",
+    showHeaderSearch: false,
   });
 }

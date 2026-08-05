@@ -1,3 +1,5 @@
 node_modules/
 dist/
 .DS_Store
+# Private design working files (Stitch export, design brief), never upstream.
+docs/

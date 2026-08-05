@@ -20,6 +20,7 @@ import { toCsv } from "./csv.js";
 import { renderPersonPage, renderTombstonePage } from "../site-templates/person.js";
 import { renderTypefacePage } from "../site-templates/typeface.js";
 import { renderHomePage } from "../site-templates/home.js";
+import { renderRedirectPage, nationalityLabel } from "../site-templates/shared.js";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const repoRoot = join(__dirname, "..");
@@ -45,6 +46,20 @@ function writeFile(outDir, relPath, content) {
   writeFileSync(full, content);
 }
 
+// Writes a redirect stub at every slug this record used to have, always
+// pointing at wherever the record lives right now (its current canonical
+// URL, whether that's an active page or a merged/deprecated tombstone).
+// Validated in scripts/validate.js to never collide with a real slug.
+function writeSlugRedirects(outDir, kindDir, record, canonicalUrl) {
+  for (const oldSlug of record.previous_slugs ?? []) {
+    const html = renderRedirectPage({
+      name: record.name?.preferred ?? record.id,
+      targetUrl: canonicalUrl,
+    });
+    writeFile(outDir, `${kindDir}/${oldSlug}/index.html`, html);
+  }
+}
+
 function build(dataDir, outDir) {
   const demonyms = loadJson(join(repoRoot, "schema/demonyms.json"));
   const people = listRecords(join(dataDir, "people"));
@@ -65,9 +80,95 @@ function build(dataDir, outDir) {
     }
   }
 
+  // "See also" cross-links: this is linked data, so each record's page
+  // should surface a few laterally-related records, not just the direct
+  // person<->typeface credit already covered above. Co-credit (people who
+  // share a typeface, typefaces that share a designer) ranks above looser
+  // matches (same nationality, same foundry), capped short since this is a
+  // researcher-facing list, not a recommendation engine.
+  function relatedPeople(record) {
+    if (record.record_status !== "active") return [];
+    const coDesignerIds = new Set();
+    for (const tf of typefaces) {
+      const designerIds = (tf.designers ?? []).map((d) => d.id);
+      if (designerIds.includes(record.id)) {
+        for (const id of designerIds) {
+          if (id !== record.id) coDesignerIds.add(id);
+        }
+      }
+    }
+    const sameCountryIds = new Set();
+    for (const p of people) {
+      if (p.id === record.id || p.record_status !== "active") continue;
+      if ((p.countries ?? []).some((c) => (record.countries ?? []).includes(c))) {
+        sameCountryIds.add(p.id);
+      }
+    }
+    const orderedIds = [...new Set([...coDesignerIds, ...sameCountryIds])];
+    return orderedIds
+      .map((id) => personById.get(id))
+      .filter((p) => p && p.record_status === "active")
+      .slice(0, 5)
+      .map((p) => ({ name: p.name.preferred, slug: p.slug }));
+  }
+
+  function relatedTypefaces(record) {
+    if (record.record_status !== "active") return [];
+    const designerIds = new Set((record.designers ?? []).map((d) => d.id));
+    const foundryNames = new Set((record.foundry ?? []).map((f) => f.name));
+    const coDesignedIds = new Set();
+    const sameFoundryIds = new Set();
+    for (const tf of typefaces) {
+      if (tf.id === record.id || tf.record_status !== "active") continue;
+      if ((tf.designers ?? []).some((d) => designerIds.has(d.id))) {
+        coDesignedIds.add(tf.id);
+      }
+      if ((tf.foundry ?? []).some((f) => foundryNames.has(f.name))) {
+        sameFoundryIds.add(tf.id);
+      }
+    }
+    const orderedIds = [...new Set([...coDesignedIds, ...sameFoundryIds])];
+    return orderedIds
+      .map((id) => typefaceById.get(id))
+      .filter(Boolean)
+      .slice(0, 5)
+      .map((t) => ({ name: t.name.preferred, slug: t.slug }));
+  }
+
+  // Short secondary line shown under each name in home-page search/browse
+  // results (e.g. "Swiss, Type Designer (1910-1980)" or "Haas Type
+  // Foundry, 1957"), computed once at build time and shipped in
+  // search-index.json so the client never has to duplicate the nationality
+  // lookup logic that already lives in shared.js.
+  function personSubtitle(record) {
+    const parts = [];
+    const nat = nationalityLabel(record.countries, demonyms);
+    if (nat) parts.push(nat);
+    if (record.roles?.length) parts.push(record.roles.join(", "));
+    let subtitle = parts.join(", ");
+    if (record.birth_year || record.death_year) {
+      const dates = `${record.birth_year ?? "?"}–${record.death_year ?? ""}`;
+      subtitle = subtitle ? `${subtitle} (${dates})` : dates;
+    }
+    return subtitle || undefined;
+  }
+
+  function typefaceSubtitle(record) {
+    const parts = [];
+    if (record.foundry?.length) parts.push(record.foundry.map((f) => f.name).join(", "));
+    const year = record.design_year || record.release_year;
+    if (year) parts.push(year);
+    return parts.length ? parts.join(", ") : undefined;
+  }
+
   if (existsSync(outDir)) rmSync(outDir, { recursive: true, force: true });
   mkdirSync(outDir, { recursive: true });
   writeFile(outDir, ".nojekyll", "");
+  writeFile(
+    outDir,
+    "styles.css",
+    readFileSync(join(repoRoot, "site-templates/styles.css"), "utf8")
+  );
 
   // --- People ---
   const peopleApiIndex = [];
@@ -77,7 +178,12 @@ function build(dataDir, outDir) {
 
     if (record.record_status === "active") {
       const works = worksByPerson.get(record.id) ?? [];
-      const html = renderPersonPage(record, { canonicalUrl, works, demonyms });
+      const html = renderPersonPage(record, {
+        canonicalUrl,
+        works,
+        demonyms,
+        related: relatedPeople(record),
+      });
       writeFile(outDir, `people/${record.slug}/index.html`, html);
       writeFile(
         outDir,
@@ -107,6 +213,7 @@ function build(dataDir, outDir) {
         )
       );
     }
+    writeSlugRedirects(outDir, "people", record, canonicalUrl);
 
     peopleApiIndex.push({
       id: record.id,
@@ -117,6 +224,7 @@ function build(dataDir, outDir) {
       record_status: record.record_status,
       api_url: apiUrl,
       canonical_url: canonicalUrl,
+      subtitle: personSubtitle(record),
     });
   }
   writeFile(outDir, "api/people.json", JSON.stringify(peopleApiIndex, null, 2));
@@ -137,7 +245,11 @@ function build(dataDir, outDir) {
           slug: person?.slug ?? d.id,
         };
       });
-      const html = renderTypefacePage(record, { canonicalUrl, designers });
+      const html = renderTypefacePage(record, {
+        canonicalUrl,
+        designers,
+        related: relatedTypefaces(record),
+      });
       writeFile(outDir, `typefaces/${record.slug}/index.html`, html);
       writeFile(
         outDir,
@@ -167,6 +279,7 @@ function build(dataDir, outDir) {
         )
       );
     }
+    writeSlugRedirects(outDir, "typefaces", record, canonicalUrl);
 
     typefacesApiIndex.push({
       id: record.id,
@@ -176,6 +289,7 @@ function build(dataDir, outDir) {
       record_status: record.record_status,
       api_url: apiUrl,
       canonical_url: canonicalUrl,
+      subtitle: typefaceSubtitle(record),
     });
   }
   writeFile(

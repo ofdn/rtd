@@ -26,6 +26,12 @@
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
       "description": "URL/filename-friendly slug. May change if a record is renamed; id does not."
     },
+    "previous_slugs": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+      "default": [],
+      "description": "Slugs this record used to have before being renamed. The build emits a redirect stub page at each old URL pointing at the current one, so old links keep working. Append the old slug here whenever you change `slug`, never remove an entry once added."
+    },
     "name": {
       "type": "object",
       "additionalProperties": false,
@@ -102,7 +108,8 @@
         "viaf": { "type": "string", "description": "VIAF cluster id, digits only." },
         "isni": { "type": "string", "description": "ISNI, 16 digits, spaces optional." },
         "lc_naf": { "type": "string", "description": "Library of Congress/NACO Authority File id, e.g. 'n79021164'." },
-        "gnd": { "type": "string", "description": "GND (Gemeinsame Normdatei / Deutsche Nationalbibliothek) id." }
+        "gnd": { "type": "string", "description": "GND (Gemeinsame Normdatei / Deutsche Nationalbibliothek) id." },
+        "worldcat_entity": { "type": "string", "description": "OCLC WorldCat Entity id, the string after id.oclc.org/worldcat/entity/. Note: the WorldCat.org detail page for an entity currently prompts for a library-affiliated login to view, unlike the other authority files here, still worth recording as a cross-reference even though the page itself isn't always freely browsable." }
       },
       "description": "Informational cross-references only, one per authority file. Never usable as a sources entry."
     },

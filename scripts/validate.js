@@ -130,7 +130,72 @@ export function validateRoot(rootDir) {
     }
   }
 
-  return { errors, peopleCount: people.length, typefacesCount: typefaces.length };
+  // Redirect stubs (see scripts/build.js) are generated at each entry in
+  // previous_slugs, so a collision here would mean two records fighting
+  // over the same URL, or a redirect silently shadowing a real page.
+  function checkPreviousSlugs(records, kind) {
+    const currentSlugs = new Set(records.map(({ record }) => record.slug));
+    const oldSlugOwners = new Map(); // old slug -> file that claims it
+    for (const { file, record } of records) {
+      for (const oldSlug of record.previous_slugs ?? []) {
+        if (oldSlug === record.slug) {
+          errors.push(
+            `${file}: previous_slugs contains "${oldSlug}", which is this record's current slug`
+          );
+        } else if (currentSlugs.has(oldSlug)) {
+          errors.push(
+            `${file}: previous_slugs entry "${oldSlug}" collides with another ${kind}'s current slug`
+          );
+        } else if (oldSlugOwners.has(oldSlug)) {
+          errors.push(
+            `${file}: previous_slugs entry "${oldSlug}" is already claimed by ${oldSlugOwners.get(oldSlug)}`
+          );
+        } else {
+          oldSlugOwners.set(oldSlug, file);
+        }
+      }
+    }
+  }
+  checkPreviousSlugs(people, "person");
+  checkPreviousSlugs(typefaces, "typeface");
+
+  // Non-fatal: more than one active record sharing a preferred name. Two
+  // real people (or two real typefaces) can legitimately share a name, so
+  // this doesn't fail CI, but it's worth a human glance to confirm it isn't
+  // an accidental duplicate and that each record is actually
+  // distinguishable (different slug, and a bio/description specific enough
+  // to tell them apart). See the disambiguation convention in
+  // CONTRIBUTING.md.
+  const warnings = [];
+  function checkNameCollisions(records, kind) {
+    const byName = new Map();
+    for (const { record } of records) {
+      if (record.record_status !== "active") continue;
+      const key = record.name?.preferred?.toLowerCase();
+      if (!key) continue;
+      const list = byName.get(key) ?? [];
+      list.push(record);
+      byName.set(key, list);
+    }
+    for (const group of byName.values()) {
+      if (group.length > 1) {
+        warnings.push(
+          `${group.length} active ${kind} records are named "${group[0].name.preferred}": ${group
+            .map((r) => `${r.id} (${r.slug})`)
+            .join(", ")}. Confirm these are distinct ${kind}s, not a duplicate.`
+        );
+      }
+    }
+  }
+  checkNameCollisions(people, "person");
+  checkNameCollisions(typefaces, "typeface");
+
+  return {
+    errors,
+    warnings,
+    peopleCount: people.length,
+    typefacesCount: typefaces.length,
+  };
 }
 
 function main() {
@@ -138,7 +203,13 @@ function main() {
     ? resolve(process.cwd(), process.argv[2])
     : join(repoRoot, "data");
 
-  const { errors, peopleCount, typefacesCount } = validateRoot(rootDir);
+  const { errors, warnings, peopleCount, typefacesCount } = validateRoot(rootDir);
+
+  if (warnings.length > 0) {
+    console.warn(`Warnings (${warnings.length}, non-fatal):\n`);
+    for (const w of warnings) console.warn(`  - ${w}`);
+    console.warn("");
+  }
 
   if (errors.length > 0) {
     console.error(`Validation failed (${errors.length} error(s)):\n`);

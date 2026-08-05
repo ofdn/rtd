@@ -3,7 +3,7 @@ import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, ident
 // `designers` is the input record's designers[] enriched with each
 // person's current name/slug (resolved by build.js), so the page can link
 // to them without duplicating name data into the typeface record itself.
-export function renderTypefacePage(record, { canonicalUrl, designers }) {
+export function renderTypefacePage(record, { canonicalUrl, designers, related }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
@@ -28,32 +28,46 @@ export function renderTypefacePage(record, { canonicalUrl, designers }) {
   };
 
   const designersHtml = designers.length
-    ? `<h2>Designers</h2>\n<ul>\n${designers
+    ? `<h2>Designers</h2>\n<ul class="record-list">\n${designers
         .map(
           (d) =>
             `<li><a href="../../people/${escapeHtml(d.slug)}/">${escapeHtml(
               d.name
-            )}</a>, ${escapeHtml(d.role)}</li>`
+            )}</a><span class="role">${escapeHtml(d.role)}</span></li>`
         )
         .join("\n")}\n</ul>`
     : "";
 
+  const relatedHtml = related?.length
+    ? `<section class="see-also">\n<h2>See also</h2>\n<ul>\n${related
+        .map(
+          (r) =>
+            `<li><a href="../../typefaces/${escapeHtml(r.slug)}/">${escapeHtml(r.name)}</a></li>`
+        )
+        .join("\n")}\n</ul>\n</section>`
+    : "";
+
   const body = `
-<p><a href="../../">Registry of Type Design</a></p>
+<main>
+<nav class="breadcrumb"><a href="../../">Registry Home</a> &rsaquo; ${escapeHtml(record.name.preferred)}</nav>
+<div class="record-header">
 <h1>${escapeHtml(record.name.preferred)}</h1>
-<p><small>${escapeHtml(record.id)}</small></p>
+<span class="record-id">${escapeHtml(record.id)}</span>
+</div>
 ${verificationNote(record)}
-${record.description ? `<p>${escapeHtml(record.description)}</p>` : ""}
-<dl>
+<dl class="facts">
 ${record.foundry?.length ? `<dt>Foundry</dt><dd>${escapeHtml(record.foundry.map((f) => f.name).join(", "))}</dd>` : ""}
 ${record.design_year || record.release_year ? `<dt>Year</dt><dd>${escapeHtml(record.design_year ?? "?")} (designed) / ${escapeHtml(record.release_year ?? "?")} (released)</dd>` : ""}
 ${record.era ? `<dt>Era</dt><dd>${escapeHtml(record.era)}</dd>` : ""}
 ${record.classification ? `<dt>Classification</dt><dd>${escapeHtml(record.classification)}</dd>` : ""}
 </dl>
+${record.description ? `<p class="description">${escapeHtml(record.description)}</p>` : ""}
 ${designersHtml}
+${relatedHtml}
 ${sourcesList(record.sources)}
 ${identifiersList(record.external_ids)}
-<p><a href="../../api/typefaces/${escapeHtml(record.id)}.json">JSON</a></p>
+<p class="json-link"><a href="../../api/typefaces/${escapeHtml(record.id)}.json">JSON</a></p>
+</main>
 `;
 
   return pageShell({
@@ -61,5 +75,6 @@ ${identifiersList(record.external_ids)}
     canonicalUrl,
     jsonLd,
     body,
+    homePath: "../../",
   });
 }
