@@ -64,6 +64,23 @@ export function sameAsUris(externalIds) {
   return uris.length ? uris : undefined;
 }
 
+// Computes a single human-readable nationality label from a countries[]
+// array using the demonym/compound tables in schema/demonyms.json (passed
+// in by build.js). Kept out of hand-written bio text so the wording stays
+// consistent across every record instead of drifting per-author.
+export function nationalityLabel(countries, demonymsData) {
+  if (!countries || countries.length === 0) return undefined;
+  const { demonyms, compounds } = demonymsData;
+  if (countries.length === 1) {
+    return demonyms[countries[0]] || countries[0];
+  }
+  if (countries.length === 2) {
+    const key = [...countries].sort().join("|");
+    if (compounds[key]) return compounds[key];
+  }
+  return countries.map((c) => demonyms[c] || c).join(" and ");
+}
+
 export function sourcesList(sources) {
   if (!sources || sources.length === 0) return "";
   const items = sources

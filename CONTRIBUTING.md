@@ -67,6 +67,18 @@ sourcing confidence in the `bio` text itself (no "independent
 corroboration has not been found" type language) - that belongs in the
 verification flag, not the biography.
 
+## Nationality
+
+Don't write nationality adjectives ("Indian", "Indo-Canadian", etc.) into
+`bio` text by hand. Just list the person's countries in `countries[]`;
+the site computes a consistent nationality label from `schema/demonyms.json`
+at build time and displays it on its own. This keeps the wording
+consistent across records instead of drifting per contributor. If a
+country or a two-country combination is missing from that file, add it
+there rather than writing the adjective into the bio, and only add a
+compound (like `Indo-Canadian`) if it's an unambiguous, well-established
+term, not a guessed combination.
+
 ## What's deliberately out of scope
 
 The schema intentionally has no field for images, no dedicated

@@ -1,9 +1,9 @@
-import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris } from "./shared.js";
+import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, nationalityLabel } from "./shared.js";
 
 // `works` is the computed reverse index (typefaces this person is credited
 // on), passed in by build.js, it is never stored on the person record
 // itself, to avoid the same relationship being hand-maintained in two files.
-export function renderPersonPage(record, { canonicalUrl, works }) {
+export function renderPersonPage(record, { canonicalUrl, works, demonyms }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -40,7 +40,7 @@ ${record.bio ? `<p>${escapeHtml(record.bio)}</p>` : ""}
 <dl>
 ${record.roles?.length ? `<dt>Roles</dt><dd>${escapeHtml(record.roles.join(", "))}</dd>` : ""}
 ${record.birth_year || record.death_year ? `<dt>Dates</dt><dd>${escapeHtml(record.birth_year ?? "?")} – ${escapeHtml(record.death_year ?? "")}</dd>` : ""}
-${record.countries?.length ? `<dt>Countries</dt><dd>${escapeHtml(record.countries.join(", "))}</dd>` : ""}
+${record.countries?.length ? `<dt>Nationality</dt><dd>${escapeHtml(nationalityLabel(record.countries, demonyms))}</dd>` : ""}
 </dl>
 ${worksHtml}
 ${sourcesList(record.sources)}

@@ -46,6 +46,7 @@ function writeFile(outDir, relPath, content) {
 }
 
 function build(dataDir, outDir) {
+  const demonyms = loadJson(join(repoRoot, "schema/demonyms.json"));
   const people = listRecords(join(dataDir, "people"));
   const typefaces = listRecords(join(dataDir, "typefaces"));
 
@@ -76,7 +77,7 @@ function build(dataDir, outDir) {
 
     if (record.record_status === "active") {
       const works = worksByPerson.get(record.id) ?? [];
-      const html = renderPersonPage(record, { canonicalUrl, works });
+      const html = renderPersonPage(record, { canonicalUrl, works, demonyms });
       writeFile(outDir, `people/${record.slug}/index.html`, html);
       writeFile(
         outDir,
@@ -257,12 +258,8 @@ function build(dataDir, outDir) {
   // --- Home page ---
   const homeHtml = renderHomePage({
     canonicalUrl: SITE_URL,
-    people: peopleApiIndex
-      .filter((p) => p.record_status === "active")
-      .map((p) => ({ slug: p.slug, name: p.name })),
-    typefaces: typefacesApiIndex
-      .filter((t) => t.record_status === "active")
-      .map((t) => ({ slug: t.slug, name: t.name })),
+    peopleCount: peopleApiIndex.filter((p) => p.record_status === "active").length,
+    typefacesCount: typefacesApiIndex.filter((t) => t.record_status === "active").length,
   });
   writeFile(outDir, "index.html", homeHtml);
 
