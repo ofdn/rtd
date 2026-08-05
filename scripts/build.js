@@ -165,7 +165,7 @@ function build(dataDir, outDir) {
     const nat = nationalityLabel(record.countries, demonyms);
     if (nat) parts.push(nat);
     if (record.roles?.length) parts.push(record.roles.join(", "));
-    let subtitle = parts.join(", ");
+    let subtitle = parts.join(" · ");
     if (record.birth_year || record.death_year) {
       const dates = `${record.birth_year ?? "?"}–${record.death_year ?? ""}`;
       subtitle = subtitle ? `${subtitle} (${dates})` : dates;

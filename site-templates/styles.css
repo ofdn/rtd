@@ -359,7 +359,7 @@ footer.site-footer p { margin: 0; }
 #results ul { list-style: none; padding: 0; margin: 0 0 2rem; }
 #results li { padding: 0.6rem 0; border-bottom: 1px solid var(--color-outline-variant); text-align: left; }
 #results a { color: var(--color-text); font-weight: 600; text-decoration: none; }
-#results a:hover { text-decoration: underline; color: var(--color-link); }
+#results a:hover .name { text-decoration: underline; color: var(--color-link); }
 #results .kind-tag {
   font-size: 0.62rem;
   letter-spacing: 0.05em;
@@ -369,8 +369,9 @@ footer.site-footer p { margin: 0; }
   margin-left: 0.5rem;
   color: var(--color-text-muted);
   vertical-align: middle;
+  text-decoration: none;
 }
-#results .subtitle { display: block; font-size: 0.85rem; font-weight: 400; color: var(--color-text-muted); margin-top: 0.1rem; }
+#results .subtitle { display: block; font-size: 0.85rem; font-weight: 400; color: var(--color-text-muted); margin-top: 0.1rem; text-decoration: none; }
 
 @media (max-width: 640px) {
   .site-header { padding: 0.6rem 1rem; flex-wrap: wrap; }

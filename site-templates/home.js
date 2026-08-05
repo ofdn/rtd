@@ -61,7 +61,7 @@ ${SEARCH_ICON}
         .map(function (m) {
           var href = (m.kind === "person" ? "people/" : "typefaces/") + m.slug + "/";
           return (
-            '<li><a href="' + href + '">' + escapeHtml(m.name) +
+            '<li><a href="' + href + '"><span class="name">' + escapeHtml(m.name) + "</span>" +
             '<span class="kind-tag">' + m.kind + "</span>" +
             (m.subtitle ? '<span class="subtitle">' + escapeHtml(m.subtitle) + "</span>" : "") +
             "</a></li>"
