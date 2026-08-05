@@ -1,0 +1,17 @@
+{
+  "id": "rtd-p-000054",
+  "slug": "sudhir-patel",
+  "name": { "preferred": "Sudhir Patel", "alternates": [] },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "bio": "Type designer formerly associated with C-DAC, India's Centre for Development of Advanced Computing.",
+  "external_ids": { "wikidata_qid": "Q123055002" },
+  "sources": [
+    { "url": "https://web.archive.org/web/20161214153615/http://cdac.in:80/index.aspx?id=C-DAC_Employee_List", "title": "C-DAC Employee List (archived)" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

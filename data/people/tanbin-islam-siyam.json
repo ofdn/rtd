@@ -1,0 +1,16 @@
+{
+  "id": "rtd-p-000051",
+  "slug": "tanbin-islam-siyam",
+  "name": { "preferred": "Tanbin Islam Siyam", "alternates": [] },
+  "countries": ["Bangladesh"],
+  "roles": ["type designer", "font engineer"],
+  "bio": "Designed Siyam Rupali and Kalpurush, Bengali typefaces developed under the Avro Free Bangla font project. Font developer at OmicronLab. Recipient of Bangladesh's Ekushey Padak award in 2025.",
+  "external_ids": { "wikidata_qid": "Q126174602" },
+  "sources": [
+    { "url": "https://luc.devroye.org/bangladesh.html", "title": "Typefaces from and for Bangladesh - Luc Devroye" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

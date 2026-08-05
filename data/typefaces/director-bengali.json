@@ -1,0 +1,18 @@
+{
+  "id": "rtd-t-000038",
+  "slug": "director-bengali",
+  "name": { "preferred": "Director Bengali", "alternates": [] },
+  "designers": [{ "id": "rtd-p-000053", "role": "designer" }, { "id": "rtd-p-000009", "role": "designer" }],
+  "foundry": [{ "name": "Indian Type Foundry" }],
+  "scripts": ["Bengali"],
+  "era": "digital",
+  "description": "A Bengali typeface family published by the Indian Type Foundry, also released as a variable font.",
+  "sources": [
+    { "url": "https://www.myfonts.com/collections/director-bengali-font-indian-type-foundry/", "title": "Director Bengali Font - MyFonts" },
+    { "url": "https://www.myfonts.com/collections/director-bengali-variable-font-indian-type-foundry/", "title": "Director Bengali Variable Font - MyFonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

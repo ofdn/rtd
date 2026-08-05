@@ -1,0 +1,17 @@
+{
+  "id": "rtd-t-000036",
+  "slug": "mina",
+  "name": { "preferred": "Mina", "alternates": [] },
+  "designers": [{ "id": "rtd-p-000050", "role": "designer" }],
+  "foundry": [{ "name": "Google Fonts" }],
+  "scripts": ["Bengali"],
+  "era": "digital",
+  "description": "A Bengali typeface published by Google Fonts, addressing type design needs for Bengali-speaking readers.",
+  "sources": [
+    { "url": "https://design.google/library/new-wave-indian-type-design", "title": "Google Fonts Embrace India's Diverse Languages - Google Design" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

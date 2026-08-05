@@ -1,0 +1,16 @@
+{
+  "id": "rtd-t-000033",
+  "slug": "raghu",
+  "name": { "preferred": "Raghu", "alternates": [] },
+  "designers": [{ "id": "rtd-p-000043", "role": "designer" }],
+  "scripts": ["Devanagari"],
+  "era": "digital",
+  "description": "The first Devanagari typeface designed for OpenType, containing over 700 glyphs and composition-rule tables for rendering the script's complex conjuncts and ligatures.",
+  "sources": [
+    { "url": "https://letterformarchive.org/news/the-multilinguascriptic-life-of-r-k-joshi/", "title": "The Multilinguascriptic Life of R. K. Joshi - Letterform Archive" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

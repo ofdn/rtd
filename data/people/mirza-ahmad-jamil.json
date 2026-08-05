@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000042",
+  "slug": "mirza-ahmad-jamil",
+  "name": { "preferred": "Mirza Ahmad Jamil", "alternates": ["Ahmed Mirza Jamil"] },
+  "countries": ["Pakistan"],
+  "roles": ["type designer", "calligrapher"],
+  "birth_year": "1921",
+  "death_year": "2014",
+  "bio": "Created Noori Nastaliq, the first digital Nastaliq typeface, in collaboration with Monotype, hand-drawing about 18,000 ligatures. Declared an Invention of National Importance by Pakistan in 1982.",
+  "external_ids": { "wikidata_qid": "Q15905488" },
+  "sources": [
+    { "url": "https://urdufonts.com/story-of-jameel-noori-nastaleeq/", "title": "The Legacy of Jameel Noori Nastaliq - Shaping Urdu Typography" },
+    { "url": "https://www.folkloristan.com/post/nastaliq-typography-and-typefaces", "title": "Nastaliq Typography and Typefaces - Folkloristan" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

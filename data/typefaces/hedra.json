@@ -1,0 +1,18 @@
+{
+  "id": "rtd-t-000035",
+  "slug": "hedra",
+  "name": { "preferred": "Hedra", "alternates": [] },
+  "designers": [{ "id": "rtd-p-000048", "role": "designer" }],
+  "foundry": [{ "name": "Indian Type Foundry" }],
+  "scripts": ["Latin"],
+  "era": "digital",
+  "description": "A seven-style Latin-script typeface published by the Indian Type Foundry, featured on MyFonts' hot new fonts list.",
+  "sources": [
+    { "url": "https://www.myfonts.com/collections/sijya-gupta", "title": "Sijya Gupta - MyFonts" },
+    { "url": "https://www.indiantypefoundry.com/designers/sijya-gupta", "title": "Sijya Gupta - Indian Type Foundry" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

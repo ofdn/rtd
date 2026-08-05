@@ -1,0 +1,16 @@
+{
+  "id": "rtd-t-000037",
+  "slug": "siyam-rupali",
+  "name": { "preferred": "Siyam Rupali", "alternates": [] },
+  "designers": [{ "id": "rtd-p-000051", "role": "designer" }],
+  "scripts": ["Bengali"],
+  "era": "digital",
+  "description": "A free Bangla display typeface with a handwritten rhythm, rounded and flowing letterforms with compact, gently swelling strokes, developed under the Avro Free Bangla font project.",
+  "sources": [
+    { "url": "https://luc.devroye.org/bangladesh.html", "title": "Typefaces from and for Bangladesh - Luc Devroye" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

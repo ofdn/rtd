@@ -1,0 +1,16 @@
+{
+  "id": "rtd-p-000049",
+  "slug": "sridhar-murthy-srikantham",
+  "name": { "preferred": "Sridhar Murthy Srikantham", "alternates": [] },
+  "countries": ["India"],
+  "roles": ["typographer"],
+  "bio": "Developed Telugu newspaper fonts for Eenadu, Vartha, Andhra Jyoti, and other publications over four decades. Designed a Gondi script font from 100-year-old manuscripts, included in Unicode 11.0.",
+  "external_ids": { "wikidata_qid": "Q123057494" },
+  "sources": [
+    { "url": "https://luc.devroye.org/fonts-55419.html", "title": "Sridhar Murthy Srikantham - Luc Devroye" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

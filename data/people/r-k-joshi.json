@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000043",
+  "slug": "r-k-joshi",
+  "name": { "preferred": "R K Joshi", "alternates": ["Raghunath Krishna Joshi"] },
+  "countries": ["India"],
+  "roles": ["type designer", "typographer", "educator"],
+  "birth_year": "1936",
+  "death_year": "2008",
+  "bio": "Designed Raghu, the first Devanagari typeface built for OpenType, and core Indian-script fonts for Microsoft Windows. Trained as a calligrapher, reframing Indic typography as rigorous design infrastructure.",
+  "external_ids": { "wikidata_qid": "Q7278200" },
+  "sources": [
+    { "url": "https://letterformarchive.org/news/the-multilinguascriptic-life-of-r-k-joshi/", "title": "The Multilinguascriptic Life of R. K. Joshi - Letterform Archive" },
+    { "url": "https://homegrown.co.in/homegrown-creators/hand-letter-form-the-many-lives-afterlives-of-indian-typography", "title": "From Hand-Painted Signboards To Contemporary Typefaces - Homegrown India" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

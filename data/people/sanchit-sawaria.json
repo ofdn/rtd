@@ -1,0 +1,17 @@
+{
+  "id": "rtd-p-000044",
+  "slug": "sanchit-sawaria",
+  "name": { "preferred": "Sanchit Sawaria", "alternates": [] },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "bio": "Designed Akhand Devanagari, a compact mono-linear typeface family, and Kathan, Khand, Onsra, and Serein. NID Ahmedabad graduate; recipient of the Type Directors Club Ascenders Award.",
+  "external_ids": { "wikidata_qid": "Q125430699" },
+  "sources": [
+    { "url": "https://fontsinuse.com/type_designers/5021/sanchit-sawaria", "title": "Sanchit Sawaria - Fonts In Use" },
+    { "url": "https://www.designboom.com/project/akhand-devanagari/", "title": "Akhand Devanagari by Sanchit Sawaria - designboom" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

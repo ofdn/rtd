@@ -1,0 +1,18 @@
+{
+  "id": "rtd-p-000047",
+  "slug": "shuchita-grover",
+  "name": { "preferred": "Shuchita Grover", "alternates": [] },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "affiliations": [{ "name": "Ek Type" }],
+  "bio": "Type designer at Ek Type. Designed the Gurmukhi component of Baloo 2 and co-designed the Kannada component with Divya Kowshik, plus Mukta Mahee with Noopur Datye.",
+  "external_ids": { "wikidata_qid": "Q123056365" },
+  "sources": [
+    { "url": "https://github.com/EkType/Baloo2", "title": "EkType/Baloo2 - GitHub" },
+    { "url": "https://www.fontsquirrel.com/fonts/mukta", "title": "Mukta Font Free by EK Type - Font Squirrel" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

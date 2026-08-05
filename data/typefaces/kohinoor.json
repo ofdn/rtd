@@ -1,0 +1,17 @@
+{
+  "id": "rtd-t-000034",
+  "slug": "kohinoor",
+  "name": { "preferred": "Kohinoor", "alternates": [] },
+  "designers": [{ "id": "rtd-p-000045", "role": "designer" }],
+  "foundry": [{ "name": "Indian Type Foundry" }],
+  "scripts": ["Devanagari", "Bengali", "Telugu"],
+  "era": "digital",
+  "description": "A multiscript typeface family for Devanagari, Bengali, and Telugu, permanently exhibited at London's Design Museum since 2016 as part of Designer Maker User.",
+  "sources": [
+    { "url": "https://thebetterindia.com/98296/indian-type-foundry-satya-rajpurohit/", "title": "Indian Type Foundry Makes Fonts for Global Brands - The Better India" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "rtd-p-000045",
+  "slug": "satya-rajpurohit",
+  "name": { "preferred": "Satya Rajpurohit", "alternates": [] },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "bio": "Co-founded the Indian Type Foundry in 2009. Designed the Kohinoor typeface family, permanently displayed at London's Design Museum since 2016. Recipient of SOTA's 2010 Catalyst Award.",
+  "external_ids": { "wikidata_qid": "Q50215689" },
+  "sources": [
+    { "url": "https://thebetterindia.com/98296/indian-type-foundry-satya-rajpurohit/", "title": "Indian Type Foundry Makes Fonts for Global Brands - The Better India" },
+    { "url": "https://www.indiantypefoundry.com/designers/satya-rajpurohit", "title": "Satya Rajpurohit - Indian Type Foundry" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}
