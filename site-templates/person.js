@@ -1,4 +1,4 @@
-import { escapeHtml, pageShell, sourcesList } from "./shared.js";
+import { escapeHtml, pageShell, sourcesList, verificationNote } from "./shared.js";
 
 // `works` is the computed reverse index (typefaces this person is credited
 // on), passed in by build.js — it is never stored on the person record
@@ -37,6 +37,7 @@ export function renderPersonPage(record, { canonicalUrl, works }) {
 <p><a href="../../">Registry of Type Design</a></p>
 <h1>${escapeHtml(record.name.preferred)}</h1>
 <p><small>${escapeHtml(record.id)}</small></p>
+${verificationNote(record)}
 ${record.bio ? `<p>${escapeHtml(record.bio)}</p>` : ""}
 <dl>
 ${record.roles?.length ? `<dt>Roles</dt><dd>${escapeHtml(record.roles.join(", "))}</dd>` : ""}

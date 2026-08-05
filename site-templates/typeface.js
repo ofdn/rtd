@@ -1,4 +1,4 @@
-import { escapeHtml, pageShell, sourcesList } from "./shared.js";
+import { escapeHtml, pageShell, sourcesList, verificationNote } from "./shared.js";
 
 // `designers` is the input record's designers[] enriched with each
 // person's current name/slug (resolved by build.js), so the page can link
@@ -44,6 +44,7 @@ export function renderTypefacePage(record, { canonicalUrl, designers }) {
 <p><a href="../../">Registry of Type Design</a></p>
 <h1>${escapeHtml(record.name.preferred)}</h1>
 <p><small>${escapeHtml(record.id)}</small></p>
+${verificationNote(record)}
 ${record.description ? `<p>${escapeHtml(record.description)}</p>` : ""}
 <dl>
 ${record.foundry?.length ? `<dt>Foundry</dt><dd>${escapeHtml(record.foundry.map((f) => f.name).join(", "))}</dd>` : ""}

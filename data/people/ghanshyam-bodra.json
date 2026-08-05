@@ -1,0 +1,20 @@
+{
+  "id": "RTD-P-000022",
+  "slug": "ghanshyam-bodra",
+  "name": {
+    "preferred": "Ghanshyam Bodra",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "bio": "Credited with early font work for the Ho language's Warang Chiti (Warang Citi) script. Independent corroboration beyond a single video credit has not yet been found, and there is some risk of confusion with unrelated people/businesses sharing the same name.",
+  "external_ids": { "wikidata_qid": "Q123113472" },
+  "sources": [
+    { "url": "https://www.youtube.com/watch?v=B1dBeypqy-c", "title": "Ghanshyam Bodra Unicode !! Ho Font Unicode !! Ho Font Creator !! Ho Font Symbol — YouTube" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

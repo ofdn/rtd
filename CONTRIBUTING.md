@@ -49,6 +49,14 @@ domain automatically.
 `external_ids.wikidata_qid` (and similar) is fine to include — that's just
 a cross-reference, not a source.
 
+If the only source you can find is thin or low-confidence (a bare LinkedIn
+profile with no other detail, for example), don't leave the person or
+typeface out entirely — add the record with `"verification_status":
+"needs_verification"`. The site flags these records so a stronger source
+can be added later. This is different from having *no* independent source
+at all: if you can't find anything to cite, the record doesn't belong here
+yet, flagged or not.
+
 ## What's deliberately out of scope
 
 The schema intentionally has no field for images, no dedicated

@@ -117,6 +117,12 @@
       },
       "description": "Independent, verifiable sources. Must never be Wikidata, Wikipedia, or any Wikimedia project — enforced by scripts/validate.js."
     },
+    "verification_status": {
+      "type": "string",
+      "enum": ["verified", "needs_verification"],
+      "default": "verified",
+      "description": "Set to needs_verification when sources are thin or low-confidence (e.g. a bare LinkedIn profile) rather than omitting the record entirely. Absent/'verified' means sources are considered solid."
+    },
     "record_status": {
       "type": "string",
       "enum": ["active", "merged", "deprecated"]

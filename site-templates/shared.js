@@ -37,6 +37,11 @@ ${body}
 `;
 }
 
+export function verificationNote(record) {
+  if (record.verification_status !== "needs_verification") return "";
+  return `<p><strong>Needs verification:</strong> sources for this record are thin or low-confidence. Help improve it by <a href="https://github.com/ofdn/rtd/blob/main/CONTRIBUTING.md">contributing a stronger source</a>.</p>`;
+}
+
 export function sourcesList(sources) {
   if (!sources || sources.length === 0) return "";
   const items = sources

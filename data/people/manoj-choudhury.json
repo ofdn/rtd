@@ -1,0 +1,20 @@
+{
+  "id": "RTD-P-000021",
+  "slug": "manoj-choudhury",
+  "name": {
+    "preferred": "Manoj Choudhury",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "bio": "Listed as a type designer on a professional networking profile; no independent published work, foundry credit, or biographical detail has been found yet to substantiate further.",
+  "external_ids": { "wikidata_qid": "Q123149032" },
+  "sources": [
+    { "url": "https://in.linkedin.com/in/manoj-choudhury-51450b36", "title": "Manoj Choudhury — LinkedIn" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}
