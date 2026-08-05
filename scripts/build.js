@@ -63,13 +63,20 @@ function writeSlugRedirects(outDir, kindDir, record, canonicalUrl) {
   }
 }
 
-// Resolves ark:<NAAN>/<id> to the record's current URL.
+// Resolves ark:<NAAN>/<id> to the record's current URL. The registered N2T
+// resolver rule for NAAN 54728 targets `<SITE_URL>ark:/<NAAN>/<content>`,
+// not a plain `/ark/<id>/` path, and N2T strips hyphens from the local id
+// before forwarding (ARK spec: hyphens are structural, insignificant,
+// readability-only). Confirmed by resolving ark:54728/rtd-p-000001 through
+// n2t.net and inspecting the actual redirect chain, 2026-08-05.
 function writeArkRedirect(outDir, record, canonicalUrl) {
   const html = renderRedirectPage({
     name: record.name?.preferred ?? record.id,
     targetUrl: canonicalUrl,
   });
   writeFile(outDir, `ark/${record.id}/index.html`, html);
+  const content = record.id.replaceAll("-", "");
+  writeFile(outDir, `ark:/${ARK_NAAN}/${content}/index.html`, html);
 }
 
 function writeBareIdRedirect(outDir, record, canonicalUrl) {
@@ -201,6 +208,20 @@ function build(dataDir, outDir) {
       jsonLd: null,
       body: `<main><h1>ARK service status</h1><p>OK.</p></main>`,
       homePath: "../../",
+      schemaVersion,
+    })
+  );
+  // N2T's own health check resolves ark:54728/servicestatus, which its
+  // registered rule forwards to this exact path, see writeArkRedirect.
+  writeFile(
+    outDir,
+    `ark:/${ARK_NAAN}/servicestatus/index.html`,
+    pageShell({
+      title: "ARK service status",
+      canonicalUrl: `${SITE_URL}ark:/${ARK_NAAN}/servicestatus/`,
+      jsonLd: null,
+      body: `<main><h1>ARK service status</h1><p>OK.</p></main>`,
+      homePath: "../../../",
       schemaVersion,
     })
   );
