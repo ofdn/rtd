@@ -1,0 +1,20 @@
+{
+  "id": "RTD-P-000031",
+  "slug": "pooja-saxena",
+  "name": {
+    "preferred": "Pooja Saxena",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer", "graphic designer"],
+  "bio": "Type and graphic designer specializing in Indic scripts and lettering. Designed Cambay, a libre Devanagari typeface matching the Latin Cantarell. Contributed to typeface projects for GNOME, Google Fonts, and the Centre for Internet and Society's Access to Knowledge programme.",
+  "external_ids": { "wikidata_qid": "Q113568776" },
+  "sources": [
+    { "url": "https://www.type-together.com/pooja-saxena", "title": "Pooja Saxena - TypeTogether" },
+    { "url": "https://www.type-together.com/interview-pooja-saxena", "title": "Interview: Pooja Saxena - TypeTogether" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "RTD-P-000034",
+  "slug": "pria-ravichandran",
+  "name": {
+    "preferred": "Pria Ravichandran",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer", "researcher"],
+  "affiliations": [
+    { "name": "Foundry5" }
+  ],
+  "bio": "Type designer and researcher, co-founder of Foundry5, holding a PhD examining the development of Kannada and Telugu typographic forms. Designed Catamaran, Palanquin, Neue Frutiger Tamil, and Peridot, supporting Latin and Indic scripts.",
+  "external_ids": { "wikidata_qid": "Q113568592" },
+  "sources": [
+    { "url": "https://foundryfivetype.com/about-us/", "title": "About Foundry5" },
+    { "url": "https://typenetwork.com/font-designers/pria-ravichandran", "title": "Pria Ravichandran - Type Network" },
+    { "url": "https://fontsinuse.com/type_designers/5463/pria-ravichandran", "title": "Pria Ravichandran - Fonts In Use" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}
