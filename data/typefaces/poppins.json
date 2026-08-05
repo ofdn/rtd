@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000021",
+  "id": "rtd-t-000021",
   "slug": "poppins",
   "name": {
     "preferred": "Poppins",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000027", "role": "Devanagari design" }
+    { "id": "rtd-p-000027", "role": "Devanagari design" }
   ],
   "foundry": [
     { "name": "Indian Type Foundry", "url": "https://www.indiantypefoundry.com" }

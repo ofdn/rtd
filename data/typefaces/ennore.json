@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000019",
+  "id": "rtd-t-000019",
   "slug": "ennore",
   "name": {
     "preferred": "Ennore",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000025", "role": "designer" }
+    { "id": "rtd-p-000025", "role": "designer" }
   ],
   "foundry": [
     { "name": "Indian Type Foundry", "url": "https://www.indiantypefoundry.com" }

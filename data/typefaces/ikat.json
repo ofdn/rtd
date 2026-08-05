@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000013",
+  "id": "rtd-t-000013",
   "slug": "ikat",
   "name": {
     "preferred": "Ikat",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000014", "role": "designer" }
+    { "id": "rtd-p-000014", "role": "designer" }
   ],
   "scripts": ["Devanagari", "Latin"],
   "era": "digital",

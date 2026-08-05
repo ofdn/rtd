@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000015",
+  "id": "rtd-t-000015",
   "slug": "noto-sans-warang-citi",
   "name": {
     "preferred": "Noto Sans Warang Citi",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000017", "role": "designer" }
+    { "id": "rtd-p-000017", "role": "designer" }
   ],
   "foundry": [
     { "name": "Google Noto Fonts", "url": "https://notofonts.github.io/warang-citi/" }

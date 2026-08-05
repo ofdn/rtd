@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000016",
+  "id": "rtd-t-000016",
   "slug": "hind",
   "name": {
     "preferred": "Hind",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000019", "role": "designer" }
+    { "id": "rtd-p-000019", "role": "designer" }
   ],
   "foundry": [
     { "name": "Indian Type Foundry", "url": "https://www.indiantypefoundry.com" }

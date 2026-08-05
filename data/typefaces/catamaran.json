@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000027",
+  "id": "rtd-t-000027",
   "slug": "catamaran",
   "name": {
     "preferred": "Catamaran",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000034", "role": "designer" }
+    { "id": "rtd-p-000034", "role": "designer" }
   ],
   "scripts": ["Tamil", "Latin"],
   "era": "digital",

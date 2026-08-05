@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000024",
+  "id": "rtd-t-000024",
   "slug": "cambay",
   "name": {
     "preferred": "Cambay",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000031", "role": "designer" }
+    { "id": "rtd-p-000031", "role": "designer" }
   ],
   "scripts": ["Devanagari", "Latin"],
   "era": "digital",

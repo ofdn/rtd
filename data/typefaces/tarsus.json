@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000010",
+  "id": "rtd-t-000010",
   "slug": "tarsus",
   "name": {
     "preferred": "Tarsus",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000012", "role": "designer" }
+    { "id": "rtd-p-000012", "role": "designer" }
   ],
   "foundry": [
     { "name": "Indian Type Foundry", "url": "https://www.indiantypefoundry.com" }

@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000026",
+  "id": "rtd-t-000026",
   "slug": "lohit",
   "name": {
     "preferred": "Lohit",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000033", "role": "designer" }
+    { "id": "rtd-p-000033", "role": "designer" }
   ],
   "foundry": [
     { "name": "Red Hat" }

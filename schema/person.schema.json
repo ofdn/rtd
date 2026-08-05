@@ -18,7 +18,7 @@
   "properties": {
     "id": {
       "type": "string",
-      "pattern": "^RTD-P-[0-9]{6}$",
+      "pattern": "^rtd-p-[0-9]{6}$",
       "description": "Permanent opaque identifier. Never reused, never changed once assigned."
     },
     "slug": {
@@ -138,7 +138,7 @@
     },
     "superseded_by": {
       "type": ["string", "null"],
-      "pattern": "^RTD-P-[0-9]{6}$"
+      "pattern": "^rtd-p-[0-9]{6}$"
     },
     "created_at": { "type": "string", "format": "date" },
     "updated_at": { "type": "string", "format": "date" }

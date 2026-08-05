@@ -37,8 +37,8 @@ break that redirect, so treat the array as append-only.
 
 ## Identifiers
 
-Every record needs a permanent `id` (`RTD-P-000001` for people,
-`RTD-T-000001` for typefaces). Don't compute it by hand, run:
+Every record needs a permanent `id` (`rtd-p-000001` for people,
+`rtd-t-000001` for typefaces). Don't compute it by hand, run:
 
 ```
 node scripts/mint-id.js person "Full Name"
@@ -92,10 +92,9 @@ human-readable page URL, `/people/<slug>/` or `/typefaces/<slug>/`) is
 allowed to change if a record is renamed, the machine-readable resolver
 that never moves is the id-keyed API URL,
 `/api/people/<id>.json` / `/api/typefaces/<id>.json`. If you rename a
-slug, note that the old human page currently stops resolving (there's no
-redirect stub for renamed slugs, only for records marked `merged` or
-`deprecated`), link to records by id in anything meant to be
-long-lived.
+slug, add the old one to `previous_slugs` (see "Renaming a record"
+above) so the old URL keeps redirecting, link to records by id in
+anything meant to be long-lived regardless.
 
 ## Source policy
 

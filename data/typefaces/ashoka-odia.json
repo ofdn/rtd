@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000025",
+  "id": "rtd-t-000025",
   "slug": "ashoka-odia",
   "name": {
     "preferred": "Ashoka Odia",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000032", "role": "designer" }
+    { "id": "rtd-p-000032", "role": "designer" }
   ],
   "foundry": [
     { "name": "Indian Type Foundry", "url": "https://www.indiantypefoundry.com" }

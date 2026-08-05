@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000009",
+  "id": "rtd-t-000009",
   "slug": "hind-siliguri",
   "name": {
     "preferred": "Hind Siliguri",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000009", "role": "designer" }
+    { "id": "rtd-p-000009", "role": "designer" }
   ],
   "foundry": [
     { "name": "Indian Type Foundry", "url": "https://www.indiantypefoundry.com" }

@@ -1,4 +1,4 @@
-import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, nationalityLabel } from "./shared.js";
+import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, nationalityLabel, copyableId } from "./shared.js";
 
 // `works` is the computed reverse index (typefaces this person is credited
 // on), passed in by build.js, it is never stored on the person record
@@ -45,7 +45,7 @@ export function renderPersonPage(record, { canonicalUrl, works, demonyms, relate
 <nav class="breadcrumb"><a href="../../">Registry Home</a> &rsaquo; ${escapeHtml(record.name.preferred)}</nav>
 <div class="record-header">
 <h1>${escapeHtml(record.name.preferred)}</h1>
-<span class="record-id">${escapeHtml(record.id)}</span>
+${copyableId(record.id)}
 </div>
 ${verificationNote(record)}
 <dl class="facts">
@@ -86,7 +86,7 @@ export function renderTombstonePage(record, { canonicalUrl, targetSlug, schemaVe
 <nav class="breadcrumb"><a href="../../">Registry Home</a> &rsaquo; ${escapeHtml(record.name?.preferred ?? record.id)}</nav>
 <div class="record-header">
 <h1>${escapeHtml(record.name?.preferred ?? record.id)}</h1>
-<span class="record-id">${escapeHtml(record.id)}</span>
+${copyableId(record.id)}
 </div>
 <p>${message}</p>
 </main>

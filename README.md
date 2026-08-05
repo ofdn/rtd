@@ -17,8 +17,8 @@ GitHub Pages.
 
 ## Identifiers
 
-Every record has a permanent, opaque id (`RTD-P-000001` for people,
-`RTD-T-000001` for typefaces) that never changes, separate from its
+Every record has a permanent, opaque id (`rtd-p-000001` for people,
+`rtd-t-000001` for typefaces) that never changes, separate from its
 filename/slug (which can change if a record is renamed). Old ids are never
 deleted or reused; merged/deprecated records resolve to a tombstone page
 pointing at the current record.

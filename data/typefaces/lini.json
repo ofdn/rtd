@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000012",
+  "id": "rtd-t-000012",
   "slug": "lini",
   "name": {
     "preferred": "Lini",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000013", "role": "designer" }
+    { "id": "rtd-p-000013", "role": "designer" }
   ],
   "era": "digital",
   "description": "A typeface awarded a Certificate of Excellence by the Type Directors Club (TDC67).",

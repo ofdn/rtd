@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000002",
+  "id": "rtd-t-000002",
   "slug": "example-typeface-two",
   "name": {
     "preferred": "Example Testface Two",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000001", "role": "digitization" }
+    { "id": "rtd-p-000001", "role": "digitization" }
   ],
   "design_year": "2001",
   "era": "digital",

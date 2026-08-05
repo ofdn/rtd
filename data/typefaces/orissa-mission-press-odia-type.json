@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000029",
+  "id": "rtd-t-000029",
   "slug": "orissa-mission-press-odia-type",
   "name": {
     "preferred": "Orissa Mission Press Odia Type",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000037", "role": "designer" }
+    { "id": "rtd-p-000037", "role": "designer" }
   ],
   "foundry": [
     { "name": "Orissa Mission Press" }

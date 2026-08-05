@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000018",
+  "id": "rtd-t-000018",
   "slug": "kunkun-devanagari",
   "name": {
     "preferred": "KunKun Devanagari",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000024", "role": "designer" }
+    { "id": "rtd-p-000024", "role": "designer" }
   ],
   "foundry": [
     { "name": "Indian Type Foundry", "url": "https://www.indiantypefoundry.com" }

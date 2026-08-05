@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000004",
+  "id": "rtd-t-000004",
   "slug": "timmana",
   "name": {
     "preferred": "Timmana",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000004", "role": "designer" }
+    { "id": "rtd-p-000004", "role": "designer" }
   ],
   "classification": "display",
   "scripts": ["Telugu"],

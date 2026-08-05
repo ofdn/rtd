@@ -15,8 +15,8 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const repoRoot = join(__dirname, "..");
 
 const KIND_CONFIG = {
-  person: { dir: "data/people", prefix: "RTD-P-" },
-  typeface: { dir: "data/typefaces", prefix: "RTD-T-" },
+  person: { dir: "data/people", prefix: "rtd-p-" },
+  typeface: { dir: "data/typefaces", prefix: "rtd-t-" },
 };
 
 function slugify(name) {

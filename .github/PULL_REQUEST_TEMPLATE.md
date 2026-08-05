@@ -1,6 +1,6 @@
 ## What does this PR add or change?
 
-<!-- e.g. "Add person: Jan Tschichold" or "Fix death_year on RTD-P-000042" -->
+<!-- e.g. "Add person: Jan Tschichold" or "Fix death_year on rtd-p-000042" -->
 
 ## Checklist
 

@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000008",
+  "id": "rtd-t-000008",
   "slug": "laila",
   "name": {
     "preferred": "Laila",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000008", "role": "Devanagari design" }
+    { "id": "rtd-p-000008", "role": "Devanagari design" }
   ],
   "scripts": ["Devanagari", "Latin"],
   "era": "digital",

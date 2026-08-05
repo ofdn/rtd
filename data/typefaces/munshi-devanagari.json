@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000020",
+  "id": "rtd-t-000020",
   "slug": "munshi-devanagari",
   "name": {
     "preferred": "Munshi Devanagari",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000027", "role": "designer" }
+    { "id": "rtd-p-000027", "role": "designer" }
   ],
   "foundry": [
     { "name": "Indian Type Foundry", "url": "https://www.indiantypefoundry.com" }

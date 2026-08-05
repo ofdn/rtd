@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000023",
+  "id": "rtd-t-000023",
   "slug": "baloo",
   "name": {
     "preferred": "Baloo",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000029", "role": "designer" }
+    { "id": "rtd-p-000029", "role": "designer" }
   ],
   "scripts": ["Latin"],
   "classification": "display",

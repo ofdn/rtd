@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000022",
+  "id": "rtd-t-000022",
   "slug": "sentient",
   "name": {
     "preferred": "Sentient",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000028", "role": "designer" }
+    { "id": "rtd-p-000028", "role": "designer" }
   ],
   "foundry": [
     { "name": "Indian Type Foundry", "url": "https://www.indiantypefoundry.com" }

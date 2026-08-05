@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000003",
+  "id": "rtd-t-000003",
   "slug": "ramaraja",
   "name": {
     "preferred": "Ramaraja",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000004", "role": "designer" }
+    { "id": "rtd-p-000004", "role": "designer" }
   ],
   "classification": "serif",
   "era": "digital",

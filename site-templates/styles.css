@@ -16,6 +16,7 @@
   --color-outline: #7e7576;
   --color-outline-variant: #d8d2d3;
   --color-callout-bg: #efefef;
+  --color-info-accent: #1b4332;
   --font-logo: "Plus Jakarta Sans", sans-serif;
   --font-heading: "Source Serif 4", Georgia, serif;
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
@@ -35,6 +36,7 @@
     --color-outline: #8f8788;
     --color-outline-variant: #4a4344;
     --color-callout-bg: #3a3536;
+    --color-info-accent: #2d6a4f;
   }
 }
 
@@ -128,6 +130,27 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 
 .header-search button:hover { color: var(--color-text); }
 
+.info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--color-info-accent);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+  text-decoration: none;
+  margin-left: 0.75rem;
+}
+.info-icon:hover { opacity: 0.85; }
+.info-icon-solo { margin-left: auto; }
+
 main { max-width: var(--container-max); margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
 
 .breadcrumb {
@@ -167,12 +190,28 @@ h2 {
 
 .record-id {
   display: inline-block;
+  font-family: var(--font-body);
   font-size: 0.7rem;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
   color: var(--color-text-muted);
+  background: transparent;
   border: 1px solid var(--color-outline-variant);
   padding: 0.15rem 0.5rem;
+}
+
+button.copy-id {
+  cursor: pointer;
+}
+button.copy-id:hover {
+  border-color: var(--color-outline);
+  color: var(--color-text);
+}
+button.copy-id.copied {
+  border-color: var(--color-info-accent);
+  color: var(--color-info-accent);
+}
+button.copy-id.copied::after {
+  content: " \2713";
 }
 
 .callout {

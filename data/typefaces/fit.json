@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000011",
+  "id": "rtd-t-000011",
   "slug": "fit",
   "name": {
     "preferred": "Fit",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000013", "role": "Devanagari design" }
+    { "id": "rtd-p-000013", "role": "Devanagari design" }
   ],
   "scripts": ["Devanagari", "Latin"],
   "release_year": "2021",

@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000014",
+  "id": "rtd-t-000014",
   "slug": "ek-odia",
   "name": {
     "preferred": "Ek Odia",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000016", "role": "contributor" }
+    { "id": "rtd-p-000016", "role": "contributor" }
   ],
   "foundry": [
     { "name": "Ek Type", "url": "https://ektype.in" }

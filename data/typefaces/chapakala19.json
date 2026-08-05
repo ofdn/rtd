@@ -1,14 +1,14 @@
 {
-  "id": "RTD-T-000030",
+  "id": "rtd-t-000030",
   "slug": "chapakala19",
   "name": {
     "preferred": "Chapakala19",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000039", "role": "revival design lead" },
-    { "id": "RTD-P-000038", "role": "type design advisor" },
-    { "id": "RTD-P-000026", "role": "font engineering and direction advisor" }
+    { "id": "rtd-p-000039", "role": "revival design lead" },
+    { "id": "rtd-p-000038", "role": "type design advisor" },
+    { "id": "rtd-p-000026", "role": "font engineering and direction advisor" }
   ],
   "foundry": [
     { "name": "O Foundation", "url": "https://theofdn.org" }

@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000007",
+  "id": "rtd-t-000007",
   "slug": "kalkal",
   "name": {
     "preferred": "Kalkal",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000007", "role": "designer" }
+    { "id": "rtd-p-000007", "role": "designer" }
   ],
   "classification": "slab serif",
   "era": "digital",

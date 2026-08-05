@@ -1,4 +1,4 @@
-import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList } from "./shared.js";
+import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, copyableId } from "./shared.js";
 
 // `designers` is the input record's designers[] enriched with each
 // person's current name/slug (resolved by build.js), so the page can link
@@ -52,7 +52,7 @@ export function renderTypefacePage(record, { canonicalUrl, designers, related, s
 <nav class="breadcrumb"><a href="../../">Registry Home</a> &rsaquo; ${escapeHtml(record.name.preferred)}</nav>
 <div class="record-header">
 <h1>${escapeHtml(record.name.preferred)}</h1>
-<span class="record-id">${escapeHtml(record.id)}</span>
+${copyableId(record.id)}
 </div>
 ${verificationNote(record)}
 <dl class="facts">

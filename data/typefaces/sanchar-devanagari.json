@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000006",
+  "id": "rtd-t-000006",
   "slug": "sanchar-devanagari",
   "name": {
     "preferred": "Sanchar Devanagari",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000005", "role": "designer" }
+    { "id": "rtd-p-000005", "role": "designer" }
   ],
   "foundry": [
     { "name": "Indian Type Foundry", "url": "https://www.indiantypefoundry.com" }

@@ -10,6 +10,10 @@ export function escapeHtml(value) {
     .replaceAll('"', "&quot;");
 }
 
+export function copyableId(id) {
+  return `<button type="button" class="record-id copy-id" data-copy="${escapeHtml(id)}">${escapeHtml(id)}</button>`;
+}
+
 // JSON-LD is embedded inside a <script> tag; guard against a source string
 // containing "</script>" from prematurely closing the tag.
 export function jsonLdScript(data) {
@@ -91,11 +95,22 @@ ${jsonLd ? jsonLdScript(jsonLd) : ""}
 <header class="site-header">
 <a class="logo" href="${escapeHtml(homePath)}">Registry of Type Design</a>
 ${showHeaderSearch ? headerSearchForm(homePath) : ""}
+<a class="info-icon${showHeaderSearch ? "" : " info-icon-solo"}" href="${escapeHtml(homePath)}info/" aria-label="About this registry">i</a>
 </header>
 ${body}
 <footer class="site-footer">
 <p>&copy; ${new Date().getFullYear()} Subhashish Panigrahi. Site and data licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.${schemaVersion ? ` Schema v${escapeHtml(schemaVersion)}.` : ""} <a href="${REPO_URL}">Source on GitHub</a>. <a href="${escapeHtml(homePath)}preservation/">Preservation statement</a>.</p>
 </footer>
+<script>
+document.querySelectorAll(".copy-id").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    navigator.clipboard.writeText(btn.getAttribute("data-copy")).then(function () {
+      btn.classList.add("copied");
+      setTimeout(function () { btn.classList.remove("copied"); }, 1200);
+    });
+  });
+});
+</script>
 </body>
 </html>
 `;

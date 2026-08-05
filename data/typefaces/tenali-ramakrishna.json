@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000005",
+  "id": "rtd-t-000005",
   "slug": "tenali-ramakrishna",
   "name": {
     "preferred": "Tenali Ramakrishna",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000004", "role": "designer" }
+    { "id": "rtd-p-000004", "role": "designer" }
   ],
   "classification": "sans-serif",
   "era": "digital",

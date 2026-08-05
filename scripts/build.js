@@ -20,6 +20,7 @@ import { toCsv } from "./csv.js";
 import { renderPersonPage, renderTombstonePage } from "../site-templates/person.js";
 import { renderTypefacePage } from "../site-templates/typeface.js";
 import { renderHomePage } from "../site-templates/home.js";
+import { renderInfoPage } from "../site-templates/info.js";
 import { renderRedirectPage, nationalityLabel, pageShell } from "../site-templates/shared.js";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
@@ -60,24 +61,22 @@ function writeSlugRedirects(outDir, kindDir, record, canonicalUrl) {
   }
 }
 
-// ARK support: `ark:<NAAN>/rtd-p-000026` resolves (via N2T.net, once a NAAN
-// is registered) to `${SITE_URL}ark/rtd-p-000026`, which redirects here to
-// the record's real current URL. The RTD id itself is reused as the ARK
-// "blade" rather than minting a second id scheme, since it's already
-// permanent and globally unique across people and typefaces (validated in
-// scripts/validate.js), and kind is already derivable from the id's own
-// RTD-P-/RTD-T- prefix, so one flat ark/<id>/ namespace covers both.
-// Lowercased specifically for the ARK path, per ARK's own best-practice
-// guidance (lowercase-only avoids a real class of transcription/case-fold
-// errors when an ARK is copied, retyped, or read aloud); the canonical
-// RTD id itself stays uppercase everywhere else, this is a presentation
-// choice for the ARK blade only, not a rename of the id scheme.
+// Resolves ark:<NAAN>/<id> to the record's current URL.
 function writeArkRedirect(outDir, record, canonicalUrl) {
   const html = renderRedirectPage({
     name: record.name?.preferred ?? record.id,
     targetUrl: canonicalUrl,
   });
-  writeFile(outDir, `ark/${record.id.toLowerCase()}/index.html`, html);
+  writeFile(outDir, `ark/${record.id}/index.html`, html);
+}
+
+function writeBareIdRedirect(outDir, record, canonicalUrl) {
+  const html = renderRedirectPage({
+    name: record.name?.preferred ?? record.id,
+    targetUrl: canonicalUrl,
+  });
+  writeFile(outDir, `${record.id}/index.html`, html);
+  writeFile(outDir, `${record.id.toUpperCase()}/index.html`, html);
 }
 
 function build(dataDir, outDir) {
@@ -191,10 +190,6 @@ function build(dataDir, outDir) {
     readFileSync(join(repoRoot, "site-templates/styles.css"), "utf8")
   );
 
-  // Dedicated health-check page for the ARK NAAN registry's periodic test
-  // ARK (ark:<NAAN>/servicestatus), kept separate from any real record so
-  // renaming, merging, or deprecating a person/typeface can never make the
-  // registry's automated test start failing.
   writeFile(
     outDir,
     "ark/servicestatus/index.html",
@@ -202,16 +197,12 @@ function build(dataDir, outDir) {
       title: "ARK service status",
       canonicalUrl: `${SITE_URL}ark/servicestatus/`,
       jsonLd: null,
-      body: `<main><h1>ARK service status</h1><p>OK. This endpoint exists only to answer the ARK NAAN registry's periodic test ARK, it is not a registry record.</p></main>`,
+      body: `<main><h1>ARK service status</h1><p>OK.</p></main>`,
       homePath: "../../",
       schemaVersion,
     })
   );
 
-  // Public preservation/persistence statement, referenced from the ARK
-  // NAAN application's "does the memory organization commit to data
-  // persistence" question, linked from the footer so the commitment is
-  // visible on the live site, not just made in a form submission.
   writeFile(
     outDir,
     "preservation/index.html",
@@ -223,13 +214,24 @@ function build(dataDir, outDir) {
 <h1>Preservation and persistence</h1>
 <p class="description">Registry of Type Design commits to best-effort persistent access to its identifiers and data.</p>
 <ul class="plain-list">
-<li>Ids (<code>RTD-P-</code>/<code>RTD-T-</code>, and the ARK identifiers built on them) are never reused or reassigned once published. A merged or deprecated record keeps its id and gets a redirect to wherever it lives now, it never gets deleted or handed to a different record.</li>
-<li>All data is openly licensed (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>) and published as bulk CSV/NDJSON dumps specifically so it can be independently mirrored, not only accessed live from this site.</li>
+<li>Ids (<code>rtd-p-</code>/<code>rtd-t-</code>, and the ARK identifiers built on them) are never reused or reassigned once published. A merged or deprecated record keeps its id and gets a redirect to wherever it lives now, it never gets deleted or handed to a different record.</li>
+<li>All data is openly licensed (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>) and published as bulk CSV/NDJSON dumps, for anyone who wants to mirror the data independently of this site.</li>
 <li>The full source and edit history is public on <a href="https://github.com/ofdn/rtd">GitHub</a>. Anyone who has cloned the repository already holds a complete, independently usable copy of the registry and its history.</li>
 </ul>
-<p>Registry of Type Design is an independent, community-run project, not a funded institution, so we can't promise formal dark-archive or LOCKSS-style preservation today. In practice, open licensing, public version history, and downloadable dumps mean the data survives independently of any single server or organization staying online.</p>
+<p>Registry of Type Design is an independent, community-run project. We can't promise formal dark-archive or LOCKSS-style preservation today. Open licensing, public version history, and downloadable dumps mean the data survives independently of any single server or organization staying online.</p>
 </main>`,
       homePath: "../",
+      schemaVersion,
+    })
+  );
+
+  writeFile(
+    outDir,
+    "info/index.html",
+    renderInfoPage({
+      canonicalUrl: `${SITE_URL}info/`,
+      peopleCount: people.filter((p) => p.record_status === "active").length,
+      typefacesCount: typefaces.filter((t) => t.record_status === "active").length,
       schemaVersion,
     })
   );
@@ -281,6 +283,7 @@ function build(dataDir, outDir) {
     }
     writeSlugRedirects(outDir, "people", record, canonicalUrl);
     writeArkRedirect(outDir, record, canonicalUrl);
+    writeBareIdRedirect(outDir, record, canonicalUrl);
 
     peopleApiIndex.push({
       id: record.id,
@@ -350,6 +353,7 @@ function build(dataDir, outDir) {
     }
     writeSlugRedirects(outDir, "typefaces", record, canonicalUrl);
     writeArkRedirect(outDir, record, canonicalUrl);
+    writeBareIdRedirect(outDir, record, canonicalUrl);
 
     typefacesApiIndex.push({
       id: record.id,

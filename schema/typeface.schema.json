@@ -18,7 +18,7 @@
   "properties": {
     "id": {
       "type": "string",
-      "pattern": "^RTD-T-[0-9]{6}$",
+      "pattern": "^rtd-t-[0-9]{6}$",
       "description": "Permanent opaque identifier. Never reused, never changed once assigned."
     },
     "slug": {
@@ -52,7 +52,7 @@
         "additionalProperties": false,
         "required": ["id", "role"],
         "properties": {
-          "id": { "type": "string", "pattern": "^RTD-P-[0-9]{6}$" },
+          "id": { "type": "string", "pattern": "^rtd-p-[0-9]{6}$" },
           "role": { "type": "string", "minLength": 1 }
         }
       },
@@ -125,7 +125,7 @@
     },
     "superseded_by": {
       "type": ["string", "null"],
-      "pattern": "^RTD-T-[0-9]{6}$"
+      "pattern": "^rtd-t-[0-9]{6}$"
     },
     "created_at": { "type": "string", "format": "date" },
     "updated_at": { "type": "string", "format": "date" }

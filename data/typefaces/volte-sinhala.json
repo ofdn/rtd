@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000002",
+  "id": "rtd-t-000002",
   "slug": "volte-sinhala",
   "name": {
     "preferred": "Volte Sinhala",
     "alternates": []
   },
   "designers": [
-    { "id": "RTD-P-000001", "role": "designer" }
+    { "id": "rtd-p-000001", "role": "designer" }
   ],
   "foundry": [
     { "name": "Indian Type Foundry", "url": "https://www.indiantypefoundry.com" }

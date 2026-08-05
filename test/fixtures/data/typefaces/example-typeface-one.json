@@ -1,12 +1,12 @@
 {
-  "id": "RTD-T-000001",
+  "id": "rtd-t-000001",
   "slug": "example-typeface-one",
   "name": {
     "preferred": "Example Testface One",
     "alternates": ["Testface One Regular"]
   },
   "designers": [
-    { "id": "RTD-P-000001", "role": "designer" }
+    { "id": "rtd-p-000001", "role": "designer" }
   ],
   "foundry": [
     { "name": "Example Foundry", "url": "https://example.org/foundry" }
