@@ -7,9 +7,10 @@
   },
   "countries": ["India"],
   "roles": ["type designer"],
+  "bio": "Indian type designer. Better source required.",
   "external_ids": { "wikidata_qid": "Q123149032" },
   "sources": [
-    { "url": "https://in.linkedin.com/in/manoj-choudhury-51450b36", "title": "Manoj Choudhury — LinkedIn" }
+    { "url": "https://in.linkedin.com/in/manoj-choudhury-51450b36", "title": "Manoj Choudhury - LinkedIn" }
   ],
   "verification_status": "needs_verification",
   "record_status": "active",

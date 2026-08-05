@@ -16,8 +16,8 @@
   "era": "digital",
   "description": "A handwritten-sans Devanagari typeface based on the designer's own handwriting, with over 800 glyphs across Light, Regular, and Bold styles.",
   "sources": [
-    { "url": "https://www.myfonts.com/collections/kunkun-devanagari-font-indian-type-foundry/", "title": "KunKun Devanagari Font — MyFonts" },
-    { "url": "https://www.indiantypefoundry.com/news/eurosoft-recia-zahrah-kunkun", "title": "Eurosoft, Recia, Zahrah, and KunKun — Indian Type Foundry" }
+    { "url": "https://www.myfonts.com/collections/kunkun-devanagari-font-indian-type-foundry/", "title": "KunKun Devanagari Font - MyFonts" },
+    { "url": "https://www.indiantypefoundry.com/news/eurosoft-recia-zahrah-kunkun", "title": "Eurosoft, Recia, Zahrah, and KunKun - Indian Type Foundry" }
   ],
   "record_status": "active",
   "superseded_by": null,

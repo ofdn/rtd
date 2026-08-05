@@ -1,14 +1,14 @@
 # Registry of Type Design
 
 A global, human- and machine-readable registry of typefaces and the people
-who made them — digital and pre-digital, in any script or writing system.
+who made them - digital and pre-digital, in any script or writing system.
 
 ## What this is
 
-- `data/people/*.json` — one file per person (type designers and other
+- `data/people/*.json` - one file per person (type designers and other
   professionals involved in creating typefaces).
-- `data/typefaces/*.json` — one file per typeface.
-- `schema/` — the JSON Schema each record must validate against.
+- `data/typefaces/*.json` - one file per typeface.
+- `schema/` - the JSON Schema each record must validate against.
 
 These JSON files are the source of truth and are edited directly via pull
 request. A build step compiles them into a static site (human-readable
@@ -26,7 +26,7 @@ pointing at the current record.
 ## Sourcing policy
 
 Sources must be independent and verifiable. **Wikidata, Wikipedia, and any
-other Wikimedia project may never be used as a source** — see
+other Wikimedia project may never be used as a source** - see
 `CONTRIBUTING.md`. This is enforced in CI, not just documentation.
 
 ## Contributing
@@ -44,4 +44,4 @@ npm run build      # compile data/ into dist/
 ## License
 
 © Subhashish Panigrahi. Registry data is licensed under [CC BY-SA
-4.0](https://creativecommons.org/licenses/by-sa/4.0/) — see `LICENSE`.
+4.0](https://creativecommons.org/licenses/by-sa/4.0/) - see `LICENSE`.
