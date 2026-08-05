@@ -1,0 +1,28 @@
+{
+  "id": "RTD-P-000036",
+  "slug": "panchanan-karmakar",
+  "name": {
+    "preferred": "Panchanan Karmakar",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["punchcutter", "type designer"],
+  "death_year": "1804",
+  "active_years": { "start": "1778", "end": "1804" },
+  "scripts": ["Bengali", "Devanagari", "Arabic", "Persian", "Marathi", "Telugu", "Burmese", "Chinese"],
+  "affiliations": [
+    { "name": "East India Company Press, Kolkata", "start_year": "1779", "end_year": "1799" },
+    { "name": "Serampore Mission Press", "start_year": "1799" }
+  ],
+  "bio": "Punchcutter who created the first Bengali typeface in 1778 under Charles Wilkins, used to print Halhed's Grammar of the Bengal Language. Later worked at the Serampore Mission Press, developing Devanagari type in 1803, the first Nagari type produced in India, and type for a total of 14 languages.",
+  "external_ids": { "wikidata_qid": "Q23614810" },
+  "sources": [
+    { "url": "https://en.banglapedia.org/index.php/Panchanan_Karmakar", "title": "Panchanan Karmakar - Banglapedia" },
+    { "url": "https://fonts.atipra.in/panchanan.html", "title": "Panchanan, digital revival of the first Bengali typeface" },
+    { "url": "https://typedrawers.com/discussion/5276/panchanan-a-project-for-digitalisation-of-first-bengali-typeface-created-by-panchanan-karmakar", "title": "Panchanan, digitalisation project - TypeDrawers" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "RTD-P-000038",
+  "slug": "yesha-goshar",
+  "name": {
+    "preferred": "Yesha Goshar",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer", "graphic designer"],
+  "affiliations": [
+    { "name": "Ek Type" }
+  ],
+  "bio": "Type and graphic designer at Ek Type, Mumbai. Designed Anek Latin and Anek Odia as part of the multiscript Anek project, and contributed to Honk with Noopur Datye and to Baloo 2's Odia script. Advised on the Chapakala19 Odia revival typeface.",
+  "external_ids": { "wikidata_qid": "Q113686759" },
+  "sources": [
+    { "url": "https://fontsinuse.com/type_designers/8527/yesha-goshar", "title": "Yesha Goshar - Fonts In Use" },
+    { "url": "https://www.typotheque.com/authors/yesha-goshar", "title": "Yesha Goshar - Typotheque" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

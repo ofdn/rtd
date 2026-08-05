@@ -1,0 +1,19 @@
+{
+  "id": "RTD-P-000039",
+  "slug": "subhashish-panigrahi",
+  "name": {
+    "preferred": "Subhashish Panigrahi",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "bio": "Led the design of Chapakala19, a digital revival of the 19th-century Odia typeface used by the Orissa Mission Press, following letterforms from books printed between approximately 1810 and 1875, focused on body text rather than display styles.",
+  "sources": [
+    { "url": "https://github.com/ofdn/Chapakala", "title": "Chapakala: Revival Odia typeface family, GitHub" },
+    { "url": "https://theofdn.org/activities/type/", "title": "Type design activities, O Foundation" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}
