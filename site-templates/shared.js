@@ -48,6 +48,8 @@ export function renderRedirectPage({ name, targetUrl }) {
 // large hero search, inlined so the site has no icon-font dependency.
 export const SEARCH_ICON = `<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>`;
 
+const INFO_ICON = `<svg aria-hidden="true" width="28" height="28" viewBox="0 0 500 500"><circle fill="#4f7744" cx="250" cy="250" r="250"/><path fill="#fff" d="M249.9,155.2c-10.2,0-19-3.4-26.4-10.3-7.3-6.9-11-15.1-11-24.6s3.7-17.9,11-24.7c7.3-6.8,16.1-10.2,26.4-10.2s19.2,3.4,26.6,10.2c7.3,6.8,11,15.1,11,24.9s-3.7,17.7-11,24.5c-7.3,6.8-16.2,10.2-26.6,10.2ZM213.8,414.6v-232.1h72.5v232.1h-72.5Z"/></svg>`;
+
 // A single GET form works everywhere: on the home page itself, action=""
 // submits back to the same page (progressively enhanced into a live
 // client-side filter by home.js); on a person/typeface page, homePath
@@ -95,7 +97,7 @@ ${jsonLd ? jsonLdScript(jsonLd) : ""}
 <header class="site-header">
 <a class="logo" href="${escapeHtml(homePath)}">Registry of Type Design</a>
 ${showHeaderSearch ? headerSearchForm(homePath) : ""}
-<a class="info-icon${showHeaderSearch ? "" : " info-icon-solo"}" href="${escapeHtml(homePath)}info/" aria-label="About this registry">i</a>
+<a class="info-icon${showHeaderSearch ? "" : " info-icon-solo"}" href="${escapeHtml(homePath)}info/" aria-label="About this registry">${INFO_ICON}</a>
 </header>
 ${body}
 <footer class="site-footer">
@@ -129,22 +131,22 @@ export function identifierLinks(externalIds) {
   if (!externalIds) return [];
   const links = [];
   if (externalIds.wikidata_qid) {
-    links.push({ label: "Wikidata", url: `https://www.wikidata.org/wiki/${externalIds.wikidata_qid}` });
+    links.push({ label: "Wikidata", value: externalIds.wikidata_qid, url: `https://www.wikidata.org/wiki/${externalIds.wikidata_qid}` });
   }
   if (externalIds.viaf) {
-    links.push({ label: "VIAF", url: `https://viaf.org/viaf/${externalIds.viaf}` });
+    links.push({ label: "VIAF", value: externalIds.viaf, url: `https://viaf.org/viaf/${externalIds.viaf}` });
   }
   if (externalIds.isni) {
-    links.push({ label: "ISNI", url: `https://isni.org/isni/${externalIds.isni.replaceAll(" ", "")}` });
+    links.push({ label: "ISNI", value: externalIds.isni, url: `https://isni.org/isni/${externalIds.isni.replaceAll(" ", "")}` });
   }
   if (externalIds.lc_naf) {
-    links.push({ label: "LC/NAF", url: `https://id.loc.gov/authorities/names/${externalIds.lc_naf}` });
+    links.push({ label: "LC/NAF", value: externalIds.lc_naf, url: `https://id.loc.gov/authorities/names/${externalIds.lc_naf}` });
   }
   if (externalIds.gnd) {
-    links.push({ label: "GND", url: `https://d-nb.info/gnd/${externalIds.gnd}` });
+    links.push({ label: "GND", value: externalIds.gnd, url: `https://d-nb.info/gnd/${externalIds.gnd}` });
   }
   if (externalIds.worldcat_entity) {
-    links.push({ label: "WorldCat", url: `https://id.oclc.org/worldcat/entity/${externalIds.worldcat_entity}` });
+    links.push({ label: "WorldCat", value: externalIds.worldcat_entity, url: `https://id.oclc.org/worldcat/entity/${externalIds.worldcat_entity}` });
   }
   return links;
 }
@@ -158,7 +160,10 @@ export function identifiersList(externalIds) {
   const links = identifierLinks(externalIds);
   if (!links.length) return "";
   const items = links
-    .map((l) => `<li>${escapeHtml(l.label)}: <a href="${escapeHtml(l.url)}">${escapeHtml(l.url)}</a></li>`)
+    .map(
+      (l) =>
+        `<li>${escapeHtml(l.label)}: <a href="${escapeHtml(l.url)}">${escapeHtml(l.url)}</a> <button type="button" class="copy-id copy-inline" data-copy="${escapeHtml(l.value)}" aria-label="Copy ${escapeHtml(l.label)} id">copy</button></li>`
+    )
     .join("\n");
   return `<h2>Identifiers</h2>\n<ul class="plain-list">\n${items}\n</ul>`;
 }

@@ -138,16 +138,10 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   width: 1.75rem;
   height: 1.75rem;
   border-radius: 50%;
-  background: var(--color-info-accent);
-  color: #ffffff;
-  font-family: var(--font-heading);
-  font-style: italic;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1;
   text-decoration: none;
   margin-left: 0.75rem;
 }
+.info-icon svg { display: block; width: 100%; height: 100%; }
 .info-icon:hover { opacity: 0.85; }
 .info-icon-solo { margin-left: auto; }
 
@@ -213,6 +207,21 @@ button.copy-id.copied {
 button.copy-id.copied::after {
   content: " \2713";
 }
+
+button.copy-inline {
+  display: inline-block;
+  border: none;
+  background: none;
+  padding: 0;
+  margin-left: 0.3rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--color-link);
+  text-decoration: underline;
+  cursor: pointer;
+}
+button.copy-inline:hover { color: var(--color-text); }
+button.copy-inline.copied { color: var(--color-info-accent); text-decoration: none; }
 
 .callout {
   background: var(--color-callout-bg);
