@@ -208,6 +208,32 @@ function build(dataDir, outDir) {
     })
   );
 
+  // Public preservation/persistence statement, referenced from the ARK
+  // NAAN application's "does the memory organization commit to data
+  // persistence" question, linked from the footer so the commitment is
+  // visible on the live site, not just made in a form submission.
+  writeFile(
+    outDir,
+    "preservation/index.html",
+    pageShell({
+      title: "Preservation and persistence",
+      canonicalUrl: `${SITE_URL}preservation/`,
+      jsonLd: null,
+      body: `<main>
+<h1>Preservation and persistence</h1>
+<p class="description">Registry of Type Design commits to best-effort persistent access to its identifiers and data.</p>
+<ul class="plain-list">
+<li>Ids (<code>RTD-P-</code>/<code>RTD-T-</code>, and the ARK identifiers built on them) are never reused or reassigned once published. A merged or deprecated record keeps its id and gets a redirect to wherever it lives now, it never gets deleted or handed to a different record.</li>
+<li>All data is openly licensed (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>) and published as bulk CSV/NDJSON dumps specifically so it can be independently mirrored, not only accessed live from this site.</li>
+<li>The full source and edit history is public on <a href="https://github.com/ofdn/rtd">GitHub</a>. Anyone who has cloned the repository already holds a complete, independently usable copy of the registry and its history.</li>
+</ul>
+<p>Registry of Type Design is an independent, community-run project, not a funded institution, so we can't promise formal dark-archive or LOCKSS-style preservation today. In practice, open licensing, public version history, and downloadable dumps mean the data survives independently of any single server or organization staying online.</p>
+</main>`,
+      homePath: "../",
+      schemaVersion,
+    })
+  );
+
   // --- People ---
   const peopleApiIndex = [];
   for (const record of people) {

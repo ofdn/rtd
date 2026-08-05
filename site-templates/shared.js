@@ -94,7 +94,7 @@ ${showHeaderSearch ? headerSearchForm(homePath) : ""}
 </header>
 ${body}
 <footer class="site-footer">
-<p>&copy; ${new Date().getFullYear()} Subhashish Panigrahi. Site and data licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.${schemaVersion ? ` Schema v${escapeHtml(schemaVersion)}.` : ""} <a href="${REPO_URL}">Source on GitHub</a>.</p>
+<p>&copy; ${new Date().getFullYear()} Subhashish Panigrahi. Site and data licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.${schemaVersion ? ` Schema v${escapeHtml(schemaVersion)}.` : ""} <a href="${REPO_URL}">Source on GitHub</a>. <a href="${escapeHtml(homePath)}preservation/">Preservation statement</a>.</p>
 </footer>
 </body>
 </html>
