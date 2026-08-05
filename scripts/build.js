@@ -60,19 +60,24 @@ function writeSlugRedirects(outDir, kindDir, record, canonicalUrl) {
   }
 }
 
-// ARK support: `ark:<NAAN>/RTD-P-000026` resolves (via N2T.net, once a NAAN
-// is registered) to `${SITE_URL}ark/RTD-P-000026`, which redirects here to
+// ARK support: `ark:<NAAN>/rtd-p-000026` resolves (via N2T.net, once a NAAN
+// is registered) to `${SITE_URL}ark/rtd-p-000026`, which redirects here to
 // the record's real current URL. The RTD id itself is reused as the ARK
 // "blade" rather than minting a second id scheme, since it's already
 // permanent and globally unique across people and typefaces (validated in
 // scripts/validate.js), and kind is already derivable from the id's own
 // RTD-P-/RTD-T- prefix, so one flat ark/<id>/ namespace covers both.
+// Lowercased specifically for the ARK path, per ARK's own best-practice
+// guidance (lowercase-only avoids a real class of transcription/case-fold
+// errors when an ARK is copied, retyped, or read aloud); the canonical
+// RTD id itself stays uppercase everywhere else, this is a presentation
+// choice for the ARK blade only, not a rename of the id scheme.
 function writeArkRedirect(outDir, record, canonicalUrl) {
   const html = renderRedirectPage({
     name: record.name?.preferred ?? record.id,
     targetUrl: canonicalUrl,
   });
-  writeFile(outDir, `ark/${record.id}/index.html`, html);
+  writeFile(outDir, `ark/${record.id.toLowerCase()}/index.html`, html);
 }
 
 function build(dataDir, outDir) {
