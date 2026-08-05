@@ -1,7 +1,7 @@
-import { escapeHtml, pageShell, sourcesList, verificationNote } from "./shared.js";
+import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris } from "./shared.js";
 
 // `works` is the computed reverse index (typefaces this person is credited
-// on), passed in by build.js — it is never stored on the person record
+// on), passed in by build.js, it is never stored on the person record
 // itself, to avoid the same relationship being hand-maintained in two files.
 export function renderPersonPage(record, { canonicalUrl, works }) {
   const jsonLd = {
@@ -17,9 +17,7 @@ export function renderPersonPage(record, { canonicalUrl, works }) {
     nationality: record.countries?.length ? record.countries : undefined,
     jobTitle: record.roles?.length ? record.roles : undefined,
     url: canonicalUrl,
-    sameAs: record.external_ids?.wikidata_qid
-      ? [`https://www.wikidata.org/wiki/${record.external_ids.wikidata_qid}`]
-      : undefined,
+    sameAs: sameAsUris(record.external_ids),
   };
 
   const worksHtml = works.length
@@ -28,7 +26,7 @@ export function renderPersonPage(record, { canonicalUrl, works }) {
           (w) =>
             `<li><a href="../../typefaces/${escapeHtml(w.slug)}/">${escapeHtml(
               w.name
-            )}</a> — ${escapeHtml(w.role)}</li>`
+            )}</a>, ${escapeHtml(w.role)}</li>`
         )
         .join("\n")}\n</ul>`
     : "";

@@ -99,10 +99,12 @@
       "additionalProperties": false,
       "properties": {
         "wikidata_qid": { "type": "string", "pattern": "^Q[0-9]+$" },
-        "viaf": { "type": "string" },
-        "isni": { "type": "string" }
+        "viaf": { "type": "string", "description": "VIAF cluster id, digits only." },
+        "isni": { "type": "string", "description": "ISNI, 16 digits, spaces optional." },
+        "lc_naf": { "type": "string", "description": "Library of Congress/NACO Authority File id, e.g. 'n79021164'." },
+        "gnd": { "type": "string", "description": "GND (Gemeinsame Normdatei / Deutsche Nationalbibliothek) id." }
       },
-      "description": "Informational cross-references only. Never usable as a sources entry."
+      "description": "Informational cross-references only, one per authority file. Never usable as a sources entry."
     },
     "sources": {
       "type": "array",
@@ -115,7 +117,7 @@
           "title": { "type": "string", "minLength": 1 }
         }
       },
-      "description": "Independent, verifiable sources. Must never be Wikidata, Wikipedia, or any Wikimedia project — enforced by scripts/validate.js."
+      "description": "Independent, verifiable sources. Must never be Wikidata, Wikipedia, or any Wikimedia project, enforced by scripts/validate.js."
     },
     "verification_status": {
       "type": "string",

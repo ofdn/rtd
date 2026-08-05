@@ -12,7 +12,7 @@ import addFormats from "ajv-formats";
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const repoRoot = join(__dirname, "..");
 
-// Domains that can never appear in a `sources[].url` — see the
+// Domains that can never appear in a `sources[].url`, see the
 // registry-sourcing-policy memory: citing Wikidata/Wikipedia/any Wikimedia
 // project here would create a circular-sourcing loop and block Wikidata
 // from ever citing this registry back.
@@ -99,7 +99,7 @@ export function validateRoot(rootDir) {
     for (const source of record.sources ?? []) {
       if (isBlockedSourceUrl(source.url)) {
         errors.push(
-          `${file}: sources contains a Wikimedia-project URL ("${source.url}") — not allowed, see CONTRIBUTING.md`
+          `${file}: sources contains a Wikimedia-project URL ("${source.url}"), not allowed, see CONTRIBUTING.md`
         );
       }
     }

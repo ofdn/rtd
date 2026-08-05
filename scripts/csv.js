@@ -1,4 +1,4 @@
-// Minimal CSV writer. No external dependency — the dataset is small and the
+// Minimal CSV writer. No external dependency, the dataset is small and the
 // escaping rules are simple (RFC 4180: quote fields containing a comma,
 // quote, or newline; double up internal quotes).
 

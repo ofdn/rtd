@@ -1,4 +1,4 @@
-import { escapeHtml, pageShell, sourcesList, verificationNote } from "./shared.js";
+import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris } from "./shared.js";
 
 // `designers` is the input record's designers[] enriched with each
 // person's current name/slug (resolved by build.js), so the page can link
@@ -24,9 +24,7 @@ export function renderTypefacePage(record, { canonicalUrl, designers }) {
       ? record.foundry.map((f) => ({ "@type": "Organization", name: f.name }))
       : undefined,
     url: canonicalUrl,
-    sameAs: record.external_ids?.wikidata_qid
-      ? [`https://www.wikidata.org/wiki/${record.external_ids.wikidata_qid}`]
-      : undefined,
+    sameAs: sameAsUris(record.external_ids),
   };
 
   const designersHtml = designers.length
@@ -35,7 +33,7 @@ export function renderTypefacePage(record, { canonicalUrl, designers }) {
           (d) =>
             `<li><a href="../../people/${escapeHtml(d.slug)}/">${escapeHtml(
               d.name
-            )}</a> — ${escapeHtml(d.role)}</li>`
+            )}</a>, ${escapeHtml(d.role)}</li>`
         )
         .join("\n")}\n</ul>`
     : "";

@@ -46,8 +46,12 @@ facts from them would make that impossible (a source can't cite something
 that cites it back). CI rejects any `sources[].url` on a Wikimedia-project
 domain automatically.
 
-`external_ids.wikidata_qid` (and similar) is fine to include - that's just
-a cross-reference, not a source.
+`external_ids` (`wikidata_qid`, `viaf`, `isni`, `lc_naf`, `gnd`) is fine
+to include, that's just a cross-reference to an authority file, not a
+source. Each is a separate field for a separate identifier system, since
+they're independent authority files with their own ids, not one combined
+value. The site resolves whichever ones are present into linked-data
+`sameAs` URIs automatically.
 
 If the only source you can find is thin or low-confidence (a bare LinkedIn
 profile with no other detail, for example), don't leave the person or
