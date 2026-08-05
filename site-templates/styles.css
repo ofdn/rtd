@@ -207,21 +207,6 @@ button.copy-id.copied::after {
   content: " \2713";
 }
 
-button.copy-inline {
-  display: inline-block;
-  border: none;
-  background: none;
-  padding: 0;
-  margin-left: 0.3rem;
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  color: var(--color-link);
-  text-decoration: underline;
-  cursor: pointer;
-}
-button.copy-inline:hover { color: var(--color-text); }
-button.copy-inline.copied { color: var(--color-info-accent); text-decoration: none; }
-
 .ark-permalink {
   display: flex;
   flex-wrap: wrap;
@@ -321,6 +306,57 @@ ul.plain-list li { margin-bottom: 0.3rem; }
 
 .json-link { font-size: 0.8rem; color: var(--color-text-muted); margin-top: 2.5rem; }
 .json-link a { color: var(--color-link); }
+
+.citation-block {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-outline-variant);
+}
+.citation-block h2 { margin-top: 0; }
+
+.citation-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.citation-style {
+  font: inherit;
+  font-size: 0.85rem;
+  color: var(--color-text);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-outline-variant);
+  padding: 0.3rem 0.5rem;
+}
+
+button.citation-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font: inherit;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid var(--color-outline-variant);
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+}
+button.citation-download:hover { border-color: var(--color-outline); color: var(--color-text); }
+
+.citation-text {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-outline-variant);
+  padding: 0.85rem 1rem;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
 
 footer.site-footer {
   border-top: 1px solid var(--color-outline-variant);

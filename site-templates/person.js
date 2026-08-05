@@ -1,4 +1,4 @@
-import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, nationalityLabel, copyableId, arkPermalink } from "./shared.js";
+import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, nationalityLabel, copyableId, arkPermalink, citationBlock } from "./shared.js";
 
 // `works` is the computed reverse index (typefaces this person is credited
 // on), passed in by build.js, it is never stored on the person record
@@ -60,6 +60,7 @@ ${relatedHtml}
 ${sourcesList(record.sources)}
 ${identifiersList(record.external_ids)}
 <p class="json-link"><a href="../../api/people/${escapeHtml(record.id)}.json">JSON</a></p>
+${citationBlock(record, { canonicalUrl, arkUrl })}
 </main>
 `;
 

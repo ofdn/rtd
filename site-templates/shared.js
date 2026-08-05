@@ -20,6 +20,58 @@ export function arkPermalink(arkUrl) {
   return `<p class="ark-permalink">ARK <code>${escapeHtml(arkUrl)}</code> <button type="button" class="copy-id copy-icon-btn" data-copy="${escapeHtml(arkUrl)}" aria-label="Copy ARK permalink">${COPY_ICON}</button></p>`;
 }
 
+function formatDate(iso) {
+  if (!iso) return "";
+  const [y, m, d] = iso.split("-").map(Number);
+  return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  });
+}
+
+// Citation text is generated at build time with an `__ACCESSED__` token
+// standing in for the retrieval date, since a static site can't know when
+// a given reader is actually viewing the page; citationBlock()'s inline
+// script fills that token in client-side with the visitor's local date.
+export function buildCitations(record, { canonicalUrl, arkUrl }) {
+  const title = record.name.preferred;
+  const year = (record.updated_at || "").slice(0, 4);
+  const updated = formatDate(record.updated_at);
+
+  return {
+    apa: `Panigrahi, S. (${year}). ${title}. Registry of Type Design. O Foundation. ${canonicalUrl}`,
+    chicago: `Panigrahi, Subhashish. "${title}." Registry of Type Design. O Foundation. Last modified ${updated}. Accessed __ACCESSED__. ${canonicalUrl}.`,
+    mla: `Panigrahi, Subhashish. "${title}." Registry of Type Design, O Foundation, ${updated}, ${canonicalUrl}. Accessed __ACCESSED__.`,
+    vancouver: `Panigrahi S. ${title} [Internet]. Registry of Type Design. O Foundation; ${year} [cited __ACCESSED__]. Available from: ${canonicalUrl}`,
+    bibtex: `@misc{${record.id},\n  author       = {Panigrahi, Subhashish},\n  title        = {{${title}}},\n  howpublished = {Registry of Type Design},\n  publisher    = {O Foundation},\n  year         = {${year}},\n  url          = {${canonicalUrl}},\n  urldate      = {__ACCESSED__},\n  note         = {ARK: ${arkUrl}}\n}`,
+  };
+}
+
+const DOWNLOAD_ICON = `<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>`;
+
+export function citationBlock(record, { canonicalUrl, arkUrl }) {
+  const citations = buildCitations(record, { canonicalUrl, arkUrl });
+  const data = escapeHtml(JSON.stringify(citations));
+  return `<section class="citation-block" data-citation="${data}" data-id="${escapeHtml(record.id)}">
+<h2>Cite this record</h2>
+<div class="citation-controls">
+<label class="visually-hidden" for="citation-style-${escapeHtml(record.id)}">Citation format</label>
+<select id="citation-style-${escapeHtml(record.id)}" class="citation-style">
+<option value="apa">APA</option>
+<option value="chicago">Chicago</option>
+<option value="mla">MLA</option>
+<option value="vancouver">Vancouver</option>
+<option value="bibtex">BibTeX</option>
+</select>
+<button type="button" class="copy-id copy-icon-btn citation-copy" aria-label="Copy citation">${COPY_ICON}</button>
+<button type="button" class="citation-download">${DOWNLOAD_ICON}Download .bib</button>
+</div>
+<pre class="citation-text"></pre>
+</section>`;
+}
+
 // JSON-LD is embedded inside a <script> tag; guard against a source string
 // containing "</script>" from prematurely closing the tag.
 export function jsonLdScript(data) {
@@ -118,6 +170,33 @@ document.querySelectorAll(".copy-id").forEach(function (btn) {
     });
   });
 });
+document.querySelectorAll(".citation-block").forEach(function (block) {
+  var citations = JSON.parse(block.getAttribute("data-citation"));
+  var accessed = new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+  var select = block.querySelector(".citation-style");
+  var pre = block.querySelector(".citation-text");
+  var copyBtn = block.querySelector(".citation-copy");
+  var downloadBtn = block.querySelector(".citation-download");
+  function render() {
+    var text = citations[select.value].replaceAll("__ACCESSED__", accessed);
+    pre.textContent = text;
+    copyBtn.setAttribute("data-copy", text);
+  }
+  select.addEventListener("change", render);
+  render();
+  downloadBtn.addEventListener("click", function () {
+    var text = citations.bibtex.replaceAll("__ACCESSED__", accessed);
+    var blob = new Blob([text], { type: "application/x-bibtex" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = block.getAttribute("data-id") + ".bib";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
+});
 </script>
 </body>
 </html>
@@ -168,7 +247,7 @@ export function identifiersList(externalIds) {
   const items = links
     .map(
       (l) =>
-        `<li>${escapeHtml(l.label)}: <a href="${escapeHtml(l.url)}">${escapeHtml(l.url)}</a> <button type="button" class="copy-id copy-inline" data-copy="${escapeHtml(l.value)}" aria-label="Copy ${escapeHtml(l.label)} id">copy</button></li>`
+        `<li>${escapeHtml(l.label)}: <a href="${escapeHtml(l.url)}">${escapeHtml(l.url)}</a></li>`
     )
     .join("\n");
   return `<h2>Identifiers</h2>\n<ul class="plain-list">\n${items}\n</ul>`;

@@ -1,4 +1,4 @@
-import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, copyableId, arkPermalink } from "./shared.js";
+import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, copyableId, arkPermalink, citationBlock } from "./shared.js";
 
 // `designers` is the input record's designers[] enriched with each
 // person's current name/slug (resolved by build.js), so the page can link
@@ -68,6 +68,7 @@ ${relatedHtml}
 ${sourcesList(record.sources)}
 ${identifiersList(record.external_ids)}
 <p class="json-link"><a href="../../api/typefaces/${escapeHtml(record.id)}.json">JSON</a></p>
+${citationBlock(record, { canonicalUrl, arkUrl })}
 </main>
 `;
 
