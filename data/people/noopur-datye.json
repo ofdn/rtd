@@ -1,0 +1,24 @@
+{
+  "id": "RTD-P-000029",
+  "slug": "noopur-datye",
+  "name": {
+    "preferred": "Noopur Datye",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer", "calligrapher"],
+  "affiliations": [
+    { "name": "Ek Type" }
+  ],
+  "bio": "Type designer and calligrapher, co-founder of Ek Type, designing in Devanagari, Bengali, Gujarati, and Latin scripts. Designed custom typefaces for Star Jalsa and LifeOk, plus open-source typefaces Mukta Vaani, Mukta Mahee, Modak, and the Baloo family.",
+  "external_ids": { "wikidata_qid": "Q125430734" },
+  "sources": [
+    { "url": "https://fontsinuse.com/type_designers/4301/noopur-datye", "title": "Noopur Datye - Fonts In Use" },
+    { "url": "https://www.dandad.org/profiles/person/284573/noopur-datye/", "title": "Noopur Datye - D&AD" },
+    { "url": "https://typographica.org/category/designer/noopur-datye/", "title": "Noopur Datye - Typographica" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}

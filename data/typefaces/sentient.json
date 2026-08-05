@@ -1,0 +1,26 @@
+{
+  "id": "RTD-T-000022",
+  "slug": "sentient",
+  "name": {
+    "preferred": "Sentient",
+    "alternates": []
+  },
+  "designers": [
+    { "id": "RTD-P-000028", "role": "designer" }
+  ],
+  "foundry": [
+    { "name": "Indian Type Foundry", "url": "https://www.indiantypefoundry.com" }
+  ],
+  "classification": "serif",
+  "release_year": "2021",
+  "era": "digital",
+  "description": "A serif text typeface based on old-style forms, drawing on the principles of humanist calligraphy, with five weights and matching italics.",
+  "sources": [
+    { "url": "https://www.noopurchoksi.com/design/sentient-typeface", "title": "Sentient Typeface - Noopur Choksi" },
+    { "url": "https://pimpmytype.com/font/sentient/", "title": "Sentient - Pimp my Type" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-05",
+  "updated_at": "2026-08-05"
+}
