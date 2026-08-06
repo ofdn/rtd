@@ -25,6 +25,14 @@ export function setCssVersion(hash) {
   cssVersion = hash;
 }
 
+// package.json's version, set once by build.js, shown in the footer next
+// to the schema version (a separate number, see CONTRIBUTING.md's
+// "Schema versioning" section for why the two don't move together).
+let siteVersion = "";
+export function setSiteVersion(version) {
+  siteVersion = version;
+}
+
 const COPY_ICON = `<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>`;
 
 export function arkPermalink(arkUrl) {
@@ -170,7 +178,11 @@ ${showHeaderSearch ? headerSearchForm(homePath) : ""}
 </header>
 ${body}
 <footer class="site-footer">
-<p>&copy; ${new Date().getFullYear()} Subhashish Panigrahi. Site and data licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.${schemaVersion ? ` Schema v${escapeHtml(schemaVersion)}.` : ""} <a href="${REPO_URL}">Source on GitHub</a>. <a href="${escapeHtml(homePath)}preservation/">Preservation statement</a>.</p>
+<a class="footer-logo-link" href="https://theofdn.org" aria-label="O Foundation">
+<img class="footer-logo footer-logo-light" src="${escapeHtml(homePath)}logo-black.svg" alt="" width="72" height="20">
+<img class="footer-logo footer-logo-dark" src="${escapeHtml(homePath)}logo-white.svg" alt="" width="72" height="20">
+</a>
+<p>Registry of Type Design${siteVersion ? ` v${escapeHtml(siteVersion)}` : ""}${schemaVersion ? `, schema v${escapeHtml(schemaVersion)}` : ""}. A project of the <a href="https://theofdn.org">O Foundation</a>, maintained by Subhashish Panigrahi. <a href="${escapeHtml(homePath)}info/#licensing">License</a> &middot; <a href="${REPO_URL}">Source on GitHub</a> &middot; <a href="${escapeHtml(homePath)}preservation/">Preservation statement</a></p>
 </footer>
 <script>
 document.querySelectorAll(".copy-id").forEach(function (btn) {

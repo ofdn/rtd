@@ -366,7 +366,19 @@ footer.site-footer {
   text-align: center;
 }
 footer.site-footer a { color: inherit; }
-footer.site-footer p { margin: 0; }
+footer.site-footer p { margin: 0.6rem 0 0; }
+
+.footer-logo-link {
+  display: inline-flex;
+  opacity: 0.85;
+}
+.footer-logo-link:hover { opacity: 1; }
+.footer-logo { display: block; height: 16px; width: auto; }
+.footer-logo-dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  .footer-logo-light { display: none; }
+  .footer-logo-dark { display: block; }
+}
 
 /* Home page */
 .home-hero { text-align: center; padding: 3.5rem 1.5rem 3rem; max-width: 40rem; margin: 0 auto; }

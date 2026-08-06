@@ -22,7 +22,7 @@ import { renderPersonPage, renderTombstonePage } from "../site-templates/person.
 import { renderTypefacePage } from "../site-templates/typeface.js";
 import { renderHomePage } from "../site-templates/home.js";
 import { renderInfoPage } from "../site-templates/info.js";
-import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion } from "../site-templates/shared.js";
+import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion } from "../site-templates/shared.js";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const repoRoot = join(__dirname, "..");
@@ -197,6 +197,11 @@ function build(dataDir, outDir) {
   const cssContent = readFileSync(join(repoRoot, "site-templates/styles.css"), "utf8");
   writeFile(outDir, "styles.css", cssContent);
   setCssVersion(createHash("md5").update(cssContent).digest("hex").slice(0, 8));
+
+  const pkgVersion = loadJson(join(repoRoot, "package.json")).version;
+  setSiteVersion(pkgVersion);
+  writeFile(outDir, "logo-black.svg", readFileSync(join(repoRoot, "site-templates/logo-black.svg")));
+  writeFile(outDir, "logo-white.svg", readFileSync(join(repoRoot, "site-templates/logo-white.svg")));
 
   writeFile(
     outDir,
