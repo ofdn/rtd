@@ -1,6 +1,6 @@
 {
   "name": "rtd-reconcile-worker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "description": "OpenRefine Reconciliation Service API for Registry of Type Design, deployed as a Cloudflare Worker.",

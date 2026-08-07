@@ -4,14 +4,26 @@
 
 // Same diacritic-stripping approach as scripts/mint-id.js's slugify(), but
 // keeps spaces (a slug isn't useful for comparing "Aditi Pimprikar" against
-// itself token-by-token).
+// itself token-by-token). Periods/commas are stripped too, since initials
+// are the main place this matters ("R.K. Joshi" / "R. K. Joshi" both need
+// to land on the same normalized form as "R K Joshi").
 export function normalize(text) {
   return text
     .normalize("NFD")
     .replace(/\p{Mark}/gu, "")
     .toLowerCase()
+    .replace(/[.,]/g, "")
     .trim()
     .replace(/\s+/g, " ");
+}
+
+// Whitespace-free form, used as a second-pass equality check for spacing
+// variants normalize() alone can't fix: "RK Joshi" vs "R K Joshi" isn't a
+// punctuation difference, it's a token-boundary one, so a plain string
+// comparison after normalize() still fails even though a human reads them
+// as the same name.
+function compact(normalized) {
+  return normalized.replace(/\s+/g, "");
 }
 
 function bigrams(s) {
@@ -37,15 +49,17 @@ function diceCoefficient(a, b) {
   return (2 * matches) / (bigramsA.length + bigramsB.length);
 }
 
-// 100 for an exact normalized match, 70-95 for a substring match (scaled by
-// how much of the longer string the shorter one covers), otherwise a Dice
-// bigram-coefficient similarity capped below the substring band so a loose
-// match never outranks a real substring hit.
+// 100 for an exact normalized match, 96 when the only difference is
+// spacing around initials ("RK Joshi" vs "R K Joshi"), 70-95 for a
+// substring match (scaled by how much of the longer string the shorter
+// one covers), otherwise a Dice bigram-coefficient similarity capped
+// below the substring band so a loose match never outranks a real one.
 export function scoreMatch(query, candidate) {
   const q = normalize(query);
   const c = normalize(candidate);
   if (!q || !c) return 0;
   if (q === c) return 100;
+  if (compact(q) === compact(c)) return 96;
   if (c.includes(q) || q.includes(c)) {
     const ratio = Math.min(q.length, c.length) / Math.max(q.length, c.length);
     return Math.round(70 + ratio * 25);

@@ -27,7 +27,7 @@ ${SEARCH_ICON}
 <p class="stat-line">Currently tracking <strong>${peopleCount}</strong> people, <strong>${typefacesCount}</strong> typefaces.</p>
 </div>
 <div id="results"></div>
-<p class="utility-links"><a href="api/people.json">People API</a> &middot; <a href="api/typefaces.json">Typefaces API</a> &middot; <a href="dumps/">Bulk dumps</a></p>
+<p class="utility-links"><a href="api/people.json">People API</a> &middot; <a href="api/typefaces.json">Typefaces API</a> &middot; <a href="dumps/">Bulk dumps</a> &middot; <a href="info/#reconciliation">Reconciliation service</a></p>
 <script>
 (function () {
   var form = document.getElementById("home-search-form");
