@@ -1,0 +1,21 @@
+{
+  "id": "rtd-p-000055",
+  "slug": "rahul-bhalerao",
+  "name": {
+    "preferred": "Rahul Bhalerao",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "scripts": ["Devanagari", "Odia"],
+  "bio": "Co-created the open-source Samyak font family (Devanagari, Oriya, and other Indian scripts) with Pravin Satpute, Sandeep Shedmake, and Bageshri Salvi, originated at HBCSE, TIFR.",
+  "sources": [
+    { "url": "https://bigfontsite.com/fonts/samyak-oriya.html", "title": "Samyak Oriya Regular Font - BigFontSite.com" },
+    { "url": "https://launchpad.net/debian/squeeze/+source/ttf-indic-fonts/+copyright", "title": "ttf-indic-fonts copyright - Debian (Launchpad)" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07"
+}

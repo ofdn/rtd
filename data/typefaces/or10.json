@@ -1,0 +1,23 @@
+{
+  "id": "rtd-t-000051",
+  "slug": "or10",
+  "name": {
+    "preferred": "Or10",
+    "alternates": []
+  },
+  "designers": [
+    { "id": "rtd-p-000059", "role": "designer" }
+  ],
+  "scripts": ["Odia"],
+  "release_year": "1998",
+  "era": "digital",
+  "description": "A METAFONT-based Odia (Oriya) font, the 10-point design size in the Oriya-TeX package by Jeroen Hellingman.",
+  "external_ids": { "wikidata_qid": "Q132456906" },
+  "sources": [
+    { "url": "https://ctan.org/pkg/oriya?lang=en", "title": "Oriya-TeX package - CTAN" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07"
+}

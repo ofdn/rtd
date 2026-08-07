@@ -1,0 +1,24 @@
+{
+  "id": "rtd-t-000043",
+  "slug": "eodissa-bahuda",
+  "name": {
+    "preferred": "eOdissa Bahuda",
+    "alternates": []
+  },
+  "designers": [
+    { "id": "rtd-p-000039", "role": "designer" }
+  ],
+  "scripts": ["Odia"],
+  "era": "digital",
+  "description": "A shareware Odia (Oriya) font by Subhashish Panigrahi, part of the eOdissa font set.",
+  "external_ids": { "wikidata_qid": "Q123086331" },
+  "sources": [
+    { "url": "https://blogfonts.com/eodissa-bahuda.font", "title": "eOdissa Bahuda Windows font - BlogFonts" },
+    { "url": "https://fontsgeek.com/eodissa-bahuda-font", "title": "eOdissa Bahuda Font - FontsGeek" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07"
+}

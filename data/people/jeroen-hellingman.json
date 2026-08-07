@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000059",
+  "slug": "jeroen-hellingman",
+  "name": {
+    "preferred": "Jeroen Hellingman",
+    "alternates": []
+  },
+  "countries": ["Netherlands"],
+  "roles": ["type designer"],
+  "scripts": ["Odia"],
+  "bio": "Computer scientist and long-time Project Gutenberg volunteer. Created the Oriya-TeX package's METAFONT-based Odia fonts, including Or10, with Anshuman Pandey, 1996-2003.",
+  "sources": [
+    { "url": "https://ctan.org/pkg/oriya?lang=en", "title": "Oriya-TeX package - CTAN" },
+    { "url": "https://ctan.org/author/hellingman?lang=en", "title": "Contributor: Jeroen Hellingman - CTAN" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "rtd-p-000058",
+  "slug": "muthu-nedumaran",
+  "name": {
+    "preferred": "Muthu Nedumaran",
+    "alternates": []
+  },
+  "countries": ["Malaysia"],
+  "roles": ["type designer"],
+  "scripts": ["Tamil", "Odia"],
+  "affiliations": [
+    { "name": "Murasu Systems" }
+  ],
+  "bio": "Founder of Murasu Systems. Designed typefaces and input methods for Tamil and other Indic scripts since the 1980s, including Oriya Sangam MN, bundled into Apple's operating systems.",
+  "sources": [
+    { "url": "https://murasu.com/", "title": "Murasu.Com" },
+    { "url": "https://fontsinuse.com/type_designers/3652/muthu-nedumaran", "title": "Muthu Nedumaran - Fonts In Use" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07"
+}

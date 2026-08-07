@@ -1,0 +1,23 @@
+{
+  "id": "rtd-t-000042",
+  "slug": "eodissaboxuni",
+  "name": {
+    "preferred": "eOdissaBOXUni",
+    "alternates": []
+  },
+  "designers": [
+    { "id": "rtd-p-000039", "role": "designer" }
+  ],
+  "scripts": ["Odia"],
+  "era": "digital",
+  "description": "A shareware Odia (Oriya) font by Subhashish Panigrahi, part of the eOdissa font set.",
+  "external_ids": { "wikidata_qid": "Q123086328" },
+  "sources": [
+    { "url": "https://www.onlinewebfonts.com/tag/eOdissa", "title": "eOdissa Fonts Downloads - OnlineWebFonts.COM" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07"
+}

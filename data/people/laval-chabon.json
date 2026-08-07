@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000060",
+  "slug": "laval-chabon",
+  "name": {
+    "preferred": "Laval Chabon",
+    "alternates": ["Leaurend-Lavie-Hyppere Chabon"]
+  },
+  "roles": ["type designer"],
+  "scripts": ["Odia"],
+  "bio": "Designed VEGESIGNES, a large multi-script open-source font built with FontStruct covering Oriya alongside numerous other writing systems.",
+  "sources": [
+    { "url": "https://fontlibrary.org/en/font/vegesignes", "title": "VEGESIGNES - Font Library" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07"
+}

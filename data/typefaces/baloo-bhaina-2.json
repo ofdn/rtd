@@ -1,0 +1,27 @@
+{
+  "id": "rtd-t-000054",
+  "slug": "baloo-bhaina-2",
+  "name": {
+    "preferred": "Baloo Bhaina 2",
+    "alternates": []
+  },
+  "designers": [
+    { "id": "rtd-p-000038", "role": "designer" },
+    { "id": "rtd-p-000018", "role": "designer" },
+    { "id": "rtd-p-000047", "role": "designer" }
+  ],
+  "foundry": [
+    { "name": "Ek Type", "url": "https://ektype.in" }
+  ],
+  "scripts": ["Odia"],
+  "era": "digital",
+  "description": "The Odia member of the Baloo display typeface family, designed by Yesha Goshar, Manish Minz, and Shuchita Grover, released as a Google Font.",
+  "external_ids": { "wikidata_qid": "Q123056356" },
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Baloo+Bhaina+2/about", "title": "Baloo Bhaina 2 - Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07"
+}

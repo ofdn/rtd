@@ -1,0 +1,27 @@
+{
+  "id": "rtd-t-000050",
+  "slug": "oriya-sangam-mn",
+  "name": {
+    "preferred": "Oriya Sangam MN",
+    "alternates": []
+  },
+  "designers": [
+    { "id": "rtd-p-000058", "role": "designer" }
+  ],
+  "foundry": [
+    { "name": "Murasu Systems", "url": "https://murasu.com" }
+  ],
+  "scripts": ["Odia"],
+  "release_year": "2010",
+  "era": "digital",
+  "description": "A sans-serif Odia (Oriya) system font by Muthu Nedumaran, bundled with Apple's operating systems.",
+  "external_ids": { "wikidata_qid": "Q123086156" },
+  "sources": [
+    { "url": "https://murasu.com/", "title": "Murasu.Com" },
+    { "url": "https://en.maisfontes.com/oriya-sangam-mn.font", "title": "Oriya Sangam MN Font - MaisFontes" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07"
+}

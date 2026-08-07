@@ -1,0 +1,25 @@
+{
+  "id": "rtd-t-000047",
+  "slug": "october",
+  "name": {
+    "preferred": "October",
+    "alternates": []
+  },
+  "designers": [
+    { "id": "rtd-p-000032", "role": "designer" }
+  ],
+  "foundry": [
+    { "name": "Typotheque", "url": "https://www.typotheque.com/authors/pratyush-das" }
+  ],
+  "scripts": ["Odia"],
+  "era": "digital",
+  "description": "An Odia typeface family by Pratyush Das, released with Compressed and Condensed variants.",
+  "external_ids": { "wikidata_qid": "Q123057561" },
+  "sources": [
+    { "url": "https://www.typotheque.com/authors/pratyush-das", "title": "Pratyush Das - Typotheque" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07"
+}

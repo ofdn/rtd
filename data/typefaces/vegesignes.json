@@ -1,0 +1,24 @@
+{
+  "id": "rtd-t-000057",
+  "slug": "vegesignes",
+  "name": {
+    "preferred": "VEGESIGNES",
+    "alternates": []
+  },
+  "designers": [
+    { "id": "rtd-p-000060", "role": "designer" }
+  ],
+  "scripts": ["Odia"],
+  "release_year": "2011",
+  "era": "digital",
+  "description": "A large open-source multi-script font by Laval Chabon covering Odia alongside numerous other writing systems, built with FontStruct.",
+  "external_ids": { "wikidata_qid": "Q123128549" },
+  "sources": [
+    { "url": "https://fontlibrary.org/en/font/vegesignes", "title": "VEGESIGNES - Font Library" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07"
+}
