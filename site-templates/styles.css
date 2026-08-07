@@ -134,7 +134,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   gap: 0.5rem;
   background: var(--color-bg-alt);
   border-radius: 999px;
-  border: 1.5px solid transparent;
+  border: 2px solid transparent;
   padding: 0.4rem 0.85rem;
 }
 
