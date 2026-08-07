@@ -1,0 +1,54 @@
+{
+  "id": "rtd-p-000066",
+  "slug": "aurelien-vret",
+  "name": {
+    "preferred": "Aurélien Vret",
+    "alternates": []
+  },
+  "countries": [
+    "France"
+  ],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "https://fonts.adobe.com/designers/aurelien-vret",
+      "title": "fonts.adobe.com"
+    },
+    {
+      "url": "https://www.gazette-drouot.com/lots/8109940-aurelien-vret-1987---carbone----",
+      "title": "www.gazette-drouot.com"
+    },
+    {
+      "url": "https://www.cnap.fr/actualites/graphisme-en-france/entretiens/focus-sur-les-recherches-daurelien-vret-chercheur-associe",
+      "title": "www.cnap.fr"
+    },
+    {
+      "url": "https://www.lecubegarges.fr/app/uploads/2024/04/Bilan-dActivites-2013-Le-Cube.pdf",
+      "title": "www.lecubegarges.fr"
+    },
+    {
+      "url": "https://catalogue.bnf.fr/ark:/12148/cb47117524w",
+      "title": "catalogue.bnf.fr"
+    },
+    {
+      "url": "https://bnf.hypotheses.org/14546",
+      "title": "bnf.hypotheses.org"
+    },
+    {
+      "url": "https://aurelien-vret.fr/",
+      "title": "aurelien-vret.fr"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification",
+  "external_ids": {
+    "wikidata_qid": "Q137908997",
+    "viaf": "5174410436408500178",
+    "isni": "0000000526333214"
+  }
+}

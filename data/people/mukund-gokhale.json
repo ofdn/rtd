@@ -1,0 +1,27 @@
+{
+  "id": "rtd-p-000092",
+  "slug": "mukund-gokhale",
+  "name": {
+    "preferred": "Mukund Gokhale",
+    "alternates": []
+  },
+  "countries": [],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "http://www.ektype.in",
+      "title": "Noto Sans Masaram Gondi - designer URL (embedded font metadata)"
+    },
+    {
+      "url": "http://www.google.com/get/noto/",
+      "title": "Noto Sans Masaram Gondi - vendor URL (embedded font metadata)"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

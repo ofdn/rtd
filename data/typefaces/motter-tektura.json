@@ -1,0 +1,26 @@
+{
+  "id": "rtd-t-000107",
+  "slug": "motter-tektura",
+  "name": {
+    "preferred": "Motter Tektura",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000095",
+      "role": "type designer"
+    }
+  ],
+  "scripts": [],
+  "sources": [
+    {
+      "url": "https://fontsinuse.com/typefaces/10214/motter-tektura",
+      "title": "Motter Tektura in use"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

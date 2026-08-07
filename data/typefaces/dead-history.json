@@ -1,0 +1,32 @@
+{
+  "id": "rtd-t-000108",
+  "slug": "dead-history",
+  "name": {
+    "preferred": "Dead History",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000096",
+      "role": "type designer"
+    }
+  ],
+  "scripts": [
+    "Latin script"
+  ],
+  "sources": [
+    {
+      "url": "http://www.moma.org/collection/works/139317",
+      "title": "www.moma.org"
+    },
+    {
+      "url": "https://www.emigre.com/Fonts/Dead-History",
+      "title": "www.emigre.com"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

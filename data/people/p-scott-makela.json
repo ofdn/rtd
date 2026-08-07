@@ -1,0 +1,37 @@
+{
+  "id": "rtd-p-000096",
+  "slug": "p-scott-makela",
+  "name": {
+    "preferred": "P. Scott Makela",
+    "alternates": []
+  },
+  "countries": [
+    "United States"
+  ],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "http://www.moma.org/collection/works/139317",
+      "title": "www.moma.org"
+    },
+    {
+      "url": "https://www.emigre.com/Fonts/Dead-History",
+      "title": "www.emigre.com"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification",
+  "external_ids": {
+    "wikidata_qid": "Q7117531",
+    "viaf": "36545587",
+    "isni": "0000000120239068",
+    "lc_naf": "no99003920",
+    "gnd": "128409452",
+    "worldcat_entity": "E39PBJc7VxhH9CtkvJVjJT78md"
+  }
+}

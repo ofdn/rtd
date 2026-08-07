@@ -1,0 +1,30 @@
+{
+  "id": "rtd-t-000113",
+  "slug": "steelfish",
+  "name": {
+    "preferred": "Steelfish",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000100",
+      "role": "type designer"
+    }
+  ],
+  "scripts": [],
+  "sources": [
+    {
+      "url": "https://typodermicfonts.com/steelfish-web-headline-fonts-7-free-styles/",
+      "title": "typodermicfonts.com"
+    },
+    {
+      "url": "https://www.myfonts.com/collections/steelfish-font-typodermic",
+      "title": "www.myfonts.com"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

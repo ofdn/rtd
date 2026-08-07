@@ -1,0 +1,33 @@
+{
+  "id": "rtd-p-000063",
+  "slug": "andrew-west",
+  "name": {
+    "preferred": "Andrew West",
+    "alternates": []
+  },
+  "countries": [
+    "United Kingdom"
+  ],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "https://www.babelstone.co.uk/",
+      "title": "www.babelstone.co.uk"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification",
+  "external_ids": {
+    "wikidata_qid": "Q4758888",
+    "viaf": "56485211",
+    "isni": "0000000078384703",
+    "lc_naf": "nr93032921",
+    "gnd": "1158476809",
+    "worldcat_entity": "E39PBJyrQW9Gg3jF6VqMPXtMyd"
+  }
+}

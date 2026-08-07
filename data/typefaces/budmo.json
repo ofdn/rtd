@@ -1,0 +1,30 @@
+{
+  "id": "rtd-t-000116",
+  "slug": "budmo",
+  "name": {
+    "preferred": "Budmo",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000100",
+      "role": "type designer"
+    }
+  ],
+  "scripts": [],
+  "sources": [
+    {
+      "url": "https://typodermicfonts.com/budmo/",
+      "title": "typodermicfonts.com"
+    },
+    {
+      "url": "https://www.myfonts.com/collections/budmo-font-typodermic",
+      "title": "www.myfonts.com"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

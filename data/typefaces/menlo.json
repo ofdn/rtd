@@ -1,0 +1,30 @@
+{
+  "id": "rtd-t-000086",
+  "slug": "menlo",
+  "name": {
+    "preferred": "Menlo",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000079",
+      "role": "type designer"
+    }
+  ],
+  "scripts": [],
+  "sources": [
+    {
+      "url": "http://www.bitstream.com/font_rendering/products/dev_fonts/vera.html",
+      "title": "Menlo - designer URL (embedded font metadata)"
+    },
+    {
+      "url": "http://www.gnome.org/contact/",
+      "title": "Menlo - vendor URL (embedded font metadata)"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "rtd-t-000117",
+  "slug": "gunplay",
+  "name": {
+    "preferred": "Gunplay",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000100",
+      "role": "type designer"
+    }
+  ],
+  "scripts": [],
+  "sources": [
+    {
+      "url": "https://typodermicfonts.com/gunplay/",
+      "title": "typodermicfonts.com"
+    },
+    {
+      "url": "https://www.myfonts.com/collections/gunplay-font-typodermic",
+      "title": "www.myfonts.com"
+    },
+    {
+      "url": "https://fonts.adobe.com/fonts/gunplay",
+      "title": "fonts.adobe.com"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

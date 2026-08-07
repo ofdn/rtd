@@ -1,0 +1,32 @@
+{
+  "id": "rtd-p-000074",
+  "slug": "giulia-boggio",
+  "name": {
+    "preferred": "Giulia Boggio",
+    "alternates": []
+  },
+  "countries": [
+    "Italy"
+  ],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "https://designby-women.com/giulia-boggio",
+      "title": "designby-women.com"
+    },
+    {
+      "url": "https://www.giuliaboggio.xyz",
+      "title": "www.giuliaboggio.xyz"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification",
+  "external_ids": {
+    "wikidata_qid": "Q125401082"
+  }
+}

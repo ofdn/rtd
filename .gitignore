@@ -4,3 +4,6 @@ dist/
 .wrangler/
 # Private design working files (Stitch export, design brief), never upstream.
 docs/
+
+# Private research scripts/data, never upstream.
+scripts/private/

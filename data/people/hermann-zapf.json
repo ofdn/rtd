@@ -1,0 +1,31 @@
+{
+  "id": "rtd-p-000075",
+  "slug": "hermann-zapf",
+  "name": {
+    "preferred": "Hermann Zapf",
+    "alternates": []
+  },
+  "countries": [],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "http://www.linotypelibrary.com",
+      "title": "Zapfino - designer URL (embedded font metadata)"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification",
+  "external_ids": {
+    "wikidata_qid": "Q60302",
+    "viaf": "74000639",
+    "isni": "000000011475088X",
+    "lc_naf": "n50015778",
+    "gnd": "118772252",
+    "worldcat_entity": "E39PBJyxgt7HWg9KkdXMtBpF8C"
+  }
+}

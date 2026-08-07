@@ -1,0 +1,30 @@
+{
+  "id": "rtd-t-000126",
+  "slug": "andale-mono",
+  "name": {
+    "preferred": "Andale Mono",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000107",
+      "role": "type designer"
+    }
+  ],
+  "scripts": [],
+  "sources": [
+    {
+      "url": "http://www.monotype.com/html/designer/des_index.html",
+      "title": "Andale Mono - designer URL (embedded font metadata)"
+    },
+    {
+      "url": "http://www.monotype.com",
+      "title": "Andale Mono - vendor URL (embedded font metadata)"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

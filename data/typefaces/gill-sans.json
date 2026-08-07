@@ -1,0 +1,38 @@
+{
+  "id": "rtd-t-000068",
+  "slug": "gill-sans",
+  "name": {
+    "preferred": "Gill Sans",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000069",
+      "role": "type designer"
+    }
+  ],
+  "scripts": [],
+  "sources": [
+    {
+      "url": "http://www.agfamonotype.com/html/designer/des_index.html",
+      "title": "Gill Sans - designer URL (embedded font metadata)"
+    },
+    {
+      "url": "http://www.agfamonotype.com",
+      "title": "Gill Sans - vendor URL (embedded font metadata)"
+    },
+    {
+      "url": "http://www.monotypeimaging.com/ProductsServices/TypeDesignerShowcase",
+      "title": "Gill Sans - designer URL (embedded font metadata)"
+    },
+    {
+      "url": "http://www.monotypeimaging.com",
+      "title": "Gill Sans - vendor URL (embedded font metadata)"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

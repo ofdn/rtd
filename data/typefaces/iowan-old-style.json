@@ -1,0 +1,30 @@
+{
+  "id": "rtd-t-000088",
+  "slug": "iowan-old-style",
+  "name": {
+    "preferred": "Iowan Old Style",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000081",
+      "role": "type designer"
+    }
+  ],
+  "scripts": [],
+  "sources": [
+    {
+      "url": "http://www.myfonts.com/person/downer/john",
+      "title": "Iowan Old Style - designer URL (embedded font metadata)"
+    },
+    {
+      "url": "http://www.bitstream.com",
+      "title": "Iowan Old Style - vendor URL (embedded font metadata)"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

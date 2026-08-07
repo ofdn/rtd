@@ -1,0 +1,42 @@
+{
+  "id": "rtd-p-000084",
+  "slug": "josef-albers",
+  "name": {
+    "preferred": "Josef Albers",
+    "alternates": []
+  },
+  "countries": [
+    "United States",
+    "Germany"
+  ],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "https://www.stedelijk.nl/nl/collectie/73477-josef-albers-paul-klee-dessau-xi-%2729",
+      "title": "Paul Klee, Dessau XI '29"
+    },
+    {
+      "url": "https://www.workwithdata.com/person/josef-albers-1888",
+      "title": "www.workwithdata.com"
+    },
+    {
+      "url": "https://www.solisprints.co.uk/pages/artist-josef-albers",
+      "title": "www.solisprints.co.uk"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification",
+  "external_ids": {
+    "wikidata_qid": "Q170071",
+    "viaf": "12347231",
+    "isni": "0000000073571729",
+    "lc_naf": "n80057250",
+    "gnd": "118501429",
+    "worldcat_entity": "E39PBJm4VhhtjwhF4tCJwHMHG3"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "rtd-t-000121",
+  "slug": "conthrax",
+  "name": {
+    "preferred": "Conthrax",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000100",
+      "role": "type designer"
+    }
+  ],
+  "scripts": [],
+  "sources": [
+    {
+      "url": "https://typodermicfonts.com/conthrax/",
+      "title": "typodermicfonts.com"
+    },
+    {
+      "url": "https://www.myfonts.com/collections/conthrax-font-typodermic",
+      "title": "www.myfonts.com"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

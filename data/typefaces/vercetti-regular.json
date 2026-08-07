@@ -1,0 +1,40 @@
+{
+  "id": "rtd-t-000070",
+  "slug": "vercetti-regular",
+  "name": {
+    "preferred": "Vercetti Regular",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000071",
+      "role": "type designer"
+    },
+    {
+      "id": "rtd-p-000101",
+      "role": "type designer"
+    }
+  ],
+  "scripts": [
+    "Latin script"
+  ],
+  "sources": [
+    {
+      "url": "https://argolika.gr/2024/05/23/i-grammatoseira-toy-grafista-fillippoy-fragogianni",
+      "title": "Η γραμματοσειρά του γραφίστα Φίλιππου Φραγκογιάννη κερδίζει βραβεία"
+    },
+    {
+      "url": "https://atypeofamigo.com/inspiration/vercetti-is-a-treasure-found-in-the-free-fonts-world",
+      "title": "Vercetti font: A treasure found in the typography universe"
+    },
+    {
+      "url": "https://filipposfragkogiannis.com/fonts/vercetti-regular/",
+      "title": "filipposfragkogiannis.com"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

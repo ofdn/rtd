@@ -1,0 +1,23 @@
+{
+  "id": "rtd-p-000083",
+  "slug": "jose-scaglione",
+  "name": {
+    "preferred": "Jose Scaglione",
+    "alternates": []
+  },
+  "countries": [],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "http://type-together.com",
+      "title": "Athelas - designer URL (embedded font metadata)"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

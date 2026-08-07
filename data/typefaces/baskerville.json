@@ -1,0 +1,30 @@
+{
+  "id": "rtd-t-000087",
+  "slug": "baskerville",
+  "name": {
+    "preferred": "Baskerville",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000080",
+      "role": "type designer"
+    }
+  ],
+  "scripts": [],
+  "sources": [
+    {
+      "url": "http://www.agfamonotype.com/html/designer/des_index.html",
+      "title": "Baskerville - designer URL (embedded font metadata)"
+    },
+    {
+      "url": "http://www.agfamonotype.com",
+      "title": "Baskerville - vendor URL (embedded font metadata)"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

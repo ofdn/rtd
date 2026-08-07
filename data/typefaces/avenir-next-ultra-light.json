@@ -1,0 +1,30 @@
+{
+  "id": "rtd-t-000060",
+  "slug": "avenir-next-ultra-light",
+  "name": {
+    "preferred": "Avenir Next Ultra Light",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000062",
+      "role": "type designer"
+    }
+  ],
+  "scripts": [],
+  "sources": [
+    {
+      "url": "http://www.linotype.com/fontdesigners",
+      "title": "Avenir Next Ultra Light - designer URL (embedded font metadata)"
+    },
+    {
+      "url": "http://www.linotype.com",
+      "title": "Avenir Next Ultra Light - vendor URL (embedded font metadata)"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

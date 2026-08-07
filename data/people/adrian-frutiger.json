@@ -1,0 +1,37 @@
+{
+  "id": "rtd-p-000061",
+  "slug": "adrian-frutiger",
+  "name": {
+    "preferred": "Adrian Frutiger",
+    "alternates": []
+  },
+  "countries": [
+    "Switzerland"
+  ],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "http://www.linotype.com/fontdesigners",
+      "title": "Avenir Next Condensed - designer URL (embedded font metadata)"
+    },
+    {
+      "url": "http://www.linotype.com",
+      "title": "Avenir Next Condensed - vendor URL (embedded font metadata)"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification",
+  "external_ids": {
+    "wikidata_qid": "Q123621",
+    "viaf": "107027312",
+    "isni": "0000000081722347",
+    "lc_naf": "n81032458",
+    "gnd": "118693891",
+    "worldcat_entity": "E39PBJjhD9fJm69kQVcHpKDXh3"
+  }
+}

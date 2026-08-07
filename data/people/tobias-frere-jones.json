@@ -1,0 +1,33 @@
+{
+  "id": "rtd-p-000108",
+  "slug": "tobias-frere-jones",
+  "name": {
+    "preferred": "Tobias Frere-Jones",
+    "alternates": []
+  },
+  "countries": [
+    "United States"
+  ],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "https://frerejones.com",
+      "title": "frerejones.com"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification",
+  "external_ids": {
+    "wikidata_qid": "Q257862",
+    "viaf": "8464835",
+    "isni": "0000000114673247",
+    "lc_naf": "no2008019228",
+    "gnd": "129420158",
+    "worldcat_entity": "E39PBJyMgMFcRvFV6bgfxDfTHC"
+  }
+}

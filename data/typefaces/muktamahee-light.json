@@ -1,0 +1,26 @@
+{
+  "id": "rtd-t-000135",
+  "slug": "muktamahee-light",
+  "name": {
+    "preferred": "MuktaMahee Light",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000114",
+      "role": "type designer"
+    }
+  ],
+  "scripts": [],
+  "sources": [
+    {
+      "url": "http://www.ektype.in",
+      "title": "MuktaMahee Light - designer URL (embedded font metadata)"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

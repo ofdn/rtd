@@ -1,0 +1,33 @@
+{
+  "id": "rtd-p-000086",
+  "slug": "ludwig-sutterlin",
+  "name": {
+    "preferred": "Ludwig Sütterlin",
+    "alternates": []
+  },
+  "countries": [
+    "Grand Duchy of Baden"
+  ],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "http://csumc.wisc.edu/AmericanLanguages/writings/german_print.html",
+      "title": "csumc.wisc.edu"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification",
+  "external_ids": {
+    "wikidata_qid": "Q68040",
+    "viaf": "12575233",
+    "isni": "000000010871118X",
+    "lc_naf": "no2004031164",
+    "gnd": "124061168",
+    "worldcat_entity": "E39PBJvMCW8HXf6pDrkrtcCRKd"
+  }
+}

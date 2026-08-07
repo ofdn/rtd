@@ -1,0 +1,30 @@
+{
+  "id": "rtd-t-000130",
+  "slug": "trebuchet-ms",
+  "name": {
+    "preferred": "Trebuchet MS",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000112",
+      "role": "type designer"
+    }
+  ],
+  "scripts": [],
+  "sources": [
+    {
+      "url": "http://www.microsoft.com/typography/",
+      "title": "Trebuchet MS - designer URL (embedded font metadata)"
+    },
+    {
+      "url": "http://www.microsoft.com",
+      "title": "Trebuchet MS - vendor URL (embedded font metadata)"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "rtd-p-000091",
+  "slug": "mirjam-somers",
+  "name": {
+    "preferred": "Mirjam Somers",
+    "alternates": []
+  },
+  "countries": [],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "http://www.decotype.com",
+      "title": ".DecoType Nastaleeq Urdu UI - designer URL (embedded font metadata)"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

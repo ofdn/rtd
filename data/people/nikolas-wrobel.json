@@ -1,0 +1,36 @@
+{
+  "id": "rtd-p-000094",
+  "slug": "nikolas-wrobel",
+  "name": {
+    "preferred": "Nikolas Wrobel",
+    "alternates": []
+  },
+  "countries": [
+    "Germany"
+  ],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "https://www.peopleofprint.com/best-of/10-type-foundries-to-follow-on-instagram",
+      "title": "10 Type Foundries to Follow on Instagram in 2024 suggested by Filippos Fragkogiannis"
+    },
+    {
+      "url": "http://nikolaswrobel.com",
+      "title": "nikolaswrobel.com"
+    },
+    {
+      "url": "http://nikolaswrobel.com/profile",
+      "title": "nikolaswrobel.com"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification",
+  "external_ids": {
+    "wikidata_qid": "Q124381786"
+  }
+}

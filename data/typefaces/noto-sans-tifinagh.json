@@ -1,0 +1,30 @@
+{
+  "id": "rtd-t-000085",
+  "slug": "noto-sans-tifinagh",
+  "name": {
+    "preferred": "Noto Sans Tifinagh",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000077",
+      "role": "type designer"
+    }
+  ],
+  "scripts": [],
+  "sources": [
+    {
+      "url": "http://www.jamra-patel.com",
+      "title": "Noto Sans Tifinagh - designer URL (embedded font metadata)"
+    },
+    {
+      "url": "http://www.google.com/get/noto/",
+      "title": "Noto Sans Tifinagh - vendor URL (embedded font metadata)"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

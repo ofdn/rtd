@@ -1,0 +1,32 @@
+{
+  "id": "rtd-p-000095",
+  "slug": "othmar-motter",
+  "name": {
+    "preferred": "Othmar Motter",
+    "alternates": []
+  },
+  "countries": [
+    "Austria"
+  ],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "https://fontsinuse.com/typefaces/10214/motter-tektura",
+      "title": "Motter Tektura in use"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification",
+  "external_ids": {
+    "wikidata_qid": "Q2036923",
+    "viaf": "171212341",
+    "isni": "0000000120138881",
+    "gnd": "1012085732",
+    "worldcat_entity": "E39PBJcC4FcQ9jjG3CYqkqR3Qq"
+  }
+}

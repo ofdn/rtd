@@ -1,0 +1,46 @@
+{
+  "id": "rtd-p-000067",
+  "slug": "cassandre",
+  "name": {
+    "preferred": "Cassandre",
+    "alternates": []
+  },
+  "countries": [
+    "France",
+    "Russian Empire"
+  ],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "https://www.boijmans.nl/en/collection/artworks/83455/poster-for-the-etoile-du-nord",
+      "title": "www.boijmans.nl"
+    },
+    {
+      "url": "https://theaterencyclopedie.nl/wiki/Adolphe_Mouron_Cassandre",
+      "title": "theaterencyclopedie.nl"
+    },
+    {
+      "url": "https://www.cassandre.fr/",
+      "title": "www.cassandre.fr"
+    },
+    {
+      "url": "https://www.cassandre-france.com/",
+      "title": "www.cassandre-france.com"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification",
+  "external_ids": {
+    "wikidata_qid": "Q278945",
+    "viaf": "44324012",
+    "isni": "0000000121303287",
+    "lc_naf": "n80015569",
+    "gnd": "118799665",
+    "worldcat_entity": "E39PBJrkYKWT9YCgQkv9xthmBP"
+  }
+}

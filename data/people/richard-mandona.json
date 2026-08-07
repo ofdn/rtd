@@ -1,0 +1,32 @@
+{
+  "id": "rtd-p-000101",
+  "slug": "richard-mandona",
+  "name": {
+    "preferred": "Richard Mandona",
+    "alternates": []
+  },
+  "countries": [
+    "Russia"
+  ],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "https://canvasrebel.com/meet-filippos-fragkogiannis",
+      "title": "Meet Filippos Fragkogiannis"
+    },
+    {
+      "url": "https://richardmandona.com",
+      "title": "richardmandona.com"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification",
+  "external_ids": {
+    "wikidata_qid": "Q123052585"
+  }
+}

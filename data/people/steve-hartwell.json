@@ -1,0 +1,27 @@
+{
+  "id": "rtd-p-000105",
+  "slug": "steve-hartwell",
+  "name": {
+    "preferred": "Steve Hartwell",
+    "alternates": []
+  },
+  "countries": [],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "http://tibet.que.ne.jp/",
+      "title": "Kailasa - designer URL (embedded font metadata)"
+    },
+    {
+      "url": "http://www.otani.ac.jp/",
+      "title": "Kailasa - vendor URL (embedded font metadata)"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

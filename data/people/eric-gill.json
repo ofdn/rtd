@@ -1,0 +1,43 @@
+{
+  "id": "rtd-p-000069",
+  "slug": "eric-gill",
+  "name": {
+    "preferred": "Eric Gill",
+    "alternates": []
+  },
+  "countries": [],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "http://www.agfamonotype.com/html/designer/des_index.html",
+      "title": "Gill Sans - designer URL (embedded font metadata)"
+    },
+    {
+      "url": "http://www.agfamonotype.com",
+      "title": "Gill Sans - vendor URL (embedded font metadata)"
+    },
+    {
+      "url": "http://www.monotypeimaging.com/ProductsServices/TypeDesignerShowcase",
+      "title": "Gill Sans - designer URL (embedded font metadata)"
+    },
+    {
+      "url": "http://www.monotypeimaging.com",
+      "title": "Gill Sans - vendor URL (embedded font metadata)"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification",
+  "external_ids": {
+    "wikidata_qid": "Q551426",
+    "viaf": "36934216",
+    "isni": "0000000108878668",
+    "lc_naf": "n50027765",
+    "gnd": "118694936",
+    "worldcat_entity": "E39PBJt3Vvb7BFXjkTxMJQ9hpP"
+  }
+}

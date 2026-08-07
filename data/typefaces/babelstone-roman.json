@@ -1,0 +1,28 @@
+{
+  "id": "rtd-t-000061",
+  "slug": "babelstone-roman",
+  "name": {
+    "preferred": "BabelStone Roman",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000063",
+      "role": "type designer"
+    }
+  ],
+  "scripts": [
+    "Latin script"
+  ],
+  "sources": [
+    {
+      "url": "https://www.babelstone.co.uk/Fonts/Roman.html",
+      "title": "www.babelstone.co.uk"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

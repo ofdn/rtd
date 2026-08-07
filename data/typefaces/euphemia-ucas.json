@@ -1,0 +1,30 @@
+{
+  "id": "rtd-t-000122",
+  "slug": "euphemia-ucas",
+  "name": {
+    "preferred": "Euphemia UCAS",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000103",
+      "role": "type designer"
+    }
+  ],
+  "scripts": [],
+  "sources": [
+    {
+      "url": "http://www.tiro.com",
+      "title": "Euphemia UCAS - designer URL (embedded font metadata)"
+    },
+    {
+      "url": "http://www.tiro.com/syllabics",
+      "title": "Euphemia UCAS - vendor URL (embedded font metadata)"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification"
+}

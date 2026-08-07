@@ -1,0 +1,35 @@
+{
+  "id": "rtd-p-000080",
+  "slug": "john-baskerville",
+  "name": {
+    "preferred": "John Baskerville",
+    "alternates": []
+  },
+  "countries": [],
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "http://www.agfamonotype.com/html/designer/des_index.html",
+      "title": "Baskerville - designer URL (embedded font metadata)"
+    },
+    {
+      "url": "http://www.agfamonotype.com",
+      "title": "Baskerville - vendor URL (embedded font metadata)"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07",
+  "verification_status": "needs_verification",
+  "external_ids": {
+    "wikidata_qid": "Q455265",
+    "viaf": "73971148",
+    "isni": "0000000066526006",
+    "lc_naf": "n81103313",
+    "gnd": "118657488",
+    "worldcat_entity": "E39PBJvd6hVvrGpV6QgDy7gMyd"
+  }
+}
