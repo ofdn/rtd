@@ -1,4 +1,4 @@
-import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, copyableId, arkPermalink, citationBlock } from "./shared.js";
+import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, copyableId, arkPermalink, citationBlock, printButton } from "./shared.js";
 
 // `designers` is the input record's designers[] enriched with each
 // person's current name/slug (resolved by build.js), so the page can link
@@ -53,6 +53,7 @@ export function renderTypefacePage(record, { canonicalUrl, designers, related, s
 <div class="record-header">
 <h1>${escapeHtml(record.name.preferred)}</h1>
 ${copyableId(record.id)}
+${printButton()}
 </div>
 ${arkPermalink(arkUrl)}
 ${verificationNote(record)}

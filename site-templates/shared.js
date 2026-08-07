@@ -35,6 +35,16 @@ export function setSiteVersion(version) {
 
 const COPY_ICON = `<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>`;
 
+const PRINT_ICON = `<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>`;
+
+// Works on any record page (person or typeface), triggers the browser's
+// own print dialog, which already offers "Save as PDF" without RTD needing
+// to generate/host PDF files itself. @media print in styles.css strips the
+// header/footer/controls so the printed page is just the record content.
+export function printButton() {
+  return `<button type="button" class="print-btn" onclick="window.print()" aria-label="Print this page" title="Print this page">${PRINT_ICON}</button>`;
+}
+
 export function arkPermalink(arkUrl) {
   return `<p class="ark-permalink">ARK <code>${escapeHtml(arkUrl)}</code> <button type="button" class="copy-id copy-icon-btn" data-copy="${escapeHtml(arkUrl)}" aria-label="Copy ARK permalink">${COPY_ICON}</button></p>`;
 }
@@ -125,7 +135,10 @@ export function renderRedirectPage({ name, targetUrl }) {
 // large hero search, inlined so the site has no icon-font dependency.
 export const SEARCH_ICON = `<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>`;
 
-const INFO_ICON = `<svg aria-hidden="true" width="28" height="28" viewBox="0 0 500 500"><circle fill="#4f7744" cx="250" cy="250" r="250"/><path fill="#fff" d="M249.9,155.2c-10.2,0-19-3.4-26.4-10.3-7.3-6.9-11-15.1-11-24.6s3.7-17.9,11-24.7c7.3-6.8,16.1-10.2,26.4-10.2s19.2,3.4,26.6,10.2c7.3,6.8,11,15.1,11,24.9s-3.7,17.7-11,24.5c-7.3,6.8-16.2,10.2-26.6,10.2ZM213.8,414.6v-232.1h72.5v232.1h-72.5Z"/></svg>`;
+// Fill colors come from styles.css (.about-link .ring / .glyph), not
+// hardcoded here, so the icon follows the header's light/dark accent
+// tokens instead of being stuck at one fixed color.
+const INFO_ICON = `<svg aria-hidden="true" class="about-icon" viewBox="0 0 24 24"><circle class="ring" cx="12" cy="12" r="12"></circle><rect class="glyph" x="10.6" y="10.2" width="2.8" height="7.4" rx="1"></rect><circle class="glyph" cx="12" cy="6.7" r="1.6"></circle></svg>`;
 
 // A single GET form works everywhere: on the home page itself, action=""
 // submits back to the same page (progressively enhanced into a live
@@ -172,9 +185,12 @@ ${jsonLd ? jsonLdScript(jsonLd) : ""}
 </head>
 <body>
 <header class="site-header">
-<a class="logo" href="${escapeHtml(homePath)}">Registry of Type Design</a>
+<a class="logo" href="${escapeHtml(homePath)}">
+<img class="logo-img logo-img-light" src="${escapeHtml(homePath)}logo-black-1.svg" alt="Registry of Type Design" width="96" height="24">
+<img class="logo-img logo-img-dark" src="${escapeHtml(homePath)}logo-white-1.svg" alt="Registry of Type Design" width="96" height="24">
+</a>
 ${showHeaderSearch ? headerSearchForm(homePath) : ""}
-<a class="info-icon${showHeaderSearch ? "" : " info-icon-solo"}" href="${escapeHtml(homePath)}info/">${INFO_ICON}<span>About</span></a>
+<a class="about-link" href="${escapeHtml(homePath)}info/">${INFO_ICON}<span>About</span></a>
 </header>
 ${body}
 <footer class="site-footer">

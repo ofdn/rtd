@@ -1,4 +1,4 @@
-import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, nationalityLabel, copyableId, arkPermalink, citationBlock } from "./shared.js";
+import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, nationalityLabel, copyableId, arkPermalink, citationBlock, printButton } from "./shared.js";
 
 // `works` is the computed reverse index (typefaces this person is credited
 // on), passed in by build.js, it is never stored on the person record
@@ -46,6 +46,7 @@ export function renderPersonPage(record, { canonicalUrl, works, demonyms, relate
 <div class="record-header">
 <h1>${escapeHtml(record.name.preferred)}</h1>
 ${copyableId(record.id)}
+${printButton()}
 </div>
 ${arkPermalink(arkUrl)}
 ${verificationNote(record)}

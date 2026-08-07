@@ -202,6 +202,9 @@ function build(dataDir, outDir) {
   setSiteVersion(pkgVersion);
   writeFile(outDir, "logo-black.svg", readFileSync(join(repoRoot, "site-templates/logo-black.svg")));
   writeFile(outDir, "logo-white.svg", readFileSync(join(repoRoot, "site-templates/logo-white.svg")));
+  writeFile(outDir, "logo-black-1.svg", readFileSync(join(repoRoot, "site-templates/logo-black-1.svg")));
+  writeFile(outDir, "logo-white-1.svg", readFileSync(join(repoRoot, "site-templates/logo-white-1.svg")));
+  writeFile(outDir, "halftone-diamond.svg", readFileSync(join(repoRoot, "site-templates/halftone-diamond.svg")));
 
   writeFile(
     outDir,
