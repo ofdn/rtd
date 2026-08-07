@@ -22,7 +22,7 @@ import { renderPersonPage, renderTombstonePage } from "../site-templates/person.
 import { renderTypefacePage } from "../site-templates/typeface.js";
 import { renderHomePage } from "../site-templates/home.js";
 import { renderInfoPage } from "../site-templates/info.js";
-import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion } from "../site-templates/shared.js";
+import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion, escapeHtml } from "../site-templates/shared.js";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const repoRoot = join(__dirname, "..");
@@ -415,6 +415,30 @@ function build(dataDir, outDir) {
       .map((t) => ({ ...t, kind: "typeface" })),
   ];
   writeFile(outDir, "search-index.json", JSON.stringify(searchIndex));
+
+  // --- Sitemap (active content pages only, not redirects/tombstones/API/
+  // ARK/bare-id stubs, not useful for search engines to index) ---
+  const today = new Date().toISOString().slice(0, 10);
+  const sitemapUrls = [
+    { loc: SITE_URL, lastmod: today },
+    { loc: `${SITE_URL}info/`, lastmod: today },
+    { loc: `${SITE_URL}preservation/`, lastmod: today },
+    { loc: `${SITE_URL}dumps/`, lastmod: today },
+    ...peopleApiIndex
+      .filter((p) => p.record_status === "active")
+      .map((p) => ({ loc: p.canonical_url, lastmod: personById.get(p.id)?.updated_at ?? today })),
+    ...typefacesApiIndex
+      .filter((t) => t.record_status === "active")
+      .map((t) => ({ loc: t.canonical_url, lastmod: typefaceById.get(t.id)?.updated_at ?? today })),
+  ];
+  const sitemapXml =
+    `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+    sitemapUrls
+      .map((u) => `<url><loc>${escapeHtml(u.loc)}</loc><lastmod>${u.lastmod}</lastmod></url>`)
+      .join("\n") +
+    `\n</urlset>\n`;
+  writeFile(outDir, "sitemap.xml", sitemapXml);
 
   // --- Dumps ---
   const peopleDumpRows = people.map((r) => ({
