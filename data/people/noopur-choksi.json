@@ -5,7 +5,7 @@
     "preferred": "Noopur Choksi",
     "alternates": []
   },
-  "countries": ["India", "United States"],
+  "countries": ["India"],
   "roles": ["type designer", "visual designer", "illustrator"],
   "bio": "Visual designer and illustrator. Designed Sentient, a serif text typeface based on old-style forms drawing on humanist calligraphy, published by the Indian Type Foundry in 2021.",
   "external_ids": { "wikidata_qid": "Q125430708" },
@@ -16,5 +16,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-08-07"
 }

@@ -5,7 +5,7 @@
     "preferred": "Kimya Gandhi",
     "alternates": []
   },
-  "countries": ["India", "Germany"],
+  "countries": ["India"],
   "roles": ["type designer"],
   "affiliations": [
     { "name": "Mota Italic", "start_year": "2014" }
@@ -20,5 +20,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-08-07"
 }

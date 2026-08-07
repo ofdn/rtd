@@ -5,7 +5,7 @@
     "preferred": "Aditi Pimprikar",
     "alternates": []
   },
-  "countries": ["India", "Australia"],
+  "countries": ["India"],
   "roles": ["type designer", "graphic designer"],
   "affiliations": [
     { "name": "Indian Type Foundry" }
@@ -19,5 +19,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-08-07"
 }

@@ -5,7 +5,7 @@
     "preferred": "Lipi Raval",
     "alternates": []
   },
-  "countries": ["India", "United Kingdom"],
+  "countries": ["India"],
   "roles": ["type designer"],
   "affiliations": [
     { "name": "Indian Type Foundry", "start_year": "2013" }
@@ -20,5 +20,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-08-07"
 }
