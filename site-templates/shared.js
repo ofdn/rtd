@@ -146,12 +146,21 @@ const INFO_ICON = `<svg aria-hidden="true" class="about-icon" viewBox="0 0 24 24
 // ("../../") submits to the registry root with the query as ?q=, which
 // home.js reads on load and searches immediately. No JS is required for
 // this to work at all, only for it to avoid a full page reload.
+//
+// `#header-search-results` is the quick-select dropdown (wired up by the
+// inline script in pageShell): as you type, if the query already matches
+// a record in the index, a few candidates appear right there to jump to
+// directly, instead of needing to submit and land on the home page's full
+// results list to find out a record already exists.
 function headerSearchForm(homePath) {
-  return `<form class="header-search" action="${escapeHtml(homePath)}" method="get" role="search">
+  return `<div class="header-search-wrap">
+<form class="header-search" action="${escapeHtml(homePath)}" method="get" role="search">
 <label class="visually-hidden" for="header-search-input">Search people and typefaces</label>
-<input id="header-search-input" type="search" name="q" placeholder="Search by name, typeface, or foundry&hellip;" autocomplete="off">
+<input id="header-search-input" type="search" name="q" placeholder="Search by name, typeface, or foundry&hellip;" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="header-search-results" aria-autocomplete="list">
 <button type="submit" aria-label="Search">${SEARCH_ICON}</button>
-</form>`;
+</form>
+<div id="header-search-results" class="header-search-results" hidden></div>
+</div>`;
 }
 
 // `homePath` is the relative path back to the site root from wherever this
@@ -236,6 +245,100 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
     URL.revokeObjectURL(url);
   });
 });
+
+// Header search quick-select: as-you-type dropdown of existing records
+// matching the query, so a search for something already in the registry
+// doesn't require submitting and landing on the home page's full results
+// list just to find out. No-ops entirely on the home page, which doesn't
+// render this header form (it has its own hero search instead).
+(function () {
+  var input = document.getElementById("header-search-input");
+  if (!input) return;
+  var wrap = input.closest(".header-search-wrap");
+  var form = input.closest("form");
+  var results = document.getElementById("header-search-results");
+  var indexPromise = null;
+  var MAX_RESULTS = 6;
+
+  function escapeHtmlClient(value) {
+    return String(value)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;");
+  }
+
+  function loadIndex() {
+    if (indexPromise) return indexPromise;
+    var base = form.getAttribute("action") || "";
+    indexPromise = fetch(base + "search-index.json").then(function (r) {
+      return r.json();
+    });
+    return indexPromise;
+  }
+
+  function hide() {
+    results.hidden = true;
+    results.innerHTML = "";
+    input.setAttribute("aria-expanded", "false");
+  }
+
+  function show(matches, q) {
+    if (!matches.length) {
+      results.innerHTML =
+        '<p class="no-matches">No matches for &ldquo;' + escapeHtmlClient(q) + '&rdquo; yet.</p>';
+    } else {
+      results.innerHTML =
+        "<ul>" +
+        matches
+          .slice(0, MAX_RESULTS)
+          .map(function (m) {
+            return (
+              '<li><a href="' + m.canonical_url + '"><span class="name">' + escapeHtmlClient(m.name) + "</span>" +
+              '<span class="kind-tag">' + m.kind + "</span>" +
+              (m.subtitle ? '<span class="subtitle">' + escapeHtmlClient(m.subtitle) + "</span>" : "") +
+              "</a></li>"
+            );
+          })
+          .join("") +
+        "</ul>";
+    }
+    results.hidden = false;
+    input.setAttribute("aria-expanded", "true");
+  }
+
+  input.addEventListener("input", function () {
+    var q = input.value.trim();
+    if (!q) {
+      hide();
+      return;
+    }
+    loadIndex().then(function (index) {
+      var needle = q.toLowerCase();
+      var matches = index.filter(function (item) {
+        return (
+          item.name.toLowerCase().includes(needle) ||
+          (item.alternates || []).some(function (a) {
+            return a.toLowerCase().includes(needle);
+          })
+        );
+      });
+      show(matches, q);
+    });
+  });
+
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") hide();
+  });
+
+  wrap.addEventListener("focusout", function (e) {
+    if (!wrap.contains(e.relatedTarget)) hide();
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!wrap.contains(e.target)) hide();
+  });
+})();
 </script>
 </body>
 </html>
