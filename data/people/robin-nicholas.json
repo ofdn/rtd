@@ -23,5 +23,12 @@
   "superseded_by": null,
   "created_at": "2026-08-07",
   "updated_at": "2026-08-07",
-  "verification_status": "needs_verification"
+  "external_ids": {
+    "wikidata_qid": "Q3437107",
+    "viaf": "165765546",
+    "isni": "0000000113483791",
+    "lc_naf": "nb2011010338",
+    "gnd": "140157840",
+    "worldcat_entity": "E39PBJtxkk9kBvyKXD3vFcHXBP"
+  }
 }

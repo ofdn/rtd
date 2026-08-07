@@ -19,5 +19,10 @@
   "superseded_by": null,
   "created_at": "2026-08-07",
   "updated_at": "2026-08-07",
-  "verification_status": "needs_verification"
+  "external_ids": {
+    "wikidata_qid": "Q4777951",
+    "viaf": "168095467",
+    "gnd": "143459317",
+    "worldcat_entity": "E39PBJp6bbR4JHJPVb3bypRBT3"
+  }
 }
