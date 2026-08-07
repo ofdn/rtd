@@ -318,6 +318,44 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
       .replaceAll('"', "&quot;");
   }
 
+  // Same id-query and order/punctuation-insensitive name matching as
+  // home.js's search (see there for the fuller rationale), duplicated
+  // here rather than shared since this whole script is a template
+  // literal with no module system on the client side.
+  function parseIdQuery(raw) {
+    var q = raw.trim();
+    var full = /^rtd-?([pt])-?0*([0-9]+)$/i.exec(q);
+    if (full) {
+      return { kind: full[1].toLowerCase() === "p" ? "person" : "typeface", num: parseInt(full[2], 10) };
+    }
+    var bare = /^[0-9]+$/.exec(q);
+    if (bare) {
+      return { kind: null, num: parseInt(bare[0], 10) };
+    }
+    return null;
+  }
+  function idNum(id) {
+    var m = /-([0-9]+)$/.exec(id);
+    return m ? parseInt(m[1], 10) : null;
+  }
+  function idMatches(item, parsedId) {
+    if (!parsedId) return false;
+    if (idNum(item.id) !== parsedId.num) return false;
+    if (parsedId.kind && item.kind !== parsedId.kind) return false;
+    return true;
+  }
+  function normalizeForSearch(s) {
+    return s.toLowerCase().replace(/[.,]/g, " ").replace(/\s+/g, " ").trim();
+  }
+  function tokenSearchMatch(query, target) {
+    var qTokens = normalizeForSearch(query).split(" ").filter(Boolean);
+    if (!qTokens.length) return false;
+    var normTarget = normalizeForSearch(target);
+    return qTokens.every(function (t) {
+      return normTarget.indexOf(t) !== -1;
+    });
+  }
+
   function loadIndex() {
     if (indexPromise) return indexPromise;
     var base = form.getAttribute("action") || "";
@@ -365,13 +403,14 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
       return;
     }
     loadIndex().then(function (index) {
-      var needle = q.toLowerCase();
+      var parsedId = parseIdQuery(q);
       var matches = index.filter(function (item) {
         return (
-          item.name.toLowerCase().includes(needle) ||
+          tokenSearchMatch(q, item.name) ||
           (item.alternates || []).some(function (a) {
-            return a.toLowerCase().includes(needle);
-          })
+            return tokenSearchMatch(q, a);
+          }) ||
+          idMatches(item, parsedId)
         );
       });
       show(matches, q);
@@ -395,6 +434,28 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
 
   document.addEventListener("click", function (e) {
     if (!wrap.contains(e.target)) hide();
+  });
+
+  // Enter still falls through to the plain GET submission (lands on the
+  // home page's own results for a name query, unchanged) unless the
+  // query is unambiguously an id, in which case skip straight to that
+  // record instead of making the reader click through the dropdown.
+  form.addEventListener("submit", function (e) {
+    var q = input.value.trim();
+    var parsedId = parseIdQuery(q);
+    if (!q || !parsedId) return;
+    e.preventDefault();
+    var base = form.getAttribute("action") || "";
+    loadIndex().then(function (index) {
+      var idHits = index.filter(function (item) {
+        return idMatches(item, parsedId);
+      });
+      if (idHits.length === 1) {
+        window.location.href = base + (idHits[0].kind === "person" ? "people/" : "typefaces/") + idHits[0].slug + "/";
+      } else {
+        window.location.href = base + "?q=" + encodeURIComponent(q);
+      }
+    });
   });
 })();
 

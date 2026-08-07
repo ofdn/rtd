@@ -53,7 +53,58 @@ ${SEARCH_ICON}
     return (base[0] || "").toUpperCase();
   }
 
-  function renderList(items) {
+  // Recognizes an RTD id typed as-is ("rtd-p-000039"), without hyphens,
+  // or as a bare number ("39", "039", "000039") so searching for an id
+  // works the way searching for a name already does. A bare number has
+  // no known kind (a person and a typeface can share the same trailing
+  // number in their own independent sequences), a full "rtd-p-"/"rtd-t-"
+  // form does.
+  function parseIdQuery(raw) {
+    var q = raw.trim();
+    var full = /^rtd-?([pt])-?0*([0-9]+)$/i.exec(q);
+    if (full) {
+      return { kind: full[1].toLowerCase() === "p" ? "person" : "typeface", num: parseInt(full[2], 10) };
+    }
+    var bare = /^[0-9]+$/.exec(q);
+    if (bare) {
+      return { kind: null, num: parseInt(bare[0], 10) };
+    }
+    return null;
+  }
+
+  function idNum(id) {
+    var m = /-([0-9]+)$/.exec(id);
+    return m ? parseInt(m[1], 10) : null;
+  }
+
+  function idMatches(item, parsedId) {
+    if (!parsedId) return false;
+    if (idNum(item.id) !== parsedId.num) return false;
+    if (parsedId.kind && item.kind !== parsedId.kind) return false;
+    return true;
+  }
+
+  // Order- and punctuation-insensitive: every word in the query has to
+  // appear somewhere in the target, regardless of what order they're
+  // in. Makes "Crouwel,Wim" (last,first, e.g. pasted from a spreadsheet
+  // export) match "Wim Crouwel" the same as typing it the "normal" way.
+  function normalizeForSearch(s) {
+    return s.toLowerCase().replace(/[.,]/g, " ").replace(/\s+/g, " ").trim();
+  }
+  function tokenSearchMatch(query, target) {
+    var qTokens = normalizeForSearch(query).split(" ").filter(Boolean);
+    if (!qTokens.length) return false;
+    var normTarget = normalizeForSearch(target);
+    return qTokens.every(function (t) {
+      return normTarget.indexOf(t) !== -1;
+    });
+  }
+
+  // showKindTag off for the A-Z browse, where results are already split
+  // into their own "People"/"Typefaces" heading, so repeating it on every
+  // row is redundant. Left on for free-text search, which shows a single
+  // mixed list where the tag is the only thing telling entries apart.
+  function renderList(items, showKindTag) {
     if (!items.length) return "<p>No entries found.</p>";
     return (
       "<ul>" +
@@ -62,7 +113,7 @@ ${SEARCH_ICON}
           var href = (m.kind === "person" ? "people/" : "typefaces/") + m.slug + "/";
           return (
             '<li><a href="' + href + '"><span class="name">' + escapeHtml(m.name) + "</span>" +
-            '<span class="kind-tag">' + m.kind + "</span>" +
+            (showKindTag ? '<span class="kind-tag">' + m.kind + "</span>" : "") +
             (m.subtitle ? '<span class="subtitle">' + escapeHtml(m.subtitle) + "</span>" : "") +
             "</a></li>"
           );
@@ -132,25 +183,26 @@ ${SEARCH_ICON}
       "<h2>" +
       letter +
       "</h2>" +
-      (people.length ? "<h3>People</h3>" + renderList(people) : "") +
-      (typefaces.length ? "<h3>Typefaces</h3>" + renderList(typefaces) : "");
+      (people.length ? "<h3>People</h3>" + renderList(people, false) : "") +
+      (typefaces.length ? "<h3>Typefaces</h3>" + renderList(typefaces, false) : "");
   }
 
   function runSearch(q) {
     markActiveLetter(null);
-    var needle = q.toLowerCase();
+    var parsedId = parseIdQuery(q);
     var matches = index.filter(function (item) {
       return (
-        item.name.toLowerCase().includes(needle) ||
+        tokenSearchMatch(q, item.name) ||
         (item.alternates || []).some(function (a) {
-          return a.toLowerCase().includes(needle);
-        })
+          return tokenSearchMatch(q, a);
+        }) ||
+        idMatches(item, parsedId)
       );
     });
     results.innerHTML =
       '<h2>Results for &ldquo;' + escapeHtml(q) + '&rdquo;</h2>' +
       '<p class="results-meta">Showing ' + matches.length + " cataloged " + (matches.length === 1 ? "entry" : "entries") + ".</p>" +
-      renderList(matches);
+      renderList(matches, true);
   }
 
   input.addEventListener("input", function () {
@@ -166,15 +218,41 @@ ${SEARCH_ICON}
 
   // The form's plain GET action already works without JS (it reloads with
   // ?q=...); once JS is running, results appear live as you type, so a
-  // full-page reload on Enter would just be redundant, not broken.
+  // full-page reload on Enter would just be redundant, not broken. The
+  // one thing submit still does on top of that: if the query is
+  // unambiguously an id (a bare number matching exactly one record, or a
+  // full "rtd-p-"/"rtd-t-" form), jump straight to that record's page
+  // instead of just leaving it sitting in the results list.
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+    var q = input.value.trim();
+    if (!q) return;
+    var parsedId = parseIdQuery(q);
+    if (!parsedId) return;
+    loadIndex().then(function (idx) {
+      var idHits = idx.filter(function (item) {
+        return idMatches(item, parsedId);
+      });
+      if (idHits.length === 1) {
+        window.location.href = (idHits[0].kind === "person" ? "people/" : "typefaces/") + idHits[0].slug + "/";
+      }
+    });
   });
 
   var initialQuery = new URLSearchParams(window.location.search).get("q");
   if (initialQuery) {
     input.value = initialQuery;
-    loadIndex().then(function () {
+    var initialParsedId = parseIdQuery(initialQuery);
+    loadIndex().then(function (idx) {
+      if (initialParsedId) {
+        var idHits = idx.filter(function (item) {
+          return idMatches(item, initialParsedId);
+        });
+        if (idHits.length === 1) {
+          window.location.href = (idHits[0].kind === "person" ? "people/" : "typefaces/") + idHits[0].slug + "/";
+          return;
+        }
+      }
       runSearch(initialQuery);
     });
   } else {
