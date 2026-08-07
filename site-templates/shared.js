@@ -439,6 +439,9 @@ export function identifierLinks(externalIds) {
   if (externalIds.worldcat_entity) {
     links.push({ label: "WorldCat", value: externalIds.worldcat_entity, url: `https://id.oclc.org/worldcat/entity/${externalIds.worldcat_entity}` });
   }
+  if (externalIds.ulan) {
+    links.push({ label: "ULAN", value: externalIds.ulan, url: `https://vocab.getty.edu/ulan/${externalIds.ulan}` });
+  }
   return links;
 }
 

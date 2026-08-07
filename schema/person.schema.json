@@ -109,7 +109,8 @@
         "isni": { "type": "string", "description": "ISNI, 16 digits, spaces optional." },
         "lc_naf": { "type": "string", "description": "Library of Congress/NACO Authority File id, e.g. 'n79021164'." },
         "gnd": { "type": "string", "description": "GND (Gemeinsame Normdatei / Deutsche Nationalbibliothek) id." },
-        "worldcat_entity": { "type": "string", "description": "OCLC WorldCat Entity id, the string after id.oclc.org/worldcat/entity/. Note: the WorldCat.org detail page for an entity currently prompts for a library-affiliated login to view, unlike the other authority files here, still worth recording as a cross-reference even though the page itself isn't always freely browsable." }
+        "worldcat_entity": { "type": "string", "description": "OCLC WorldCat Entity id, the string after id.oclc.org/worldcat/entity/. Note: the WorldCat.org detail page for an entity currently prompts for a library-affiliated login to view, unlike the other authority files here, still worth recording as a cross-reference even though the page itself isn't always freely browsable." },
+        "ulan": { "type": "string", "pattern": "^[0-9]+$", "description": "Getty Union List of Artist Names (ULAN) numeric id, e.g. '500104874'. As reliable an authority file as VIAF/ISNI/LC-NAF/GND. Note getty.edu is not a Wikimedia domain, so unlike wikidata_qid a ULAN record page can also be cited directly in sources[] when it's the actual independent evidence for a record, this field alone is still just the cross-reference." }
       },
       "description": "Informational cross-references only, one per authority file. Never usable as a sources entry."
     },

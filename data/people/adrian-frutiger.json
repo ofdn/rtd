@@ -25,12 +25,5 @@
   "superseded_by": null,
   "created_at": "2026-08-07",
   "updated_at": "2026-08-07",
-  "external_ids": {
-    "wikidata_qid": "Q123621",
-    "viaf": "107027312",
-    "isni": "0000000081722347",
-    "lc_naf": "n81032458",
-    "gnd": "118693891",
-    "worldcat_entity": "E39PBJjhD9fJm69kQVcHpKDXh3"
-  }
+  "external_ids": { "wikidata_qid": "Q123621", "viaf": "107027312", "isni": "0000000081722347", "lc_naf": "n81032458", "gnd": "118693891", "worldcat_entity": "E39PBJjhD9fJm69kQVcHpKDXh3", "ulan": "500126250" }
 }
