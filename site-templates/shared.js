@@ -155,9 +155,10 @@ const INFO_ICON = `<svg aria-hidden="true" class="about-icon" viewBox="0 0 24 24
 function headerSearchForm(homePath) {
   return `<div class="header-search-wrap">
 <form class="header-search" action="${escapeHtml(homePath)}" method="get" role="search">
+<span class="header-search-icon" aria-hidden="true">${SEARCH_ICON}</span>
 <label class="visually-hidden" for="header-search-input">Search people and typefaces</label>
 <input id="header-search-input" type="search" name="q" placeholder="Search by name, typeface, or foundry&hellip;" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="header-search-results" aria-autocomplete="list">
-<button type="submit" aria-label="Search">${SEARCH_ICON}</button>
+<button type="button" id="header-search-clear" class="header-search-clear" aria-label="Clear search" hidden>&times;</button>
 </form>
 <div id="header-search-results" class="header-search-results" hidden></div>
 </div>`;
@@ -257,8 +258,13 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
   var wrap = input.closest(".header-search-wrap");
   var form = input.closest("form");
   var results = document.getElementById("header-search-results");
+  var clearBtn = document.getElementById("header-search-clear");
   var indexPromise = null;
   var MAX_RESULTS = 6;
+
+  function updateClearVisibility() {
+    clearBtn.hidden = !input.value;
+  }
 
   function escapeHtmlClient(value) {
     return String(value)
@@ -308,6 +314,7 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
   }
 
   input.addEventListener("input", function () {
+    updateClearVisibility();
     var q = input.value.trim();
     if (!q) {
       hide();
@@ -329,6 +336,13 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
 
   input.addEventListener("keydown", function (e) {
     if (e.key === "Escape") hide();
+  });
+
+  clearBtn.addEventListener("click", function () {
+    input.value = "";
+    updateClearVisibility();
+    hide();
+    input.focus();
   });
 
   wrap.addEventListener("focusout", function (e) {

@@ -22,6 +22,11 @@
   --color-header-fg: #2a2a2a;
   --color-header-fg-muted: #6b6b6b;
   --color-header-accent: #2a2a2a;
+  /* The one orange in this design system. Defined once here (not
+     redeclared in the dark-mode block below), so anything using it stays
+     the exact same color in both themes rather than drifting into a
+     second, different orange per theme. */
+  --color-accent: #febb54;
   --font-logo: "Plus Jakarta Sans", sans-serif;
   --font-heading: "Source Serif 4", Georgia, serif;
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
@@ -43,10 +48,10 @@
     --color-callout-bg: #3a3536;
     --color-info-accent: #2d6a4f;
     --color-header-bg: #0a0a0a;
-    --color-header-border: #febb54;
+    --color-header-border: var(--color-accent);
     --color-header-fg: #e1d9c4;
     --color-header-fg-muted: #b9b0a0;
-    --color-header-accent: #febb54;
+    --color-header-accent: var(--color-accent);
   }
 }
 
@@ -117,17 +122,33 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 
 .header-search-wrap {
   position: relative;
-  flex: 1;
-  max-width: 22rem;
+  width: 26rem;
+  max-width: 40vw;
+  flex-shrink: 1;
   margin-left: auto;
 }
 
 .header-search {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  border-bottom: 2px solid var(--color-header-fg);
-  padding-bottom: 0.15rem;
+  gap: 0.5rem;
+  background: var(--color-bg-alt);
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  padding: 0.4rem 0.85rem;
+}
+
+/* :focus-within, not :focus on the input alone, so the ring stays on
+   while the clear button briefly has focus too. */
+.header-search:focus-within {
+  background: var(--color-bg-card);
+  border-color: var(--color-accent);
+}
+
+.header-search .header-search-icon {
+  display: flex;
+  flex-shrink: 0;
+  color: var(--color-text-muted);
 }
 
 .header-search input {
@@ -135,24 +156,34 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   min-width: 0;
   border: none;
   background: transparent;
-  padding: 0.3rem 0;
   font: inherit;
-  color: var(--color-header-fg);
+  color: var(--color-text);
 }
 
-.header-search input::placeholder { color: var(--color-header-fg-muted); }
+.header-search input::placeholder { color: var(--color-text-muted); }
 .header-search input:focus { outline: none; }
+/* Custom clear button below replaces the native one, which would
+   otherwise double up with it in Chrome/Safari. */
+.header-search input[type="search"]::-webkit-search-cancel-button { display: none; }
 
-.header-search button {
+.header-search-clear {
+  flex-shrink: 0;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 50%;
   border: none;
-  background: none;
-  padding: 0.2rem;
-  color: var(--color-header-fg);
-  cursor: pointer;
+  padding: 0;
+  background: var(--color-outline);
+  color: var(--color-bg-card);
+  font-size: 0.8rem;
+  line-height: 1;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
-
-.header-search button:hover { opacity: 0.8; }
+.header-search-clear:hover { background: var(--color-text-muted); }
+.header-search-clear[hidden] { display: none; }
 
 .about-link {
   display: inline-flex;
@@ -163,8 +194,15 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   color: var(--color-header-accent);
   font-size: 0.85rem;
   font-weight: 600;
+  /* Pushes itself right only when it's the sole trailing item (no search
+     form on the page, e.g. the home page). When the search form IS
+     present, its own margin-left:auto already pushes the whole trailing
+     group right, so About should just sit flush next to it, not claim a
+     second share of the free space (which would open a gap between them,
+     see 2026-08 search redesign). */
   margin-left: auto;
 }
+.header-search-wrap + .about-link { margin-left: 0; }
 .about-link .about-icon { display: block; width: 1.5rem; height: 1.5rem; flex-shrink: 0; }
 .about-link .ring { fill: var(--color-header-accent); }
 .about-link .glyph { fill: var(--color-header-bg); }
@@ -533,6 +571,9 @@ footer.site-footer p { margin: 0.6rem 0 0; }
      competes with the search input's legibility. */
   .site-header { padding: 0.6rem 1rem; flex-wrap: wrap; background-image: none; }
   .header-search-wrap { max-width: none; width: 100%; order: 3; margin-left: 0; }
+  /* Icon only, no "About" label, to save header width on narrow screens. */
+  .about-link span { display: none; }
+  .about-link { gap: 0; }
   main, #results { padding-left: 1rem; padding-right: 1rem; }
   h1 { font-size: 1.75rem; }
   dl.facts { grid-template-columns: 1fr; row-gap: 0.35rem; }
