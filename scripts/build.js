@@ -22,7 +22,7 @@ import { renderPersonPage, renderTombstonePage } from "../site-templates/person.
 import { renderTypefacePage } from "../site-templates/typeface.js";
 import { renderHomePage } from "../site-templates/home.js";
 import { renderInfoPage } from "../site-templates/info.js";
-import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion, escapeHtml } from "../site-templates/shared.js";
+import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion, escapeHtml, linkTag } from "../site-templates/shared.js";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const repoRoot = join(__dirname, "..");
@@ -245,8 +245,8 @@ function build(dataDir, outDir) {
 <p class="description">Registry of Type Design commits to best-effort persistent access to its identifiers and data.</p>
 <ul class="plain-list">
 <li>Ids (<code>rtd-p-</code>/<code>rtd-t-</code>, and the ARK identifiers built on them) are never reused or reassigned once published. A merged or deprecated record keeps its id and gets a redirect to wherever it lives now, it never gets deleted or handed to a different record.</li>
-<li>All data is openly licensed (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>) and published as bulk CSV/NDJSON dumps, for anyone who wants to mirror the data independently of this site.</li>
-<li>The full source and edit history is public on <a href="https://github.com/ofdn/rtd">GitHub</a>. Anyone who has cloned the repository already holds a complete, independently usable copy of the registry and its history.</li>
+<li>All data is openly licensed (${linkTag("https://creativecommons.org/licenses/by-sa/4.0/", "CC BY-SA 4.0")}) and published as bulk CSV/NDJSON dumps, for anyone who wants to mirror the data independently of this site.</li>
+<li>The full source and edit history is public on ${linkTag("https://github.com/ofdn/rtd", "GitHub")}. Anyone who has cloned the repository already holds a complete, independently usable copy of the registry and its history.</li>
 </ul>
 <p>Registry of Type Design is an independent, community-run project. We can't promise formal dark-archive or LOCKSS-style preservation today. Open licensing, public version history, and downloadable dumps mean the data survives independently of any single server or organization staying online.</p>
 </main>`,

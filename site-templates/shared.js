@@ -14,6 +14,29 @@ export function copyableId(id) {
   return `<button type="button" class="record-id copy-id" data-copy="${escapeHtml(id)}">${escapeHtml(id)}</button>`;
 }
 
+// Every link off rtd.theofdn.org itself (including theofdn.org, the
+// parent O Foundation site, which is a separate site from RTD) opens in
+// a new tab; internal navigation never does. noopener/noreferrer: the
+// new tab shouldn't get a handle back to this page (a real, if minor,
+// security consideration whenever target="_blank" is used).
+const SITE_HOSTS = new Set(["rtd.theofdn.org"]);
+export const EXTERNAL_LINK_ATTRS = 'target="_blank" rel="noopener noreferrer"';
+export function isExternalUrl(url) {
+  try {
+    return !SITE_HOSTS.has(new URL(url).hostname);
+  } catch {
+    return false; // relative path, e.g. "../people/foo/", always internal
+  }
+}
+// `<a>` tag builder used anywhere a URL comes from data (sources[], the
+// identifier authority-file links, search results) rather than being
+// hand-written in a template, so external-ness is decided once per call
+// site instead of copy-pasted attribute strings everywhere.
+export function linkTag(url, innerHtml, extraAttrs = "") {
+  const target = isExternalUrl(url) ? ` ${EXTERNAL_LINK_ATTRS}` : "";
+  return `<a href="${escapeHtml(url)}"${extraAttrs ? ` ${extraAttrs}` : ""}${target}>${innerHtml}</a>`;
+}
+
 // A hash of styles.css's own content, set once by build.js and appended to
 // the stylesheet link as a cache-buster (`?v=<hash>`). Without this,
 // browsers and the CDN in front of the custom domain hold onto a cached
@@ -225,11 +248,11 @@ ${showHeaderSearch ? headerSearchForm(homePath) : ""}
 </header>
 ${body}
 <footer class="site-footer">
-<a class="footer-logo-link" href="https://theofdn.org" aria-label="O Foundation">
+<a class="footer-logo-link" href="https://theofdn.org" aria-label="O Foundation" ${EXTERNAL_LINK_ATTRS}>
 <img class="footer-logo footer-logo-light" src="${escapeHtml(homePath)}logo-black.svg" alt="" width="72" height="20">
 <img class="footer-logo footer-logo-dark" src="${escapeHtml(homePath)}logo-white.svg" alt="" width="72" height="20">
 </a>
-<p>Registry of Type Design${siteVersion ? ` v${escapeHtml(siteVersion)}` : ""}${schemaVersion ? `, schema v${escapeHtml(schemaVersion)}` : ""}. A project of the <a href="https://theofdn.org">O Foundation</a>, maintained by Subhashish Panigrahi. <a href="${escapeHtml(homePath)}info/#licensing">License</a> &middot; <a href="${REPO_URL}">Source on GitHub</a> &middot; <a href="${escapeHtml(homePath)}preservation/">Preservation statement</a></p>
+<p>Registry of Type Design${siteVersion ? ` v${escapeHtml(siteVersion)}` : ""}${schemaVersion ? `, schema v${escapeHtml(schemaVersion)}` : ""}. A project of the ${linkTag("https://theofdn.org", "O Foundation")}, maintained by Subhashish Panigrahi. <a href="${escapeHtml(homePath)}info/#licensing">License</a> &middot; ${linkTag(REPO_URL, "Source on GitHub")} &middot; <a href="${escapeHtml(homePath)}preservation/">Preservation statement</a></p>
 </footer>
 <script>
 document.querySelectorAll(".copy-id").forEach(function (btn) {
@@ -411,7 +434,7 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
 
 export function verificationNote(record) {
   if (record.verification_status !== "needs_verification") return "";
-  return `<aside class="callout"><strong>Needs verification</strong><p>Sources for this record are thin or low-confidence. Help improve it by <a href="https://github.com/ofdn/rtd/blob/main/CONTRIBUTING.md">contributing a stronger source</a>.</p></aside>`;
+  return `<aside class="callout"><strong>Needs verification</strong><p>Sources for this record are thin or low-confidence. Help improve it by ${linkTag("https://github.com/ofdn/rtd/blob/main/CONTRIBUTING.md", "contributing a stronger source")}.</p></aside>`;
 }
 
 // Resolves external_ids into {label, url} pairs, one per authority file
@@ -458,10 +481,7 @@ export function identifiersList(externalIds) {
   const links = identifierLinks(externalIds);
   if (!links.length) return "";
   const items = links
-    .map(
-      (l) =>
-        `<a class="identifier-badge" href="${escapeHtml(l.url)}" title="${escapeHtml(l.value)}">${escapeHtml(l.label)}</a>`
-    )
+    .map((l) => linkTag(l.url, escapeHtml(l.label), `class="identifier-badge" title="${escapeHtml(l.value)}"`))
     .join("\n");
   return `<h2>Identifiers</h2>\n<div class="identifier-badges">\n${items}\n</div>`;
 }
@@ -486,10 +506,7 @@ export function nationalityLabel(countries, demonymsData) {
 export function sourcesList(sources) {
   if (!sources || sources.length === 0) return "";
   const items = sources
-    .map(
-      (s) =>
-        `<li><a href="${escapeHtml(s.url)}">${escapeHtml(s.title)}</a></li>`
-    )
+    .map((s) => `<li>${linkTag(s.url, escapeHtml(s.title))}</li>`)
     .join("\n");
   return `<h2>Sources</h2>\n<ul class="plain-list">\n${items}\n</ul>`;
 }
