@@ -1,0 +1,23 @@
+{
+  "id": "rtd-t-000040",
+  "slug": "ghanshyambodra11",
+  "name": {
+    "preferred": "GhanshyamBodra11",
+    "alternates": []
+  },
+  "designers": [
+    { "id": "rtd-p-000022", "role": "designer" }
+  ],
+  "scripts": ["Warang Citi"],
+  "era": "digital",
+  "description": "A legacy ASCII-encoded Warang Citi (Ho) font by Ghanshyam Bodra, predating Unicode-based Warang Citi fonts.",
+  "external_ids": { "wikidata_qid": "Q123113517" },
+  "sources": [
+    { "url": "https://jsahu.me/tools/huc", "title": "Ho (Warang Chiti) Unicode Converter - converts Boyo Gagrai & Ghanshyam Bodra ASCII fonts to Unicode" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07"
+}

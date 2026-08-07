@@ -1,0 +1,24 @@
+{
+  "id": "rtd-t-000039",
+  "slug": "sangiyana",
+  "name": {
+    "preferred": "Sangiyana",
+    "alternates": []
+  },
+  "designers": [
+    { "id": "rtd-p-000022", "role": "designer" }
+  ],
+  "scripts": ["Warang Citi"],
+  "era": "digital",
+  "description": "A Warang Citi (Ho) font style released by Ghanshyam Bodra to the Elabu Etona Warang Chiti community.",
+  "external_ids": { "wikidata_qid": "Q123113518" },
+  "sources": [
+    { "url": "http://warangchiti.blogspot.com/2019/", "title": "New font Style Sangiyana in Warang Chiti - Warang Chiti 2030" },
+    { "url": "https://www.facebook.com/ElabuEtonaWarangchiti2/posts/sangiyana-new-font-of-warangchitiby_-hirla-ghanshyam-bodradownload-here-httpswww/372476116688586/", "title": "Sangiyana New Font of #WarangChiti by Hirla Ghanshyam Bodra - Elabu Etona Warang Chiti (Facebook)" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-07",
+  "updated_at": "2026-08-07"
+}
