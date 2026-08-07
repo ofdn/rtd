@@ -140,6 +140,13 @@ export const SEARCH_ICON = `<svg aria-hidden="true" width="16" height="16" viewB
 // tokens instead of being stuck at one fixed color.
 const INFO_ICON = `<svg aria-hidden="true" class="about-icon" viewBox="0 0 24 24"><circle class="ring" cx="12" cy="12" r="12"></circle><rect class="glyph" x="10.6" y="10.2" width="2.8" height="7.4" rx="1"></rect><circle class="glyph" cx="12" cy="6.7" r="1.6"></circle></svg>`;
 
+// Both icons ship in the DOM always; styles.css shows whichever matches
+// the effective theme (see .theme-toggle .icon-sun/.icon-moon), same
+// three-state pattern (system/explicit-light/explicit-dark) as the color
+// tokens at the top of the stylesheet. Icon shown is the mode a click
+// would switch *to*, not the current one.
+const THEME_TOGGLE_ICON = `<svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"></circle><line x1="12" y1="1.5" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22.5"></line><line x1="1.5" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22.5" y2="12"></line><line x1="4.5" y1="4.5" x2="6.2" y2="6.2"></line><line x1="17.8" y1="17.8" x2="19.5" y2="19.5"></line><line x1="4.5" y1="19.5" x2="6.2" y2="17.8"></line><line x1="17.8" y1="6.2" x2="19.5" y2="4.5"></line></svg><svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 1 0 11 11z"></path></svg>`;
+
 // A single GET form works everywhere: on the home page itself, action=""
 // submits back to the same page (progressively enhanced into a live
 // client-side filter by home.js); on a person/typeface page, homePath
@@ -184,6 +191,19 @@ export function pageShell({
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>
+// Runs before the stylesheet loads, so an explicit theme choice applies
+// immediately with no flash of the wrong theme. No explicit choice made
+// yet: leaves data-theme unset entirely and lets the prefers-color-scheme
+// media query in styles.css drive it, same three-state pattern used
+// throughout the CSS.
+(function () {
+  try {
+    var t = localStorage.getItem("rtd-theme");
+    if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+})();
+</script>
 <title>${escapeHtml(title)}, Registry of Type Design</title>
 <link rel="canonical" href="${escapeHtml(canonicalUrl)}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -200,6 +220,7 @@ ${jsonLd ? jsonLdScript(jsonLd) : ""}
 <img class="logo-img logo-img-dark" src="${escapeHtml(homePath)}logo-white-1.svg" alt="Registry of Type Design" width="96" height="24">
 </a>
 ${showHeaderSearch ? headerSearchForm(homePath) : ""}
+<button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">${THEME_TOGGLE_ICON}</button>
 <a class="about-link" href="${escapeHtml(homePath)}info/">${INFO_ICON}<span>About</span></a>
 </header>
 ${body}
@@ -353,6 +374,35 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
     if (!wrap.contains(e.target)) hide();
   });
 })();
+
+// Theme toggle: flips between explicit light/dark, persisted to
+// localStorage (read back by the anti-flash script in <head>). With no
+// explicit choice ever made, this never runs and the page just follows
+// the OS via the prefers-color-scheme media queries in styles.css.
+(function () {
+  var toggle = document.getElementById("theme-toggle");
+  if (!toggle) return;
+
+  function isDark() {
+    var explicit = document.documentElement.getAttribute("data-theme");
+    if (explicit) return explicit === "dark";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+
+  function updateLabel() {
+    toggle.setAttribute("aria-label", isDark() ? "Switch to light mode" : "Switch to dark mode");
+  }
+
+  updateLabel();
+  toggle.addEventListener("click", function () {
+    var next = isDark() ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try {
+      localStorage.setItem("rtd-theme", next);
+    } catch (e) {}
+    updateLabel();
+  });
+})();
 </script>
 </body>
 </html>
@@ -397,16 +447,20 @@ export function sameAsUris(externalIds) {
   return links.length ? links.map((l) => l.url) : undefined;
 }
 
+// Rendered as bordered label badges (same visual language as the
+// record-id badge next to the page title, see .record-id in styles.css),
+// linking straight out to each authority file rather than printing the
+// raw URL as visible text.
 export function identifiersList(externalIds) {
   const links = identifierLinks(externalIds);
   if (!links.length) return "";
   const items = links
     .map(
       (l) =>
-        `<li>${escapeHtml(l.label)}: <a href="${escapeHtml(l.url)}">${escapeHtml(l.url)}</a></li>`
+        `<a class="identifier-badge" href="${escapeHtml(l.url)}" title="${escapeHtml(l.value)}">${escapeHtml(l.label)}</a>`
     )
     .join("\n");
-  return `<h2>Identifiers</h2>\n<ul class="plain-list">\n${items}\n</ul>`;
+  return `<h2>Identifiers</h2>\n<div class="identifier-badges">\n${items}\n</div>`;
 }
 
 // Computes a single human-readable nationality label from a countries[]

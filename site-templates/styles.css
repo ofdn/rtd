@@ -33,8 +33,12 @@
   --container-max: 46rem;
 }
 
+/* Three-state theming: no explicit choice follows the OS
+   (prefers-color-scheme, guarded so an explicit "light" pick can override
+   a dark OS), and an explicit choice (data-theme, set by the toggle button
+   in the header, see .theme-toggle below) always wins regardless of OS. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --color-bg: #2e3132;
     --color-bg-alt: #35393a;
     --color-bg-card: #26292a;
@@ -53,6 +57,25 @@
     --color-header-fg-muted: #b9b0a0;
     --color-header-accent: var(--color-accent);
   }
+}
+:root[data-theme="dark"] {
+  --color-bg: #2e3132;
+  --color-bg-alt: #35393a;
+  --color-bg-card: #26292a;
+  --color-text: #f0f1f2;
+  --color-text-muted: #c9c5c6;
+  --color-primary: #ffffff;
+  --color-on-primary: #191c1d;
+  --color-link: #c6cddb;
+  --color-outline: #8f8788;
+  --color-outline-variant: #4a4344;
+  --color-callout-bg: #3a3536;
+  --color-info-accent: #2d6a4f;
+  --color-header-bg: #0a0a0a;
+  --color-header-border: var(--color-accent);
+  --color-header-fg: #e1d9c4;
+  --color-header-fg-muted: #b9b0a0;
+  --color-header-accent: var(--color-accent);
 }
 
 * { box-sizing: border-box; }
@@ -106,19 +129,25 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   border-bottom: 3px solid var(--color-header-border);
 }
 @media (prefers-color-scheme: dark) {
-  .site-header {
+  :root:not([data-theme="light"]) .site-header {
     background-image: url("halftone-diamond.svg");
     background-size: 12px 64px;
   }
+}
+:root[data-theme="dark"] .site-header {
+  background-image: url("halftone-diamond.svg");
+  background-size: 12px 64px;
 }
 
 .site-header .logo { display: flex; align-items: center; flex-shrink: 0; }
 .logo-img { display: block; height: 24px; width: auto; }
 .logo-img-dark { display: none; }
 @media (prefers-color-scheme: dark) {
-  .logo-img-light { display: none; }
-  .logo-img-dark { display: block; }
+  :root:not([data-theme="light"]) .logo-img-light { display: none; }
+  :root:not([data-theme="light"]) .logo-img-dark { display: block; }
 }
+:root[data-theme="dark"] .logo-img-light { display: none; }
+:root[data-theme="dark"] .logo-img-dark { display: block; }
 
 .header-search-wrap {
   position: relative;
@@ -194,15 +223,48 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   color: var(--color-header-accent);
   font-size: 0.85rem;
   font-weight: 600;
-  /* Pushes itself right only when it's the sole trailing item (no search
-     form on the page, e.g. the home page). When the search form IS
-     present, its own margin-left:auto already pushes the whole trailing
-     group right, so About should just sit flush next to it, not claim a
-     second share of the free space (which would open a gap between them,
-     see 2026-08 search redesign). */
+  /* No margin-left:auto here: the theme toggle button is unconditional
+     (every page, including home, unlike the search form), so it always
+     sits directly before About and is what claims the free space instead
+     (see .theme-toggle below), keeping the trailing group flush together
+     regardless of whether search is present. */
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1.7rem;
+  height: 1.7rem;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--color-header-accent);
+  /* Pushes the whole trailing group (itself + About) right when search
+     is absent (home page). When search IS present, its own
+     margin-left:auto already did this job, so cancel this one instead of
+     stacking two auto-margins (which would open a gap between search and
+     the toggle, see 2026-08 search redesign for the same bug elsewhere). */
   margin-left: auto;
 }
-.header-search-wrap + .about-link { margin-left: 0; }
+.header-search-wrap ~ .theme-toggle { margin-left: 0; }
+.theme-toggle:hover { opacity: 0.8; }
+.theme-toggle svg { display: block; width: 1.2rem; height: 1.2rem; }
+/* Shows the icon for the mode a click would switch *to* (moon while
+   light, sun while dark), same convention as most theme toggles. Default
+   (no explicit choice, light OS or dark OS not yet evaluated): assume
+   light, so moon shows; the dark-OS media query below flips it exactly
+   like the color tokens above do. */
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
+}
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 .about-link .about-icon { display: block; width: 1.5rem; height: 1.5rem; flex-shrink: 0; }
 .about-link .ring { fill: var(--color-header-accent); }
 .about-link .glyph { fill: var(--color-header-bg); }
@@ -255,6 +317,22 @@ h2 {
   border: 1px solid var(--color-outline-variant);
   padding: 0.15rem 0.5rem;
 }
+
+/* Same badge language as .record-id above, one per authority file, linking
+   straight out instead of printing the raw URL as visible page text. */
+.identifier-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.identifier-badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid var(--color-outline-variant);
+  padding: 0.15rem 0.5rem;
+  text-decoration: none;
+}
+.identifier-badge:hover { border-color: var(--color-outline); color: var(--color-text); }
 
 button.copy-id {
   cursor: pointer;
@@ -456,9 +534,11 @@ footer.site-footer p { margin: 0.6rem 0 0; }
 .footer-logo { display: block; height: 16px; width: auto; }
 .footer-logo-dark { display: none; }
 @media (prefers-color-scheme: dark) {
-  .footer-logo-light { display: none; }
-  .footer-logo-dark { display: block; }
+  :root:not([data-theme="light"]) .footer-logo-light { display: none; }
+  :root:not([data-theme="light"]) .footer-logo-dark { display: block; }
 }
+:root[data-theme="dark"] .footer-logo-light { display: none; }
+:root[data-theme="dark"] .footer-logo-dark { display: block; }
 
 /* Home page */
 .home-hero { text-align: center; padding: 3.5rem 1.5rem 3rem; max-width: 40rem; margin: 0 auto; }
