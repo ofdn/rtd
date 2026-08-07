@@ -15,11 +15,11 @@
   "sources": [
     {
       "url": "http://www.microsoft.com/typography/",
-      "title": "Trebuchet MS - designer URL (embedded font metadata)"
+      "title": "www.microsoft.com"
     },
     {
       "url": "http://www.microsoft.com",
-      "title": "Trebuchet MS - vendor URL (embedded font metadata)"
+      "title": "www.microsoft.com"
     }
   ],
   "record_status": "active",

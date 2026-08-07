@@ -12,14 +12,13 @@
   "sources": [
     {
       "url": "http://www.linotypelibrary.com",
-      "title": "Zapfino - designer URL (embedded font metadata)"
+      "title": "www.linotypelibrary.com"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
   "updated_at": "2026-08-07",
-  "verification_status": "needs_verification",
   "external_ids": {
     "wikidata_qid": "Q60302",
     "viaf": "74000639",

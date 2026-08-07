@@ -12,11 +12,11 @@
   "sources": [
     {
       "url": "http://www.bitstream.com/font_rendering/products/dev_fonts/vera.html",
-      "title": "Menlo - designer URL (embedded font metadata)"
+      "title": "www.bitstream.com"
     },
     {
       "url": "http://www.gnome.org/contact/",
-      "title": "Menlo - vendor URL (embedded font metadata)"
+      "title": "www.gnome.org"
     }
   ],
   "record_status": "active",

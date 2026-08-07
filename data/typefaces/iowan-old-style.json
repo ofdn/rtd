@@ -15,11 +15,11 @@
   "sources": [
     {
       "url": "http://www.myfonts.com/person/downer/john",
-      "title": "Iowan Old Style - designer URL (embedded font metadata)"
+      "title": "www.myfonts.com"
     },
     {
       "url": "http://www.bitstream.com",
-      "title": "Iowan Old Style - vendor URL (embedded font metadata)"
+      "title": "www.bitstream.com"
     }
   ],
   "record_status": "active",

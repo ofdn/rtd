@@ -12,11 +12,11 @@
   "sources": [
     {
       "url": "http://www.monotype.com/html/designer/des_index.html",
-      "title": "Andale Mono - designer URL (embedded font metadata)"
+      "title": "www.monotype.com"
     },
     {
       "url": "http://www.monotype.com",
-      "title": "Andale Mono - vendor URL (embedded font metadata)"
+      "title": "www.monotype.com"
     }
   ],
   "record_status": "active",

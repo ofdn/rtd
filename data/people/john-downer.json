@@ -12,18 +12,17 @@
   "sources": [
     {
       "url": "http://www.myfonts.com/person/downer/john",
-      "title": "Iowan Old Style - designer URL (embedded font metadata)"
+      "title": "www.myfonts.com"
     },
     {
       "url": "http://www.bitstream.com",
-      "title": "Iowan Old Style - vendor URL (embedded font metadata)"
+      "title": "www.bitstream.com"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
   "updated_at": "2026-08-07",
-  "verification_status": "needs_verification",
   "external_ids": {
     "wikidata_qid": "Q24260678",
     "viaf": "7724204",

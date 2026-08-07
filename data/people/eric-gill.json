@@ -12,26 +12,25 @@
   "sources": [
     {
       "url": "http://www.agfamonotype.com/html/designer/des_index.html",
-      "title": "Gill Sans - designer URL (embedded font metadata)"
+      "title": "www.agfamonotype.com"
     },
     {
       "url": "http://www.agfamonotype.com",
-      "title": "Gill Sans - vendor URL (embedded font metadata)"
+      "title": "www.agfamonotype.com"
     },
     {
       "url": "http://www.monotypeimaging.com/ProductsServices/TypeDesignerShowcase",
-      "title": "Gill Sans - designer URL (embedded font metadata)"
+      "title": "www.monotypeimaging.com"
     },
     {
       "url": "http://www.monotypeimaging.com",
-      "title": "Gill Sans - vendor URL (embedded font metadata)"
+      "title": "www.monotypeimaging.com"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
   "updated_at": "2026-08-07",
-  "verification_status": "needs_verification",
   "external_ids": {
     "wikidata_qid": "Q551426",
     "viaf": "36934216",

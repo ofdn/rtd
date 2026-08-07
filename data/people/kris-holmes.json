@@ -12,18 +12,17 @@
   "sources": [
     {
       "url": "http://www.bigelowandholmes.com",
-      "title": "Lucida Grande - designer URL (embedded font metadata)"
+      "title": "www.bigelowandholmes.com"
     },
     {
       "url": "http://www.agfamonotype.com",
-      "title": "Lucida Grande - vendor URL (embedded font metadata)"
+      "title": "www.agfamonotype.com"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
   "updated_at": "2026-08-07",
-  "verification_status": "needs_verification",
   "external_ids": {
     "wikidata_qid": "Q253622",
     "viaf": "80543833",
