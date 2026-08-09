@@ -68,6 +68,16 @@ export function printButton() {
   return `<button type="button" class="print-btn" onclick="window.print()" aria-label="Print this page" title="Print this page">${PRINT_ICON}</button>`;
 }
 
+const LINK_ICON = `<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>`;
+
+// Permalink icon next to a heading, so a section on a long static page
+// (like /info/) can be linked or cited directly instead of just the
+// page as a whole. Plain anchor jump, no clipboard JS needed, the URL
+// bar/right-click "copy link" already does the rest.
+export function sectionAnchor(id) {
+  return `<a class="section-anchor" href="#${escapeHtml(id)}" aria-label="Link to this section" title="Link to this section">${LINK_ICON}</a>`;
+}
+
 export function arkPermalink(arkUrl) {
   return `<p class="ark-permalink">ARK <code>${escapeHtml(arkUrl)}</code> <button type="button" class="copy-id copy-icon-btn" data-copy="${escapeHtml(arkUrl)}" aria-label="Copy ARK permalink">${COPY_ICON}</button></p>`;
 }
@@ -248,11 +258,13 @@ ${showHeaderSearch ? headerSearchForm(homePath) : ""}
 </header>
 ${body}
 <footer class="site-footer">
+<div class="footer-content">
 <a class="footer-logo-link" href="https://theofdn.org" aria-label="O Foundation" ${EXTERNAL_LINK_ATTRS}>
 <img class="footer-logo footer-logo-light" src="${escapeHtml(homePath)}logo-black.svg" alt="" width="72" height="20">
 <img class="footer-logo footer-logo-dark" src="${escapeHtml(homePath)}logo-white.svg" alt="" width="72" height="20">
 </a>
 <p>Registry of Type Design${siteVersion ? ` v${escapeHtml(siteVersion)}` : ""}${schemaVersion ? `, schema v${escapeHtml(schemaVersion)}` : ""}. A project of the ${linkTag("https://theofdn.org", "O Foundation")}, maintained by Subhashish Panigrahi. <a href="${escapeHtml(homePath)}info/#licensing">License</a> &middot; ${linkTag(REPO_URL, "Source on GitHub")} &middot; <a href="${escapeHtml(homePath)}preservation/">Preservation statement</a></p>
+</div>
 </footer>
 <script>
 document.querySelectorAll(".copy-id").forEach(function (btn) {
