@@ -549,6 +549,10 @@ footer.site-footer p { margin: 0; }
   opacity: 0.5;
 }
 .section-anchor:hover, .section-anchor:focus-visible { opacity: 1; }
+
+.cc-badge-link { display: inline-block; margin-top: 0.75rem; opacity: 0.85; }
+.cc-badge-link:hover { opacity: 1; }
+.cc-badge { display: block; height: 31px; width: auto; }
 .footer-logo-link:hover { opacity: 1; }
 .footer-logo { display: block; height: 16px; width: auto; }
 .footer-logo-dark { display: none; }

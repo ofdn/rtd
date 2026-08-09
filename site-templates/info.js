@@ -5,7 +5,7 @@ import { pageShell, escapeHtml, linkTag, sectionAnchor } from "./shared.js";
 // the home page. Kept as its own template file (rather than an inline
 // string in build.js like the smaller preservation/servicestatus pages)
 // because it's long enough to be worth editing on its own.
-export function renderInfoPage({ canonicalUrl, peopleCount, typefacesCount, schemaVersion, arkNaan }) {
+export function renderInfoPage({ canonicalUrl, peopleCount, typefacesCount, scriptsCount, schemaVersion, arkNaan }) {
   const body = `
 <main>
 <h1>About the registry</h1>
@@ -16,7 +16,8 @@ export function renderInfoPage({ canonicalUrl, peopleCount, typefacesCount, sche
 <p class="description">Registry of Type Design began as a concept in 2021, aiming to keep a live registry of verifiable information about typefaces and the people who made them. The registry's founder, Subhashish Panigrahi, was trying to collect information about typefaces and type designers to update Wikidata, and reached out to several type designers, including Dave Crossland (Google Fonts), Yesha Goshar, Kalapi Gajjar-Bordawekar (Universal Thirst), who pointed at existing public resources such as Google Fonts, Adobe Fonts, Typotheque, and MyFonts, among others. While those sites are cited in RTD as sources, they are not catalogues of typefaces and type professionals. By 2026, the paper prototype had become a live project with the full capability to maintain permanent records of type design history. Registry of Type Design is currently maintained at the ${linkTag("https://theofdn.org", "O Foundation")}.</p>
 
 <h2 id="licensing">Licensing ${sectionAnchor("licensing")}</h2>
-<p class="description">Site and data are licensed under ${linkTag("https://creativecommons.org/licenses/by-sa/4.0/", "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)")}: reuse, adaptation, and redistribution are permitted with attribution to Registry of Type Design and a link to the license. &copy; Subhashish Panigrahi.</p>
+<p class="description">Site and data are licensed under ${linkTag("https://creativecommons.org/licenses/by-sa/4.0/", "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)")}: reuse, adaptation, and redistribution are permitted with attribution to Registry of Type Design and a link to the license.</p>
+${linkTag("https://creativecommons.org/licenses/by-sa/4.0/", `<img class="cc-badge" src="../cc-by-sa.svg" alt="Creative Commons Attribution-ShareAlike 4.0 International" width="88" height="31">`, 'class="cc-badge-link"')}
 
 <h2 id="machine-readable-data">Machine-readable data ${sectionAnchor("machine-readable-data")}</h2>
 <p class="description">Every record here is published as JSON alongside its HTML page. The <a href="../api/people.json">People API</a> and <a href="../api/typefaces.json">Typefaces API</a> list every active record with its id, name, and canonical URL. Each individual record is also its own JSON document, for example <a href="../api/people/rtd-p-000001.json">api/people/rtd-p-000001.json</a>. Bulk CSV and NDJSON dumps of the full dataset are published at <a href="../dumps/">/dumps/</a>, for mirroring or offline analysis without hitting the API record by record.</p>
@@ -31,7 +32,7 @@ export function renderInfoPage({ canonicalUrl, peopleCount, typefacesCount, sche
 <p class="description">Every record has a permanent, opaque id (<code>rtd-p-000001</code> for people, <code>rtd-t-000001</code> for typefaces): six digits, assigned sequentially, never reused or reassigned once published, even if a record is later merged or deprecated. The <code>slug</code> used in a page's URL can change if a record is renamed, the id never does. The full validation rules are public: ${linkTag("https://github.com/ofdn/rtd/blob/main/schema/person.schema.json", "person.schema.json")} and ${linkTag("https://github.com/ofdn/rtd/blob/main/schema/typeface.schema.json", "typeface.schema.json")} on GitHub define exactly what a valid record looks like, currently schema v${schemaVersion}, versioned separately from the site itself so a change to the data shape is always visible and dated.</p>
 <p class="description">RTD ids also resolve as ARK identifiers under NAAN <code>${escapeHtml(arkNaan)}</code> (<code>ark:${escapeHtml(arkNaan)}/rtd-p-000001</code>, resolvable at ${linkTag(`https://n2t.net/ark:${arkNaan}/rtd-p-000001`, `n2t.net/ark:${escapeHtml(arkNaan)}/rtd-p-000001`)}), and the registry commits to keeping identifiers and data available long-term, see the <a href="../preservation/">preservation and persistence statement</a> for specifics.</p>
 
-<p class="stat-line">Currently tracking <strong>${peopleCount}</strong> people, <strong>${typefacesCount}</strong> typefaces.</p>
+<p class="stat-line">Registry of Type Design currently archives details of <strong>${peopleCount}</strong> people and <strong>${typefacesCount}</strong> typefaces in <strong>${scriptsCount}</strong> scripts.</p>
 </main>
 `;
 

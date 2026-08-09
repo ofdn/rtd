@@ -24,6 +24,13 @@ import { renderHomePage } from "../site-templates/home.js";
 import { renderInfoPage } from "../site-templates/info.js";
 import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion, escapeHtml, linkTag } from "../site-templates/shared.js";
 
+// Collapses "Latin" vs "Latin script" vs "Greek alphabet" style variants in
+// scripts[] into one count, so the /info/ stat line doesn't overcount the
+// same script twice just because two records phrased it differently.
+function normalizeScriptName(script) {
+  return script.replace(/\s+(script|alphabet)$/i, "").trim().toLowerCase();
+}
+
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const repoRoot = join(__dirname, "..");
 const SITE_URL = (process.env.SITE_URL || "https://example.org/").replace(
@@ -205,6 +212,7 @@ function build(dataDir, outDir) {
   writeFile(outDir, "logo-black-1.svg", readFileSync(join(repoRoot, "site-templates/logo-black-1.svg")));
   writeFile(outDir, "logo-white-1.svg", readFileSync(join(repoRoot, "site-templates/logo-white-1.svg")));
   writeFile(outDir, "halftone-diamond.svg", readFileSync(join(repoRoot, "site-templates/halftone-diamond.svg")));
+  writeFile(outDir, "cc-by-sa.svg", readFileSync(join(repoRoot, "site-templates/cc-by-sa.svg")));
 
   writeFile(
     outDir,
@@ -255,6 +263,10 @@ function build(dataDir, outDir) {
     })
   );
 
+  const activeScripts = new Set();
+  for (const p of people) if (p.record_status === "active") for (const s of p.scripts || []) activeScripts.add(normalizeScriptName(s));
+  for (const t of typefaces) if (t.record_status === "active") for (const s of t.scripts || []) activeScripts.add(normalizeScriptName(s));
+
   writeFile(
     outDir,
     "info/index.html",
@@ -262,6 +274,7 @@ function build(dataDir, outDir) {
       canonicalUrl: `${SITE_URL}info/`,
       peopleCount: people.filter((p) => p.record_status === "active").length,
       typefacesCount: typefaces.filter((t) => t.record_status === "active").length,
+      scriptsCount: activeScripts.size,
       schemaVersion,
       arkNaan: ARK_NAAN,
     })
