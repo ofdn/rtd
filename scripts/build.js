@@ -340,6 +340,7 @@ function build(dataDir, outDir) {
       api_url: apiUrl,
       canonical_url: canonicalUrl,
       subtitle: personSubtitle(record),
+      external_ids: record.external_ids,
     });
   }
   writeFile(outDir, "api/people.json", JSON.stringify(peopleApiIndex, null, 2));
@@ -410,6 +411,7 @@ function build(dataDir, outDir) {
       api_url: apiUrl,
       canonical_url: canonicalUrl,
       subtitle: typefaceSubtitle(record),
+      external_ids: record.external_ids,
     });
   }
   writeFile(

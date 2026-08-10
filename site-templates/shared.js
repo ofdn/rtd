@@ -367,6 +367,26 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
       return normTarget.indexOf(t) !== -1;
     });
   }
+  // Same exact-value identifier matching as home.js's search (see there
+  // for the fuller rationale), duplicated here for the same reason as
+  // the id-query helpers above: no module system on this inline script.
+  function identifierMatches(item, rawQuery) {
+    if (!item.external_ids) return false;
+    var q = rawQuery.trim();
+    var qCompact = q.replace(/\\s+/g, "");
+    if (!q) return false;
+    return Object.keys(item.external_ids).some(function (field) {
+      var value = String(item.external_ids[field]);
+      return value === q || value === qCompact;
+    });
+  }
+  function findDirectMatch(index, q) {
+    var parsedId = parseIdQuery(q);
+    var hits = index.filter(function (item) {
+      return idMatches(item, parsedId) || identifierMatches(item, q);
+    });
+    return hits.length === 1 ? hits[0] : null;
+  }
 
   function loadIndex() {
     if (indexPromise) return indexPromise;
@@ -422,7 +442,8 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
           (item.alternates || []).some(function (a) {
             return tokenSearchMatch(q, a);
           }) ||
-          idMatches(item, parsedId)
+          idMatches(item, parsedId) ||
+          identifierMatches(item, q)
         );
       });
       show(matches, q);
@@ -454,16 +475,13 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
   // record instead of making the reader click through the dropdown.
   form.addEventListener("submit", function (e) {
     var q = input.value.trim();
-    var parsedId = parseIdQuery(q);
-    if (!q || !parsedId) return;
+    if (!q) return;
     e.preventDefault();
     var base = form.getAttribute("action") || "";
     loadIndex().then(function (index) {
-      var idHits = index.filter(function (item) {
-        return idMatches(item, parsedId);
-      });
-      if (idHits.length === 1) {
-        window.location.href = base + (idHits[0].kind === "person" ? "people/" : "typefaces/") + idHits[0].slug + "/";
+      var hit = findDirectMatch(index, q);
+      if (hit) {
+        window.location.href = base + (hit.kind === "person" ? "people/" : "typefaces/") + hit.slug + "/";
       } else {
         window.location.href = base + "?q=" + encodeURIComponent(q);
       }

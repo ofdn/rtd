@@ -84,6 +84,23 @@ ${SEARCH_ICON}
     return true;
   }
 
+  // Cross-referenced authority identifiers (VIAF, ISNI, LC-NAF, GND,
+  // WorldCat, ULAN, a Wikidata QID) are exact values, not free text, so a
+  // query matching one of them stored on a record is unambiguous. ISNI is
+  // often copied with grouping spaces ("0000 0003 7140 3942"), so those
+  // are stripped before comparing against RTD's own unspaced storage
+  // format.
+  function identifierMatches(item, rawQuery) {
+    if (!item.external_ids) return false;
+    var q = rawQuery.trim();
+    var qCompact = q.replace(/\\s+/g, "");
+    if (!q) return false;
+    return Object.keys(item.external_ids).some(function (field) {
+      var value = String(item.external_ids[field]);
+      return value === q || value === qCompact;
+    });
+  }
+
   // Order- and punctuation-insensitive: every word in the query has to
   // appear somewhere in the target, regardless of what order they're
   // in. Makes "Crouwel,Wim" (last,first, e.g. pasted from a spreadsheet
@@ -196,13 +213,26 @@ ${SEARCH_ICON}
         (item.alternates || []).some(function (a) {
           return tokenSearchMatch(q, a);
         }) ||
-        idMatches(item, parsedId)
+        idMatches(item, parsedId) ||
+        identifierMatches(item, q)
       );
     });
     results.innerHTML =
       '<h2>Results for &ldquo;' + escapeHtml(q) + '&rdquo;</h2>' +
       '<p class="results-meta">Showing ' + matches.length + " cataloged " + (matches.length === 1 ? "entry" : "entries") + ".</p>" +
       renderList(matches, true);
+  }
+
+  // Resolves a query to a single record when it's unambiguously an id
+  // (RTD id, or an exact external identifier like ISNI/VIAF), so submit
+  // and a direct ?q= link can jump straight to the record instead of
+  // leaving it sitting in the results list.
+  function findDirectMatch(idx, q) {
+    var parsedId = parseIdQuery(q);
+    var hits = idx.filter(function (item) {
+      return idMatches(item, parsedId) || identifierMatches(item, q);
+    });
+    return hits.length === 1 ? hits[0] : null;
   }
 
   input.addEventListener("input", function () {
@@ -227,14 +257,10 @@ ${SEARCH_ICON}
     e.preventDefault();
     var q = input.value.trim();
     if (!q) return;
-    var parsedId = parseIdQuery(q);
-    if (!parsedId) return;
     loadIndex().then(function (idx) {
-      var idHits = idx.filter(function (item) {
-        return idMatches(item, parsedId);
-      });
-      if (idHits.length === 1) {
-        window.location.href = (idHits[0].kind === "person" ? "people/" : "typefaces/") + idHits[0].slug + "/";
+      var hit = findDirectMatch(idx, q);
+      if (hit) {
+        window.location.href = (hit.kind === "person" ? "people/" : "typefaces/") + hit.slug + "/";
       }
     });
   });
@@ -242,16 +268,11 @@ ${SEARCH_ICON}
   var initialQuery = new URLSearchParams(window.location.search).get("q");
   if (initialQuery) {
     input.value = initialQuery;
-    var initialParsedId = parseIdQuery(initialQuery);
     loadIndex().then(function (idx) {
-      if (initialParsedId) {
-        var idHits = idx.filter(function (item) {
-          return idMatches(item, initialParsedId);
-        });
-        if (idHits.length === 1) {
-          window.location.href = (idHits[0].kind === "person" ? "people/" : "typefaces/") + idHits[0].slug + "/";
-          return;
-        }
+      var hit = findDirectMatch(idx, initialQuery);
+      if (hit) {
+        window.location.href = (hit.kind === "person" ? "people/" : "typefaces/") + hit.slug + "/";
+        return;
       }
       runSearch(initialQuery);
     });
