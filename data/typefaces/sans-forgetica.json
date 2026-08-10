@@ -1,0 +1,39 @@
+{
+  "id": "rtd-t-000145",
+  "slug": "sans-forgetica",
+  "name": {
+    "preferred": "Sans Forgetica",
+    "alternates": []
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000121",
+      "role": "type designer"
+    }
+  ],
+  "foundry": [
+    {
+      "name": "RMIT University",
+      "url": "https://sansforgetica.rmit/"
+    }
+  ],
+  "release_year": "2018",
+  "classification": "Sans-serif",
+  "scripts": ["Latin"],
+  "era": "digital",
+  "description": "A back-slanted, deliberately 'hard to read' sans-serif designed with RMIT's Behavioural Business Lab, using desirable-difficulty principles to improve reader memory retention.",
+  "sources": [
+    {
+      "url": "https://www.rmit.edu.au/news/media-releases-and-expert-comments/2018/oct/sans-forgetica-media-release",
+      "title": "Sans Forgetica: RMIT creates typeface designed to help students study - RMIT"
+    },
+    {
+      "url": "https://eyeondesign.aiga.org/sans-forgetica-a-typeface-to-remember/",
+      "title": "Can \"Bad\" Type Design Help Readers Absorb and Remember Information? - AIGA Eye on Design"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-10",
+  "updated_at": "2026-08-10"
+}

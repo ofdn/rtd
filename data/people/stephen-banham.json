@@ -1,0 +1,30 @@
+{
+  "id": "rtd-p-000121",
+  "slug": "stephen-banham",
+  "name": {
+    "preferred": "Stephen Banham",
+    "alternates": []
+  },
+  "countries": [
+    "Australia"
+  ],
+  "roles": [
+    "type designer"
+  ],
+  "bio": "Designed Sans Forgetica, a typeface engineered with RMIT's Behavioural Business Lab to boost memory retention through 'desirable difficulty,' founder of the Letterbox type studio.",
+  "sources": [
+    {
+      "url": "https://www.rmit.edu.au/news/media-releases-and-expert-comments/2018/oct/sans-forgetica-media-release",
+      "title": "Sans Forgetica: RMIT creates typeface designed to help students study - RMIT"
+    },
+    {
+      "url": "https://eyeondesign.aiga.org/sans-forgetica-a-typeface-to-remember/",
+      "title": "Can \"Bad\" Type Design Help Readers Absorb and Remember Information? - AIGA Eye on Design"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-10",
+  "updated_at": "2026-08-10",
+  "external_ids": { "wikidata_qid": "Q15458380", "isni": "0000000064689725", "viaf": "750148997670859870009" }
+}
