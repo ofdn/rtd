@@ -373,7 +373,7 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
   function identifierMatches(item, rawQuery) {
     if (!item.external_ids) return false;
     var q = rawQuery.trim();
-    var qCompact = q.replace(/\\s+/g, "");
+    var qCompact = q.replace(/[\\s-]+/g, "");
     if (!q) return false;
     return Object.keys(item.external_ids).some(function (field) {
       var value = String(item.external_ids[field]);

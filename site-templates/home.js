@@ -86,14 +86,16 @@ ${SEARCH_ICON}
 
   // Cross-referenced authority identifiers (VIAF, ISNI, LC-NAF, GND,
   // WorldCat, ULAN, a Wikidata QID) are exact values, not free text, so a
-  // query matching one of them stored on a record is unambiguous. ISNI is
-  // often copied with grouping spaces ("0000 0003 7140 3942"), so those
-  // are stripped before comparing against RTD's own unspaced storage
-  // format.
+  // query matching one of them stored on a record is unambiguous. ISNI in
+  // particular gets copied with grouping spaces or hyphens as often as
+  // not ("0000 0003 7140 3942" / "0000-0003-7140-3942"), so both are
+  // stripped before comparing against RTD's own unseparated storage
+  // format. Partial/prefix matches are deliberately not attempted: an
+  // identifier is either the whole thing or it isn't a safe match.
   function identifierMatches(item, rawQuery) {
     if (!item.external_ids) return false;
     var q = rawQuery.trim();
-    var qCompact = q.replace(/\\s+/g, "");
+    var qCompact = q.replace(/[\\s-]+/g, "");
     if (!q) return false;
     return Object.keys(item.external_ids).some(function (field) {
       var value = String(item.external_ids[field]);
