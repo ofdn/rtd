@@ -1,0 +1,38 @@
+{
+  "id": "rtd-p-000120",
+  "slug": "colm-o-lochlainn",
+  "name": {
+    "preferred": "Colm Ó Lochlainn",
+    "alternates": []
+  },
+  "countries": [
+    "Ireland"
+  ],
+  "roles": [
+    "type designer",
+    "printer",
+    "typographer"
+  ],
+  "birth_year": "1892",
+  "death_year": "1972",
+  "bio": "Irish printer and typographer who spent a decade developing the Colum Cille Gaelic typeface with Monotype and Stanley Morison, released for hot-metal composition in 1936.",
+  "sources": [
+    {
+      "url": "https://www.dib.ie/biography/o-lochlainn-colm-a6392",
+      "title": "Ó Lochlainn, Colm - Dictionary of Irish Biography"
+    },
+    {
+      "url": "https://uwmspeccoll.tumblr.com/post/625544781339279360/typography-tuesday-the-colum-cille-irish-type",
+      "title": "Typography Tuesday: The Colum Cille Irish Type - UWM Special Collections"
+    },
+    {
+      "url": "https://id.loc.gov/authorities/names/n81147369.html",
+      "title": "O Lochlainn, Colm - LC Linked Data Service"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-10",
+  "updated_at": "2026-08-10",
+  "external_ids": { "wikidata_qid": "Q5147710", "isni": "0000000083398798", "gnd": "1225310210", "viaf": "21015571", "lc_naf": "n81147369", "worldcat_entity": "E39PBJj8MDpdMf7TK64wKYjBfq" }
+}

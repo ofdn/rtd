@@ -1,0 +1,39 @@
+{
+  "id": "rtd-t-000142",
+  "slug": "arnhem-pro",
+  "name": {
+    "preferred": "Arnhem",
+    "alternates": ["Arnhem Pro"]
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000119",
+      "role": "type designer"
+    }
+  ],
+  "foundry": [
+    {
+      "name": "OurType",
+      "url": "https://typecache.com/OurType/"
+    }
+  ],
+  "release_year": "2002",
+  "classification": "Serif",
+  "scripts": ["Latin"],
+  "era": "digital",
+  "description": "A text family designed over several years for the official daily newspaper of the Dutch government.",
+  "sources": [
+    {
+      "url": "https://ilovetypography.com/2008/02/14/typeface-review-arnhem/",
+      "title": "Typeface Review: Arnhem - I Love Typography"
+    },
+    {
+      "url": "https://eyemagazine.com/feature/article/reputations-fred-smeijers",
+      "title": "Reputations: Fred Smeijers - Eye Magazine"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-10",
+  "updated_at": "2026-08-10"
+}

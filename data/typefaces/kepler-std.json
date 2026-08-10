@@ -1,0 +1,39 @@
+{
+  "id": "rtd-t-000139",
+  "slug": "kepler-std",
+  "name": {
+    "preferred": "Kepler",
+    "alternates": ["Kepler Std"]
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000116",
+      "role": "type designer"
+    }
+  ],
+  "foundry": [
+    {
+      "name": "Adobe",
+      "url": "https://fonts.adobe.com/fonts/kepler"
+    }
+  ],
+  "release_year": "1996",
+  "classification": "Serif",
+  "scripts": ["Latin"],
+  "era": "digital",
+  "description": "A humanist Adobe Originals text family in the tradition of 18th-century modern typefaces, with calligraphic detailing and Oldstyle proportions.",
+  "sources": [
+    {
+      "url": "https://fontsinuse.com/typefaces/4198/kepler",
+      "title": "Kepler in use - Fonts In Use"
+    },
+    {
+      "url": "https://blog.typekit.com/2012/03/02/robert-slimbach-25-years/",
+      "title": "Robert Slimbach's 25 Years of Type at Adobe - Typekit Blog"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-10",
+  "updated_at": "2026-08-10"
+}

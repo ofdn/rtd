@@ -1,0 +1,35 @@
+{
+  "id": "rtd-p-000116",
+  "slug": "robert-slimbach",
+  "name": {
+    "preferred": "Robert Slimbach",
+    "alternates": []
+  },
+  "countries": [
+    "United States"
+  ],
+  "roles": [
+    "type designer"
+  ],
+  "birth_year": "1956",
+  "bio": "Principal type designer at Adobe since 1987, designed Kepler and numerous other Adobe Originals typefaces blending calligraphic detailing with digital text-face engineering.",
+  "sources": [
+    {
+      "url": "https://fontsinuse.com/type_designers/7/robert-slimbach",
+      "title": "Robert Slimbach - Fonts In Use"
+    },
+    {
+      "url": "https://blog.typekit.com/2012/03/02/robert-slimbach-25-years/",
+      "title": "Robert Slimbach's 25 Years of Type at Adobe - Typekit Blog"
+    },
+    {
+      "url": "https://id.loc.gov/authorities/names/n94002905.html",
+      "title": "Slimbach, Robert - LC Linked Data Service"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-10",
+  "updated_at": "2026-08-10",
+  "external_ids": { "wikidata_qid": "Q1372822", "isni": "0000000035904713", "lc_naf": "n94002905", "gnd": "142288551", "viaf": "45986386", "worldcat_entity": "E39PBJtxjJrjrMGgV77vRTTmBP" }
+}

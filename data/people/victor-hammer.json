@@ -1,0 +1,37 @@
+{
+  "id": "rtd-p-000118",
+  "slug": "victor-hammer",
+  "name": {
+    "preferred": "Victor Hammer",
+    "alternates": []
+  },
+  "countries": [
+    "Austria"
+  ],
+  "roles": [
+    "type designer",
+    "punchcutter"
+  ],
+  "birth_year": "1882",
+  "death_year": "1967",
+  "bio": "Hand-cut Hammer Unziale and related uncial typefaces, including American Uncial at Wells College in 1943, while working as a painter, sculptor, and printer.",
+  "sources": [
+    {
+      "url": "https://www.typeoff.de/2021/04/victor-hammer-and-punchcutting/",
+      "title": "Victor Hammer and punchcutting - TypeOff."
+    },
+    {
+      "url": "https://fontsinuse.com/typefaces/890/american-uncial",
+      "title": "American Uncial in use - Fonts In Use"
+    },
+    {
+      "url": "https://id.loc.gov/authorities/names/n79027216.html",
+      "title": "Hammer, Victor, 1882-1967 - LC Linked Data Service"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-10",
+  "updated_at": "2026-08-10",
+  "external_ids": { "wikidata_qid": "Q1915570", "isni": "0000000078688651", "lc_naf": "n79027216", "gnd": "124315909", "viaf": "69858092", "worldcat_entity": "E39PBJwtrQwWY4bW8yXvg3yfMP" }
+}

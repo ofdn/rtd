@@ -1,0 +1,37 @@
+{
+  "id": "rtd-p-000117",
+  "slug": "heinrich-jost",
+  "name": {
+    "preferred": "Heinrich Jost",
+    "alternates": []
+  },
+  "countries": [
+    "Germany"
+  ],
+  "roles": [
+    "type designer",
+    "typographer"
+  ],
+  "birth_year": "1889",
+  "death_year": "1948",
+  "bio": "Designed Bauer Bodoni for the Bauer Type Foundry, where he served as art director from 1923 to 1948, adapting Bodoni's forms for machine composition.",
+  "sources": [
+    {
+      "url": "https://museobodoniano.com/tipi/bauer-bodoni-en/",
+      "title": "Bauer Bodoni - Museo Bodoniano"
+    },
+    {
+      "url": "http://modernism101.com/products-page/graphic-design/type-specimen-heinrich-jost-imre-reiner-designer-bauer-beton-new-york-bauer-type-foundry-c-1936/",
+      "title": "Type Specimen: Heinrich Jost, Bauer Beton - Modernism101"
+    },
+    {
+      "url": "https://id.loc.gov/authorities/names/n2018056518.html",
+      "title": "Jost, Heinrich, 1889-1948 - LC Linked Data Service"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-10",
+  "updated_at": "2026-08-10",
+  "external_ids": { "wikidata_qid": "Q19935440", "isni": "0000000082757242", "gnd": "142063622", "viaf": "85399071", "lc_naf": "n2018056518", "worldcat_entity": "E39PBJtxkqmMVHKkDT8vycbrv3" }
+}
