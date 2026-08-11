@@ -10,6 +10,7 @@
   ],
   "scripts": ["Warang Citi"],
   "era": "digital",
+  "unicode_compliant": false,
   "description": "A legacy ASCII-encoded Warang Citi (Ho) font by Ghanshyam Bodra, predating Unicode-based Warang Citi fonts.",
   "external_ids": { "wikidata_qid": "Q123113517" },
   "sources": [
@@ -19,5 +20,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07"
+  "updated_at": "2026-08-11"
 }

@@ -1,0 +1,29 @@
+{
+  "id": "rtd-t-000152",
+  "slug": "ol-chiki-usara",
+  "name": {
+    "preferred": "Ol Chiki Usara",
+    "alternates": ["olciki_usoro", "Ol Chiki Usoro"]
+  },
+  "designers": [
+    { "id": "rtd-p-000123", "role": "designer" },
+    { "id": "rtd-p-000124", "role": "keyboard mapping standardization" },
+    { "id": "rtd-p-000125", "role": "glyph correction" },
+    { "id": "rtd-p-000126", "role": "glyph correction" }
+  ],
+  "design_year": "2002",
+  "release_year": "2003",
+  "scripts": ["Ol Chiki"],
+  "era": "digital",
+  "unicode_compliant": false,
+  "description": "A variant of the Wesanthals e-group's ASCII-mapped Ol Chiki fonts with a modified keyboard layout, assigning ahad-diacritic combinations to number keys 1-5.",
+  "sources": [
+    { "url": "https://web.archive.org/web/20260413230637/https://wesanthals.tripod.com//id19.html", "title": "Ol Chiki Fonts - Wesanthals: A Network for Santals (archived)" },
+    { "url": "https://web.archive.org/web/20260412173128/https://wesanthals.tripod.com/", "title": "Wesanthals: A Network for Santals (archived homepage)" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-11",
+  "updated_at": "2026-08-11"
+}

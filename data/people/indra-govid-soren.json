@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000128",
+  "slug": "indra-govid-soren",
+  "name": {
+    "preferred": "Indra Govid Soren",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["font tester"],
+  "bio": "Contributed testing and feedback during development of the Wesanthals e-group's Ol Chiki fonts, released 2002-2005 for typing Santali in Ol Chiki script.",
+  "sources": [
+    { "url": "https://web.archive.org/web/20260413230637/https://wesanthals.tripod.com//id19.html", "title": "Ol Chiki Fonts - Wesanthals: A Network for Santals (archived)" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-11",
+  "updated_at": "2026-08-11"
+}

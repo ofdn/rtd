@@ -1,0 +1,29 @@
+{
+  "id": "rtd-t-000148",
+  "slug": "ol-chiki-old",
+  "name": {
+    "preferred": "Ol Chiki Old",
+    "alternates": ["ol_ciki_old"]
+  },
+  "designers": [
+    { "id": "rtd-p-000123", "role": "designer" },
+    { "id": "rtd-p-000124", "role": "keyboard mapping standardization" },
+    { "id": "rtd-p-000125", "role": "glyph correction" },
+    { "id": "rtd-p-000126", "role": "glyph correction" }
+  ],
+  "design_year": "2002",
+  "release_year": "2003",
+  "scripts": ["Ol Chiki"],
+  "era": "digital",
+  "unicode_compliant": false,
+  "description": "One of five Ol Chiki font styles released together by the Wesanthals e-group, mapping Santali glyphs onto ASCII keys before Ol Chiki entered Unicode in 2008.",
+  "sources": [
+    { "url": "https://web.archive.org/web/20260413230637/https://wesanthals.tripod.com//id19.html", "title": "Ol Chiki Fonts - Wesanthals: A Network for Santals (archived)" },
+    { "url": "https://web.archive.org/web/20260412173128/https://wesanthals.tripod.com/", "title": "Wesanthals: A Network for Santals (archived homepage)" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-11",
+  "updated_at": "2026-08-11"
+}

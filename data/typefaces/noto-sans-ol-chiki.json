@@ -1,0 +1,28 @@
+{
+  "id": "rtd-t-000154",
+  "slug": "noto-sans-ol-chiki",
+  "name": {
+    "preferred": "Noto Sans Ol Chiki",
+    "alternates": []
+  },
+  "designers": [
+    { "id": "rtd-p-000131", "role": "type designer" }
+  ],
+  "foundry": [
+    { "name": "Google Noto Fonts", "url": "https://notofonts.github.io/ol-chiki/" }
+  ],
+  "release_year": "2022",
+  "classification": "sans-serif",
+  "scripts": ["Ol Chiki"],
+  "era": "digital",
+  "unicode_compliant": true,
+  "description": "A sans-serif Unicode typeface for the Ol Chiki script, part of Google's Noto font project, designed by the Monotype design team.",
+  "sources": [
+    { "url": "https://fonts.google.com/noto/specimen/Noto+Sans+Ol+Chiki", "title": "Noto Sans Ol Chiki - Google Fonts" },
+    { "url": "https://notofonts.github.io/ol-chiki/", "title": "Noto Sans Ol Chiki - Noto Fonts project" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-11",
+  "updated_at": "2026-08-11"
+}

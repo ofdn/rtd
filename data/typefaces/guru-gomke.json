@@ -1,0 +1,31 @@
+{
+  "id": "rtd-t-000153",
+  "slug": "guru-gomke",
+  "name": {
+    "preferred": "Guru Gomke",
+    "alternates": []
+  },
+  "designers": [
+    { "id": "rtd-p-000031", "role": "designer" },
+    { "id": "rtd-p-000039", "role": "research and project coordination" }
+  ],
+  "foundry": [
+    { "name": "Centre for Internet and Society (CIS-A2K)", "url": "https://cis-india.org" }
+  ],
+  "design_year": "2014",
+  "release_year": "2016",
+  "classification": "sans-serif",
+  "scripts": ["Ol Chiki", "Latin"],
+  "era": "digital",
+  "unicode_compliant": true,
+  "description": "An open-source, Unicode-compliant Ol Chiki typeface family with bold and italic styles, named for Raghunath Murmu's honorific Guru Gomke, made for CIS-A2K's Project Ol Chiki. Its Latin glyphs are derived from Source Sans Pro.",
+  "sources": [
+    { "url": "https://eyeondesign.aiga.org/guru-gomke-is-a-stylish-ol-chiki-typeface-for-indias-santali-speakers/", "title": "Guru Gomke Is a Stylish Ol Chiki Typeface for India's Santali Speakers - AIGA Eye on Design" },
+    { "url": "https://www.alphabettes.org/showcase-guru-gomke/", "title": "Showcase: Guru Gomke - Alphabettes" },
+    { "url": "https://typoday.in/2016/spk_papers/Pooja_Saxena_Shubhasis%20Panigrahi_TypographyDay-2016.pdf", "title": "Guru Gomke: Designing an Ol Chiki Typeface - Typography Day 2016" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-11",
+  "updated_at": "2026-08-11"
+}

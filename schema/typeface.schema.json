@@ -83,6 +83,10 @@
       "type": "string",
       "enum": ["digital", "metal", "phototype", "wood", "other"]
     },
+    "unicode_compliant": {
+      "type": "boolean",
+      "description": "False for digital fonts that map a script's glyphs onto non-standard code points (plain ASCII, PUA, or another script's block) instead of the script's real Unicode block, common in fonts made before a script was encoded. Omit when not established either way, don't assume true by default."
+    },
     "description": {
       "type": "string",
       "maxLength": 1000

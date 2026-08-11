@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000134",
+  "slug": "banwang-losu",
+  "name": {
+    "preferred": "Banwang Losu",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["script inventor", "educator"],
+  "bio": "Developed the Wancho script for the Wancho language between 2001 and 2012, publishing a teaching textbook in 2013; the script entered Unicode in 2019.",
+  "sources": [
+    { "url": "https://www.deccanherald.com/india/arunachal-man-scripts-history-with-new-tribal-alphabet-753893", "title": "Arunachal man scripts history with new tribal alphabet - Deccan Herald" },
+    { "url": "https://nenow.in/literature/arunachals-banwang-losu-develops-new-script-for-wancho-community.html", "title": "Arunachal's Banwang Losu develops new script for Wancho community - NE Now" },
+    { "url": "https://www.omniglot.com/writing/wanchoscript.htm", "title": "Wancho script - Omniglot" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-11",
+  "updated_at": "2026-08-11"
+}
