@@ -117,7 +117,6 @@ body:
         note what it's from (publication, date) in the same line.
       placeholder: |
         https://example.com/specimen - "Foundry specimen sheet, 1978"
-      render: false
     validations:
       required: true
   - type: dropdown
