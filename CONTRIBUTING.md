@@ -9,8 +9,14 @@ live.
 Use the issue forms instead - **[New person](../../issues/new?template=new-person.yml)**
 or **[New typeface](../../issues/new?template=new-typeface.yml)**. Fill in
 whatever you know, attach photos of sources directly in the form if you
-don't have a web link, and a maintainer will turn it into a record. The
-rest of this document is for people submitting via pull request directly.
+don't have a web link, and submit it. A bot turns the submission into a
+pull request within a minute or two (see `scripts/issue-to-record.js` and
+`.github/workflows/issue-to-pr.yml`) - a maintainer still reviews and
+merges it, same as any other PR, this just removes the JSON-writing step.
+If something in the form couldn't be turned into a record automatically
+(an unresolvable designer name, a missing required field), the bot
+comments on the issue explaining what to fix instead. The rest of this
+document is for people submitting via pull request directly.
 
 ## Adding or editing a record
 

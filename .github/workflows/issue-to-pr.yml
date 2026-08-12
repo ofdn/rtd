@@ -1,0 +1,100 @@
+name: Issue to PR
+
+# Turns a "New person" / "New typeface" issue form submission (see
+# .github/ISSUE_TEMPLATE/) into a pull request automatically. Never
+# auto-merges - see scripts/issue-to-record.js and CONTRIBUTING.md, a
+# maintainer still has to check sources and duplicates before merging.
+#
+# Security note: the issue body/title are untrusted input from anyone who
+# can open an issue. They're only ever passed through `env:` into the
+# node script (never spliced into a `run:` shell string or a
+# `github-script` `script:` block), so there's no command/code injection
+# path here even though nothing here is fork-gated the way pull_request
+# workflows need to be.
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  build-record:
+    if: >-
+      contains(github.event.issue.labels.*.name, 'new-person') ||
+      contains(github.event.issue.labels.*.name, 'new-typeface')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      - id: kind
+        run: |
+          echo "kind=${{ contains(github.event.issue.labels.*.name, 'new-person') && 'person' || 'typeface' }}" >> "$GITHUB_OUTPUT"
+
+      - id: build
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: node scripts/issue-to-record.js ${{ steps.kind.outputs.kind }}
+
+      - name: Comment when a record could not be built
+        if: steps.build.outputs.created != 'true'
+        uses: actions/github-script@v7
+        env:
+          ERROR_MESSAGE: ${{ steps.build.outputs.error_message }}
+        with:
+          script: |
+            const body = "Couldn't turn this into a record yet:\n\n" +
+              process.env.ERROR_MESSAGE +
+              "\n\nEdit the issue to fix this - a maintainer can re-run the automation, or convert it by hand (see CONTRIBUTING.md).";
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ["needs-info"],
+            });
+
+      - name: Open a pull request
+        if: steps.build.outputs.created == 'true'
+        id: pr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Add ${{ steps.kind.outputs.kind }}: ${{ steps.build.outputs.record_name }}"
+          branch: "issue-${{ github.event.issue.number }}-${{ steps.build.outputs.record_slug }}"
+          add-paths: ${{ steps.build.outputs.file }}
+          title: "Add ${{ steps.kind.outputs.kind }}: ${{ steps.build.outputs.record_name }}"
+          labels: ${{ steps.build.outputs.validation_failed == 'true' && 'needs-fix' || '' }}
+          body: |
+            Generated from #${{ github.event.issue.number }}.
+
+            ${{ steps.build.outputs.report }}
+
+            ---
+            A maintainer still needs to check the sources actually support the claims and that this isn't a duplicate before merging - see CONTRIBUTING.md. This PR does not auto-merge.
+
+      - name: Link the PR back on the issue
+        if: steps.build.outputs.created == 'true'
+        uses: actions/github-script@v7
+        env:
+          PR_NUMBER: ${{ steps.pr.outputs.pull-request-number }}
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `Opened #${process.env.PR_NUMBER} from this issue. A maintainer will review it before merging.`,
+            });

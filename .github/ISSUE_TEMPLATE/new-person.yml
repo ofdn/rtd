@@ -65,10 +65,15 @@ body:
     validations:
       required: true
   - type: input
-    id: active_years
+    id: active_years_start
     attributes:
-      label: Active years
-      placeholder: e.g. 1965-1998
+      label: Active years - start
+      placeholder: e.g. 1965
+  - type: input
+    id: active_years_end
+    attributes:
+      label: Active years - end
+      placeholder: e.g. 1998
   - type: input
     id: scripts
     attributes:
@@ -112,11 +117,13 @@ body:
     attributes:
       label: Sources
       description: >-
-        One per line: a URL and a short title. If there's no web link,
-        drag and drop a photo/scan of the coverage into this box instead -
-        note what it's from (publication, date) in the same line.
+        One per line, as `URL | Title` (a pipe between the two - titles
+        often contain a dash, so a pipe is what keeps this parseable). If
+        there's no web link, drag and drop a photo/scan of the coverage
+        into this box instead and use the image link GitHub gives you as
+        the URL, with what it's from (publication, date) as the title.
       placeholder: |
-        https://example.com/article - "Profile in Example Magazine, 1987"
+        https://example.com/article | Profile in Example Magazine, 1987
     validations:
       required: true
   - type: dropdown
@@ -143,12 +150,40 @@ body:
         - Thin - the best I could find, needs a stronger source later
     validations:
       required: true
-  - type: input
-    id: external_ids
+  - type: markdown
     attributes:
-      label: External identifiers
-      description: Any of - Wikidata QID, VIAF, ISNI, LC/NAF, GND, WorldCat entity, ULAN. Cross-references only, not sources.
-      placeholder: "e.g. wikidata_qid: Q12345, isni: 0000 0001 2345 6789"
+      value: |
+        ### External identifiers
+        Optional cross-references, not sources - leave blank if unknown.
+  - type: input
+    id: wikidata_qid
+    attributes:
+      label: Wikidata QID
+      placeholder: e.g. Q12345
+  - type: input
+    id: viaf
+    attributes:
+      label: VIAF
+  - type: input
+    id: isni
+    attributes:
+      label: ISNI
+  - type: input
+    id: lc_naf
+    attributes:
+      label: LC/NAF
+  - type: input
+    id: gnd
+    attributes:
+      label: GND
+  - type: input
+    id: worldcat_entity
+    attributes:
+      label: WorldCat entity
+  - type: input
+    id: ulan
+    attributes:
+      label: ULAN
   - type: textarea
     id: notes
     attributes:

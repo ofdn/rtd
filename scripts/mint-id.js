@@ -7,59 +7,20 @@
 // Usage:
 //   node scripts/mint-id.js person "Nasim Ali"
 //   node scripts/mint-id.js typeface "Some Typeface" --write
-import { readFileSync, readdirSync, existsSync, writeFileSync } from "node:fs";
+import { existsSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  KIND_CONFIG,
+  slugify,
+  listRecords,
+  nextId,
+  uniqueSlug,
+  sameNameCollisions,
+} from "./lib/records.js";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const repoRoot = join(__dirname, "..");
-
-const KIND_CONFIG = {
-  person: { dir: "data/people", prefix: "rtd-p-" },
-  typeface: { dir: "data/typefaces", prefix: "rtd-t-" },
-};
-
-function slugify(name) {
-  return name
-    .normalize("NFD")
-    .replace(/\p{Mark}/gu, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
-
-function loadJson(path) {
-  return JSON.parse(readFileSync(path, "utf8"));
-}
-
-function listRecords(dir) {
-  if (!existsSync(dir)) return [];
-  return readdirSync(dir)
-    .filter((f) => f.endsWith(".json"))
-    .map((f) => loadJson(join(dir, f)));
-}
-
-function nextId(records, prefix) {
-  let max = 0;
-  const idPattern = new RegExp(`^${prefix}(\\d{6})$`);
-  for (const record of records) {
-    const m = idPattern.exec(record.id ?? "");
-    if (m) max = Math.max(max, parseInt(m[1], 10));
-  }
-  return `${prefix}${String(max + 1).padStart(6, "0")}`;
-}
-
-// If the plain slug is taken, append -2, -3, ... rather than a birth year
-// or role (those aren't always known at mint time). Once the record is
-// drafted, a contributor is free to hand-pick a more descriptive
-// disambiguator (e.g. "nasim-ali-1952") before opening the PR, this is
-// just a safe default that guarantees no filename collision.
-function uniqueSlug(baseSlug, existingSlugs) {
-  if (!existingSlugs.has(baseSlug)) return baseSlug;
-  let n = 2;
-  while (existingSlugs.has(`${baseSlug}-${n}`)) n++;
-  return `${baseSlug}-${n}`;
-}
 
 function buildStub(kind, id, slug, name, today) {
   const base = {
@@ -115,11 +76,7 @@ function main() {
   // name is a signal to check before minting a brand new id, either this
   // is the same record (edit it, don't mint) or a genuine namesake (keep
   // going, but make sure the two bios are distinguishable).
-  const collisions = records.filter(
-    (r) =>
-      r.record_status === "active" &&
-      r.name?.preferred?.toLowerCase() === nameArg.toLowerCase()
-  );
+  const collisions = sameNameCollisions(records, nameArg);
 
   console.log(`Next ${kindArg} id: ${id}`);
   console.log(

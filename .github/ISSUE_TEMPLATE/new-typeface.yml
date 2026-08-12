@@ -46,11 +46,11 @@ body:
     attributes:
       label: Designer(s)
       description: >-
-        One per line: the designer's name as it appears in the registry
-        (or their rtd-p-###### id if you know it) and their role, e.g.
-        "Jan Tschichold - type designer". If they're not in the registry
-        yet, open a "New person" issue for them first and mention that
-        here instead.
+        One per line, as `Name | role` (a pipe between the two) - the
+        name exactly as it appears in the registry, or their
+        rtd-p-###### id if you know it. e.g. "Jan Tschichold | type
+        designer". If they're not in the registry yet, open a "New
+        person" issue for them first and mention that here instead.
     validations:
       required: true
   - type: textarea
@@ -112,11 +112,13 @@ body:
     attributes:
       label: Sources
       description: >-
-        One per line: a URL and a short title. If there's no web link,
-        drag and drop a photo/scan of the coverage into this box instead -
-        note what it's from (publication, date) in the same line.
+        One per line, as `URL | Title` (a pipe between the two - titles
+        often contain a dash, so a pipe is what keeps this parseable). If
+        there's no web link, drag and drop a photo/scan of the coverage
+        into this box instead and use the image link GitHub gives you as
+        the URL, with what it's from (publication, date) as the title.
       placeholder: |
-        https://example.com/specimen - "Foundry specimen sheet, 1978"
+        https://example.com/specimen | Foundry specimen sheet, 1978
     validations:
       required: true
   - type: dropdown
@@ -139,11 +141,36 @@ body:
         - Thin - the best I could find, needs a stronger source later
     validations:
       required: true
-  - type: input
-    id: external_ids
+  - type: markdown
     attributes:
-      label: External identifiers
-      description: Any of - Wikidata QID, VIAF, ISNI, LC/NAF, GND, WorldCat entity. Cross-references only, not sources.
+      value: |
+        ### External identifiers
+        Optional cross-references, not sources - leave blank if unknown.
+  - type: input
+    id: wikidata_qid
+    attributes:
+      label: Wikidata QID
+      placeholder: e.g. Q12345
+  - type: input
+    id: viaf
+    attributes:
+      label: VIAF
+  - type: input
+    id: isni
+    attributes:
+      label: ISNI
+  - type: input
+    id: lc_naf
+    attributes:
+      label: LC/NAF
+  - type: input
+    id: gnd
+    attributes:
+      label: GND
+  - type: input
+    id: worldcat_entity
+    attributes:
+      label: WorldCat entity
   - type: textarea
     id: notes
     attributes:
