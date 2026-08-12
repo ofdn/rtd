@@ -19,11 +19,36 @@
     {
       "url": "http://www.linotype.com",
       "title": "www.linotype.com"
+    },
+    {
+      "url": "http://www.sueddeutsche.de/kultur/nachruf-eine-epoche-in-buchstaben-1.2645575",
+      "title": "Nachruf: Eine Epoche in Buchstaben - Sueddeutsche Zeitung"
+    },
+    {
+      "url": "http://www.luzernerzeitung.ch/nachrichten/panorama/panorama-sda/Schweizer-Typograf-Adrian-Frutiger-ist-tot;art46441,594159",
+      "title": "Schweizer Typograf Adrian Frutiger ist tot - Luzerner Zeitung"
+    },
+    {
+      "url": "https://www.emuseum.ch/en/people/details/34864",
+      "title": "Adrian Frutiger - Biographies - eMuseum, Museum fuer Gestaltung Zuerich"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
-  "external_ids": { "wikidata_qid": "Q123621", "viaf": "107027312", "isni": "0000000081722347", "lc_naf": "n81032458", "gnd": "118693891", "worldcat_entity": "E39PBJjhD9fJm69kQVcHpKDXh3", "ulan": "500126250" }
+  "updated_at": "2026-08-12",
+  "external_ids": {
+    "wikidata_qid": "Q123621",
+    "viaf": "107027312",
+    "isni": "0000000081722347",
+    "lc_naf": "n81032458",
+    "gnd": "118693891",
+    "worldcat_entity": "E39PBJjhD9fJm69kQVcHpKDXh3",
+    "ulan": "500126250"
+  },
+  "death_year": "2015-09-10",
+  "place_of_death": "Bremgarten bei Bern",
+  "alma_mater": [
+    "Kunstgewerbeschule Zürich"
+  ]
 }

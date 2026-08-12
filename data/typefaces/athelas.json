@@ -18,13 +18,12 @@
   "scripts": [],
   "sources": [
     {
-      "url": "http://type-together.com",
-      "title": "type-together.com"
+      "url": "https://www.type-together.com/athelas-font",
+      "title": "Athelas - TypeTogether"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
-  "verification_status": "needs_verification"
+  "updated_at": "2026-08-12"
 }

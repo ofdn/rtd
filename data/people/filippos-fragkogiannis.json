@@ -115,14 +115,26 @@
     {
       "url": "https://filipposfragkogiannis.com/about",
       "title": "filipposfragkogiannis.com"
+    },
+    {
+      "url": "https://www.graphis.com/bio/filippos-fragkogiannis",
+      "title": "Filippos Fragkogiannis - Graphis"
+    },
+    {
+      "url": "https://trendlist.org/studios/filippos-fragkogiannis",
+      "title": "Filippos Fragkogiannis - Trend List"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
-  "verification_status": "needs_verification",
+  "updated_at": "2026-08-12",
   "external_ids": {
     "wikidata_qid": "Q122351689"
-  }
+  },
+  "birth_year": "1993-01-11",
+  "place_of_birth": "Marousi",
+  "alma_mater": [
+    "Vakalo Art & Design College"
+  ]
 }

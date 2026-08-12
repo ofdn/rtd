@@ -22,10 +22,8 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-08-12",
   "external_ids": {
-    "wikidata_qid": "Q118612591",
-    "viaf": "94151776800218011994",
-    "lc_naf": "no2016117922"
+    "wikidata_qid": "Q99674849"
   }
 }

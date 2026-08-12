@@ -22,13 +22,12 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-08-12",
   "external_ids": {
-    "wikidata_qid": "Q1092056",
-    "viaf": "34264496",
-    "isni": "0000000051243599",
-    "lc_naf": "no2008057725",
-    "gnd": "1117491145",
-    "worldcat_entity": "E39PBJtmrTvVv8Tq6x9VkkbyBP"
+    "wikidata_qid": "Q9130175",
+    "viaf": "54574284",
+    "isni": "0000000003707344",
+    "lc_naf": "nr97023806",
+    "gnd": "1145730647"
   }
 }

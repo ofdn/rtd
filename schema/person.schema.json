@@ -95,6 +95,37 @@
         }
       }
     },
+    "gender": {
+      "type": "string",
+      "minLength": 1
+    },
+    "place_of_birth": {
+      "type": "string",
+      "minLength": 1
+    },
+    "place_of_death": {
+      "type": "string",
+      "minLength": 1
+    },
+    "alma_mater": {
+      "type": "array",
+      "default": [],
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "positions_held": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title"],
+        "properties": {
+          "title": { "type": "string", "minLength": 1 },
+          "start_year": { "type": "string" },
+          "end_year": { "type": "string" }
+        }
+      }
+    },
     "bio": {
       "type": "string",
       "maxLength": 1000,

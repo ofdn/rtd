@@ -15,12 +15,16 @@
     {
       "url": "https://www.babelstone.co.uk/",
       "title": "www.babelstone.co.uk"
+    },
+    {
+      "url": "https://corp.unicode.org/pipermail/unicode/2025-July/011467.html",
+      "title": "Andrew C. West 1960-2025 - Unicode mailing list"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-08-12",
   "external_ids": {
     "wikidata_qid": "Q4758888",
     "viaf": "56485211",
@@ -28,5 +32,6 @@
     "lc_naf": "nr93032921",
     "gnd": "1158476809",
     "worldcat_entity": "E39PBJyrQW9Gg3jF6VqMPXtMyd"
-  }
+  },
+  "death_year": "2025-07-10"
 }

@@ -39,15 +39,41 @@
     {
       "url": "https://aurelien-vret.fr/",
       "title": "aurelien-vret.fr"
+    },
+    {
+      "url": "https://actions-recherche.bnf.fr/bnf/anirw3.nsf/IX01/E2022000003_vret-aurelien",
+      "title": "VRET, Aurelien - Programmes de recherche, BnF"
+    },
+    {
+      "url": "https://typofonderie.com/fr/fonts/prosaic/details",
+      "title": "Prosaic - Fonts - Typofonderie"
+    },
+    {
+      "url": "http://www.sudoc.fr/268785724",
+      "title": "Typophilie [catalogue no. 307] / Librairie Paul Jammes - Sudoc"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-08-12",
   "external_ids": {
     "wikidata_qid": "Q137908997",
     "viaf": "5174410436408500178",
     "isni": "0000000526333214"
-  }
+  },
+  "positions_held": [
+    {
+      "title": "associated researcher",
+      "start_year": "2021",
+      "end_year": "2022"
+    },
+    {
+      "title": "type designer",
+      "start_year": "2012"
+    },
+    {
+      "title": "expert"
+    }
+  ]
 }

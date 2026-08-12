@@ -19,14 +19,18 @@
     {
       "url": "https://www.giuliaboggio.xyz",
       "title": "www.giuliaboggio.xyz"
+    },
+    {
+      "url": "https://www.c41magazine.com/giulia-boggio",
+      "title": "Giulia Boggio - C41 Magazine"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
-  "verification_status": "needs_verification",
+  "updated_at": "2026-08-12",
   "external_ids": {
     "wikidata_qid": "Q125401082"
-  }
+  },
+  "birth_year": "1994"
 }

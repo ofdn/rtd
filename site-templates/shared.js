@@ -525,7 +525,7 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
 
 export function verificationNote(record) {
   if (record.verification_status !== "needs_verification") return "";
-  return `<aside class="callout"><strong>Needs verification</strong><p>Sources for this record are thin or low-confidence. Help improve it by ${linkTag("https://github.com/ofdn/rtd/blob/main/CONTRIBUTING.md", "contributing a stronger source")}.</p></aside>`;
+  return `<aside class="callout"><strong>NOTE</strong><p>Add more verified sources if you have to improve this record.</p></aside>`;
 }
 
 // Resolves external_ids into {label, url} pairs, one per authority file

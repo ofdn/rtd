@@ -28,11 +28,24 @@
     {
       "url": "https://www.cassandre-france.com/",
       "title": "www.cassandre-france.com"
+    },
+    {
+      "url": "https://collectie.nieuweinstituut.nl/detail/people/10496",
+      "title": "Cassandre - Nieuwe Instituut Collectieplatform"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
-  "external_ids": { "wikidata_qid": "Q278945", "viaf": "44324012", "isni": "0000000121303287", "lc_naf": "n80015569", "gnd": "118799665", "worldcat_entity": "E39PBJrkYKWT9YCgQkv9xthmBP", "ulan": "500015994" }
+  "updated_at": "2026-08-12",
+  "external_ids": {
+    "wikidata_qid": "Q278945",
+    "viaf": "44324012",
+    "isni": "0000000121303287",
+    "lc_naf": "n80015569",
+    "gnd": "118799665",
+    "worldcat_entity": "E39PBJrkYKWT9YCgQkv9xthmBP",
+    "ulan": "500015994"
+  },
+  "birth_year": "1901-01-24"
 }

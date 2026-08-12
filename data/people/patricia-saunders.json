@@ -17,14 +17,20 @@
     {
       "url": "http://www.monotype.com/html/mtname/ms_welcome.html",
       "title": "www.monotype.com"
+    },
+    {
+      "url": "https://research.reading.ac.uk/women-in-type/patricia-saunders-1933-2019/",
+      "title": "Patricia Saunders 1933-2019 - Women In Type, University of Reading"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-08-12",
   "external_ids": {
     "wikidata_qid": "Q30065540",
     "gnd": "1399648284"
-  }
+  },
+  "birth_year": "1933-06-07",
+  "death_year": "2019-06-25"
 }

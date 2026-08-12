@@ -11,18 +11,23 @@
   ],
   "sources": [
     {
-      "url": "http://type-together.com",
-      "title": "type-together.com"
+      "url": "https://www.type-together.com/athelas-font",
+      "title": "Athelas - TypeTogether"
+    },
+    {
+      "url": "https://cs.isabart.org/person/154571",
+      "title": "Veronika Burian - isabart.org (Institute of Art History biographical archive)"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-08-12",
   "external_ids": {
     "wikidata_qid": "Q28810460",
     "viaf": "60244641",
     "isni": "0000000019610037",
     "gnd": "132519550"
-  }
+  },
+  "place_of_birth": "Prague"
 }

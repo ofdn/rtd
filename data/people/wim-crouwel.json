@@ -39,11 +39,31 @@
     {
       "url": "https://theaterencyclopedie.nl/wiki/Wim_Crouwel",
       "title": "theaterencyclopedie.nl"
+    },
+    {
+      "url": "https://www.nu.nl/amsterdam/5995586/grafisch-ontwerper-wim-crouwel-90-overleden.html",
+      "title": "Grafisch ontwerper Wim Crouwel (90) overleden - NU.nl"
+    },
+    {
+      "url": "https://www.tellerreport.com/news/2019-09-19---graphic-designer-wim-crouwel-(90)-passed-away-.SJV5DKWPB.html",
+      "title": "Graphic designer Wim Crouwel (90) passed away - Teller Report"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
-  "external_ids": { "wikidata_qid": "Q555389", "viaf": "96546526", "isni": "0000000092024835", "lc_naf": "n50018512", "gnd": "118996169", "worldcat_entity": "E39PBJrm7cyXv7yr9v67hhkRrq", "ulan": "500008765" }
+  "updated_at": "2026-08-12",
+  "external_ids": {
+    "wikidata_qid": "Q555389",
+    "viaf": "96546526",
+    "isni": "0000000092024835",
+    "lc_naf": "n50018512",
+    "gnd": "118996169",
+    "worldcat_entity": "E39PBJrm7cyXv7yr9v67hhkRrq",
+    "ulan": "500008765"
+  },
+  "birth_year": "1928-11-21",
+  "death_year": "2019-09-19",
+  "place_of_birth": "Groningen",
+  "place_of_death": "Amsterdam"
 }

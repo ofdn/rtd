@@ -17,14 +17,23 @@
     {
       "url": "http://www.gnome.org/contact/",
       "title": "www.gnome.org"
+    },
+    {
+      "url": "https://www.linotype.com/6760/jim-lyles.html",
+      "title": "Jim Lyles - MyFonts"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
-  "verification_status": "needs_verification",
+  "updated_at": "2026-08-12",
   "external_ids": {
     "wikidata_qid": "Q76588119"
-  }
+  },
+  "birth_year": "1955",
+  "place_of_birth": "Michigan City",
+  "alma_mater": [
+    "Pratt Institute",
+    "School of Visual Arts"
+  ]
 }
