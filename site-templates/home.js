@@ -27,7 +27,7 @@ ${SEARCH_ICON}
 <p class="stat-line">Currently tracking <strong>${peopleCount}</strong> people, <strong>${typefacesCount}</strong> typefaces.</p>
 </div>
 <div id="results"></div>
-<p class="utility-links"><a href="api/people.json">People API</a> &middot; <a href="api/typefaces.json">Typefaces API</a> &middot; <a href="dumps/">Bulk dumps</a> &middot; <a href="info/#reconciliation">Reconciliation service</a></p>
+<p class="utility-links"><a href="scripts/">Browse by script</a> &middot; <a href="api/people.json">People API</a> &middot; <a href="api/typefaces.json">Typefaces API</a> &middot; <a href="dumps/">Bulk dumps</a> &middot; <a href="info/#reconciliation">Reconciliation service</a></p>
 <script>
 (function () {
   var form = document.getElementById("home-search-form");
@@ -116,6 +116,29 @@ ${SEARCH_ICON}
     var normTarget = normalizeForSearch(target);
     return qTokens.every(function (t) {
       return normTarget.indexOf(t) !== -1;
+    });
+  }
+
+  // A record's scripts[] stores the writing system ("Ol Chiki"), not the
+  // language it's usually associated with ("Santali"), so a plain
+  // tokenSearchMatch against scripts[] alone would miss a reader who
+  // searches by language. This maps a handful of language names onto the
+  // script they're inseparably tied to in this registry's own data (see
+  // each script's records for the sourced language link).
+  var SCRIPT_LANGUAGE_ALIASES = {
+    "santali": "Ol Chiki",
+    "santhali": "Ol Chiki",
+    "ho": "Warang Citi",
+    "punjabi": "Gurmukhi",
+    "oriya": "Odia",
+    "bangla": "Bengali"
+  };
+  function scriptSearchMatch(query, scripts) {
+    if (!scripts || !scripts.length) return false;
+    var normQuery = normalizeForSearch(query);
+    var aliasTarget = SCRIPT_LANGUAGE_ALIASES[normQuery];
+    return scripts.some(function (s) {
+      return tokenSearchMatch(query, s) || (aliasTarget && s === aliasTarget);
     });
   }
 
@@ -216,7 +239,8 @@ ${SEARCH_ICON}
           return tokenSearchMatch(q, a);
         }) ||
         idMatches(item, parsedId) ||
-        identifierMatches(item, q)
+        identifierMatches(item, q) ||
+        scriptSearchMatch(q, item.scripts)
       );
     });
     results.innerHTML =

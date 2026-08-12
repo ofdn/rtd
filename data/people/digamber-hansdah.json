@@ -5,15 +5,25 @@
     "preferred": "Digamber Hansdah",
     "alternates": []
   },
-  "countries": ["India"],
-  "roles": ["type designer"],
+  "countries": [
+    "India"
+  ],
+  "roles": [
+    "type designer"
+  ],
   "bio": "Helped correct the glyphs of the Wesanthals e-group's Ol Chiki fonts (Classic, Old, Optimum, Regular, Royal, Usara), released 2002-2005 for typing Santali.",
   "sources": [
-    { "url": "https://web.archive.org/web/20260413230637/https://wesanthals.tripod.com//id19.html", "title": "Ol Chiki Fonts - Wesanthals: A Network for Santals (archived)" }
+    {
+      "url": "https://web.archive.org/web/20260413230637/https://wesanthals.tripod.com//id19.html",
+      "title": "Ol Chiki Fonts - Wesanthals: A Network for Santals (archived)"
+    }
   ],
   "verification_status": "needs_verification",
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-11",
-  "updated_at": "2026-08-11"
+  "updated_at": "2026-08-12",
+  "scripts": [
+    "Ol Chiki"
+  ]
 }

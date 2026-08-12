@@ -3,19 +3,38 @@
   "slug": "lako-bodra",
   "name": {
     "preferred": "Lako Bodra",
-    "alternates": ["Kol Lako Bodra", "Ot Guru Lako Bodra"]
+    "alternates": [
+      "Kol Lako Bodra",
+      "Ot Guru Lako Bodra"
+    ]
   },
-  "countries": ["India"],
-  "roles": ["script inventor"],
+  "countries": [
+    "India"
+  ],
+  "roles": [
+    "script inventor"
+  ],
   "birth_year": "1919",
   "bio": "Invented the Warang Chiti script for the Ho language while working as an Indian Railways clerk, drawing purely native letterforms; honored as Ot Guru, born 1919 in West Singhbhum.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/varangkshiti.htm", "title": "Warang Citi alphabet - Omniglot" },
-    { "url": "http://warangchiti.blogspot.com/2019/09/100th-birth-anniversary-of-ot-guru-kol.html", "title": "Warang Chiti 2030: 100th Birth Anniversary of Ot Guru Kol Lako Bodra" },
-    { "url": "https://iacss.in/biography-of-kol-lako-bodra/", "title": "Biography of Kol Lako Bodra - IACSS" }
+    {
+      "url": "https://www.omniglot.com/writing/varangkshiti.htm",
+      "title": "Warang Citi alphabet - Omniglot"
+    },
+    {
+      "url": "http://warangchiti.blogspot.com/2019/09/100th-birth-anniversary-of-ot-guru-kol.html",
+      "title": "Warang Chiti 2030: 100th Birth Anniversary of Ot Guru Kol Lako Bodra"
+    },
+    {
+      "url": "https://iacss.in/biography-of-kol-lako-bodra/",
+      "title": "Biography of Kol Lako Bodra - IACSS"
+    }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-11",
-  "updated_at": "2026-08-11"
+  "updated_at": "2026-08-12",
+  "scripts": [
+    "Warang Citi"
+  ]
 }

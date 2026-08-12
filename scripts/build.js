@@ -22,14 +22,8 @@ import { renderPersonPage, renderTombstonePage } from "../site-templates/person.
 import { renderTypefacePage } from "../site-templates/typeface.js";
 import { renderHomePage } from "../site-templates/home.js";
 import { renderInfoPage } from "../site-templates/info.js";
-import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion, escapeHtml, linkTag } from "../site-templates/shared.js";
-
-// Collapses "Latin" vs "Latin script" vs "Greek alphabet" style variants in
-// scripts[] into one count, so the /info/ stat line doesn't overcount the
-// same script twice just because two records phrased it differently.
-function normalizeScriptName(script) {
-  return script.replace(/\s+(script|alphabet)$/i, "").trim().toLowerCase();
-}
+import { renderScriptPage, renderScriptsIndexPage } from "../site-templates/script.js";
+import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion, escapeHtml, linkTag, canonicalScriptName, scriptSlug } from "../site-templates/shared.js";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const repoRoot = join(__dirname, "..");
@@ -263,9 +257,31 @@ function build(dataDir, outDir) {
     })
   );
 
-  const activeScripts = new Set();
-  for (const p of people) if (p.record_status === "active") for (const s of p.scripts || []) activeScripts.add(normalizeScriptName(s));
-  for (const t of typefaces) if (t.record_status === "active") for (const s of t.scripts || []) activeScripts.add(normalizeScriptName(s));
+  // One entry per canonical script, gathering every active typeface and
+  // person tagged with it (via scriptSlug, so "Latin"/"Latin script"
+  // variants land in the same entry), to drive both the /info/ scripts
+  // count and the /scripts/ tag pages below.
+  const scriptsIndex = new Map();
+  function registerScript(script, kind, entry) {
+    const slug = scriptSlug(script);
+    if (!scriptsIndex.has(slug)) {
+      scriptsIndex.set(slug, { slug, name: canonicalScriptName(script), typefaces: [], people: [] });
+    }
+    scriptsIndex.get(slug)[kind].push(entry);
+  }
+  for (const p of people) {
+    if (p.record_status !== "active") continue;
+    for (const s of p.scripts || []) registerScript(s, "people", { slug: p.slug, name: p.name.preferred });
+  }
+  for (const t of typefaces) {
+    if (t.record_status !== "active") continue;
+    for (const s of t.scripts || []) registerScript(s, "typefaces", { slug: t.slug, name: t.name.preferred });
+  }
+  for (const entry of scriptsIndex.values()) {
+    entry.typefaces.sort((a, b) => a.name.localeCompare(b.name));
+    entry.people.sort((a, b) => a.name.localeCompare(b.name));
+  }
+  const activeScripts = new Set(scriptsIndex.keys());
 
   writeFile(
     outDir,
@@ -341,6 +357,7 @@ function build(dataDir, outDir) {
       canonical_url: canonicalUrl,
       subtitle: personSubtitle(record),
       external_ids: record.external_ids,
+      scripts: (record.scripts ?? []).map(canonicalScriptName),
     });
   }
   writeFile(outDir, "api/people.json", JSON.stringify(peopleApiIndex, null, 2));
@@ -412,6 +429,7 @@ function build(dataDir, outDir) {
       canonical_url: canonicalUrl,
       subtitle: typefaceSubtitle(record),
       external_ids: record.external_ids,
+      scripts: (record.scripts ?? []).map(canonicalScriptName),
     });
   }
   writeFile(
@@ -419,6 +437,38 @@ function build(dataDir, outDir) {
     "api/typefaces.json",
     JSON.stringify(typefacesApiIndex, null, 2)
   );
+
+  // --- Scripts (tag pages: one per script, plus an index of all of them) ---
+  const scriptsForIndex = [...scriptsIndex.values()]
+    .map((s) => ({
+      slug: s.slug,
+      name: s.name,
+      typefacesCount: s.typefaces.length,
+      peopleCount: s.people.length,
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+  writeFile(
+    outDir,
+    "scripts/index.html",
+    renderScriptsIndexPage({
+      canonicalUrl: `${SITE_URL}scripts/`,
+      scripts: scriptsForIndex,
+      schemaVersion,
+    })
+  );
+  for (const entry of scriptsIndex.values()) {
+    writeFile(
+      outDir,
+      `scripts/${entry.slug}/index.html`,
+      renderScriptPage({
+        canonicalUrl: `${SITE_URL}scripts/${entry.slug}/`,
+        name: entry.name,
+        typefaces: entry.typefaces,
+        people: entry.people,
+        schemaVersion,
+      })
+    );
+  }
 
   // --- Search index (active records only) ---
   const searchIndex = [
@@ -439,6 +489,8 @@ function build(dataDir, outDir) {
     { loc: `${SITE_URL}info/`, lastmod: today },
     { loc: `${SITE_URL}preservation/`, lastmod: today },
     { loc: `${SITE_URL}dumps/`, lastmod: today },
+    { loc: `${SITE_URL}scripts/`, lastmod: today },
+    ...scriptsForIndex.map((s) => ({ loc: `${SITE_URL}scripts/${s.slug}/`, lastmod: today })),
     ...peopleApiIndex
       .filter((p) => p.record_status === "active")
       .map((p) => ({ loc: p.canonical_url, lastmod: personById.get(p.id)?.updated_at ?? today })),

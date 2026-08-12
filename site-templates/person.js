@@ -1,4 +1,4 @@
-import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, nationalityLabel, copyableId, arkPermalink, citationBlock, printButton } from "./shared.js";
+import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, nationalityLabel, copyableId, arkPermalink, citationBlock, printButton, scriptBadges } from "./shared.js";
 
 // `works` is the computed reverse index (typefaces this person is credited
 // on), passed in by build.js, it is never stored on the person record
@@ -54,6 +54,7 @@ ${verificationNote(record)}
 ${record.roles?.length ? `<dt>Roles</dt><dd>${escapeHtml(record.roles.join(", "))}</dd>` : ""}
 ${record.birth_year || record.death_year ? `<dt>Dates</dt><dd>${escapeHtml(record.birth_year ?? "?")} – ${escapeHtml(record.death_year ?? "")}</dd>` : ""}
 ${record.countries?.length ? `<dt>Nationality</dt><dd>${escapeHtml(nationalityLabel(record.countries, demonyms))}</dd>` : ""}
+${record.scripts?.length ? `<dt>Scripts</dt><dd>${scriptBadges(record.scripts)}</dd>` : ""}
 </dl>
 ${record.bio ? `<p class="bio">${escapeHtml(record.bio)}</p>` : ""}
 ${worksHtml}

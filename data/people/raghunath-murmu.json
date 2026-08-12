@@ -3,20 +3,41 @@
   "slug": "raghunath-murmu",
   "name": {
     "preferred": "Raghunath Murmu",
-    "alternates": ["Pandit Raghunath Murmu", "Guru Gomke"]
+    "alternates": [
+      "Pandit Raghunath Murmu",
+      "Guru Gomke"
+    ]
   },
-  "countries": ["India"],
-  "roles": ["script inventor", "writer", "educator"],
+  "countries": [
+    "India"
+  ],
+  "roles": [
+    "script inventor",
+    "writer",
+    "educator"
+  ],
   "birth_year": "1905",
   "death_year": "1982",
   "bio": "Invented the Ol Chiki script for Santali in 1925, given the honorific Guru Gomke by the Mayurbhanj Adivasi Mahasabha; won the 1978 Sahitya Akademi award for Santali literature.",
   "sources": [
-    { "url": "https://www.jetir.org/papers/JETIR1811258.pdf", "title": "Guru Gomke Pundit Raghunath Murmu: The Inventor of Ol Chiki Script - JETIR" },
-    { "url": "https://scroll.in/article/811908/do-you-know-of-the-ol-chiki-script-it-could-be-santhals-and-indias-route-to-their-language", "title": "Do you know of the Ol-Chiki script? It could be Santhals' - and India's - route to their language - Scroll.in" },
-    { "url": "https://web.archive.org/web/20260411025410/https://wesanthals.tripod.com//id45.html", "title": "Ol Chiki Script - Wesanthals: A Network for Santals (archived)" }
+    {
+      "url": "https://www.jetir.org/papers/JETIR1811258.pdf",
+      "title": "Guru Gomke Pundit Raghunath Murmu: The Inventor of Ol Chiki Script - JETIR"
+    },
+    {
+      "url": "https://scroll.in/article/811908/do-you-know-of-the-ol-chiki-script-it-could-be-santhals-and-indias-route-to-their-language",
+      "title": "Do you know of the Ol-Chiki script? It could be Santhals' - and India's - route to their language - Scroll.in"
+    },
+    {
+      "url": "https://web.archive.org/web/20260411025410/https://wesanthals.tripod.com//id45.html",
+      "title": "Ol Chiki Script - Wesanthals: A Network for Santals (archived)"
+    }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-11",
-  "updated_at": "2026-08-11"
+  "updated_at": "2026-08-12",
+  "scripts": [
+    "Ol Chiki"
+  ]
 }

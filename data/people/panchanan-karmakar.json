@@ -9,7 +9,7 @@
   "roles": ["punchcutter", "type designer"],
   "death_year": "1804",
   "active_years": { "start": "1778", "end": "1804" },
-  "scripts": ["Bengali", "Devanagari", "Arabic", "Persian", "Marathi", "Telugu", "Burmese", "Chinese"],
+  "scripts": ["Bengali", "Devanagari", "Arabic", "Persian", "Telugu", "Burmese", "Chinese"],
   "affiliations": [
     { "name": "East India Company Press, Kolkata", "start_year": "1779", "end_year": "1799" },
     { "name": "Serampore Mission Press", "start_year": "1799" }
@@ -24,5 +24,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-08-12"
 }

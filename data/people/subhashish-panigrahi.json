@@ -8,6 +8,7 @@
   "countries": ["India"],
   "roles": ["type designer"],
   "bio": "Led the design of Chapakala19, a revival Odia typeface, and coordinated research for Guru Gomke, a Unicode Ol Chiki typeface, at the Centre for Internet and Society.",
+  "scripts": ["Odia", "Ol Chiki"],
   "external_ids": { "wikidata_qid": "Q28469412", "viaf": "2637162669526055500002", "isni": "0000000501801034", "lc_naf": "n2022242804", "gnd": "1265482411" },
   "sources": [
     { "url": "https://github.com/ofdn/Chapakala", "title": "Chapakala: Revival Odia typeface family, GitHub" },
@@ -16,5 +17,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-11"
+  "updated_at": "2026-08-12"
 }

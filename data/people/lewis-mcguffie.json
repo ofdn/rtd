@@ -5,15 +5,28 @@
     "preferred": "Lewis McGuffie",
     "alternates": []
   },
-  "countries": ["United Kingdom"],
-  "roles": ["type designer"],
+  "countries": [
+    "United Kingdom"
+  ],
+  "roles": [
+    "type designer"
+  ],
   "bio": "Part of the Monotype Design Team credited for Noto Sans Ol Chiki, a Unicode Ol Chiki typeface for Google's Noto font project, released 2022.",
   "sources": [
-    { "url": "https://www.lewismcguffie.com/About", "title": "About - Lewis McGuffie's Typeface Design Portfolio Website" },
-    { "url": "https://fontsinuse.com/type_designers/4228/lewis-mcguffie", "title": "Lewis McGuffie - Fonts In Use" }
+    {
+      "url": "https://www.lewismcguffie.com/About",
+      "title": "About - Lewis McGuffie's Typeface Design Portfolio Website"
+    },
+    {
+      "url": "https://fontsinuse.com/type_designers/4228/lewis-mcguffie",
+      "title": "Lewis McGuffie - Fonts In Use"
+    }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-11",
-  "updated_at": "2026-08-11"
+  "updated_at": "2026-08-12",
+  "scripts": [
+    "Ol Chiki"
+  ]
 }

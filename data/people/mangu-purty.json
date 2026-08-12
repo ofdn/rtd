@@ -5,19 +5,36 @@
     "preferred": "Mangu Purty",
     "alternates": []
   },
-  "countries": ["India"],
-  "roles": ["type designer"],
+  "countries": [
+    "India"
+  ],
+  "roles": [
+    "type designer"
+  ],
   "affiliations": [
-    { "name": "Jawaharlal Nehru University" }
+    {
+      "name": "Jawaharlal Nehru University"
+    }
   ],
   "bio": "Designed the Noto Sans Warang Citi typeface, part of Google's Noto font project bringing the Ho language into digital use, and a Warang Citi mobile keyboard at Jawaharlal Nehru University.",
-  "external_ids": { "wikidata_qid": "Q113475303" },
+  "external_ids": {
+    "wikidata_qid": "Q113475303"
+  },
   "sources": [
-    { "url": "https://scroll.in/magazine/1017132/meet-the-young-indians-who-are-bringing-an-adivasi-language-into-the-digital-age", "title": "Meet the youngsters bringing the Indian tribal language of Ho into the digital age - Scroll.in" },
-    { "url": "https://notofonts.github.io/warang-citi/", "title": "Noto Warang Citi - Noto Fonts project" }
+    {
+      "url": "https://scroll.in/magazine/1017132/meet-the-young-indians-who-are-bringing-an-adivasi-language-into-the-digital-age",
+      "title": "Meet the youngsters bringing the Indian tribal language of Ho into the digital age - Scroll.in"
+    },
+    {
+      "url": "https://notofonts.github.io/warang-citi/",
+      "title": "Noto Warang Citi - Noto Fonts project"
+    }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-08-12",
+  "scripts": [
+    "Warang Citi"
+  ]
 }

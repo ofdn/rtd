@@ -1,4 +1,4 @@
-import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, copyableId, arkPermalink, citationBlock, printButton } from "./shared.js";
+import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, copyableId, arkPermalink, citationBlock, printButton, scriptBadges } from "./shared.js";
 
 // `designers` is the input record's designers[] enriched with each
 // person's current name/slug (resolved by build.js), so the page can link
@@ -62,6 +62,7 @@ ${record.foundry?.length ? `<dt>Foundry</dt><dd>${escapeHtml(record.foundry.map(
 ${record.design_year || record.release_year ? `<dt>Year</dt><dd>${escapeHtml(record.design_year ?? "?")} (designed) / ${escapeHtml(record.release_year ?? "?")} (released)</dd>` : ""}
 ${record.era ? `<dt>Era</dt><dd>${escapeHtml(record.era)}</dd>` : ""}
 ${record.classification ? `<dt>Classification</dt><dd>${escapeHtml(record.classification)}</dd>` : ""}
+${record.scripts?.length ? `<dt>Scripts</dt><dd>${scriptBadges(record.scripts)}</dd>` : ""}
 </dl>
 ${record.description ? `<p class="description">${escapeHtml(record.description)}</p>` : ""}
 ${designersHtml}

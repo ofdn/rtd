@@ -334,6 +334,23 @@ h2 {
 }
 .identifier-badge:hover { border-color: var(--color-outline); color: var(--color-text); }
 
+/* Same badge language as .identifier-badge, one per script tagged on a
+   record, linking to that script's /scripts/<slug>/ page. dl.facts dd
+   already wraps, so no extra flex container is needed here. */
+.script-badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1px solid var(--color-outline-variant);
+  padding: 0.15rem 0.5rem;
+  text-decoration: none;
+  margin: 0 0.35rem 0.35rem 0;
+}
+.script-badge:hover { border-color: var(--color-outline); color: var(--color-text); }
+
 button.copy-id {
   cursor: pointer;
 }

@@ -367,6 +367,29 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
       return normTarget.indexOf(t) !== -1;
     });
   }
+  // A record's scripts[] stores the writing system ("Ol Chiki"), not the
+  // language it's usually associated with ("Santali"), so a plain
+  // tokenSearchMatch against scripts[] alone would miss a reader who
+  // searches by language. This maps a handful of language names onto the
+  // script they're inseparably tied to in this registry's own data (see
+  // each script's records for the sourced language link), same
+  // duplication rationale as the id/identifier helpers above.
+  var SCRIPT_LANGUAGE_ALIASES = {
+    "santali": "Ol Chiki",
+    "santhali": "Ol Chiki",
+    "ho": "Warang Citi",
+    "punjabi": "Gurmukhi",
+    "oriya": "Odia",
+    "bangla": "Bengali"
+  };
+  function scriptSearchMatch(query, scripts) {
+    if (!scripts || !scripts.length) return false;
+    var normQuery = normalizeForSearch(query);
+    var aliasTarget = SCRIPT_LANGUAGE_ALIASES[normQuery];
+    return scripts.some(function (s) {
+      return tokenSearchMatch(query, s) || (aliasTarget && s === aliasTarget);
+    });
+  }
   // Same exact-value identifier matching as home.js's search (see there
   // for the fuller rationale), duplicated here for the same reason as
   // the id-query helpers above: no module system on this inline script.
@@ -443,7 +466,8 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
             return tokenSearchMatch(q, a);
           }) ||
           idMatches(item, parsedId) ||
-          identifierMatches(item, q)
+          identifierMatches(item, q) ||
+          scriptSearchMatch(q, item.scripts)
         );
       });
       show(matches, q);
@@ -592,6 +616,38 @@ export function nationalityLabel(countries, demonymsData) {
     if (compounds[key]) return compounds[key];
   }
   return countries.map((c) => demonyms[c] || c).join(" and ");
+}
+
+// Collapses "Latin" / "Latin script" / "Greek alphabet" style variants
+// recorded across different entries into one canonical display name, so
+// they land on the same /scripts/<slug>/ tag page instead of splitting
+// into near-duplicate tags.
+export function canonicalScriptName(script) {
+  return script.replace(/\s+(script|alphabet)$/i, "").trim();
+}
+
+export function scriptSlug(script) {
+  return canonicalScriptName(script)
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/\p{Mark}/gu, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+// Renders each of a record's scripts[] as a clickable tag pointing at its
+// /scripts/<slug>/ page (same bordered-badge visual language as
+// identifiersList, see .identifier-badge in styles.css). Person and
+// typeface pages both live two levels deep (people/<slug>/,
+// typefaces/<slug>/), so the relative path back up to /scripts/ is the
+// same from either template.
+export function scriptBadges(scripts) {
+  if (!scripts || scripts.length === 0) return "";
+  return scripts
+    .map((s) =>
+      linkTag(`../../scripts/${scriptSlug(s)}/`, escapeHtml(canonicalScriptName(s)), 'class="script-badge"')
+    )
+    .join("\n");
 }
 
 export function sourcesList(sources) {
