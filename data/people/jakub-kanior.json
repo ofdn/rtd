@@ -1,0 +1,28 @@
+{
+  "id": "rtd-p-000135",
+  "slug": "jakub-kanior",
+  "name": {
+    "preferred": "Jakub Kanior",
+    "alternates": []
+  },
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "https://healtheweb.site/",
+      "title": "https://healtheweb.site/"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "countries": [
+    "Germany"
+  ],
+  "scripts": [
+    "Latin"
+  ],
+  "bio": "German type and graphic designer. Created Heal the Web for Rainbow Unicorn, which was commissioned to create Mozilla’s Internet Health Report 2020.",
+  "created_at": "2026-08-12",
+  "updated_at": "2026-08-12"
+}
