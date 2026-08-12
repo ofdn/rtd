@@ -1,0 +1,152 @@
+name: "New typeface"
+description: Submit a typeface for the registry without needing to write JSON or open a pull request yourself.
+title: "[Typeface] "
+labels: ["new-typeface"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill in what you know - leave a field blank if you don't have it. A
+        maintainer will turn this into a record after checking the sources.
+
+        **The designer(s) need to already be in the registry** (or be
+        submitted as a separate "New person" issue first) - typefaces
+        link to a person record, they don't duplicate the person's
+        details.
+
+        **Every submission needs at least one independent, verifiable
+        source** - a foundry specimen/catalog, published interview,
+        museum/archive record, newspaper/magazine coverage, academic
+        paper, or similar. Wikipedia, Wikidata, and any other Wikimedia
+        project can never be used as a source.
+
+        **No web link for your source?** Drag and drop a photo or scan of
+        the coverage directly into any text box below (the "Sources"
+        field is the natural place). GitHub will host the image and
+        insert a link automatically - that link can stand in for a URL.
+
+        **Source not in English, Odia, or Hindi?** We only have in-house
+        review capacity in those three languages right now. Please attach
+        a photo/scan of the source itself (same drag-and-drop method) so
+        it can be reviewed properly, rather than a link we may not be
+        able to read.
+  - type: input
+    id: name
+    attributes:
+      label: Typeface name (preferred form)
+    validations:
+      required: true
+  - type: input
+    id: alternates
+    attributes:
+      label: Alternate names or spellings
+      description: Comma-separated, if any.
+  - type: textarea
+    id: designers
+    attributes:
+      label: Designer(s)
+      description: >-
+        One per line: the designer's name as it appears in the registry
+        (or their rtd-p-###### id if you know it) and their role, e.g.
+        "Jan Tschichold - type designer". If they're not in the registry
+        yet, open a "New person" issue for them first and mention that
+        here instead.
+    validations:
+      required: true
+  - type: textarea
+    id: foundry
+    attributes:
+      label: Foundry / publisher
+      description: One per line - name and URL if it has one.
+  - type: input
+    id: design_year
+    attributes:
+      label: Design year
+  - type: input
+    id: release_year
+    attributes:
+      label: Release year
+  - type: input
+    id: classification
+    attributes:
+      label: Classification
+      placeholder: e.g. serif, grotesque, display
+  - type: input
+    id: scripts
+    attributes:
+      label: Scripts
+      description: Comma-separated, e.g. Latin, Odia, Devanagari.
+    validations:
+      required: true
+  - type: dropdown
+    id: era
+    attributes:
+      label: Era
+      options:
+        - digital
+        - metal
+        - phototype
+        - wood
+        - other
+  - type: dropdown
+    id: unicode_compliant
+    attributes:
+      label: Unicode-compliant?
+      description: >-
+        Leave unset/skip if this isn't established either way - don't
+        guess "yes" by default. Applies to fonts that map a script's
+        glyphs onto non-standard code points (ASCII, PUA, another
+        script's block) instead of the script's real Unicode block,
+        common before a script was encoded.
+      options:
+        - "Yes"
+        - "No"
+        - Not established / unsure
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description
+      description: A few plain sentences - not a full history.
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: >-
+        One per line: a URL and a short title. If there's no web link,
+        drag and drop a photo/scan of the coverage into this box instead -
+        note what it's from (publication, date) in the same line.
+      placeholder: |
+        https://example.com/specimen - "Foundry specimen sheet, 1978"
+      render: false
+    validations:
+      required: true
+  - type: dropdown
+    id: source_language
+    attributes:
+      label: Primary language of your source(s)
+      options:
+        - English
+        - Odia
+        - Hindi
+        - Other (attached a photo/scan above for review)
+    validations:
+      required: true
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: How solid is this source?
+      options:
+        - Solid - a substantial, independent source
+        - Thin - the best I could find, needs a stronger source later
+    validations:
+      required: true
+  - type: input
+    id: external_ids
+    attributes:
+      label: External identifiers
+      description: Any of - Wikidata QID, VIAF, ISNI, LC/NAF, GND, WorldCat entity. Cross-references only, not sources.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else the maintainer should know?
+      description: Duplicate concerns, uncertain spellings, translation help needed, etc.

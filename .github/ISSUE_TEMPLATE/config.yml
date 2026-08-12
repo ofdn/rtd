@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Comfortable with git and JSON?
+    url: https://github.com/ofdn/rtd/blob/main/CONTRIBUTING.md
+    about: Skip the form and open a pull request directly - see CONTRIBUTING.md for the schema and field rules.

@@ -4,6 +4,14 @@ Thanks for helping build the Registry of Type Design. Contributions happen
 via pull request; a maintainer reviews and merges before anything goes
 live.
 
+## Don't want to write JSON or open a pull request?
+
+Use the issue forms instead - **[New person](../../issues/new?template=new-person.yml)**
+or **[New typeface](../../issues/new?template=new-typeface.yml)**. Fill in
+whatever you know, attach photos of sources directly in the form if you
+don't have a web link, and a maintainer will turn it into a record. The
+rest of this document is for people submitting via pull request directly.
+
 ## Adding or editing a record
 
 1. Add or edit one JSON file under `data/people/` or `data/typefaces/`.
@@ -132,6 +140,29 @@ needed, and set `"verification_status": "needs_verification"`. The site
 flags these records so a stronger source can be added later. This is
 different from having *no* independent source at all: if you can't find
 anything to cite, the record doesn't belong here yet, flagged or not.
+
+### No web link for a source
+
+`sources[].url` must be a URL, but the underlying source doesn't have to
+be born-digital. Print coverage (a newspaper clipping, a foundry
+specimen sheet, a museum label) with no web presence is still usable -
+photograph or scan it and host the image somewhere you can link to. The
+easiest path is the issue forms above: drag and drop the photo into the
+"Sources" field and GitHub hosts it and gives you a URL automatically,
+which you (or the maintainer) can then use as `sources[].url`, with a
+`title` describing what it is and where it's from (publication, date,
+archive). This is separate from the no-Wikimedia-domain rule -
+Wikimedia-hosted images are still blocked as sources, same as any other
+Wikimedia-project URL.
+
+### Sources in a language other than English, Odia, or Hindi
+
+Review capacity currently only covers those three languages. If your
+source is in another language, attach a photo/scan of it (same
+drag-and-drop method) rather than only a link, so it can be reviewed
+directly instead of relying on machine translation. Note the source
+language in the PR description or issue so the maintainer knows to
+arrange translation help before merging.
 
 ## Bio style
 

@@ -1,0 +1,157 @@
+name: "New person: type designer or other contributor"
+description: Submit a person for the registry without needing to write JSON or open a pull request yourself.
+title: "[Person] "
+labels: ["new-person"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill in what you know - leave a field blank if you don't have it. A
+        maintainer will turn this into a record after checking the sources.
+
+        **Every submission needs at least one independent, verifiable
+        source** - a book, published interview, foundry specimen/catalog,
+        museum or archive record, newspaper/magazine coverage, academic
+        paper, or similar. Wikipedia, Wikidata, and any other Wikimedia
+        project can never be used as a source.
+
+        **No web link for your source?** Drag and drop a photo or scan of
+        the coverage directly into any text box below (the "Sources"
+        field is the natural place). GitHub will host the image and
+        insert a link automatically - that link can stand in for a URL.
+
+        **Source not in English, Odia, or Hindi?** We only have in-house
+        review capacity in those three languages right now. Please attach
+        a photo/scan of the source itself (same drag-and-drop method) so
+        it can be reviewed properly, rather than a link we may not be
+        able to read.
+  - type: input
+    id: name
+    attributes:
+      label: Full name (preferred form)
+      placeholder: e.g. Jan Tschichold
+    validations:
+      required: true
+  - type: input
+    id: alternates
+    attributes:
+      label: Alternate names or spellings
+      description: Comma-separated, if any (e.g. other transliterations, married/maiden names).
+  - type: input
+    id: sort_name
+    attributes:
+      label: Sort name
+      description: Only needed if different from the preferred name - useful for family-name-first or non-Latin names.
+  - type: input
+    id: birth_year
+    attributes:
+      label: Birth year
+      description: Free-form is fine if precision is uncertain, e.g. "1901" or "c. 1890".
+  - type: input
+    id: death_year
+    attributes:
+      label: Death year
+  - type: input
+    id: countries
+    attributes:
+      label: Countries
+      description: Comma-separated. Used to compute a nationality label automatically - don't write the adjective yourself.
+      placeholder: e.g. India, Canada
+  - type: input
+    id: roles
+    attributes:
+      label: Roles
+      description: Comma-separated, e.g. type designer, punchcutter, calligrapher, type engineer.
+    validations:
+      required: true
+  - type: input
+    id: active_years
+    attributes:
+      label: Active years
+      placeholder: e.g. 1965-1998
+  - type: input
+    id: scripts
+    attributes:
+      label: Writing systems worked in
+      description: Comma-separated, e.g. Latin, Odia, Devanagari.
+  - type: textarea
+    id: affiliations
+    attributes:
+      label: Affiliations
+      description: Studios, foundries, or organizations, with years if known. One per line.
+  - type: input
+    id: place_of_birth
+    attributes:
+      label: Place of birth
+  - type: input
+    id: place_of_death
+    attributes:
+      label: Place of death
+  - type: input
+    id: alma_mater
+    attributes:
+      label: Alma mater
+      description: Comma-separated, if known.
+  - type: textarea
+    id: positions_held
+    attributes:
+      label: Positions held
+      description: Job titles with years if known. One per line.
+  - type: textarea
+    id: bio
+    attributes:
+      label: Short bio
+      description: >-
+        30 words maximum, one or two plain sentences. Lead with what they
+        designed or built and for what script - biographical framing
+        (where they studied, general job title) comes after, only if it
+        fits. This is a caption, not a biography.
+      placeholder: e.g. Designed Odia typefaces for [foundry], focusing on [script/project]. Trained as a calligrapher at [institution].
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: >-
+        One per line: a URL and a short title. If there's no web link,
+        drag and drop a photo/scan of the coverage into this box instead -
+        note what it's from (publication, date) in the same line.
+      placeholder: |
+        https://example.com/article - "Profile in Example Magazine, 1987"
+      render: false
+    validations:
+      required: true
+  - type: dropdown
+    id: source_language
+    attributes:
+      label: Primary language of your source(s)
+      options:
+        - English
+        - Odia
+        - Hindi
+        - Other (attached a photo/scan above for review)
+    validations:
+      required: true
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: How solid is this source?
+      description: >-
+        Choose "thin" for something like a bare LinkedIn profile with no
+        other detail - the record can still be added, just flagged for a
+        stronger source later.
+      options:
+        - Solid - a substantial, independent source
+        - Thin - the best I could find, needs a stronger source later
+    validations:
+      required: true
+  - type: input
+    id: external_ids
+    attributes:
+      label: External identifiers
+      description: Any of - Wikidata QID, VIAF, ISNI, LC/NAF, GND, WorldCat entity, ULAN. Cross-references only, not sources.
+      placeholder: "e.g. wikidata_qid: Q12345, isni: 0000 0001 2345 6789"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else the maintainer should know?
+      description: Duplicate concerns, uncertain spellings, translation help needed, etc.
