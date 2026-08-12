@@ -14,7 +14,7 @@ import { pageShell, SEARCH_ICON } from "./shared.js";
 // filter, it's never required for the search to function at all. This is
 // also the page that a person/typeface page's header search form submits
 // to, landing here with the same ?q= convention.
-export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount, schemaVersion }) {
+export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount, scriptsCount, schemaVersion }) {
   const body = `
 <div class="home-hero">
 <p class="tagline">A global registry of typefaces and the people who made them, digital and pre-digital.</p>
@@ -24,7 +24,7 @@ export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount, sche
 ${SEARCH_ICON}
 </form>
 <nav id="letters" class="letters" aria-label="Browse by first letter"></nav>
-<p class="stat-line">Currently tracking <strong>${peopleCount}</strong> people, <strong>${typefacesCount}</strong> typefaces.</p>
+<p class="stat-line">Currently tracking <strong>${peopleCount}</strong> people, <strong>${typefacesCount}</strong> typefaces in <a href="scripts/"><strong>${scriptsCount}</strong> scripts</a>.</p>
 </div>
 <div id="results"></div>
 <p class="utility-links"><a href="scripts/">Browse by script</a> &middot; <a href="api/people.json">People API</a> &middot; <a href="api/typefaces.json">Typefaces API</a> &middot; <a href="dumps/">Bulk dumps</a> &middot; <a href="info/#reconciliation">Reconciliation service</a></p>

@@ -593,6 +593,7 @@ function build(dataDir, outDir) {
     canonicalUrl: SITE_URL,
     peopleCount: peopleApiIndex.filter((p) => p.record_status === "active").length,
     typefacesCount: typefacesApiIndex.filter((t) => t.record_status === "active").length,
+    scriptsCount: activeScripts.size,
     schemaVersion,
   });
   writeFile(outDir, "index.html", homeHtml);
