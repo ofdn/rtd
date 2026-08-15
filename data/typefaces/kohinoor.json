@@ -1,5 +1,6 @@
 {
   "id": "rtd-t-000034",
+  "external_ids": { "wikidata_qid": "Q56318617" },
   "slug": "kohinoor",
   "name": { "preferred": "Kohinoor", "alternates": [] },
   "designers": [{ "id": "rtd-p-000045", "role": "designer" }],

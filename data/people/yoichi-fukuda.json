@@ -24,5 +24,5 @@
   "created_at": "2026-08-07",
   "updated_at": "2026-08-07",
   "verification_status": "needs_verification",
-  "external_ids": { "isni": "0000000453022385", "lc_naf": "nr90026935" }
+  "external_ids": { "isni": "0000000453022385", "lc_naf": "nr90026935", "wikidata_qid": "Q81560878" }
 }
