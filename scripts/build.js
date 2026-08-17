@@ -24,6 +24,8 @@ import { renderHomePage } from "../site-templates/home.js";
 import { renderInfoPage } from "../site-templates/info.js";
 import { renderScriptPage, renderScriptsIndexPage } from "../site-templates/script.js";
 import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion, escapeHtml, linkTag, canonicalScriptName, scriptSlug } from "../site-templates/shared.js";
+import { buildPersonDc, buildTypefaceDc } from "./lib/dublin-core.js";
+import { buildPersonMarc } from "./lib/marc-authority.js";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const repoRoot = join(__dirname, "..");
@@ -106,7 +108,7 @@ function build(dataDir, outDir) {
   for (const tf of typefaces) {
     for (const d of tf.designers ?? []) {
       const list = worksByPerson.get(d.id) ?? [];
-      list.push({ id: tf.id, slug: tf.slug, name: tf.name.preferred, role: d.role });
+      list.push({ id: tf.id, slug: tf.slug, name: tf.name.preferred, role: d.role, canonicalUrl: `${SITE_URL}typefaces/${tf.slug}/` });
       worksByPerson.set(d.id, list);
     }
   }
@@ -301,16 +303,19 @@ function build(dataDir, outDir) {
   for (const record of people) {
     const canonicalUrl = `${SITE_URL}people/${record.slug}/`;
     const apiUrl = `${SITE_URL}api/people/${record.id}.json`;
+    const dcUrl = `${SITE_URL}api/people/${record.id}.dc.xml`;
+    const marcUrl = `${SITE_URL}api/people/${record.id}.marc.xml`;
+    const arkUrl = `https://n2t.net/ark:${ARK_NAAN}/${record.id}`;
+    const works = record.record_status === "active" ? worksByPerson.get(record.id) ?? [] : [];
 
     if (record.record_status === "active") {
-      const works = worksByPerson.get(record.id) ?? [];
       const html = renderPersonPage(record, {
         canonicalUrl,
         works,
         demonyms,
         related: relatedPeople(record),
         schemaVersion,
-        arkUrl: `https://n2t.net/ark:${ARK_NAAN}/${record.id}`,
+        arkUrl,
       });
       writeFile(outDir, `people/${record.slug}/index.html`, html);
       writeFile(
@@ -342,6 +347,14 @@ function build(dataDir, outDir) {
         )
       );
     }
+    // Dublin Core and MARCXML exports, every person record regardless of
+    // status (mirrors the JSON API's own always-written behavior above),
+    // built straight from the schema fields so they can't drift out of
+    // sync with the record they describe. See scripts/lib/dublin-core.js
+    // and scripts/lib/marc-authority.js for what each field maps to.
+    writeFile(outDir, `api/people/${record.id}.dc.xml`, buildPersonDc(record, { canonicalUrl, arkUrl, works }));
+    writeFile(outDir, `api/people/${record.id}.marc.xml`, buildPersonMarc(record, { canonicalUrl, arkUrl }));
+
     writeSlugRedirects(outDir, "people", record, canonicalUrl);
     writeArkRedirect(outDir, record, canonicalUrl);
     writeBareIdRedirect(outDir, record, canonicalUrl);
@@ -355,6 +368,8 @@ function build(dataDir, outDir) {
       record_status: record.record_status,
       api_url: apiUrl,
       canonical_url: canonicalUrl,
+      dc_url: dcUrl,
+      marc_url: marcUrl,
       subtitle: personSubtitle(record),
       external_ids: record.external_ids,
       scripts: (record.scripts ?? []).map(canonicalScriptName),
@@ -367,23 +382,26 @@ function build(dataDir, outDir) {
   for (const record of typefaces) {
     const canonicalUrl = `${SITE_URL}typefaces/${record.slug}/`;
     const apiUrl = `${SITE_URL}api/typefaces/${record.id}.json`;
+    const dcUrl = `${SITE_URL}api/typefaces/${record.id}.dc.xml`;
+    const arkUrl = `https://n2t.net/ark:${ARK_NAAN}/${record.id}`;
+    const designers = (record.designers ?? []).map((d) => {
+      const person = personById.get(d.id);
+      return {
+        id: d.id,
+        role: d.role,
+        name: person?.name?.preferred ?? d.id,
+        slug: person?.slug ?? d.id,
+        canonicalUrl: person ? `${SITE_URL}people/${person.slug}/` : "",
+      };
+    });
 
     if (record.record_status === "active") {
-      const designers = (record.designers ?? []).map((d) => {
-        const person = personById.get(d.id);
-        return {
-          id: d.id,
-          role: d.role,
-          name: person?.name?.preferred ?? d.id,
-          slug: person?.slug ?? d.id,
-        };
-      });
       const html = renderTypefacePage(record, {
         canonicalUrl,
         designers,
         related: relatedTypefaces(record),
         schemaVersion,
-        arkUrl: `https://n2t.net/ark:${ARK_NAAN}/${record.id}`,
+        arkUrl,
       });
       writeFile(outDir, `typefaces/${record.slug}/index.html`, html);
       writeFile(
@@ -415,6 +433,10 @@ function build(dataDir, outDir) {
         )
       );
     }
+    // Dublin Core export, every typeface record regardless of status, see
+    // the equivalent comment in the People loop above.
+    writeFile(outDir, `api/typefaces/${record.id}.dc.xml`, buildTypefaceDc(record, { canonicalUrl, arkUrl, designers }));
+
     writeSlugRedirects(outDir, "typefaces", record, canonicalUrl);
     writeArkRedirect(outDir, record, canonicalUrl);
     writeBareIdRedirect(outDir, record, canonicalUrl);
@@ -427,6 +449,7 @@ function build(dataDir, outDir) {
       record_status: record.record_status,
       api_url: apiUrl,
       canonical_url: canonicalUrl,
+      dc_url: dcUrl,
       subtitle: typefaceSubtitle(record),
       external_ids: record.external_ids,
       scripts: (record.scripts ?? []).map(canonicalScriptName),
@@ -582,6 +605,7 @@ function build(dataDir, outDir) {
 <li><a href="typefaces.csv">typefaces.csv</a> &mdash; one row per typeface record</li>
 <li><a href="typefaces.ndjson">typefaces.ndjson</a> &mdash; one JSON object per line, full record</li>
 </ul>
+<p class="description">Per-record Dublin Core and MARCXML exports are published alongside each record's own JSON, see <a href="../info/#machine-readable-data">Machine-readable data</a> in the About page.</p>
 </main>`,
       homePath: "../",
       schemaVersion,

@@ -61,7 +61,7 @@ ${worksHtml}
 ${relatedHtml}
 ${sourcesList(record.sources)}
 ${identifiersList(record.external_ids)}
-<p class="json-link"><a href="../../api/people/${escapeHtml(record.id)}.json">JSON</a></p>
+<p class="json-link"><a href="../../api/people/${escapeHtml(record.id)}.json">JSON</a> &middot; <a href="../../api/people/${escapeHtml(record.id)}.dc.xml">Dublin Core (XML)</a> &middot; <a href="../../api/people/${escapeHtml(record.id)}.marc.xml">MARCXML</a></p>
 ${citationBlock(record, { canonicalUrl, arkUrl })}
 </main>
 `;

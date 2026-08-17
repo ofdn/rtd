@@ -69,7 +69,7 @@ ${designersHtml}
 ${relatedHtml}
 ${sourcesList(record.sources)}
 ${identifiersList(record.external_ids)}
-<p class="json-link"><a href="../../api/typefaces/${escapeHtml(record.id)}.json">JSON</a></p>
+<p class="json-link"><a href="../../api/typefaces/${escapeHtml(record.id)}.json">JSON</a> &middot; <a href="../../api/typefaces/${escapeHtml(record.id)}.dc.xml">Dublin Core (XML)</a></p>
 ${citationBlock(record, { canonicalUrl, arkUrl })}
 </main>
 `;
