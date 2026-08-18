@@ -1,6 +1,8 @@
 {
   "id": "rtd-p-000091",
-  "external_ids": { "wikidata_qid": "Q71976684" },
+  "external_ids": {
+    "wikidata_qid": "Q71976684"
+  },
   "slug": "mirjam-somers",
   "name": {
     "preferred": "Mirjam Somers",
@@ -14,11 +16,16 @@
     {
       "url": "http://www.decotype.com",
       "title": "www.decotype.com"
+    },
+    {
+      "url": "https://rkd.nl/artists/106147",
+      "title": "RKD Artists"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
-  "verification_status": "needs_verification"
+  "updated_at": "2026-08-18",
+  "verification_status": "needs_verification",
+  "birth_year": "1971-11-20"
 }

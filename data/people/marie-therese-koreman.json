@@ -1,6 +1,8 @@
 {
   "id": "rtd-p-000087",
-  "external_ids": { "wikidata_qid": "Q122935344" },
+  "external_ids": {
+    "wikidata_qid": "Q122935344"
+  },
   "slug": "marie-therese-koreman",
   "name": {
     "preferred": "Marie-Thérèse Koreman",
@@ -14,11 +16,16 @@
     {
       "url": "http://www.neufville.com",
       "title": "www.neufville.com"
+    },
+    {
+      "url": "https://rkd.nl/artists/45893",
+      "title": "RKD Artists"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
-  "verification_status": "needs_verification"
+  "updated_at": "2026-08-18",
+  "verification_status": "needs_verification",
+  "birth_year": "1951-10-03"
 }

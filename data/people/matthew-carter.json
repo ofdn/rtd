@@ -19,12 +19,16 @@
     {
       "url": "http://www.microsoft.com/typography",
       "title": "www.microsoft.com"
+    },
+    {
+      "url": "https://www.moma.org/artists/32468",
+      "title": "MoMA online collection"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-08-18",
   "external_ids": {
     "wikidata_qid": "Q383244",
     "viaf": "93774544",
@@ -32,5 +36,6 @@
     "lc_naf": "nr99021702",
     "gnd": "121959252",
     "worldcat_entity": "E39PBJqqBYMgJ8D4Xc8wbr7JXd"
-  }
+  },
+  "birth_year": "1937"
 }

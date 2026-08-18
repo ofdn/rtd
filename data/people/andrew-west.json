@@ -19,12 +19,16 @@
     {
       "url": "https://corp.unicode.org/pipermail/unicode/2025-July/011467.html",
       "title": "Andrew C. West 1960-2025 - Unicode mailing list"
+    },
+    {
+      "url": "https://id.loc.gov/authorities/nr93032921",
+      "title": "Library of Congress Authorities"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-12",
+  "updated_at": "2026-08-18",
   "external_ids": {
     "wikidata_qid": "Q4758888",
     "viaf": "56485211",
@@ -33,5 +37,6 @@
     "gnd": "1158476809",
     "worldcat_entity": "E39PBJyrQW9Gg3jF6VqMPXtMyd"
   },
-  "death_year": "2025-07-10"
+  "death_year": "2025-07-10",
+  "birth_year": "1960-03-31"
 }

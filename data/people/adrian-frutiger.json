@@ -31,12 +31,20 @@
     {
       "url": "https://www.emuseum.ch/en/people/details/34864",
       "title": "Adrian Frutiger - Biographies - eMuseum, Museum fuer Gestaltung Zuerich"
+    },
+    {
+      "url": "https://d-nb.info/gnd/118693891",
+      "title": "GND / Integrated Authority File"
+    },
+    {
+      "url": "https://snaccooperative.org/ark:/99166/w6s54nrx",
+      "title": "SNAC"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-12",
+  "updated_at": "2026-08-18",
   "external_ids": {
     "wikidata_qid": "Q123621",
     "viaf": "107027312",
@@ -50,5 +58,6 @@
   "place_of_death": "Bremgarten bei Bern",
   "alma_mater": [
     "Kunstgewerbeschule Zürich"
-  ]
+  ],
+  "birth_year": "1928-05-24"
 }

@@ -21,12 +21,16 @@
     {
       "url": "https://www.commarts.com/features/typetogether",
       "title": "TypeTogether - Communication Arts"
+    },
+    {
+      "url": "https://openlibrary.org/isbn/9781592537020",
+      "title": "Typography Referenced (ISBN 978-1-59253-702-0), p. 118"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-12",
+  "updated_at": "2026-08-18",
   "external_ids": {
     "wikidata_qid": "Q28802638",
     "viaf": "251041081",
@@ -42,5 +46,6 @@
     {
       "title": "director"
     }
-  ]
+  ],
+  "birth_year": "1974"
 }

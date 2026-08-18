@@ -17,17 +17,22 @@
     {
       "url": "https://cs.isabart.org/person/154571",
       "title": "Veronika Burian - isabart.org (Institute of Art History biographical archive)"
+    },
+    {
+      "url": "https://aleph.nkp.cz/F/?func=find-c&local_base=aut&ccl_term=ica=xx0200716",
+      "title": "Czech National Authority Database"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-12",
+  "updated_at": "2026-08-18",
   "external_ids": {
     "wikidata_qid": "Q28810460",
     "viaf": "60244641",
     "isni": "0000000019610037",
     "gnd": "132519550"
   },
-  "place_of_birth": "Prague"
+  "place_of_birth": "Prague",
+  "birth_year": "1973"
 }

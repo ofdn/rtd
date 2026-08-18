@@ -11,10 +11,13 @@
   "bio": "Devised the Sorang Sompeng script for the Sora language in 1936, its 24 letters named for deities in the Sora pantheon, resolving a dispute over which script to use.",
   "sources": [
     { "url": "https://www.omniglot.com/writing/sorangsompeng.htm", "title": "Sorang Sompeng script - Omniglot" },
-    { "url": "https://www.endangeredalphabets.net/alphabets/sorang-sompeng/", "title": "Sora Sompeng - Atlas of Endangered Alphabets" }
+    { "url": "https://www.endangeredalphabets.net/alphabets/sorang-sompeng/", "title": "Sora Sompeng - Atlas of Endangered Alphabets" },
+    { "url": "https://ci.nii.ac.jp/ncid/BB2058942X?l=en", "title": "Asoka Kumara Dasababu, Guru Mangei Gamango (Academy of Tribal Dialects & Culture, 1996) — CiNii catalogue record giving lifespan 1916-1980" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-11",
-  "updated_at": "2026-08-11"
+  "updated_at": "2026-08-18",
+  "birth_year": "1916",
+  "death_year": "1980"
 }

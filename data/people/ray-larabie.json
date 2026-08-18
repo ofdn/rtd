@@ -13,17 +13,22 @@
     {
       "url": "http://www.typodermic.com",
       "title": "www.typodermic.com"
+    },
+    {
+      "url": "https://d-nb.info/gnd/143394657",
+      "title": "GND / Integrated Authority File"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-08-18",
   "external_ids": {
     "wikidata_qid": "Q6104700",
     "viaf": "165545463",
     "isni": "0000000113363044",
     "gnd": "143394657",
     "worldcat_entity": "E39PBJhxqYt64hhFGDGMY4KTpP"
-  }
+  },
+  "birth_year": "1970"
 }

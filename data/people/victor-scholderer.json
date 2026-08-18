@@ -13,12 +13,16 @@
     {
       "url": "https://www.scholderer.org/web_data/p81558.htm",
       "title": "www.scholderer.org"
+    },
+    {
+      "url": "https://catalogue.bnf.fr/ark:/12148/cb13484802s",
+      "title": "BnF authorities"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-08-18",
   "external_ids": {
     "wikidata_qid": "Q18922365",
     "viaf": "116296597",
@@ -26,5 +30,7 @@
     "lc_naf": "n50002789",
     "gnd": "118759019",
     "worldcat_entity": "E39PBJjHjrvrRDf4QdCgGpkCcP"
-  }
+  },
+  "birth_year": "1880-10-09",
+  "death_year": "1971-09-11"
 }

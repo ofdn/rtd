@@ -17,12 +17,20 @@
     {
       "url": "http://www.heise.de/newsticker/meldung/Es-gibt-keine-Entschuldigung-fuer-schlechte-Typographie-zum-Tode-von-Hermann-Zapf-2681823.html",
       "title": "Es gibt keine Entschuldigung fuer schlechte Typographie: zum Tode von Hermann Zapf - heise online"
+    },
+    {
+      "url": "https://rkd.nl/artists/269414",
+      "title": "RKD Artists"
+    },
+    {
+      "url": "https://snaccooperative.org/ark:/99166/w6s58zt2",
+      "title": "SNAC"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-12",
+  "updated_at": "2026-08-18",
   "external_ids": {
     "wikidata_qid": "Q60302",
     "viaf": "74000639",
@@ -33,5 +41,6 @@
     "ulan": "500104874"
   },
   "death_year": "2015-06-04",
-  "place_of_death": "Darmstadt"
+  "place_of_death": "Darmstadt",
+  "birth_year": "1918-11-08"
 }

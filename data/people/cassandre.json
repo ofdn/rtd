@@ -32,12 +32,20 @@
     {
       "url": "https://collectie.nieuweinstituut.nl/detail/people/10496",
       "title": "Cassandre - Nieuwe Instituut Collectieplatform"
+    },
+    {
+      "url": "https://rkd.nl/artists/15770",
+      "title": "RKD Artists"
+    },
+    {
+      "url": "https://collecties.stadsarchief.rotterdam.nl/detail.php?id=143239245",
+      "title": "Rotterdam City Archives actor ID"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-12",
+  "updated_at": "2026-08-18",
   "external_ids": {
     "wikidata_qid": "Q278945",
     "viaf": "44324012",
@@ -47,5 +55,6 @@
     "worldcat_entity": "E39PBJrkYKWT9YCgQkv9xthmBP",
     "ulan": "500015994"
   },
-  "birth_year": "1901-01-24"
+  "birth_year": "1901-01-24",
+  "death_year": "1968-06-17"
 }

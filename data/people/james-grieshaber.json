@@ -13,14 +13,19 @@
     {
       "url": "http://www.p22.com",
       "title": "www.p22.com"
+    },
+    {
+      "url": "https://aleph.nkp.cz/F/?func=find-c&local_base=aut&ccl_term=ica=mub2015892222",
+      "title": "Czech National Authority Database"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-08-18",
   "external_ids": {
     "wikidata_qid": "Q112495247",
     "viaf": "767144928095354340822"
-  }
+  },
+  "birth_year": "1967"
 }

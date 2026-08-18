@@ -15,11 +15,25 @@
     {
       "url": "http://csumc.wisc.edu/AmericanLanguages/writings/german_print.html",
       "title": "csumc.wisc.edu"
+    },
+    {
+      "url": "https://cs.isabart.org/person/147738",
+      "title": "The Fine Art Archive (abART)"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
-  "external_ids": { "wikidata_qid": "Q68040", "viaf": "12575233", "isni": "000000010871118X", "lc_naf": "no2004031164", "gnd": "124061168", "worldcat_entity": "E39PBJvMCW8HXf6pDrkrtcCRKd", "ulan": "500128208" }
+  "updated_at": "2026-08-18",
+  "external_ids": {
+    "wikidata_qid": "Q68040",
+    "viaf": "12575233",
+    "isni": "000000010871118X",
+    "lc_naf": "no2004031164",
+    "gnd": "124061168",
+    "worldcat_entity": "E39PBJvMCW8HXf6pDrkrtcCRKd",
+    "ulan": "500128208"
+  },
+  "birth_year": "1865-07-23",
+  "death_year": "1917-11-20"
 }

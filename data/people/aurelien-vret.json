@@ -51,12 +51,20 @@
     {
       "url": "http://www.sudoc.fr/268785724",
       "title": "Typophilie [catalogue no. 307] / Librairie Paul Jammes - Sudoc"
+    },
+    {
+      "url": "https://catalogue.bnf.fr/ark:/12148/cb176650896",
+      "title": "BnF authorities"
+    },
+    {
+      "url": "https://catalogue.bnf.fr/ark:/12148/cb47684342v",
+      "title": "BnF general catalogue"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-12",
+  "updated_at": "2026-08-18",
   "external_ids": {
     "wikidata_qid": "Q137908997",
     "viaf": "5174410436408500178",
@@ -75,5 +83,6 @@
     {
       "title": "expert"
     }
-  ]
+  ],
+  "birth_year": "1987-12-30"
 }

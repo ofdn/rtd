@@ -13,17 +13,26 @@
     {
       "url": "http://www.neufville.com",
       "title": "www.neufville.com"
+    },
+    {
+      "url": "https://d-nb.info/gnd/118744542",
+      "title": "GND / Integrated Authority File"
+    },
+    {
+      "url": "https://catalogue.bnf.fr/ark:/12148/cb13607933r",
+      "title": "BnF authorities"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-08-18",
   "external_ids": {
-    "wikidata_qid": "Q102337848",
-    "viaf": "310720166",
-    "lc_naf": "no2014120330",
-    "gnd": "1250660912",
-    "worldcat_entity": "E39PBJgRQF9p4F48x4yH6rkYyd"
-  }
+    "wikidata_qid": "Q552409",
+    "viaf": "118204020",
+    "lc_naf": "no97024731",
+    "gnd": "118744542"
+  },
+  "birth_year": "1878-08-09",
+  "death_year": "1956-04-25"
 }

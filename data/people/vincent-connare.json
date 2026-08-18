@@ -17,17 +17,22 @@
     {
       "url": "http://www.microsoft.com",
       "title": "www.microsoft.com"
+    },
+    {
+      "url": "https://pic.nypl.org/constituents/389241",
+      "title": "Photographers' Identities Catalog (NYPL)"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-08-18",
   "external_ids": {
     "wikidata_qid": "Q2434645",
     "viaf": "169272616",
     "isni": "000000011824380X",
     "gnd": "14377140X",
     "worldcat_entity": "E39PBJcRbqBckCcTGD7G3XtMyd"
-  }
+  },
+  "birth_year": "1960"
 }

@@ -31,12 +31,20 @@
     {
       "url": "https://www.workwithdata.com/person/eric-gill-1882",
       "title": "Eric Gill (1882) - WorkWithData"
+    },
+    {
+      "url": "https://d-nb.info/gnd/118694936",
+      "title": "GND / Integrated Authority File"
+    },
+    {
+      "url": "https://catalogue.bnf.fr/ark:/12148/cb120352046",
+      "title": "BnF authorities"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-12",
+  "updated_at": "2026-08-18",
   "external_ids": {
     "wikidata_qid": "Q551426",
     "viaf": "36934216",
@@ -45,5 +53,7 @@
     "gnd": "118694936",
     "worldcat_entity": "E39PBJt3Vvb7BFXjkTxMJQ9hpP",
     "ulan": "500025465"
-  }
+  },
+  "birth_year": "1882-02-22",
+  "death_year": "1940-11-17"
 }

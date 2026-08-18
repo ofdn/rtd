@@ -13,16 +13,21 @@
     {
       "url": "http://www.HouseofType.com",
       "title": "www.houseoftype.com"
+    },
+    {
+      "url": "https://d-nb.info/gnd/141108886",
+      "title": "GND / Integrated Authority File"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-08-18",
   "external_ids": {
     "wikidata_qid": "Q133718968",
     "viaf": "120353166",
     "isni": "0000000077915082",
     "gnd": "141108886"
-  }
+  },
+  "birth_year": "1954"
 }
