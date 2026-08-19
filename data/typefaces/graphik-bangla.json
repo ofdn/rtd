@@ -1,0 +1,23 @@
+{
+  "id": "rtd-t-000165",
+  "slug": "graphik-bangla",
+  "name": { "preferred": "Graphik Bangla", "alternates": [] },
+  "designers": [
+    { "id": "rtd-p-000137", "role": "designer" },
+    { "id": "rtd-p-000046", "role": "creative direction" },
+    { "id": "rtd-p-000141", "role": "original Latin design" }
+  ],
+  "foundry": [
+    { "name": "Commercial Type", "url": "https://commercialtype.com" }
+  ],
+  "scripts": ["Bangla"],
+  "era": "digital",
+  "description": "The Bangla companion to Christian Schwartz's Graphik, designed by Arya Purohit with creative direction from Shiva Nallaperumal at November.",
+  "sources": [
+    { "url": "https://commercialtype.com/catalog/graphik_bangla", "title": "Graphik Bangla Family - Commercial Type" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-19",
+  "updated_at": "2026-08-19"
+}

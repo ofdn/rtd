@@ -1,0 +1,27 @@
+{
+  "id": "rtd-t-000156",
+  "slug": "gotu",
+  "name": {
+    "preferred": "Gotu",
+    "alternates": []
+  },
+  "designers": [
+    { "id": "rtd-p-000136", "role": "designer" },
+    { "id": "rtd-p-000139", "role": "designer" }
+  ],
+  "foundry": [
+    { "name": "Ek Type", "url": "https://ektype.in" }
+  ],
+  "scripts": ["Devanagari", "Latin"],
+  "classification": "display",
+  "era": "digital",
+  "design_year": "2020",
+  "description": "A high-contrast display typeface with rotund curves and large loops, reimagining Devanagari calligraphy alongside a matching Latin.",
+  "sources": [
+    { "url": "https://ektype.in/gotu.html", "title": "Gotu - Ek Type" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-19",
+  "updated_at": "2026-08-19"
+}

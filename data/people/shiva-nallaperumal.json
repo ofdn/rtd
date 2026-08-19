@@ -4,14 +4,19 @@
   "name": { "preferred": "Shiva Nallaperumal", "alternates": [] },
   "countries": ["India"],
   "roles": ["type designer", "graphic designer"],
-  "bio": "Designed Labyrinth, an experimental typeface inspired by Kufic calligraphy, with Typotheque and Tal Leming, and Calcula, exploring the space between type design and lettering. Forbes India 30 Under 30, 2017.",
+  "affiliations": [
+    { "name": "November", "start_year": "2018" }
+  ],
+  "bio": "Co-founded design studio November with Juhi Vishnani in 2018. Designed Labyrinth, a Kufic-inspired typeface with Typotheque and Tal Leming, and Calcula. Typefaces published by Indian Type Foundry and Commercial Type.",
   "external_ids": { "wikidata_qid": "Q125430702" },
   "sources": [
     { "url": "https://www.typeroom.eu/article/shiva-nallaperumal-spices-typography-unique-glyphs", "title": "Shiva Nallaperumal spices up typography with unique glyphs - TypeRoom" },
-    { "url": "https://www.forbesindia.com/article/30-under-30-2017/30-under-30-meet-shiva-nallaperumal-the-man-trying-to-leave-an-indian-imprint-on-typeface-design/45759/1", "title": "30 Under 30: Meet Shiva Nallaperumal - Forbes India" }
+    { "url": "https://www.forbesindia.com/article/30-under-30-2017/30-under-30-meet-shiva-nallaperumal-the-man-trying-to-leave-an-indian-imprint-on-typeface-design/45759/1", "title": "30 Under 30: Meet Shiva Nallaperumal - Forbes India" },
+    { "url": "https://www.walkerart.org/reader/pluralism-indian-design-november-shiva-nallaperumal-juhi-vishnani/", "title": "Pluralism in Indian Design: November, Shiva Nallaperumal, and Juhi Vishnani - Walker Art Center" },
+    { "url": "https://www.creativereview.co.uk/shiva-nallaperumal-november-design-india/", "title": "Shiva Nallaperumal on building November - Creative Review" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-08-19"
 }

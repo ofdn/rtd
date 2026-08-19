@@ -1,0 +1,23 @@
+{
+  "id": "rtd-t-000164",
+  "slug": "rit-chingam",
+  "name": { "preferred": "RIT Chingam", "alternates": [] },
+  "designers": [
+    { "id": "rtd-p-000140", "role": "designer" }
+  ],
+  "foundry": [
+    { "name": "Rachana Institute of Typography", "url": "https://rachana.org.in" }
+  ],
+  "scripts": ["Malayalam"],
+  "classification": "display",
+  "era": "digital",
+  "release_year": "2024",
+  "description": "A display style font for the Malayalam traditional script, designed by calligrapher Narayana Bhattathiri, released by the Rachana Institute of Typography in 2024.",
+  "sources": [
+    { "url": "https://rachana.org.in/fonts.html", "title": "Fonts - Rachana Institute of Typography" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-19",
+  "updated_at": "2026-08-19"
+}

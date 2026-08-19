@@ -1,0 +1,24 @@
+{
+  "id": "rtd-t-000162",
+  "slug": "october-devanagari-tamil",
+  "name": {
+    "preferred": "October (Devanagari and Tamil)",
+    "alternates": []
+  },
+  "designers": [
+    { "id": "rtd-p-000137", "role": "designer" }
+  ],
+  "foundry": [
+    { "name": "Typotheque", "url": "https://www.typotheque.com/authors/arya-purohit" }
+  ],
+  "scripts": ["Devanagari", "Tamil"],
+  "era": "digital",
+  "description": "The Devanagari and Tamil versions of Typotheque's October type family, designed by Arya Purohit.",
+  "sources": [
+    { "url": "https://www.typotheque.com/blog/november-october-support-extended-to-devanagari-and-tamil", "title": "November / October support extended to Devanagari and Tamil - Typotheque" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-19",
+  "updated_at": "2026-08-19"
+}

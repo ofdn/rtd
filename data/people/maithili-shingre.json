@@ -1,0 +1,18 @@
+{
+  "id": "rtd-p-000138",
+  "slug": "maithili-shingre",
+  "name": {
+    "preferred": "Maithili Shingre",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "bio": "Type designer who co-designed Modak, a Devanagari and Latin display typeface, with Sarang Kulkarni and Noopur Datye at Ek Type.",
+  "sources": [
+    { "url": "https://ektype.in/modak.html", "title": "Modak - Ek Type" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-19",
+  "updated_at": "2026-08-19"
+}

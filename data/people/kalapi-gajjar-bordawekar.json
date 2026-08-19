@@ -1,10 +1,7 @@
 {
   "id": "rtd-p-000011",
   "slug": "kalapi-gajjar-bordawekar",
-  "name": {
-    "preferred": "Kalapi Gajjar-Bordawekar",
-    "alternates": ["Kalapi Gajjar"]
-  },
+  "name": { "preferred": "Kalapi Gajjar-Bordawekar", "alternates": ["Kalapi Gajjar"] },
   "countries": ["India"],
   "roles": ["type designer", "font engineer"],
   "affiliations": [
@@ -12,15 +9,16 @@
     { "name": "Monotype" },
     { "name": "Dalton Maag" }
   ],
-  "bio": "Type designer and font engineer focused on writing systems of the Indian subcontinent. Worked at Monotype and Dalton Maag before co-founding Universal Thirst in 2016.",
+  "bio": "Type designer and font engineer focused on writing systems of the Indian subcontinent. Worked at Monotype and Dalton Maag before co-founding Universal Thirst with Gunnar Vilhjálmsson in 2016.",
   "external_ids": { "wikidata_qid": "Q113568817" },
   "sources": [
     { "url": "https://typenetwork.com/font-designers/kalapi-gajjar", "title": "Kalapi Gajjar - Type Network" },
     { "url": "https://www.typotheque.com/authors/kalapi-gajjar-bordawekar", "title": "Kalapi Gajjar-Bordawekar - Typotheque" },
-    { "url": "https://granshan.com/person/kalapi-gajjar-bordawekar", "title": "Kalapi Gajjar-Bordawekar - GRANSHAN" }
+    { "url": "https://granshan.com/person/kalapi-gajjar-bordawekar", "title": "Kalapi Gajjar-Bordawekar - GRANSHAN" },
+    { "url": "https://www.itsnicethat.com/articles/universal-thirst-graphic-design-141119", "title": "Universal Thirst - It's Nice That" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-07"
+  "updated_at": "2026-08-19"
 }

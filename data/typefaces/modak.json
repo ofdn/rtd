@@ -1,0 +1,27 @@
+{
+  "id": "rtd-t-000158",
+  "slug": "modak",
+  "name": {
+    "preferred": "Modak",
+    "alternates": []
+  },
+  "designers": [
+    { "id": "rtd-p-000136", "role": "designer" },
+    { "id": "rtd-p-000138", "role": "designer" },
+    { "id": "rtd-p-000029", "role": "designer" }
+  ],
+  "foundry": [
+    { "name": "Ek Type", "url": "https://ektype.in" }
+  ],
+  "scripts": ["Devanagari", "Latin"],
+  "classification": "display",
+  "era": "digital",
+  "description": "A Devanagari and Latin display typeface designed by Sarang Kulkarni, Maithili Shingre, and Noopur Datye at Ek Type.",
+  "sources": [
+    { "url": "https://ektype.in/modak.html", "title": "Modak - Ek Type" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-08-19",
+  "updated_at": "2026-08-19"
+}

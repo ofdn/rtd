@@ -1,20 +1,23 @@
 {
   "id": "rtd-p-000007",
   "slug": "gunjan-panchal",
-  "name": {
-    "preferred": "Gunjan Panchal",
-    "alternates": []
-  },
+  "name": { "preferred": "Gunjan Panchal", "alternates": [] },
   "countries": ["India"],
   "roles": ["type designer", "graphic designer", "calligrapher"],
-  "bio": "Type designer working in Gujarati, Devanagari, and Gurmukhi scripts. Runs the Gunjan Font Foundry, producing typefaces including Kalkal, plus Switzer Gujarati and Switzer Gurmukhi for the Indian Type Foundry.",
+  "affiliations": [
+    { "name": "Indian Type Foundry", "start_year": "2016" },
+    { "name": "Ek Type", "start_year": "2020" },
+    { "name": "Universal Thirst", "start_year": "2021" }
+  ],
+  "bio": "Designs typefaces in Gujarati, Devanagari, and Gurmukhi. Runs Gunjan Font Foundry; has worked at Indian Type Foundry, Ek Type (Nandinagari script), and Universal Thirst.",
   "external_ids": { "wikidata_qid": "Q125430736" },
   "sources": [
     { "url": "https://www.myfonts.com/collections/gunjan-foundry", "title": "Gunjan Font Foundry - MyFonts" },
-    { "url": "https://fontsinuse.com/type_designers/5936/gunjan-panchal", "title": "Gunjan Panchal - Fonts In Use" }
+    { "url": "https://fontsinuse.com/type_designers/5936/gunjan-panchal", "title": "Gunjan Panchal - Fonts In Use" },
+    { "url": "https://fonts.adobe.com/designers/gunjan-panchal", "title": "Gunjan Panchal - Adobe Fonts" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-08-19"
 }
