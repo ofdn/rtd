@@ -1,0 +1,33 @@
+{
+  "id": "rtd-p-000142",
+  "slug": "eric-de-berranger",
+  "name": {
+    "preferred": "Éric de Berranger",
+    "alternates": []
+  },
+  "roles": [
+    "type designer"
+  ],
+  "sources": [
+    {
+      "url": "https://luc.devroye.org/fonts-25515.html",
+      "title": "Éric de Berranger"
+    },
+    {
+      "url": "https://typography.guru/list-entries/brusseline-r276/",
+      "title": "Brusseline"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "birth_year": "1973",
+  "countries": [
+    "France"
+  ],
+  "scripts": [
+    "Latin"
+  ],
+  "verification_status": "needs_verification",
+  "created_at": "2026-08-22",
+  "updated_at": "2026-08-22"
+}
