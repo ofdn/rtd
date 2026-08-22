@@ -1,0 +1,52 @@
+{
+  "id": "rtd-p-000142",
+  "slug": "edward-johnston",
+  "name": {
+    "preferred": "Edward Johnston",
+    "alternates": []
+  },
+  "roles": [
+    "type designer",
+    "graphic designer",
+    "calligrapher",
+    "illuminator"
+  ],
+  "sources": [
+    {
+      "url": "https://www.elpais.com.uy/informacion/sociedad/nacio-en-san-jose-y-cambio-el-metro-de-londres-para-siempre-la-historia-del-tipografo-edward-johnston",
+      "title": "\"Nació en San José y cambió el Metro de Londres para siempre: la historia del tipógrafo Edward Johnston\""
+    },
+    {
+      "url": "https://www.britannica.com/biography/Edward-Johnston",
+      "title": "Edward Johnston"
+    },
+    {
+      "url": "https://www.ltmuseum.co.uk/collections/stories/people/edward-johnston-man-behind-londons-lettering",
+      "title": "Edward Johnston: the man behind London’s lettering"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "birth_year": "1872",
+  "death_year": "1944",
+  "countries": [
+    "United Kingdom"
+  ],
+  "scripts": [
+    "Latin"
+  ],
+  "place_of_birth": "Arazatí, Uruguay",
+  "place_of_death": "Ditchling, England",
+  "alma_mater": [
+    "University of Edinburgh"
+  ],
+  "external_ids": {
+    "wikidata_qid": "Q1292717",
+    "viaf": "100260468",
+    "isni": "0000000110317712",
+    "gnd": "118776304",
+    "worldcat_entity": "E39PBJgt6KQKXXGR3WxdrB9VYP"
+  },
+  "created_at": "2026-08-22",
+  "updated_at": "2026-08-22"
+}
