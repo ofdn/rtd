@@ -1,0 +1,52 @@
+{
+  "id": "rtd-t-000166",
+  "slug": "johnston",
+  "name": {
+    "preferred": "Johnston",
+    "alternates": [
+      "Underground",
+      "Johnston's Railway Type",
+      "Johnston Sans",
+      "Railway",
+      "Johnston's Underground Type"
+    ]
+  },
+  "designers": [
+    {
+      "id": "rtd-p-000142",
+      "role": "type designer"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.ltmuseum.co.uk/collections/stories/people/edward-johnston-man-behind-londons-lettering",
+      "title": "Edward Johnston: the man behind London’s lettering"
+    },
+    {
+      "url": "https://luc.devroye.org/fonts-66504.html",
+      "title": "Johnston's Underground Type [Edward Johnston]"
+    },
+    {
+      "url": "https://www.colophon.co.uk/typography/font-id-how-johnstons-underground-bridged-the-class-gap/",
+      "title": "FONT ID – How Johnston’s Underground bridged the class gap"
+    },
+    {
+      "url": "https://www.bbc.com/news/magazine-35916807",
+      "title": "Johnston Sans: The Tube typeface that changed everything"
+    }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "design_year": "1916",
+  "classification": "sans-serif",
+  "scripts": [
+    "Latin"
+  ],
+  "era": "metal",
+  "unicode_compliant": true,
+  "external_ids": {
+    "wikidata_qid": "Q383685"
+  },
+  "created_at": "2026-08-25",
+  "updated_at": "2026-08-25"
+}
