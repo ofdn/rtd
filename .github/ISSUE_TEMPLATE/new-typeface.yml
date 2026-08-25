@@ -12,7 +12,9 @@ body:
         **The designer(s) need to already be in the registry** (or be
         submitted as a separate "New person" issue first) - typefaces
         link to a person record, they don't duplicate the person's
-        details.
+        details. If no individual designer is known at all - an
+        anonymous or foundry-attributed historical type, for
+        example - leave Designer(s) blank and explain why instead.
 
         **Every submission needs at least one independent, verifiable
         source** - a foundry specimen/catalog, published interview,
@@ -51,8 +53,18 @@ body:
         rtd-p-###### id if you know it. e.g. "Jan Tschichold | type
         designer". If they're not in the registry yet, open a "New
         person" issue for them first and mention that here instead.
-    validations:
-      required: true
+        Leave blank only if no individual designer is known at all
+        (anonymous, foundry-attributed only, or lost to history) - fill
+        in the field below instead in that case.
+  - type: input
+    id: no_designer_reason
+    attributes:
+      label: If no individual designer is known, why?
+      description: >-
+        Only fill this in if you left Designer(s) blank above - e.g.
+        "Anonymous, foundry-attributed only" or "No individual designer
+        documented; credited to the foundry's in-house team". Leave
+        blank if you listed a designer above.
   - type: textarea
     id: foundry
     attributes:

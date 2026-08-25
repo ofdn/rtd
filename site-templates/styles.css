@@ -454,6 +454,7 @@ ul.record-list li:last-child { border-bottom: none; }
 ul.record-list a { color: var(--color-text); text-decoration: none; font-weight: 600; }
 ul.record-list a:hover { color: var(--color-link); text-decoration: underline; }
 ul.record-list .role { font-size: 0.8rem; color: var(--color-text-muted); text-align: right; white-space: nowrap; }
+.attribution-unknown { font-size: 0.9rem; color: var(--color-text-muted); font-style: italic; }
 
 .see-also {
   background: var(--color-bg-alt);

@@ -143,6 +143,25 @@ export function validateRoot(rootDir) {
     }
   }
 
+  // designers/attribution are mutually exclusive: an empty designers[]
+  // (no individual can be named - anonymous, foundry-only, lost to
+  // history) must say why via attribution, and attribution only makes
+  // sense when there's no one to credit. Can't be expressed as a single
+  // JSON Schema constraint since it spans two sibling fields.
+  for (const { file, record } of typefaces) {
+    const hasDesigners = (record.designers ?? []).length > 0;
+    if (!hasDesigners && !record.attribution) {
+      errors.push(
+        `${file}: designers is empty but no attribution explaining why (anonymous, foundry-only, lost to history, etc.), see CONTRIBUTING.md`
+      );
+    }
+    if (hasDesigners && record.attribution) {
+      errors.push(
+        `${file}: attribution is only for typefaces with no known designer; this record has designers[], remove attribution`
+      );
+    }
+  }
+
   // Redirect stubs (see scripts/build.js) are generated at each entry in
   // previous_slugs, so a collision here would mean two records fighting
   // over the same URL, or a redirect silently shadowing a real page.

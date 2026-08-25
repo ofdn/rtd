@@ -31,6 +31,35 @@ document is for people submitting via pull request directly.
 4. Run `npm install && npm run validate` locally before opening the PR -
    this is the same check CI runs.
 
+A typeface's `designers[]` points at existing person records by id, it
+never duplicates a person's details - so if the designer isn't in the
+registry yet, submit them as a person record first (or in the same PR,
+if you're comfortable ordering the commits so the person's file lands
+before the typeface references it). If no individual designer can be
+named at all, see "Typefaces with no known individual designer" below
+instead of blocking on this.
+
+## Typefaces with no known individual designer
+
+Some typefaces genuinely have no person to credit - an anonymous
+historical face, one attributed only to a foundry's in-house team, or
+one lost to history. For these, leave `designers` as an empty array and
+add an `attribution` field instead:
+
+```json
+"designers": [],
+"attribution": {
+  "unknown": true,
+  "note": "Anonymous, foundry-attributed only"
+}
+```
+
+`attribution` is only valid when `designers` is empty, and vice versa -
+`npm run validate` enforces both directions. This is deliberately not a
+way to skip crediting a designer who *is* identifiable; only use it when
+there's genuinely no one to name. The issue form has the same escape
+hatch (leave Designer(s) blank, fill in the reason field instead).
+
 ## Renaming a record (changing its slug)
 
 The `id` never changes, but `slug` can, if a record needs a better URL

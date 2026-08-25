@@ -80,6 +80,7 @@ const TYPEFACE_LABELS = {
   name: "Typeface name (preferred form)",
   alternates: "Alternate names or spellings",
   designers: "Designer(s)",
+  noDesignerReason: "If no individual designer is known, why?",
   foundry: "Foundry / publisher",
   designYear: "Design year",
   releaseYear: "Release year",
@@ -258,21 +259,33 @@ function buildTypeface(fields, peopleRecords) {
   const L = TYPEFACE_LABELS;
   const name = (fields[L.name] || "").trim();
   if (!name) return { error: "Missing required field: " + L.name };
-  if (!(fields[L.designers] || "").trim()) {
-    return { error: "Missing required field: " + L.designers };
-  }
 
-  const { designers, unresolved } = resolveDesigners(fields[L.designers], peopleRecords);
-  if (unresolved.length) {
-    return { error: "Could not resolve designer(s):\n" + unresolved.map((u) => `- ${u}`).join("\n") };
-  }
-  if (!designers.length) {
-    return { error: "Missing required field: " + L.designers };
+  const designersRaw = (fields[L.designers] || "").trim();
+  const noDesignerReason = (fields[L.noDesignerReason] || "").trim();
+
+  let designers = [];
+  let attribution;
+  if (designersRaw) {
+    const { designers: resolved, unresolved } = resolveDesigners(designersRaw, peopleRecords);
+    if (unresolved.length) {
+      return { error: "Could not resolve designer(s):\n" + unresolved.map((u) => `- ${u}`).join("\n") };
+    }
+    if (!resolved.length) {
+      return { error: "Missing required field: " + L.designers };
+    }
+    designers = resolved;
+  } else if (noDesignerReason) {
+    attribution = { unknown: true, note: noDesignerReason };
+  } else {
+    return {
+      error: `Missing required field: either ${L.designers}, or ${L.noDesignerReason} explaining why no individual designer is known.`,
+    };
   }
 
   const record = {
     name: { preferred: name, alternates: csv(fields[L.alternates]) },
     designers,
+    ...(attribution ? { attribution } : {}),
     sources: parseSources(fields[L.sources]),
     record_status: "active",
     superseded_by: null,

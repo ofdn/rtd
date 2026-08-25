@@ -13,11 +13,13 @@ export function renderTypefacePage(record, { canonicalUrl, designers, related, s
     alternateName: record.name.alternates?.length
       ? record.name.alternates
       : undefined,
-    creator: designers.map((d) => ({
-      "@type": "Person",
-      name: d.name,
-      identifier: d.id,
-    })),
+    creator: designers.length
+      ? designers.map((d) => ({
+          "@type": "Person",
+          name: d.name,
+          identifier: d.id,
+        }))
+      : undefined,
     dateCreated: record.design_year || undefined,
     datePublished: record.release_year || undefined,
     publisher: record.foundry?.length
@@ -36,6 +38,8 @@ export function renderTypefacePage(record, { canonicalUrl, designers, related, s
             )}</a><span class="role">${escapeHtml(d.role)}</span></li>`
         )
         .join("\n")}\n</ul>`
+    : record.attribution?.unknown
+    ? `<h2>Designers</h2>\n<p class="attribution-unknown">No individual designer known &mdash; ${escapeHtml(record.attribution.note)}</p>`
     : "";
 
   const relatedHtml = related?.length

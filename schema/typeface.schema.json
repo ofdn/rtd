@@ -46,7 +46,7 @@
     },
     "designers": {
       "type": "array",
-      "minItems": 1,
+      "minItems": 0,
       "items": {
         "type": "object",
         "additionalProperties": false,
@@ -56,7 +56,25 @@
           "role": { "type": "string", "minLength": 1 }
         }
       },
-      "description": "Points at person ids. The reverse ('typefaces by this person') is computed at build time, not hand-maintained on the person record."
+      "description": "Points at person ids. The reverse ('typefaces by this person') is computed at build time, not hand-maintained on the person record. Empty only when no individual designer can be named - see `attribution`, required in that case (enforced by scripts/validate.js, not expressible in this schema alone)."
+    },
+    "attribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unknown", "note"],
+      "properties": {
+        "unknown": {
+          "type": "boolean",
+          "const": true,
+          "description": "Always true when present. Set only when designers is empty - anonymous type, foundry-attributed only, or lost to history."
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Why no individual designer is credited, e.g. \"Anonymous, foundry-attributed only\" or \"No individual designer documented; credited to the foundry's in-house team\"."
+        }
+      },
+      "description": "Only set when designers is empty. Never set alongside a non-empty designers[] - enforced by scripts/validate.js."
     },
     "foundry": {
       "type": "array",
