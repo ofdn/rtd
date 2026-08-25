@@ -42,6 +42,7 @@ jobs:
       - id: build
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
         run: node scripts/issue-to-record.js ${{ steps.kind.outputs.kind }}
 
       - name: Comment when a record could not be built

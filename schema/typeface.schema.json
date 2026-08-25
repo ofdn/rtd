@@ -135,6 +135,21 @@
       },
       "description": "Independent, verifiable sources. Must never be Wikidata, Wikipedia, or any Wikimedia project, enforced by scripts/validate.js."
     },
+    "contributed_by": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "type": { "type": "string", "enum": ["individual", "institution"], "default": "individual" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      },
+      "description": "Who submitted or substantially contributed this record's entry - distinct from the typeface's own designers[]. The first entry is treated as the record's citation author (see site-templates/shared.js buildCitations). Auto-filled with the submitter's GitHub username for issue-form submissions; add by hand when opening a PR directly, see CONTRIBUTING.md. Also powers the /contributors/ page. Omit entirely for records researched and entered by the registry's own maintainers - the citation falls back to the default maintainer credit in that case."
+    },
     "verification_status": {
       "type": "string",
       "enum": ["verified", "needs_verification"],

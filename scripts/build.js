@@ -23,6 +23,7 @@ import { renderTypefacePage } from "../site-templates/typeface.js";
 import { renderHomePage } from "../site-templates/home.js";
 import { renderInfoPage } from "../site-templates/info.js";
 import { renderScriptPage, renderScriptsIndexPage } from "../site-templates/script.js";
+import { renderContributorsPage } from "../site-templates/contributors.js";
 import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion, escapeHtml, linkTag, canonicalScriptName, scriptSlug } from "../site-templates/shared.js";
 import { buildPersonDc, buildTypefaceDc } from "./lib/dublin-core.js";
 import { buildPersonMarc } from "./lib/marc-authority.js";
@@ -493,6 +494,46 @@ function build(dataDir, outDir) {
     );
   }
 
+  // --- Contributors (public credit for who submitted each record, see
+  // contributed_by[] on both schemas) ---
+  const contributorsIndex = new Map(); // "name|url" -> { name, type, url, people: [], typefaces: [] }
+  function registerContributor(contributor, kind, entry) {
+    if (!contributor?.name) return;
+    const key = `${contributor.name}|${contributor.url ?? ""}`;
+    if (!contributorsIndex.has(key)) {
+      contributorsIndex.set(key, {
+        name: contributor.name,
+        type: contributor.type || "individual",
+        url: contributor.url,
+        people: [],
+        typefaces: [],
+      });
+    }
+    contributorsIndex.get(key)[kind].push(entry);
+  }
+  for (const p of people) {
+    if (p.record_status !== "active") continue;
+    for (const c of p.contributed_by ?? []) registerContributor(c, "people", { slug: p.slug, name: p.name.preferred });
+  }
+  for (const t of typefaces) {
+    if (t.record_status !== "active") continue;
+    for (const c of t.contributed_by ?? []) registerContributor(c, "typefaces", { slug: t.slug, name: t.name.preferred });
+  }
+  for (const entry of contributorsIndex.values()) {
+    entry.people.sort((a, b) => a.name.localeCompare(b.name));
+    entry.typefaces.sort((a, b) => a.name.localeCompare(b.name));
+  }
+  const contributorsForPage = [...contributorsIndex.values()].sort((a, b) => a.name.localeCompare(b.name));
+  writeFile(
+    outDir,
+    "contributors/index.html",
+    renderContributorsPage({
+      canonicalUrl: `${SITE_URL}contributors/`,
+      contributors: contributorsForPage,
+      schemaVersion,
+    })
+  );
+
   // --- Search index (active records only) ---
   const searchIndex = [
     ...peopleApiIndex
@@ -514,6 +555,7 @@ function build(dataDir, outDir) {
     { loc: `${SITE_URL}dumps/`, lastmod: today },
     { loc: `${SITE_URL}scripts/`, lastmod: today },
     ...scriptsForIndex.map((s) => ({ loc: `${SITE_URL}scripts/${s.slug}/`, lastmod: today })),
+    { loc: `${SITE_URL}contributors/`, lastmod: today },
     ...peopleApiIndex
       .filter((p) => p.record_status === "active")
       .map((p) => ({ loc: p.canonical_url, lastmod: personById.get(p.id)?.updated_at ?? today })),

@@ -102,12 +102,23 @@ export function buildCitations(record, { canonicalUrl, arkUrl }) {
   const year = (record.updated_at || "").slice(0, 4);
   const updated = formatDate(record.updated_at);
 
+  // The citation author defaults to the registry's own maintainer, who
+  // researched and entered most records by hand. A record with a real
+  // contributor (see contributed_by[] in the schema, auto-filled from the
+  // issue-form submitter's GitHub username, or added by hand for a direct
+  // PR) is cited by that contributor's name instead - used as-is in every
+  // format below, not split into last-name/initial, since it may be a
+  // GitHub username or an institution name rather than "First Last".
+  const contributorName = record.contributed_by?.[0]?.name;
+  const author = contributorName || "Panigrahi, Subhashish";
+  const authorInitial = contributorName || "Panigrahi, S.";
+
   return {
-    apa: `Panigrahi, S. (${year}). ${title}. Registry of Type Design. O Foundation. ${canonicalUrl}`,
-    chicago: `Panigrahi, Subhashish. "${title}." Registry of Type Design. O Foundation. Last modified ${updated}. Accessed __ACCESSED__. ${canonicalUrl}.`,
-    mla: `Panigrahi, Subhashish. "${title}." Registry of Type Design, O Foundation, ${updated}, ${canonicalUrl}. Accessed __ACCESSED__.`,
-    vancouver: `Panigrahi S. ${title} [Internet]. Registry of Type Design. O Foundation; ${year} [cited __ACCESSED__]. Available from: ${canonicalUrl}`,
-    bibtex: `@misc{${record.id},\n  author       = {Panigrahi, Subhashish},\n  title        = {{${title}}},\n  howpublished = {Registry of Type Design},\n  publisher    = {O Foundation},\n  year         = {${year}},\n  url          = {${canonicalUrl}},\n  urldate      = {__ACCESSED__},\n  note         = {ARK: ${arkUrl}}\n}`,
+    apa: `${authorInitial} (${year}). ${title}. Registry of Type Design. O Foundation. ${canonicalUrl}`,
+    chicago: `${author}. "${title}." Registry of Type Design. O Foundation. Last modified ${updated}. Accessed __ACCESSED__. ${canonicalUrl}.`,
+    mla: `${author}. "${title}." Registry of Type Design, O Foundation, ${updated}, ${canonicalUrl}. Accessed __ACCESSED__.`,
+    vancouver: `${authorInitial} ${title} [Internet]. Registry of Type Design. O Foundation; ${year} [cited __ACCESSED__]. Available from: ${canonicalUrl}`,
+    bibtex: `@misc{${record.id},\n  author       = {${author}},\n  title        = {{${title}}},\n  howpublished = {Registry of Type Design},\n  publisher    = {O Foundation},\n  year         = {${year}},\n  url          = {${canonicalUrl}},\n  urldate      = {__ACCESSED__},\n  note         = {ARK: ${arkUrl}}\n}`,
   };
 }
 

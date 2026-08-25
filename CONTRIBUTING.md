@@ -18,6 +18,28 @@ If something in the form couldn't be turned into a record automatically
 comments on the issue explaining what to fix instead. The rest of this
 document is for people submitting via pull request directly.
 
+## Getting credited
+
+Submitting via the issue forms above credits you automatically: the bot
+sets `contributed_by` on the new record to your GitHub username. That
+name (or an institution's name, if you're submitting on behalf of one)
+then shows as the author in that record's own "Cite this record" section
+and on the public [Contributors](../../contributors/) page, instead of
+the registry's own maintainer.
+
+Opening a pull request directly doesn't credit you automatically - add it
+yourself:
+
+```json
+"contributed_by": [
+  { "name": "your-github-username", "type": "individual", "url": "https://github.com/your-github-username" }
+]
+```
+
+`type` is `"individual"` or `"institution"`; `url` is optional. Omit
+`contributed_by` entirely if you'd rather not be credited, or if you're a
+maintainer entering a record as part of the registry's own research.
+
 ## Adding or editing a record
 
 1. Add or edit one JSON file under `data/people/` or `data/typefaces/`.

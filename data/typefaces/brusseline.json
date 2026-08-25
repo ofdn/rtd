@@ -37,6 +37,9 @@
       "title": "Éric de Berranger"
     }
   ],
+  "contributed_by": [
+    { "name": "JhowieNitnek", "type": "individual", "url": "https://github.com/JhowieNitnek" }
+  ],
   "record_status": "active",
   "superseded_by": null,
   "design_year": "2006",

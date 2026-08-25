@@ -18,6 +18,9 @@
       "title": "Brusseline"
     }
   ],
+  "contributed_by": [
+    { "name": "JhowieNitnek", "type": "individual", "url": "https://github.com/JhowieNitnek" }
+  ],
   "record_status": "active",
   "superseded_by": null,
   "birth_year": "1973",

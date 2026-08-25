@@ -348,6 +348,15 @@ function main() {
   }
 
   const { record, manualNotes = [], sourceLanguage, notes } = built;
+
+  // Credits whoever actually submitted the issue, not the bot that opened
+  // the PR on their behalf - see contributed_by[] on both schemas and the
+  // citation-author logic in site-templates/shared.js.
+  const issueAuthor = (process.env.ISSUE_AUTHOR || "").trim();
+  if (issueAuthor) {
+    record.contributed_by = [{ name: issueAuthor, type: "individual", url: `https://github.com/${issueAuthor}` }];
+  }
+
   const rawName = record.name.preferred;
   const id = nextId(records, prefix);
   const baseSlug = slugify(rawName);
