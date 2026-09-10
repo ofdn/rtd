@@ -1,5 +1,8 @@
 {
   "id": "rtd-t-000119",
+  "external_ids": {
+    "wikidata_qid": "Q135113281"
+  },
   "slug": "good-times",
   "name": {
     "preferred": "Good Times",
@@ -29,6 +32,6 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-09-10",
   "verification_status": "needs_verification"
 }
