@@ -41,6 +41,31 @@ npm run validate   # validate data/ against the schemas
 npm run build      # compile data/ into dist/
 ```
 
+### Useful queries
+
+Count people records carrying a given external identifier (needs
+[`jq`](https://jqlang.org/)):
+
+```
+# ISNI
+jq -s '[.[] | select(.external_ids.isni != null and .external_ids.isni != "")] | length' data/people/*.json
+
+# LC-NAF
+jq -s '[.[] | select(.external_ids.lc_naf != null and .external_ids.lc_naf != "")] | length' data/people/*.json
+```
+
+Count Wikidata items carrying an RTD id via the
+[Registry of Type Design ID property (P14791)](https://www.wikidata.org/wiki/Property:P14791),
+run at [query.wikidata.org](https://query.wikidata.org/) or via curl:
+
+```
+SELECT (COUNT(?item) AS ?count) WHERE { ?item wdt:P14791 ?rtdid. }
+```
+
+`scripts/sync-wikidata-p14791.js` runs this same query as part of a
+fuller reconciliation between RTD's own `wikidata_qid` fields and
+Wikidata's P14791 claims.
+
 ## License
 
 © Subhashish Panigrahi. Registry data is licensed under [CC BY-SA
