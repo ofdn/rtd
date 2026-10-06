@@ -1,0 +1,22 @@
+{
+  "id": "rtd-p-000144",
+  "external_ids": { "wikidata_qid": "Q2996980" },
+  "slug": "solomana-kante",
+  "name": {
+    "preferred": "Solomana Kanté",
+    "alternates": ["Souleymane Kanté", "Soulemayne Kante"]
+  },
+  "birth_year": "1922",
+  "countries": ["Guinea"],
+  "roles": ["script inventor"],
+  "scripts": ["N'Ko"],
+  "bio": "Invented the N'Ko alphabet in 1949 to write Manding languages, now used for Maninka, Bambara and Dyula in Guinea, Côte d'Ivoire and Mali.",
+  "sources": [
+    { "url": "https://www.omniglot.com/writing/nko.htm", "title": "N'Ko alphabet" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-06",
+  "updated_at": "2026-10-06"
+}

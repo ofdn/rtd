@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000150",
+  "external_ids": { "wikidata_qid": "Q105525836" },
+  "slug": "thomas-flo-lewis",
+  "name": {
+    "preferred": "Thomas Flo Lewis",
+    "alternates": ["Flo Darvin Lewis"]
+  },
+  "roles": ["script inventor"],
+  "scripts": ["Bassa Vah"],
+  "bio": "Shaped the modern Bassa Vah script in the early 1900s, after learning it from Bassa descendants still using it in Brazil and the West Indies.",
+  "sources": [
+    { "url": "https://www.omniglot.com/writing/bassavah.htm", "title": "Bassa Vah alphabet" },
+    { "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/", "title": "The Unicode Standard, Version 17.0, Chapter 19" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-06",
+  "updated_at": "2026-10-06"
+}

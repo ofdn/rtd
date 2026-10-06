@@ -1,0 +1,21 @@
+{
+  "id": "rtd-p-000156",
+  "external_ids": { "wikidata_qid": "Q5978366" },
+  "slug": "i-m-muthanna",
+  "name": {
+    "preferred": "I. M. Muthanna",
+    "alternates": ["Iychettira M. Muthanna"]
+  },
+  "countries": ["India"],
+  "roles": ["script inventor"],
+  "scripts": ["Kodava"],
+  "bio": "Developed the Kodava Lipi in 1970 to write Kodava. He was a writer, scholar and translator from Kodagu, Karnataka.",
+  "sources": [
+    { "url": "https://www.omniglot.com/writing/kodavalipi.htm", "title": "Kodava Lipi" },
+    { "url": "https://www.omniglot.com/writing/kodava.htm", "title": "Kodava language and alphabet" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-06",
+  "updated_at": "2026-10-06"
+}

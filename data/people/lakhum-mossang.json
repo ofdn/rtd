@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000171",
+  "slug": "lakhum-mossang",
+  "name": {
+    "preferred": "Lakhum Mossang",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["script inventor"],
+  "scripts": ["Tangsa"],
+  "bio": "Created the Tangsa alphabet in 1990 for the Tangsa languages of Arunachal Pradesh and Myanmar's Sagaing Region. He was from Namphai Nong, Arunachal Pradesh.",
+  "sources": [
+    { "url": "https://www.omniglot.com/writing/tangsa.htm", "title": "Tangsa alphabet and language" },
+    { "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/", "title": "The Unicode Standard, Version 17.0, Chapter 13" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-06",
+  "updated_at": "2026-10-06"
+}

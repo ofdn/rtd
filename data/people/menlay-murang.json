@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000158",
+  "external_ids": { "wikidata_qid": "Q105556020" },
+  "slug": "menlay-murang",
+  "name": {
+    "preferred": "Menlay Murang",
+    "alternates": ["Manley Mro"]
+  },
+  "roles": ["script inventor"],
+  "scripts": ["Mro"],
+  "bio": "Created the Mro alphabet for the Mro language in the 1980s.",
+  "sources": [
+    { "url": "https://www.omniglot.com/writing/mro.htm", "title": "Mro (Mru) alphabet and language" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-06",
+  "updated_at": "2026-10-06"
+}

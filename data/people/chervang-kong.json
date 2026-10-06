@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000160",
+  "external_ids": { "wikidata_qid": "Q105502034" },
+  "slug": "chervang-kong",
+  "name": {
+    "preferred": "Chervang Kong",
+    "alternates": ["Cher Vang Kong", "Txawj Vaag Koo"]
+  },
+  "roles": ["script inventor"],
+  "scripts": ["Nyiakeng Puachue Hmong"],
+  "bio": "Created the Nyiakeng Puachue Hmong alphabet in the 1980s for White and Green Hmong, for use in his United Christians Liberty Evangelical Church.",
+  "sources": [
+    { "url": "https://www.omniglot.com/writing/nyiakengpuachuehmong.htm", "title": "Nyiakeng Puachue Hmong alphabet" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-06",
+  "updated_at": "2026-10-06"
+}

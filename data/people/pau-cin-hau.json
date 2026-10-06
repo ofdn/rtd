@@ -1,0 +1,22 @@
+{
+  "id": "rtd-p-000157",
+  "external_ids": { "wikidata_qid": "Q7148814" },
+  "slug": "pau-cin-hau",
+  "name": {
+    "preferred": "Pau Cin Hau",
+    "alternates": ["Pau Chin Hau"]
+  },
+  "birth_year": "1859",
+  "death_year": "1948",
+  "roles": ["script inventor"],
+  "scripts": ["Pau Cin Hau"],
+  "bio": "Created the Pau Cin Hau script in 1902 to convey the teachings of the Laipian tradition he founded in the Chin Hills of present-day Myanmar.",
+  "sources": [
+    { "url": "https://www.omniglot.com/writing/paucinhau.htm", "title": "Pau Cin Hau script" },
+    { "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-16/", "title": "The Unicode Standard, Version 17.0, Chapter 16" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-06",
+  "updated_at": "2026-10-06"
+}

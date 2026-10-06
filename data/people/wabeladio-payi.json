@@ -1,0 +1,21 @@
+{
+  "id": "rtd-p-000148",
+  "external_ids": { "wikidata_qid": "Q16269525" },
+  "slug": "wabeladio-payi",
+  "name": {
+    "preferred": "Wabeladio Payi",
+    "alternates": ["David Wabeladio Payi"]
+  },
+  "countries": ["Democratic Republic of the Congo"],
+  "roles": ["script inventor"],
+  "scripts": ["Mandombe"],
+  "bio": "Devised the Mandombe script in 1978, building its letters from two shapes held sacred in the Kimbanguist Church.",
+  "sources": [
+    { "url": "https://www.omniglot.com/writing/mandombe.htm", "title": "Mandombe alphabet" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-06",
+  "updated_at": "2026-10-06"
+}

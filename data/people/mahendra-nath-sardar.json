@@ -1,0 +1,21 @@
+{
+  "id": "rtd-p-000154",
+  "external_ids": { "wikidata_qid": "Q123560907" },
+  "slug": "mahendra-nath-sardar",
+  "name": {
+    "preferred": "Mahendra Nath Sardar",
+    "alternates": ["Ol Guru Mahendra Nath Sardar"]
+  },
+  "countries": ["India"],
+  "roles": ["script inventor"],
+  "scripts": ["Ol Onal"],
+  "bio": "Created the Ol Onal alphabet for the Bhumij language between 1981 and 1992. He was a Bhumij linguist from Mahadevdihi in Mayurbhanj, Odisha.",
+  "sources": [
+    { "url": "https://www.omniglot.com/writing/olonal.htm", "title": "Ol Onal alphabet" },
+    { "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/", "title": "The Unicode Standard, Version 17.0, Chapter 13" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-06",
+  "updated_at": "2026-10-06"
+}

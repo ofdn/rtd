@@ -1,0 +1,22 @@
+{
+  "id": "rtd-p-000162",
+  "external_ids": { "wikidata_qid": "Q7904099" },
+  "slug": "uyaquq",
+  "name": {
+    "preferred": "Uyaquq",
+    "alternates": []
+  },
+  "birth_year": "1860",
+  "death_year": "1924",
+  "roles": ["script inventor"],
+  "scripts": ["Yugtun"],
+  "bio": "Devised the Yugtun script for Central Yup'ik around 1900, starting with a pictographic script and later developing a syllabic one.",
+  "sources": [
+    { "url": "https://www.omniglot.com/writing/yugtun.htm", "title": "Yugtun script" },
+    { "url": "https://www.omniglot.com/writing/yupik.htm", "title": "Central Alaskan Yup'ik language and alphabet" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-06",
+  "updated_at": "2026-10-06"
+}

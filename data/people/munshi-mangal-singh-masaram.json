@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000172",
+  "slug": "munshi-mangal-singh-masaram",
+  "name": {
+    "preferred": "Munshi Mangal Singh Masaram",
+    "alternates": ["Mangal Singh Masaram"]
+  },
+  "countries": ["India"],
+  "roles": ["script inventor"],
+  "scripts": ["Masaram Gondi"],
+  "bio": "Created the Masaram Gondi script in 1918 to write Gondi. He was from Kochewada in Balaghat district, Madhya Pradesh.",
+  "sources": [
+    { "url": "https://www.omniglot.com/writing/masaramgondi.htm", "title": "Masaram Gondi Script" },
+    { "url": "https://www.omniglot.com/writing/gondi.htm", "title": "Gondi languages and alphabets" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-06",
+  "updated_at": "2026-10-06"
+}

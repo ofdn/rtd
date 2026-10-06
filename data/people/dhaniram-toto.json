@@ -1,0 +1,21 @@
+{
+  "id": "rtd-p-000155",
+  "external_ids": { "wikidata_qid": "Q105580958" },
+  "slug": "dhaniram-toto",
+  "name": {
+    "preferred": "Dhaniram Toto",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["script inventor"],
+  "scripts": ["Toto"],
+  "bio": "Created the Toto alphabet for the Toto language of West Bengal, launched in 2015. He is a historian and elder of the Toto community.",
+  "sources": [
+    { "url": "https://www.omniglot.com/writing/toto2.htm", "title": "Toto alphabet" },
+    { "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/", "title": "The Unicode Standard, Version 17.0, Chapter 13" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-06",
+  "updated_at": "2026-10-06"
+}

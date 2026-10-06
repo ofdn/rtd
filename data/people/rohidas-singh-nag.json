@@ -1,0 +1,23 @@
+{
+  "id": "rtd-p-000153",
+  "external_ids": { "wikidata_qid": "Q18965931" },
+  "slug": "rohidas-singh-nag",
+  "name": {
+    "preferred": "Rohidas Singh Nag",
+    "alternates": []
+  },
+  "birth_year": "1934",
+  "death_year": "2012",
+  "countries": ["India"],
+  "roles": ["script inventor"],
+  "scripts": ["Mundari Bani"],
+  "bio": "Created the Mundari Bani alphabet for the Mundari language between 1949 and 1953. He was a Mundari linguist from Mayurbhanj, Odisha.",
+  "sources": [
+    { "url": "https://www.omniglot.com/writing/mundaribani.htm", "title": "Mundari Bani alphabet" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-06",
+  "updated_at": "2026-10-06"
+}

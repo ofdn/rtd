@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000161",
+  "external_ids": { "wikidata_qid": "Q105518953" },
+  "slug": "htae-bu-phae",
+  "name": {
+    "preferred": "Htae Bu Phae",
+    "alternates": ["Hteh Bu Phe"]
+  },
+  "roles": ["script inventor"],
+  "scripts": ["Kayah Li"],
+  "bio": "Devised the Kayah Li alphabet in March 1962 for the Kayah languages of Myanmar and Thailand.",
+  "sources": [
+    { "url": "https://www.omniglot.com/writing/kayahli.htm", "title": "Kayah Li alphabet" },
+    { "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-16/", "title": "The Unicode Standard, Version 17.0, Chapter 16" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-06",
+  "updated_at": "2026-10-06"
+}

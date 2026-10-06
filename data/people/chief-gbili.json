@@ -1,0 +1,21 @@
+{
+  "id": "rtd-p-000166",
+  "external_ids": { "wikidata_qid": "Q105526049" },
+  "slug": "chief-gbili",
+  "name": {
+    "preferred": "Chief Gbili",
+    "alternates": ["Gbili"]
+  },
+  "countries": ["Liberia"],
+  "roles": ["script inventor"],
+  "scripts": ["Kpelle"],
+  "bio": "Invented the Kpelle syllabary in the 1930s as a chief of Sanoyea in Bong County, Liberia.",
+  "sources": [
+    { "url": "https://www.omniglot.com/writing/kpelle.htm", "title": "Kpelle language and syllabary" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-06",
+  "updated_at": "2026-10-06"
+}

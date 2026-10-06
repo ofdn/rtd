@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000151",
+  "external_ids": { "wikidata_qid": "Q105659282" },
+  "slug": "nolence-mwangwego",
+  "name": {
+    "preferred": "Nolence Mwangwego",
+    "alternates": ["Nolence Moses Mwangwego"]
+  },
+  "roles": ["script inventor"],
+  "scripts": ["Mwangwego"],
+  "bio": "Invented the Mwangwego script for Malawian languages after a 1977 visit to France introduced him to other writing systems.",
+  "sources": [
+    { "url": "https://www.omniglot.com/writing/mwangwego.htm", "title": "Mwangwego" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-06",
+  "updated_at": "2026-10-06"
+}

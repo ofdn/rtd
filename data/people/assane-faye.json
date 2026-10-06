@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000170",
+  "slug": "assane-faye",
+  "name": {
+    "preferred": "Assane Faye",
+    "alternates": []
+  },
+  "roles": ["script inventor"],
+  "scripts": ["Garay"],
+  "bio": "Created the Garay script for Wolof, a right-to-left alphabet first published in 1961.",
+  "sources": [
+    { "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/", "title": "The Unicode Standard, Version 17.0, Chapter 19" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-06",
+  "updated_at": "2026-10-06"
+}
