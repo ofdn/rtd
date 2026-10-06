@@ -171,10 +171,9 @@ magazine coverage, academic papers, and similar.
 **Wikidata, Wikipedia, and any other Wikimedia project may never be used
 as a source.** If the only place a fact currently appears is a Wikipedia
 article, that's a sign the fact needs an independent source before it
-belongs here, not a reason to cite Wikipedia. This project exists in part
-so Wikidata and similar projects can eventually cite *it* - sourcing our
-facts from them would make that impossible (a source can't cite something
-that cites it back). CI rejects any `sources[].url` on a Wikimedia-project
+belongs here, not a reason to cite Wikipedia. Wikimedia projects are
+themselves compiled from other sources, so RTD cites the original
+source instead. CI rejects any `sources[].url` on a Wikimedia-project
 domain automatically.
 
 `external_ids` (`wikidata_qid`, `viaf`, `isni`, `lc_naf`, `gnd`,
@@ -197,6 +196,29 @@ needed, and set `"verification_status": "needs_verification"`. The site
 flags these records so a stronger source can be added later. This is
 different from having *no* independent source at all: if you can't find
 anything to cite, the record doesn't belong here yet, flagged or not.
+
+### Accepted sources
+
+One of these is enough to create a record. Use a page that names the
+person or typeface directly.
+
+- University of Reading, Lettering, Printing and Graphic Design
+  Collections, including the Type Design Collection.
+- Letterform Archive and its online archive.
+- Visible Language and other peer-reviewed journals.
+- Typographica.
+- "Facing the World: Towards a Global History of Non-Latin Type Design",
+  edited by Thomas S. Mullaney.
+- Omniglot.
+- The Unicode Standard core specification and Unicode script proposals.
+- Google Fonts and Adobe Fonts family and designer pages.
+
+Luc Devroye's type design pages are a comprehensive resource. One person
+maintains them and some entries are out of date, so check facts from them
+against another source where you can.
+
+Foundry and company names belong in a typeface's `foundry` field, not in
+a person record.
 
 ### No web link for a source
 
