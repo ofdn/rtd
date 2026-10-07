@@ -10,11 +10,10 @@
   "scripts": ["Bété"],
   "bio": "Created a syllabic script for the Bété languages of Côte d'Ivoire in 1956.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/betedaloa.htm", "title": "Daloa Bete language and alphabet" }
+    { "url": "https://www.omniglot.com/writing/betedaloa.htm", "title": "Daloa Bete language and alphabet", "type": "reference website", "language": "en", "publisher": "Omniglot" }
   ],
-  "verification_status": "needs_verification",
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-06"
+  "updated_at": "2026-10-07"
 }

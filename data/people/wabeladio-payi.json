@@ -11,11 +11,10 @@
   "scripts": ["Mandombe"],
   "bio": "Devised the Mandombe script in 1978, building its letters from two shapes held sacred in the Kimbanguist Church.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/mandombe.htm", "title": "Mandombe alphabet" }
+    { "url": "https://www.omniglot.com/writing/mandombe.htm", "title": "Mandombe alphabet", "type": "reference website", "language": "en", "publisher": "Omniglot" }
   ],
-  "verification_status": "needs_verification",
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-06"
+  "updated_at": "2026-10-07"
 }

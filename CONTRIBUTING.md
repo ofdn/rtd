@@ -71,10 +71,14 @@ add an `attribution` field instead:
 ```json
 "designers": [],
 "attribution": {
-  "unknown": true,
-  "note": "Anonymous, foundry-attributed only"
+  "status": "foundry-only",
+  "note": "Credited to the foundry's in-house team"
 }
 ```
+
+`status` is one of `unknown`, `anonymous`, `collective` (made by a group
+or community), `foundry-only` or `lost` (records did not survive).
+Older records use `"unknown": true`, which is still accepted.
 
 `attribution` is only valid when `designers` is empty, and vice versa -
 `npm run validate` enforces both directions. This is deliberately not a
@@ -192,10 +196,10 @@ If the only source you can find is thin or low-confidence (a bare LinkedIn
 profile with no other detail, for example), don't leave the person or
 typeface out entirely. Add the record with a minimal factual `bio` (e.g.
 "Indian type designer.") plus a short note that a better source is
-needed, and set `"verification_status": "needs_verification"`. The site
-flags these records so a stronger source can be added later. This is
-different from having *no* independent source at all: if you can't find
-anything to cite, the record doesn't belong here yet, flagged or not.
+needed, and set `"verification_status": "needs_verification"`. This field
+is a maintainer worklist. It is not shown on the site, in the API or in
+the dumps. One source is enough for a record. If you cannot find anything
+to cite, the record does not belong here yet.
 
 ### Accepted sources
 
@@ -219,6 +223,40 @@ against another source where you can.
 
 Foundry and company names belong in a typeface's `foundry` field, not in
 a person record.
+
+### Describing a source
+
+Each `sources[]` entry needs `url` and `title`. These optional fields
+describe the source further:
+
+- `type`: one of `book`, `book chapter`, `journal article`, `thesis`,
+  `conference paper`, `newspaper or magazine`, `interview`,
+  `type specimen`, `foundry or publisher page`, `font catalogue`,
+  `designer website`, `archive or museum record`, `standards document`,
+  `reference website`, `government document`, `community publication`,
+  `audio or video`, `software repository`, `other`.
+- `language`: the source's language as a BCP 47 tag, e.g. `en`, `or`,
+  `sat`, `hi`, `ar`. The site shows the language next to non-English
+  sources.
+- `date`, `publisher`, `archive_url` (an archived copy, e.g. on
+  web.archive.org).
+
+```json
+{ "url": "https://www.omniglot.com/writing/cherokee.htm", "title": "Cherokee language and alphabet", "type": "reference website", "language": "en", "publisher": "Omniglot" }
+```
+
+These fields describe a source. They do not rate it.
+
+### Other optional fields
+
+- `name.native`: the name written in its own script, as found in a
+  source: `{ "value": "ᏍᏏᏉᏯ", "script": "Cherokee", "language": "chr" }`.
+- Typefaces: `languages` (`{ "name": "Santali", "code": "sat" }`, ISO
+  639-3), `related_typefaces` (`{ "id": "rtd-t-000012", "relation":
+  "digitisation_of" }`, relation one of `revival_of`, `digitisation_of`,
+  `adaptation_of`, `companion_to`), `commissioned_by` (`{ "name": "..." }`,
+  only when a source states it), and `era` as a list when a typeface
+  exists in more than one technology, e.g. `["metal", "digital"]`.
 
 ### No web link for a source
 
@@ -269,8 +307,8 @@ far more predictably than long ones with nested clauses):
 4. **Plain, simple sentence structure.** Short declarative sentences,
    minimal subordinate clauses, no idioms. Don't narrate your research
    process or sourcing confidence in the `bio` text itself (no
-   "independent corroboration has not been found" type language) - that
-   belongs in the verification flag, not the biography.
+   "independent corroboration has not been found" type language). The
+   record states facts; it does not comment on its sources.
 5. Trimming for length can mean dropping a secondary fact (a full script
    list, a co-designer's name, a location) in favor of the most notable
    one or two. That's expected, the full picture belongs in `sources`,
@@ -327,7 +365,7 @@ linked from the record's own page next to the existing "JSON" link.
 
 ## Schema versioning
 
-`schema/VERSION` is the schema's own semantic version (currently 1.0.0),
+`schema/VERSION` is the schema's own semantic version (currently 1.1.0),
 shown in the site footer. It's separate from `package.json`'s version,
 which tracks the site/tooling, not the data shape. Bump it when you
 change `schema/*.schema.json`:

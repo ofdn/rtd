@@ -11,11 +11,11 @@
   "scripts": ["Hanifi Rohingya"],
   "bio": "Created the Hanifi Rohingya script with colleagues in the 1980s to write Rohingya. He was a teacher and scholar.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/hanifi.htm", "title": "Hanifi Rohingya alphabet" },
-    { "url": "https://www.omniglot.com/writing/rohingya.htm", "title": "Rohingya alphabets and language" }
+    { "url": "https://www.omniglot.com/writing/hanifi.htm", "title": "Hanifi Rohingya alphabet", "type": "reference website", "language": "en", "publisher": "Omniglot" },
+    { "url": "https://www.omniglot.com/writing/rohingya.htm", "title": "Rohingya alphabets and language", "type": "reference website", "language": "en", "publisher": "Omniglot" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-06"
+  "updated_at": "2026-10-07"
 }

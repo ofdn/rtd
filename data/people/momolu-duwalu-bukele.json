@@ -10,11 +10,10 @@
   "scripts": ["Vai"],
   "bio": "Created the Vai syllabary for the Vai language of Liberia and Sierra Leone. Philologist S. W. Koelle met him in 1854 while researching the language.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/vaisyllabary.htm", "title": "Vai Syllabary" }
+    { "url": "https://www.omniglot.com/writing/vaisyllabary.htm", "title": "Vai Syllabary", "type": "reference website", "language": "en", "publisher": "Omniglot" }
   ],
-  "verification_status": "needs_verification",
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-06"
+  "updated_at": "2026-10-07"
 }

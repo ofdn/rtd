@@ -4,17 +4,19 @@
   "slug": "osman-yusuf-kenadid",
   "name": {
     "preferred": "Osman Yusuf Kenadid",
-    "alternates": ["Cusmaan Yuusuf Keenadiid"]
+    "alternates": ["Cusmaan Yuusuf Keenadiid"],
+    "native": [
+      { "value": "عثمان يوسف", "script": "Arabic" }
+    ]
   },
   "roles": ["script inventor"],
   "scripts": ["Osmanya"],
   "bio": "Created the Osmanya alphabet for Somali between 1920 and 1922.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/osmanya.htm", "title": "Osmanya alphabet" }
+    { "url": "https://www.omniglot.com/writing/osmanya.htm", "title": "Osmanya alphabet", "type": "reference website", "language": "en", "publisher": "Omniglot" }
   ],
-  "verification_status": "needs_verification",
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-06"
+  "updated_at": "2026-10-07"
 }

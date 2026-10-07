@@ -10,11 +10,11 @@
   "scripts": ["Masaram Gondi"],
   "bio": "Created the Masaram Gondi script in 1918 to write Gondi. He was from Kochewada in Balaghat district, Madhya Pradesh.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/masaramgondi.htm", "title": "Masaram Gondi Script" },
-    { "url": "https://www.omniglot.com/writing/gondi.htm", "title": "Gondi languages and alphabets" }
+    { "url": "https://www.omniglot.com/writing/masaramgondi.htm", "title": "Masaram Gondi Script", "type": "reference website", "language": "en", "publisher": "Omniglot" },
+    { "url": "https://www.omniglot.com/writing/gondi.htm", "title": "Gondi languages and alphabets", "type": "reference website", "language": "en", "publisher": "Omniglot" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-06"
+  "updated_at": "2026-10-07"
 }

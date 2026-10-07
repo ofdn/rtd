@@ -41,6 +41,20 @@
           "type": "array",
           "items": { "type": "string", "minLength": 1 },
           "default": []
+        },
+        "native": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["value", "script"],
+            "properties": {
+              "value": { "type": "string", "minLength": 1 },
+              "script": { "type": "string", "minLength": 1 },
+              "language": { "type": "string", "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$" }
+            }
+          },
+          "description": "The name written in its own script(s), as found in a source."
         }
       }
     },
@@ -61,17 +75,18 @@
     "attribution": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["unknown", "note"],
+      "required": ["note"],
       "properties": {
-        "unknown": {
-          "type": "boolean",
-          "const": true,
-          "description": "Always true when present. Set only when designers is empty - anonymous type, foundry-attributed only, or lost to history."
+        "unknown": { "type": "boolean", "const": true, "description": "Older form of status: unknown. Still accepted." },
+        "status": {
+          "type": "string",
+          "enum": ["unknown", "anonymous", "collective", "foundry-only", "lost"],
+          "description": "Why no individual is credited: unknown, anonymous (deliberately uncredited), collective (made by a group or community), foundry-only (credited to the organisation), lost (records did not survive)."
         },
         "note": {
           "type": "string",
           "minLength": 1,
-          "description": "Why no individual designer is credited, e.g. \"Anonymous, foundry-attributed only\" or \"No individual designer documented; credited to the foundry's in-house team\"."
+          "description": "Plain description of the attribution, e.g. \"Credited to the foundry's in-house team\"."
         }
       },
       "description": "Only set when designers is empty. Never set alongside a non-empty designers[] - enforced by scripts/validate.js."
@@ -98,8 +113,50 @@
       "default": []
     },
     "era": {
-      "type": "string",
-      "enum": ["digital", "metal", "phototype", "wood", "other"]
+      "oneOf": [
+        { "type": "string", "enum": ["digital", "metal", "phototype", "wood", "other"] },
+        { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "enum": ["digital", "metal", "phototype", "wood", "other"] } }
+      ],
+      "description": "Production technology. A list when the typeface exists in more than one, e.g. [\"metal\", \"digital\"]."
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "code": { "type": "string", "pattern": "^[a-z]{3}$", "description": "ISO 639-3 code." }
+        }
+      },
+      "description": "Languages the typeface was made for or documented as supporting, as stated in a source. Separate from scripts."
+    },
+    "related_typefaces": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "relation"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^rtd-t-[0-9]{6}$" },
+          "relation": { "type": "string", "enum": ["revival_of", "digitisation_of", "adaptation_of", "companion_to"] }
+        }
+      },
+      "description": "This typeface's relation to another RTD typeface, e.g. {\"id\": \"rtd-t-000012\", \"relation\": \"digitisation_of\"}."
+    },
+    "commissioned_by": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "url": { "type": "string", "format": "uri" }
+        }
+      },
+      "description": "Organisation(s) or person(s) that commissioned the typeface, only when a source states it."
     },
     "unicode_compliant": {
       "type": "boolean",
@@ -130,7 +187,20 @@
         "required": ["url", "title"],
         "properties": {
           "url": { "type": "string", "format": "uri" },
-          "title": { "type": "string", "minLength": 1 }
+          "title": { "type": "string", "minLength": 1 },
+          "type": {
+            "type": "string",
+            "enum": ["book", "book chapter", "journal article", "thesis", "conference paper", "newspaper or magazine", "interview", "type specimen", "foundry or publisher page", "font catalogue", "designer website", "archive or museum record", "standards document", "reference website", "government document", "community publication", "audio or video", "software repository", "other"],
+            "description": "What kind of document this is. Descriptive only."
+          },
+          "language": {
+            "type": "string",
+            "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$",
+            "description": "Language of the source, as a BCP 47 tag (e.g. en, or, sat, hi, ar)."
+          },
+          "date": { "type": "string", "description": "Publication date as given by the source (YYYY, YYYY-MM or YYYY-MM-DD)." },
+          "publisher": { "type": "string", "minLength": 1 },
+          "archive_url": { "type": "string", "format": "uri", "description": "An archived copy of url, e.g. on web.archive.org." }
         }
       },
       "description": "Independent, verifiable sources. Must never be Wikidata, Wikipedia, or any Wikimedia project, enforced by scripts/validate.js."

@@ -558,11 +558,6 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
 `;
 }
 
-export function verificationNote(record) {
-  if (record.verification_status !== "needs_verification") return "";
-  return `<aside class="callout"><strong>NOTE</strong><p>Add more verified sources if you have to improve this record.</p></aside>`;
-}
-
 // Resolves external_ids into {label, url} pairs, one per authority file
 // that's actually present on the record. Single source of truth for both
 // the visible "Identifiers" list on each page and the JSON-LD sameAs
@@ -661,10 +656,41 @@ export function scriptBadges(scripts) {
     .join("\n");
 }
 
+const languageNames = new Intl.DisplayNames(["en"], { type: "language" });
+
+function languageLabel(tag) {
+  try {
+    return languageNames.of(tag) ?? tag;
+  } catch {
+    return tag;
+  }
+}
+
+// Preferred-name alternates plus any own-script names, for search,
+// JSON-LD alternateName and authority-record cross-references.
+export function allNames(name) {
+  return [...(name?.alternates ?? []), ...(name?.native ?? []).map((n) => n.value)];
+}
+
+export function nativeNamesFact(name) {
+  if (!name?.native?.length) return "";
+  const items = name.native
+    .map((n) => `<span${n.language ? ` lang="${escapeHtml(n.language)}"` : ""}>${escapeHtml(n.value)}</span> <span class="role">${escapeHtml(n.script)}</span>`)
+    .join("<br>");
+  return `<dt>Also written</dt><dd>${items}</dd>`;
+}
+
+export function eraLabel(era) {
+  return Array.isArray(era) ? era.join(", ") : era;
+}
+
 export function sourcesList(sources) {
   if (!sources || sources.length === 0) return "";
   const items = sources
-    .map((s) => `<li>${linkTag(s.url, escapeHtml(s.title))}</li>`)
+    .map((s) => {
+      const lang = s.language && !s.language.startsWith("en") ? ` <span class="role">${escapeHtml(languageLabel(s.language))}</span>` : "";
+      return `<li>${linkTag(s.url, escapeHtml(s.title))}${lang}</li>`;
+    })
     .join("\n");
   return `<h2>Sources</h2>\n<ul class="plain-list">\n${items}\n</ul>`;
 }

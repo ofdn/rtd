@@ -42,6 +42,20 @@
           "type": "array",
           "items": { "type": "string", "minLength": 1 },
           "default": []
+        },
+        "native": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["value", "script"],
+            "properties": {
+              "value": { "type": "string", "minLength": 1 },
+              "script": { "type": "string", "minLength": 1 },
+              "language": { "type": "string", "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$" }
+            }
+          },
+          "description": "The name written in its own script(s), as found in a source."
         }
       }
     },
@@ -153,7 +167,20 @@
         "required": ["url", "title"],
         "properties": {
           "url": { "type": "string", "format": "uri" },
-          "title": { "type": "string", "minLength": 1 }
+          "title": { "type": "string", "minLength": 1 },
+          "type": {
+            "type": "string",
+            "enum": ["book", "book chapter", "journal article", "thesis", "conference paper", "newspaper or magazine", "interview", "type specimen", "foundry or publisher page", "font catalogue", "designer website", "archive or museum record", "standards document", "reference website", "government document", "community publication", "audio or video", "software repository", "other"],
+            "description": "What kind of document this is. Descriptive only."
+          },
+          "language": {
+            "type": "string",
+            "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$",
+            "description": "Language of the source, as a BCP 47 tag (e.g. en, or, sat, hi, ar)."
+          },
+          "date": { "type": "string", "description": "Publication date as given by the source (YYYY, YYYY-MM or YYYY-MM-DD)." },
+          "publisher": { "type": "string", "minLength": 1 },
+          "archive_url": { "type": "string", "format": "uri", "description": "An archived copy of url, e.g. on web.archive.org." }
         }
       },
       "description": "Independent, verifiable sources. Must never be Wikidata, Wikipedia, or any Wikimedia project, enforced by scripts/validate.js."

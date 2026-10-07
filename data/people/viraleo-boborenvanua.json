@@ -11,11 +11,10 @@
   "scripts": ["Avoiuli"],
   "bio": "Devised the Avoiuli script for Raga and other languages of Vanuatu over 14 years from the 1990s, basing its forms on traditional sand drawings.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/avoiuli.htm", "title": "Avoiuli Script" }
+    { "url": "https://www.omniglot.com/writing/avoiuli.htm", "title": "Avoiuli Script", "type": "reference website", "language": "en", "publisher": "Omniglot" }
   ],
-  "verification_status": "needs_verification",
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-06"
+  "updated_at": "2026-10-07"
 }

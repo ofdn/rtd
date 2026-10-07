@@ -49,7 +49,7 @@ export function buildPersonMarc(record, { canonicalUrl, arkUrl }) {
       record.external_ids?.[key] ? datafield("024", "7", " ", [["a", record.external_ids[key]], ["2", code]]) : ""
     ),
     datafield("100", "1", " ", [["a", name], ["d", dates]]),
-    ...(record.name.alternates ?? []).map((alt) => datafield("400", "1", " ", [["a", alt]])),
+    ...[...(record.name.alternates ?? []), ...(record.name.native ?? []).map((n) => n.value)].map((alt) => datafield("400", "1", " ", [["a", alt]])),
     record.countries?.length ? datafield("370", " ", " ", [["c", record.countries.join(", ")]]) : "",
     datafield("372", " ", " ", [["a", "Type design"]]),
     record.roles?.length ? datafield("374", " ", " ", [["a", record.roles.join(", ")]]) : "",

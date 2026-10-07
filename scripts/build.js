@@ -24,7 +24,7 @@ import { renderHomePage } from "../site-templates/home.js";
 import { renderInfoPage } from "../site-templates/info.js";
 import { renderScriptPage, renderScriptsIndexPage } from "../site-templates/script.js";
 import { renderContributorsPage } from "../site-templates/contributors.js";
-import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion, escapeHtml, linkTag, canonicalScriptName, scriptSlug } from "../site-templates/shared.js";
+import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion, escapeHtml, linkTag, allNames, eraLabel, canonicalScriptName, scriptSlug } from "../site-templates/shared.js";
 import { buildPersonDc, buildTypefaceDc } from "./lib/dublin-core.js";
 import { buildPersonMarc } from "./lib/marc-authority.js";
 
@@ -45,7 +45,12 @@ function listRecords(dir) {
   if (!existsSync(dir)) return [];
   return readdirSync(dir)
     .filter((f) => f.endsWith(".json"))
-    .map((f) => loadJson(join(dir, f)));
+    .map((f) => {
+      // verification_status is a maintainer worklist field, kept out of
+      // every published page, API record and dump.
+      const { verification_status, ...record } = loadJson(join(dir, f));
+      return record;
+    });
 }
 
 function writeFile(outDir, relPath, content) {
@@ -365,7 +370,7 @@ function build(dataDir, outDir) {
       slug: record.slug,
       name: record.name.preferred,
       sort_name: record.sort_name ?? record.name.preferred,
-      alternates: record.name.alternates ?? [],
+      alternates: allNames(record.name),
       record_status: record.record_status,
       api_url: apiUrl,
       canonical_url: canonicalUrl,
@@ -401,6 +406,10 @@ function build(dataDir, outDir) {
         canonicalUrl,
         designers,
         related: relatedTypefaces(record),
+        relations: (record.related_typefaces ?? [])
+          .map((rel) => ({ rel, t: typefaceById.get(rel.id) }))
+          .filter(({ t }) => t)
+          .map(({ rel, t }) => ({ relation: rel.relation, name: t.name.preferred, slug: t.slug })),
         schemaVersion,
         arkUrl,
       });
@@ -446,7 +455,7 @@ function build(dataDir, outDir) {
       id: record.id,
       slug: record.slug,
       name: record.name.preferred,
-      alternates: record.name.alternates ?? [],
+      alternates: allNames(record.name),
       record_status: record.record_status,
       api_url: apiUrl,
       canonical_url: canonicalUrl,
@@ -577,7 +586,7 @@ function build(dataDir, outDir) {
     id: r.id,
     slug: r.slug,
     preferred_name: r.name.preferred,
-    alternates: r.name.alternates ?? [],
+    alternates: allNames(r.name),
     sort_name: r.sort_name ?? "",
     birth_year: r.birth_year ?? "",
     death_year: r.death_year ?? "",
@@ -606,7 +615,7 @@ function build(dataDir, outDir) {
     id: r.id,
     slug: r.slug,
     preferred_name: r.name.preferred,
-    alternates: r.name.alternates ?? [],
+    alternates: allNames(r.name),
     designers: (r.designers ?? []).map(
       (d) => `${personById.get(d.id)?.name?.preferred ?? d.id} (${d.role})`
     ),
@@ -614,7 +623,7 @@ function build(dataDir, outDir) {
     design_year: r.design_year ?? "",
     release_year: r.release_year ?? "",
     classification: r.classification ?? "",
-    era: r.era ?? "",
+    era: eraLabel(r.era ?? ""),
     wikidata_qid: r.external_ids?.wikidata_qid ?? "",
     record_status: r.record_status,
     superseded_by: r.superseded_by ?? "",

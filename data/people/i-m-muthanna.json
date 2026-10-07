@@ -11,11 +11,11 @@
   "scripts": ["Kodava"],
   "bio": "Developed the Kodava Lipi in 1970 to write Kodava. He was a writer, scholar and translator from Kodagu, Karnataka.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/kodavalipi.htm", "title": "Kodava Lipi" },
-    { "url": "https://www.omniglot.com/writing/kodava.htm", "title": "Kodava language and alphabet" }
+    { "url": "https://www.omniglot.com/writing/kodavalipi.htm", "title": "Kodava Lipi", "type": "reference website", "language": "en", "publisher": "Omniglot" },
+    { "url": "https://www.omniglot.com/writing/kodava.htm", "title": "Kodava language and alphabet", "type": "reference website", "language": "en", "publisher": "Omniglot" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-06"
+  "updated_at": "2026-10-07"
 }

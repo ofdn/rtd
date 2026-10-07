@@ -1,4 +1,4 @@
-import { escapeHtml, pageShell, sourcesList, verificationNote, sameAsUris, identifiersList, nationalityLabel, copyableId, arkPermalink, citationBlock, printButton, scriptBadges } from "./shared.js";
+import { allNames, nativeNamesFact, escapeHtml, pageShell, sourcesList, sameAsUris, identifiersList, nationalityLabel, copyableId, arkPermalink, citationBlock, printButton, scriptBadges } from "./shared.js";
 
 // `works` is the computed reverse index (typefaces this person is credited
 // on), passed in by build.js, it is never stored on the person record
@@ -9,9 +9,7 @@ export function renderPersonPage(record, { canonicalUrl, works, demonyms, relate
     "@type": "Person",
     identifier: record.id,
     name: record.name.preferred,
-    alternateName: record.name.alternates?.length
-      ? record.name.alternates
-      : undefined,
+    alternateName: allNames(record.name).length ? allNames(record.name) : undefined,
     birthDate: record.birth_year || undefined,
     deathDate: record.death_year || undefined,
     nationality: record.countries?.length ? record.countries : undefined,
@@ -49,8 +47,8 @@ ${copyableId(record.id)}
 ${printButton()}
 </div>
 ${arkPermalink(arkUrl)}
-${verificationNote(record)}
 <dl class="facts">
+${nativeNamesFact(record.name)}
 ${record.roles?.length ? `<dt>Roles</dt><dd>${escapeHtml(record.roles.join(", "))}</dd>` : ""}
 ${record.birth_year || record.death_year ? `<dt>Dates</dt><dd>${escapeHtml(record.birth_year ?? "?")} – ${escapeHtml(record.death_year ?? "")}</dd>` : ""}
 ${record.countries?.length ? `<dt>Nationality</dt><dd>${escapeHtml(nationalityLabel(record.countries, demonyms))}</dd>` : ""}

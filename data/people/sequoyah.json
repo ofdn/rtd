@@ -4,17 +4,21 @@
   "slug": "sequoyah",
   "name": {
     "preferred": "Sequoyah",
-    "alternates": ["George Guess", "George Gist"]
+    "alternates": ["George Guess", "George Gist"],
+    "native": [
+      { "value": "ᏍᏏᏉᏯ", "script": "Cherokee", "language": "chr" },
+      { "value": "ᏎᏉᏯ", "script": "Cherokee", "language": "chr" }
+    ]
   },
   "roles": ["script inventor"],
   "scripts": ["Cherokee"],
   "bio": "Created the Cherokee syllabary in the early 19th century. His original letters were later modified to make them easier to print.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/cherokee.htm", "title": "Cherokee language and alphabet" },
-    { "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-20/", "title": "The Unicode Standard, Version 17.0, Chapter 20" }
+    { "url": "https://www.omniglot.com/writing/cherokee.htm", "title": "Cherokee language and alphabet", "type": "reference website", "language": "en", "publisher": "Omniglot" },
+    { "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-20/", "title": "The Unicode Standard, Version 17.0, Chapter 20", "type": "standards document", "language": "en", "publisher": "Unicode Consortium", "date": "2025-09" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-06"
+  "updated_at": "2026-10-07"
 }

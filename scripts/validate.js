@@ -143,6 +143,16 @@ export function validateRoot(rootDir) {
     }
   }
 
+  // related_typefaces must point at known typeface ids, never at itself.
+  const typefaceIds = new Set(typefaces.map(({ record }) => record.id));
+  for (const { file, record } of typefaces) {
+    for (const rel of record.related_typefaces ?? []) {
+      if (!typefaceIds.has(rel.id) || rel.id === record.id) {
+        errors.push(`${file}: related_typefaces references unknown or self id "${rel.id}"`);
+      }
+    }
+  }
+
   // designers/attribution are mutually exclusive: an empty designers[]
   // (no individual can be named - anonymous, foundry-only, lost to
   // history) must say why via attribution, and attribution only makes
@@ -154,6 +164,9 @@ export function validateRoot(rootDir) {
       errors.push(
         `${file}: designers is empty but no attribution explaining why (anonymous, foundry-only, lost to history, etc.), see CONTRIBUTING.md`
       );
+    }
+    if (record.attribution && !record.attribution.unknown && !record.attribution.status) {
+      errors.push(`${file}: attribution needs a status (or the older unknown: true)`);
     }
     if (hasDesigners && record.attribution) {
       errors.push(

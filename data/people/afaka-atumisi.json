@@ -10,11 +10,10 @@
   "scripts": ["Afaka"],
   "bio": "Invented the Afaka syllabary for the Ndyuka language of eastern Suriname in 1908.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/afaka.htm", "title": "Afaka (Ndyuka) Syllabary" }
+    { "url": "https://www.omniglot.com/writing/afaka.htm", "title": "Afaka (Ndyuka) Syllabary", "type": "reference website", "language": "en", "publisher": "Omniglot" }
   ],
-  "verification_status": "needs_verification",
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-06"
+  "updated_at": "2026-10-07"
 }

@@ -11,11 +11,11 @@
   "scripts": ["Pahawh Hmong"],
   "bio": "Invented the Pahawh Hmong script in 1959 while farming in northern Laos. The script travelled with Hmong refugees to Thailand and later further abroad.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/pahawhhmong.htm", "title": "Pahawh Hmong alphabet and pronunciation" },
-    { "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-16/", "title": "The Unicode Standard, Version 17.0, Chapter 16" }
+    { "url": "https://www.omniglot.com/writing/pahawhhmong.htm", "title": "Pahawh Hmong alphabet and pronunciation", "type": "reference website", "language": "en", "publisher": "Omniglot" },
+    { "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-16/", "title": "The Unicode Standard, Version 17.0, Chapter 16", "type": "standards document", "language": "en", "publisher": "Unicode Consortium", "date": "2025-09" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-06"
+  "updated_at": "2026-10-07"
 }

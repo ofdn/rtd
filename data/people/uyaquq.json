@@ -12,11 +12,11 @@
   "scripts": ["Yugtun"],
   "bio": "Devised the Yugtun script for Central Yup'ik around 1900, starting with a pictographic script and later developing a syllabic one.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/yugtun.htm", "title": "Yugtun script" },
-    { "url": "https://www.omniglot.com/writing/yupik.htm", "title": "Central Alaskan Yup'ik language and alphabet" }
+    { "url": "https://www.omniglot.com/writing/yugtun.htm", "title": "Yugtun script", "type": "reference website", "language": "en", "publisher": "Omniglot" },
+    { "url": "https://www.omniglot.com/writing/yupik.htm", "title": "Central Alaskan Yup'ik language and alphabet", "type": "reference website", "language": "en", "publisher": "Omniglot" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-06"
+  "updated_at": "2026-10-07"
 }
