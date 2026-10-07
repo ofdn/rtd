@@ -131,7 +131,7 @@ ${SEARCH_ICON}
     "ho": "Warang Citi",
     "punjabi": "Gurmukhi",
     "oriya": "Odia",
-    "bangla": "Bengali"
+    "bengali": "Bangla"
   };
   function scriptSearchMatch(query, scripts) {
     if (!scripts || !scripts.length) return false;

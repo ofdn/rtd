@@ -24,7 +24,7 @@ import { renderHomePage } from "../site-templates/home.js";
 import { renderInfoPage } from "../site-templates/info.js";
 import { renderScriptPage, renderScriptsIndexPage } from "../site-templates/script.js";
 import { renderContributorsPage } from "../site-templates/contributors.js";
-import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion, escapeHtml, linkTag, allNames, eraLabel, canonicalScriptName, scriptSlug } from "../site-templates/shared.js";
+import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion, escapeHtml, linkTag, allNames, eraLabel, scriptLabel, canonicalScriptName, scriptSlug } from "../site-templates/shared.js";
 import { buildPersonDc, buildTypefaceDc } from "./lib/dublin-core.js";
 import { buildPersonMarc } from "./lib/marc-authority.js";
 
@@ -273,7 +273,7 @@ function build(dataDir, outDir) {
   function registerScript(script, kind, entry) {
     const slug = scriptSlug(script);
     if (!scriptsIndex.has(slug)) {
-      scriptsIndex.set(slug, { slug, name: canonicalScriptName(script), typefaces: [], people: [] });
+      scriptsIndex.set(slug, { slug, name: scriptLabel(script), typefaces: [], people: [] });
     }
     scriptsIndex.get(slug)[kind].push(entry);
   }
@@ -500,6 +500,15 @@ function build(dataDir, outDir) {
         people: entry.people,
         schemaVersion,
       })
+    );
+  }
+  // Script pages renamed to the community's own name keep their old URL.
+  for (const [oldSlug, newSlug] of [["bengali", "bangla"]]) {
+    if (!scriptsIndex.has(newSlug)) continue;
+    writeFile(
+      outDir,
+      `scripts/${oldSlug}/index.html`,
+      renderRedirectPage({ name: scriptsIndex.get(newSlug).name, targetUrl: `${SITE_URL}scripts/${newSlug}/` })
     );
   }
 

@@ -11,7 +11,7 @@
   "foundry": [
     { "name": "Indian Type Foundry", "url": "https://www.indiantypefoundry.com" }
   ],
-  "scripts": ["Bengali", "Latin"],
+  "scripts": ["Bangla", "Latin"],
   "era": "digital",
   "description": "A Bengali and Latin typeface family developed at the Indian Type Foundry.",
   "sources": [
@@ -20,5 +20,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-10-07"
 }

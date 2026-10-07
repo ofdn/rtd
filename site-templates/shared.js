@@ -391,7 +391,7 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
     "ho": "Warang Citi",
     "punjabi": "Gurmukhi",
     "oriya": "Odia",
-    "bangla": "Bengali"
+    "bengali": "Bangla"
   };
   function scriptSearchMatch(query, scripts) {
     if (!scripts || !scripts.length) return false;
@@ -628,8 +628,19 @@ export function nationalityLabel(countries, demonymsData) {
 // recorded across different entries into one canonical display name, so
 // they land on the same /scripts/<slug>/ tag page instead of splitting
 // into near-duplicate tags.
+// Script names are the bare name the script's own community uses
+// ("Bangla", "Latin"), with the Unicode name in brackets where it differs.
+const SCRIPT_NAME_ALIASES = { Bengali: "Bangla" };
+const SCRIPT_UNICODE_NAMES = { Bangla: "Bengali" };
+
 export function canonicalScriptName(script) {
-  return script.replace(/\s+(script|alphabet)$/i, "").trim();
+  const name = script.replace(/\s+(script|alphabet)$/i, "").trim();
+  return SCRIPT_NAME_ALIASES[name] ?? name;
+}
+
+export function scriptLabel(script) {
+  const name = canonicalScriptName(script);
+  return SCRIPT_UNICODE_NAMES[name] ? `${name} (${SCRIPT_UNICODE_NAMES[name]})` : name;
 }
 
 export function scriptSlug(script) {
@@ -651,7 +662,7 @@ export function scriptBadges(scripts) {
   if (!scripts || scripts.length === 0) return "";
   return scripts
     .map((s) =>
-      linkTag(`../../scripts/${scriptSlug(s)}/`, escapeHtml(canonicalScriptName(s)), 'class="script-badge"')
+      linkTag(`../../scripts/${scriptSlug(s)}/`, escapeHtml(scriptLabel(s)), 'class="script-badge"')
     )
     .join("\n");
 }

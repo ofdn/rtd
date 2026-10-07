@@ -5,7 +5,7 @@
   "name": { "preferred": "Kohinoor", "alternates": [] },
   "designers": [{ "id": "rtd-p-000045", "role": "designer" }],
   "foundry": [{ "name": "Indian Type Foundry" }],
-  "scripts": ["Devanagari", "Bengali", "Telugu"],
+  "scripts": ["Devanagari", "Bangla", "Telugu"],
   "era": "digital",
   "description": "A multiscript typeface family for Devanagari, Bengali, and Telugu, permanently exhibited at London's Design Museum since 2016 as part of Designer Maker User.",
   "sources": [
@@ -14,5 +14,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-10-07"
 }
