@@ -20,20 +20,26 @@
   "sources": [
     {
       "url": "https://www.meermanno.nl/matrices-of-the-zilverdistel-press",
-      "title": "Matrices of the Zilverdistel Press - Meermanno"
+      "title": "Matrices of the Zilverdistel Press - Meermanno",
+      "type": "archive or museum record",
+      "publisher": "Museum Meermanno"
     },
     {
       "url": "https://resources.huygens.knaw.nl/bwn1880-2000/lemmata/bwn2/royen",
-      "title": "Roijen, Jean François van (1878-1942) - Biografisch Woordenboek Nederland, Huygens Institute"
+      "title": "Roijen, Jean François van (1878-1942) - Biografisch Woordenboek Nederland, Huygens Institute",
+      "type": "reference website",
+      "publisher": "Huygens Institute"
     },
     {
       "url": "https://id.loc.gov/authorities/names/n50010996.html",
-      "title": "Pissarro, Lucien, 1863-1944 - LC Linked Data Service"
+      "title": "Pissarro, Lucien, 1863-1944 - LC Linked Data Service",
+      "type": "archive or museum record",
+      "publisher": "Library of Congress"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-10",
-  "updated_at": "2026-08-10",
+  "updated_at": "2026-10-08",
   "external_ids": { "wikidata_qid": "Q964608", "isni": "000000011472194X", "lc_naf": "n50010996", "viaf": "49320353", "gnd": "119220555", "worldcat_entity": "E39PBJbCKpmFdyJ8cdjVYbc3wC" }
 }

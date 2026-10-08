@@ -16,7 +16,9 @@
   "sources": [
     {
       "url": "https://www.linotype.com/162/birka-family.html",
-      "title": "www.linotype.com"
+      "title": "www.linotype.com",
+      "type": "foundry or publisher page",
+      "publisher": "Linotype"
     },
     {
       "url": "https://www.degruyterbrill.com/database/AKL/entry/_ad474c48-a919-4a63-9793-268bd4a774d1/html",
@@ -26,7 +28,7 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-18",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q12890",
     "viaf": "102750023",

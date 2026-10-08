@@ -16,16 +16,20 @@
   "sources": [
     {
       "url": "http://www.myfonts.com/person/downer/john",
-      "title": "www.myfonts.com"
+      "title": "www.myfonts.com",
+      "type": "font catalogue",
+      "publisher": "MyFonts"
     },
     {
       "url": "http://www.bitstream.com",
-      "title": "www.bitstream.com"
+      "title": "www.bitstream.com",
+      "type": "foundry or publisher page",
+      "publisher": "Bitstream"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-10-08",
   "verification_status": "needs_verification"
 }

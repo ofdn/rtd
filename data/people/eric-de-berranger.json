@@ -11,7 +11,9 @@
   "sources": [
     {
       "url": "https://luc.devroye.org/fonts-25515.html",
-      "title": "Éric de Berranger"
+      "title": "Éric de Berranger",
+      "type": "reference website",
+      "publisher": "Luc Devroye"
     },
     {
       "url": "https://typography.guru/list-entries/brusseline-r276/",
@@ -32,5 +34,5 @@
   ],
   "verification_status": "needs_verification",
   "created_at": "2026-08-22",
-  "updated_at": "2026-08-22"
+  "updated_at": "2026-10-08"
 }

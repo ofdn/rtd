@@ -16,16 +16,20 @@
   "sources": [
     {
       "url": "https://typodermicfonts.com/built-for-headlines/",
-      "title": "typodermicfonts.com"
+      "title": "typodermicfonts.com",
+      "type": "foundry or publisher page",
+      "publisher": "Typodermic Fonts"
     },
     {
       "url": "https://www.myfonts.com/collections/built-font-typodermic",
-      "title": "www.myfonts.com"
+      "title": "www.myfonts.com",
+      "type": "font catalogue",
+      "publisher": "MyFonts"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-10-08",
   "verification_status": "needs_verification"
 }

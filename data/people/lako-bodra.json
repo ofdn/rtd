@@ -20,7 +20,9 @@
   "sources": [
     {
       "url": "https://www.omniglot.com/writing/varangkshiti.htm",
-      "title": "Warang Citi alphabet - Omniglot"
+      "title": "Warang Citi alphabet - Omniglot",
+      "type": "reference website",
+      "publisher": "Omniglot"
     },
     {
       "url": "http://warangchiti.blogspot.com/2019/09/100th-birth-anniversary-of-ot-guru-kol.html",
@@ -32,13 +34,15 @@
     },
     {
       "url": "https://www.bhaskar.com/news/JHA-MAT-latest-chakradharpur-news-021503-460102-NOR.html",
-      "title": "Dainik Bhaskar, \"Ho Samaj ne Lako Bodra ki manai punyatithi\" (30 June 2016) — report on his 29 June 1986 death anniversary observance"
+      "title": "Dainik Bhaskar, \"Ho Samaj ne Lako Bodra ki manai punyatithi\" (30 June 2016) — report on his 29 June 1986 death anniversary observance",
+      "type": "newspaper or magazine",
+      "publisher": "Dainik Bhaskar"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-11",
-  "updated_at": "2026-08-18",
+  "updated_at": "2026-10-08",
   "death_year": "1986-06-29",
   "scripts": [
     "Warang Citi"

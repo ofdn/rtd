@@ -18,7 +18,9 @@
   "sources": [
     {
       "url": "https://museobodoniano.com/tipi/bauer-bodoni-en/",
-      "title": "Bauer Bodoni - Museo Bodoniano"
+      "title": "Bauer Bodoni - Museo Bodoniano",
+      "type": "archive or museum record",
+      "publisher": "Museo Bodoniano"
     },
     {
       "url": "http://modernism101.com/products-page/graphic-design/type-specimen-heinrich-jost-imre-reiner-designer-bauer-beton-new-york-bauer-type-foundry-c-1936/",
@@ -26,12 +28,14 @@
     },
     {
       "url": "https://id.loc.gov/authorities/names/n2018056518.html",
-      "title": "Jost, Heinrich, 1889-1948 - LC Linked Data Service"
+      "title": "Jost, Heinrich, 1889-1948 - LC Linked Data Service",
+      "type": "archive or museum record",
+      "publisher": "Library of Congress"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-10",
-  "updated_at": "2026-08-10",
+  "updated_at": "2026-10-08",
   "external_ids": { "wikidata_qid": "Q19935440", "isni": "0000000082757242", "gnd": "142063622", "viaf": "85399071", "lc_naf": "n2018056518", "worldcat_entity": "E39PBJtxkqmMVHKkDT8vycbrv3" }
 }

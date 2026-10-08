@@ -12,7 +12,9 @@
   "sources": [
     {
       "url": "https://www.type-together.com/athelas-font",
-      "title": "Athelas - TypeTogether"
+      "title": "Athelas - TypeTogether",
+      "type": "foundry or publisher page",
+      "publisher": "TypeTogether"
     },
     {
       "url": "https://atypi.org/about-atypi/history/",
@@ -20,7 +22,9 @@
     },
     {
       "url": "https://www.commarts.com/features/typetogether",
-      "title": "TypeTogether - Communication Arts"
+      "title": "TypeTogether - Communication Arts",
+      "type": "newspaper or magazine",
+      "publisher": "Communication Arts"
     },
     {
       "url": "https://openlibrary.org/isbn/9781592537020",
@@ -30,7 +34,7 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-18",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q28802638",
     "viaf": "251041081",

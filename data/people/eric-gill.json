@@ -14,19 +14,27 @@
   "sources": [
     {
       "url": "http://www.agfamonotype.com/html/designer/des_index.html",
-      "title": "www.agfamonotype.com"
+      "title": "www.agfamonotype.com",
+      "type": "foundry or publisher page",
+      "publisher": "Agfa Monotype"
     },
     {
       "url": "http://www.agfamonotype.com",
-      "title": "www.agfamonotype.com"
+      "title": "www.agfamonotype.com",
+      "type": "foundry or publisher page",
+      "publisher": "Agfa Monotype"
     },
     {
       "url": "http://www.monotypeimaging.com/ProductsServices/TypeDesignerShowcase",
-      "title": "www.monotypeimaging.com"
+      "title": "www.monotypeimaging.com",
+      "type": "foundry or publisher page",
+      "publisher": "Monotype Imaging"
     },
     {
       "url": "http://www.monotypeimaging.com",
-      "title": "www.monotypeimaging.com"
+      "title": "www.monotypeimaging.com",
+      "type": "foundry or publisher page",
+      "publisher": "Monotype Imaging"
     },
     {
       "url": "https://www.workwithdata.com/person/eric-gill-1882",
@@ -34,17 +42,21 @@
     },
     {
       "url": "https://d-nb.info/gnd/118694936",
-      "title": "GND / Integrated Authority File"
+      "title": "GND / Integrated Authority File",
+      "type": "archive or museum record",
+      "publisher": "Deutsche Nationalbibliothek"
     },
     {
       "url": "https://catalogue.bnf.fr/ark:/12148/cb120352046",
-      "title": "BnF authorities"
+      "title": "BnF authorities",
+      "type": "archive or museum record",
+      "publisher": "Bibliothèque nationale de France"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-18",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q551426",
     "viaf": "36934216",

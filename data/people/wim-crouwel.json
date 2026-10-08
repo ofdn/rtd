@@ -14,7 +14,9 @@
   "sources": [
     {
       "url": "https://www.dutchgraphicroots.nl/wim-crouwel-2/",
-      "title": "www.dutchgraphicroots.nl"
+      "title": "www.dutchgraphicroots.nl",
+      "type": "reference website",
+      "publisher": "Dutch Graphic Roots"
     },
     {
       "url": "https://hdl.handle.net/21.12141/id/people.30dd6a2b-f013-4211-9b3d-0e61128884e2",
@@ -22,7 +24,9 @@
     },
     {
       "url": "https://a-g-i.org/user/wimcrouwel/",
-      "title": "a-g-i.org"
+      "title": "a-g-i.org",
+      "type": "reference website",
+      "publisher": "Alliance Graphique Internationale"
     },
     {
       "url": "https://www.lastdodo.nl/nl/areas/108313",
@@ -34,7 +38,9 @@
     },
     {
       "url": "https://www.stedelijk.nl/nl/collectie/23481-wim-crouwel-compositie-b",
-      "title": "Compositie B"
+      "title": "Compositie B",
+      "type": "archive or museum record",
+      "publisher": "Stedelijk Museum Amsterdam"
     },
     {
       "url": "https://theaterencyclopedie.nl/wiki/Wim_Crouwel",
@@ -52,7 +58,7 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-12",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q555389",
     "viaf": "96546526",

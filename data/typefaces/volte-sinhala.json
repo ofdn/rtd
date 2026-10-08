@@ -15,10 +15,10 @@
   "era": "digital",
   "description": "A Sinhala-script typeface designed in-house at the Indian Type Foundry.",
   "sources": [
-    { "url": "https://www.myfonts.com/collections/volte-sinhala-font-indian-type-foundry", "title": "Volte Sinhala Font - MyFonts" }
+    { "url": "https://www.myfonts.com/collections/volte-sinhala-font-indian-type-foundry", "title": "Volte Sinhala Font - MyFonts", "type": "font catalogue", "publisher": "MyFonts" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-10-08"
 }

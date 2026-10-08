@@ -12,21 +12,27 @@
   "sources": [
     {
       "url": "http://www.bigelowandholmes.com",
-      "title": "www.bigelowandholmes.com"
+      "title": "www.bigelowandholmes.com",
+      "type": "foundry or publisher page",
+      "publisher": "Bigelow & Holmes"
     },
     {
       "url": "http://www.agfamonotype.com",
-      "title": "www.agfamonotype.com"
+      "title": "www.agfamonotype.com",
+      "type": "foundry or publisher page",
+      "publisher": "Agfa Monotype"
     },
     {
       "url": "https://d-nb.info/gnd/14361598X",
-      "title": "GND / Integrated Authority File"
+      "title": "GND / Integrated Authority File",
+      "type": "archive or museum record",
+      "publisher": "Deutsche Nationalbibliothek"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-18",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q331241",
     "viaf": "13810160",

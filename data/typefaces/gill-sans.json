@@ -16,24 +16,32 @@
   "sources": [
     {
       "url": "http://www.agfamonotype.com/html/designer/des_index.html",
-      "title": "www.agfamonotype.com"
+      "title": "www.agfamonotype.com",
+      "type": "foundry or publisher page",
+      "publisher": "Agfa Monotype"
     },
     {
       "url": "http://www.agfamonotype.com",
-      "title": "www.agfamonotype.com"
+      "title": "www.agfamonotype.com",
+      "type": "foundry or publisher page",
+      "publisher": "Agfa Monotype"
     },
     {
       "url": "http://www.monotypeimaging.com/ProductsServices/TypeDesignerShowcase",
-      "title": "www.monotypeimaging.com"
+      "title": "www.monotypeimaging.com",
+      "type": "foundry or publisher page",
+      "publisher": "Monotype Imaging"
     },
     {
       "url": "http://www.monotypeimaging.com",
-      "title": "www.monotypeimaging.com"
+      "title": "www.monotypeimaging.com",
+      "type": "foundry or publisher page",
+      "publisher": "Monotype Imaging"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-10-08",
   "verification_status": "needs_verification"
 }

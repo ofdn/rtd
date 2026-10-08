@@ -26,15 +26,19 @@
   "sources": [
     {
       "url": "https://ilovetypography.com/2008/02/14/typeface-review-arnhem/",
-      "title": "Typeface Review: Arnhem - I Love Typography"
+      "title": "Typeface Review: Arnhem - I Love Typography",
+      "type": "newspaper or magazine",
+      "publisher": "I Love Typography"
     },
     {
       "url": "https://eyemagazine.com/feature/article/reputations-fred-smeijers",
-      "title": "Reputations: Fred Smeijers - Eye Magazine"
+      "title": "Reputations: Fred Smeijers - Eye Magazine",
+      "type": "newspaper or magazine",
+      "publisher": "Eye"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-10",
-  "updated_at": "2026-08-10"
+  "updated_at": "2026-10-08"
 }

@@ -14,21 +14,27 @@
   "sources": [
     {
       "url": "https://www.babelstone.co.uk/",
-      "title": "www.babelstone.co.uk"
+      "title": "www.babelstone.co.uk",
+      "type": "reference website",
+      "publisher": "BabelStone"
     },
     {
       "url": "https://corp.unicode.org/pipermail/unicode/2025-July/011467.html",
-      "title": "Andrew C. West 1960-2025 - Unicode mailing list"
+      "title": "Andrew C. West 1960-2025 - Unicode mailing list",
+      "type": "standards document",
+      "publisher": "Unicode Consortium"
     },
     {
       "url": "https://id.loc.gov/authorities/nr93032921",
-      "title": "Library of Congress Authorities"
+      "title": "Library of Congress Authorities",
+      "type": "archive or museum record",
+      "publisher": "Library of Congress"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-18",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q4758888",
     "viaf": "56485211",

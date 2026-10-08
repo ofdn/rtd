@@ -27,15 +27,19 @@
   "sources": [
     {
       "url": "https://www.meermanno.nl/matrices-of-the-zilverdistel-press",
-      "title": "Matrices of the Zilverdistel Press - Meermanno"
+      "title": "Matrices of the Zilverdistel Press - Meermanno",
+      "type": "archive or museum record",
+      "publisher": "Museum Meermanno"
     },
     {
       "url": "https://resources.huygens.knaw.nl/bwn1880-2000/lemmata/bwn2/royen",
-      "title": "Roijen, Jean François van (1878-1942) - Biografisch Woordenboek Nederland, Huygens Institute"
+      "title": "Roijen, Jean François van (1878-1942) - Biografisch Woordenboek Nederland, Huygens Institute",
+      "type": "reference website",
+      "publisher": "Huygens Institute"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-10",
-  "updated_at": "2026-08-10"
+  "updated_at": "2026-10-08"
 }

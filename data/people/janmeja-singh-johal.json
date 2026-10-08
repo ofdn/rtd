@@ -10,11 +10,11 @@
   "bio": "Self-taught type designer known for an early body of free ASCII-encoded fonts covering Gurmukhi and other Indian scripts, produced from the mid-1990s into the 2000s. Also a Punjabi photographer.",
   "external_ids": { "wikidata_qid": "Q20607074" },
   "sources": [
-    { "url": "https://luc.devroye.org/punjabi.html", "title": "Punjabi/Gurmukhi fonts - Luc Devroye" },
-    { "url": "https://www.onlinewebfonts.com/fonts/jatt_janmeja", "title": "Jatt Janmeja - OnlineWebFonts" }
+    { "url": "https://luc.devroye.org/punjabi.html", "title": "Punjabi/Gurmukhi fonts - Luc Devroye", "type": "reference website", "publisher": "Luc Devroye" },
+    { "url": "https://www.onlinewebfonts.com/fonts/jatt_janmeja", "title": "Jatt Janmeja - OnlineWebFonts", "type": "font catalogue" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-10-08"
 }

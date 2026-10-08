@@ -16,11 +16,11 @@
   "description": "A multi-script display typeface by Suman Bhandary covering Bengali, Devanagari, and Odia, released as a Google Font and used in the opening titles of the Netflix film Mission Raniganj.",
   "external_ids": { "wikidata_qid": "Q123056277" },
   "sources": [
-    { "url": "https://fonts.google.com/specimen/Alkatra", "title": "Alkatra - Google Fonts" },
+    { "url": "https://fonts.google.com/specimen/Alkatra", "title": "Alkatra - Google Fonts", "type": "font catalogue", "publisher": "Google Fonts" },
     { "url": "https://thesunflower.com/75378/arts-and-culture/features/suman-bhandary-google-font-creator-to-assistant-educator/", "title": "Suman Bhandary: Google Font creator to assistant educator - The Sunflower" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-10-07"
+  "updated_at": "2026-10-08"
 }

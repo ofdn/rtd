@@ -15,7 +15,9 @@
   "sources": [
     {
       "url": "https://www.stedelijk.nl/nl/collectie/73477-josef-albers-paul-klee-dessau-xi-%2729",
-      "title": "Paul Klee, Dessau XI '29"
+      "title": "Paul Klee, Dessau XI '29",
+      "type": "archive or museum record",
+      "publisher": "Stedelijk Museum Amsterdam"
     },
     {
       "url": "https://www.workwithdata.com/person/josef-albers-1888",
@@ -27,17 +29,21 @@
     },
     {
       "url": "https://catalogue.bnf.fr/ark:/12148/cb121619326",
-      "title": "BnF authorities"
+      "title": "BnF authorities",
+      "type": "archive or museum record",
+      "publisher": "Bibliothèque nationale de France"
     },
     {
       "url": "https://rkd.nl/artists/895",
-      "title": "RKD Artists"
+      "title": "RKD Artists",
+      "type": "archive or museum record",
+      "publisher": "RKD"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-18",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q170071",
     "viaf": "12347231",

@@ -22,16 +22,20 @@
     },
     {
       "url": "https://fontsinuse.com/typefaces/890/american-uncial",
-      "title": "American Uncial in use - Fonts In Use"
+      "title": "American Uncial in use - Fonts In Use",
+      "type": "reference website",
+      "publisher": "Fonts In Use"
     },
     {
       "url": "https://id.loc.gov/authorities/names/n79027216.html",
-      "title": "Hammer, Victor, 1882-1967 - LC Linked Data Service"
+      "title": "Hammer, Victor, 1882-1967 - LC Linked Data Service",
+      "type": "archive or museum record",
+      "publisher": "Library of Congress"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-10",
-  "updated_at": "2026-08-10",
+  "updated_at": "2026-10-08",
   "external_ids": { "wikidata_qid": "Q1915570", "isni": "0000000078688651", "lc_naf": "n79027216", "gnd": "124315909", "viaf": "69858092", "worldcat_entity": "E39PBJwtrQwWY4bW8yXvg3yfMP" }
 }

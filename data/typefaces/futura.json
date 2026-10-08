@@ -20,12 +20,14 @@
   "sources": [
     {
       "url": "http://www.neufville.com",
-      "title": "www.neufville.com"
+      "title": "www.neufville.com",
+      "type": "foundry or publisher page",
+      "publisher": "Neufville Digital"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-10-08",
   "verification_status": "needs_verification"
 }

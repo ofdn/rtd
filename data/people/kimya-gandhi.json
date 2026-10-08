@@ -13,12 +13,12 @@
   "bio": "Designed the Devanagari component of Fit and the typeface Lini, awarded a Certificate of Excellence by the Type Directors Club. Mumbai-born, Berlin-based type designer; partner at Mota Italic.",
   "external_ids": { "wikidata_qid": "Q76425316" },
   "sources": [
-    { "url": "https://typenetwork.com/font-designers/kimya-gandhi", "title": "Kimya Gandhi - Type Network" },
-    { "url": "https://tdc.org/work/kimya-gandhi/", "title": "Kimya Gandhi - The Type Directors Club" },
-    { "url": "https://kimyagandhi.com/", "title": "Kimya Gandhi - personal website" }
+    { "url": "https://typenetwork.com/font-designers/kimya-gandhi", "title": "Kimya Gandhi - Type Network", "type": "font catalogue", "publisher": "Type Network" },
+    { "url": "https://tdc.org/work/kimya-gandhi/", "title": "Kimya Gandhi - The Type Directors Club", "type": "foundry or publisher page", "publisher": "Type Directors Club" },
+    { "url": "https://kimyagandhi.com/", "title": "Kimya Gandhi - personal website", "type": "designer website" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-07"
+  "updated_at": "2026-10-08"
 }

@@ -12,7 +12,9 @@
   "sources": [
     {
       "url": "http://www.jamra-patel.com",
-      "title": "www.jamra-patel.com"
+      "title": "www.jamra-patel.com",
+      "type": "foundry or publisher page",
+      "publisher": "Jamra Patel"
     },
     {
       "url": "http://www.google.com/get/noto/",
@@ -22,6 +24,6 @@
   "record_status": "deprecated",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-10-08",
   "verification_status": "needs_verification"
 }

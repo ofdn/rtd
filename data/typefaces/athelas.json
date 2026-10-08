@@ -20,11 +20,13 @@
   "sources": [
     {
       "url": "https://www.type-together.com/athelas-font",
-      "title": "Athelas - TypeTogether"
+      "title": "Athelas - TypeTogether",
+      "type": "foundry or publisher page",
+      "publisher": "TypeTogether"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-12"
+  "updated_at": "2026-10-08"
 }

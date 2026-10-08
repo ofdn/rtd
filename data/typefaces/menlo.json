@@ -16,7 +16,9 @@
   "sources": [
     {
       "url": "http://www.bitstream.com/font_rendering/products/dev_fonts/vera.html",
-      "title": "www.bitstream.com"
+      "title": "www.bitstream.com",
+      "type": "foundry or publisher page",
+      "publisher": "Bitstream"
     },
     {
       "url": "http://www.gnome.org/contact/",
@@ -26,6 +28,6 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-10-08",
   "verification_status": "needs_verification"
 }

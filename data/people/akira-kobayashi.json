@@ -12,21 +12,27 @@
   "sources": [
     {
       "url": "http://www.linotype.com/fontdesigners",
-      "title": "www.linotype.com"
+      "title": "www.linotype.com",
+      "type": "foundry or publisher page",
+      "publisher": "Linotype"
     },
     {
       "url": "http://www.linotype.com",
-      "title": "www.linotype.com"
+      "title": "www.linotype.com",
+      "type": "foundry or publisher page",
+      "publisher": "Linotype"
     },
     {
       "url": "https://lod.nl.go.kr/page/KAC201324528",
-      "title": "Korean Authority File"
+      "title": "Korean Authority File",
+      "type": "archive or museum record",
+      "publisher": "National Library of Korea"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-18",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q9130175",
     "viaf": "54574284",

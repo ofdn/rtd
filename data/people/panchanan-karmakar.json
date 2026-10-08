@@ -17,12 +17,12 @@
   "bio": "Punchcutter who created the first Bengali typeface in 1778 under Charles Wilkins, then the first Nagari (Devanagari) type in 1803 at the Serampore Mission Press, cutting type for 14 languages.",
   "external_ids": { "wikidata_qid": "Q23614810" },
   "sources": [
-    { "url": "https://en.banglapedia.org/index.php/Panchanan_Karmakar", "title": "Panchanan Karmakar - Banglapedia" },
+    { "url": "https://en.banglapedia.org/index.php/Panchanan_Karmakar", "title": "Panchanan Karmakar - Banglapedia", "type": "reference website", "publisher": "Banglapedia" },
     { "url": "https://fonts.atipra.in/panchanan.html", "title": "Panchanan, digital revival of the first Bengali typeface" },
     { "url": "https://typedrawers.com/discussion/5276/panchanan-a-project-for-digitalisation-of-first-bengali-typeface-created-by-panchanan-karmakar", "title": "Panchanan, digitalisation project - TypeDrawers" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-07"
+  "updated_at": "2026-10-08"
 }

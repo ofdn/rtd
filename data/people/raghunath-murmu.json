@@ -27,7 +27,9 @@
     },
     {
       "url": "https://scroll.in/article/811908/do-you-know-of-the-ol-chiki-script-it-could-be-santhals-and-indias-route-to-their-language",
-      "title": "Do you know of the Ol-Chiki script? It could be Santhals' - and India's - route to their language - Scroll.in"
+      "title": "Do you know of the Ol-Chiki script? It could be Santhals' - and India's - route to their language - Scroll.in",
+      "type": "newspaper or magazine",
+      "publisher": "Scroll.in"
     },
     {
       "url": "https://web.archive.org/web/20260411025410/https://wesanthals.tripod.com//id45.html",
@@ -37,7 +39,7 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-11",
-  "updated_at": "2026-08-12",
+  "updated_at": "2026-10-08",
   "scripts": [
     "Ol Chiki"
   ]

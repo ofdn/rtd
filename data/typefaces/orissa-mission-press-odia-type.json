@@ -15,10 +15,10 @@
   "era": "metal",
   "description": "The letterpress-era Odia typeface cut for the Orissa Mission Press, founded in Cuttack in 1838.",
   "sources": [
-    { "url": "https://github.com/ofdn/Chapakala", "title": "Chapakala: Revival Odia typeface family, GitHub" }
+    { "url": "https://github.com/ofdn/Chapakala", "title": "Chapakala: Revival Odia typeface family, GitHub", "type": "software repository" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-10-08"
 }

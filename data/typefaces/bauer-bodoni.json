@@ -26,15 +26,19 @@
   "sources": [
     {
       "url": "https://museobodoniano.com/tipi/bauer-bodoni-en/",
-      "title": "Bauer Bodoni - Museo Bodoniano"
+      "title": "Bauer Bodoni - Museo Bodoniano",
+      "type": "archive or museum record",
+      "publisher": "Museo Bodoniano"
     },
     {
       "url": "https://fontsinuse.com/typefaces/225/bauer-bodoni",
-      "title": "Bauer Bodoni in use - Fonts In Use"
+      "title": "Bauer Bodoni in use - Fonts In Use",
+      "type": "reference website",
+      "publisher": "Fonts In Use"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-10",
-  "updated_at": "2026-08-10"
+  "updated_at": "2026-10-08"
 }

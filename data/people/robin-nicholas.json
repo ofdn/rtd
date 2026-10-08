@@ -12,21 +12,27 @@
   "sources": [
     {
       "url": "http://www.monotype.com/html/designer/des_index.html",
-      "title": "www.monotype.com"
+      "title": "www.monotype.com",
+      "type": "foundry or publisher page",
+      "publisher": "Monotype"
     },
     {
       "url": "http://www.monotype.com/html/mtname/ms_welcome.html",
-      "title": "www.monotype.com"
+      "title": "www.monotype.com",
+      "type": "foundry or publisher page",
+      "publisher": "Monotype"
     },
     {
       "url": "https://d-nb.info/gnd/140157840",
-      "title": "GND / Integrated Authority File"
+      "title": "GND / Integrated Authority File",
+      "type": "archive or museum record",
+      "publisher": "Deutsche Nationalbibliothek"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-18",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q3437107",
     "viaf": "165765546",

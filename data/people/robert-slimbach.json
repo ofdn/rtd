@@ -16,20 +16,26 @@
   "sources": [
     {
       "url": "https://fontsinuse.com/type_designers/7/robert-slimbach",
-      "title": "Robert Slimbach - Fonts In Use"
+      "title": "Robert Slimbach - Fonts In Use",
+      "type": "reference website",
+      "publisher": "Fonts In Use"
     },
     {
       "url": "https://blog.typekit.com/2012/03/02/robert-slimbach-25-years/",
-      "title": "Robert Slimbach's 25 Years of Type at Adobe - Typekit Blog"
+      "title": "Robert Slimbach's 25 Years of Type at Adobe - Typekit Blog",
+      "type": "foundry or publisher page",
+      "publisher": "Typekit"
     },
     {
       "url": "https://id.loc.gov/authorities/names/n94002905.html",
-      "title": "Slimbach, Robert - LC Linked Data Service"
+      "title": "Slimbach, Robert - LC Linked Data Service",
+      "type": "archive or museum record",
+      "publisher": "Library of Congress"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-10",
-  "updated_at": "2026-08-10",
+  "updated_at": "2026-10-08",
   "external_ids": { "wikidata_qid": "Q1372822", "isni": "0000000035904713", "lc_naf": "n94002905", "gnd": "142288551", "viaf": "45986386", "worldcat_entity": "E39PBJtxjJrjrMGgV77vRTTmBP" }
 }

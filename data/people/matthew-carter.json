@@ -14,21 +14,27 @@
   "sources": [
     {
       "url": "http://www.carterandcone.com/",
-      "title": "www.carterandcone.com"
+      "title": "www.carterandcone.com",
+      "type": "foundry or publisher page",
+      "publisher": "Carter & Cone"
     },
     {
       "url": "http://www.microsoft.com/typography",
-      "title": "www.microsoft.com"
+      "title": "www.microsoft.com",
+      "type": "foundry or publisher page",
+      "publisher": "Microsoft"
     },
     {
       "url": "https://www.moma.org/artists/32468",
-      "title": "MoMA online collection"
+      "title": "MoMA online collection",
+      "type": "archive or museum record",
+      "publisher": "Museum of Modern Art"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-18",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q383244",
     "viaf": "93774544",

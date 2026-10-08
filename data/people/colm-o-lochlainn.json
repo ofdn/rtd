@@ -19,7 +19,9 @@
   "sources": [
     {
       "url": "https://www.dib.ie/biography/o-lochlainn-colm-a6392",
-      "title": "Ó Lochlainn, Colm - Dictionary of Irish Biography"
+      "title": "Ó Lochlainn, Colm - Dictionary of Irish Biography",
+      "type": "reference website",
+      "publisher": "Dictionary of Irish Biography"
     },
     {
       "url": "https://uwmspeccoll.tumblr.com/post/625544781339279360/typography-tuesday-the-colum-cille-irish-type",
@@ -27,12 +29,14 @@
     },
     {
       "url": "https://id.loc.gov/authorities/names/n81147369.html",
-      "title": "O Lochlainn, Colm - LC Linked Data Service"
+      "title": "O Lochlainn, Colm - LC Linked Data Service",
+      "type": "archive or museum record",
+      "publisher": "Library of Congress"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-10",
-  "updated_at": "2026-08-10",
+  "updated_at": "2026-10-08",
   "external_ids": { "wikidata_qid": "Q5147710", "isni": "0000000083398798", "gnd": "1225310210", "viaf": "21015571", "lc_naf": "n81147369", "worldcat_entity": "E39PBJj8MDpdMf7TK64wKYjBfq" }
 }

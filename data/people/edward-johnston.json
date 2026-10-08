@@ -14,15 +14,21 @@
   "sources": [
     {
       "url": "https://www.elpais.com.uy/informacion/sociedad/nacio-en-san-jose-y-cambio-el-metro-de-londres-para-siempre-la-historia-del-tipografo-edward-johnston",
-      "title": "\"Nació en San José y cambió el Metro de Londres para siempre: la historia del tipógrafo Edward Johnston\""
+      "title": "\"Nació en San José y cambió el Metro de Londres para siempre: la historia del tipógrafo Edward Johnston\"",
+      "type": "newspaper or magazine",
+      "publisher": "El País"
     },
     {
       "url": "https://www.britannica.com/biography/Edward-Johnston",
-      "title": "Edward Johnston"
+      "title": "Edward Johnston",
+      "type": "reference website",
+      "publisher": "Encyclopaedia Britannica"
     },
     {
       "url": "https://www.ltmuseum.co.uk/collections/stories/people/edward-johnston-man-behind-londons-lettering",
-      "title": "Edward Johnston: the man behind London’s lettering"
+      "title": "Edward Johnston: the man behind London’s lettering",
+      "type": "archive or museum record",
+      "publisher": "London Transport Museum"
     }
   ],
   "contributed_by": [
@@ -51,5 +57,5 @@
     "worldcat_entity": "E39PBJgt6KQKXXGR3WxdrB9VYP"
   },
   "created_at": "2026-08-22",
-  "updated_at": "2026-08-22"
+  "updated_at": "2026-10-08"
 }

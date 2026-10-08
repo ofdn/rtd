@@ -14,21 +14,25 @@
   "sources": [
     {
       "url": "https://www.peopleofprint.com/best-of/10-type-foundries-to-follow-on-instagram",
-      "title": "10 Type Foundries to Follow on Instagram in 2024 suggested by Filippos Fragkogiannis"
+      "title": "10 Type Foundries to Follow on Instagram in 2024 suggested by Filippos Fragkogiannis",
+      "type": "reference website",
+      "publisher": "People of Print"
     },
     {
       "url": "http://nikolaswrobel.com",
-      "title": "nikolaswrobel.com"
+      "title": "nikolaswrobel.com",
+      "type": "designer website"
     },
     {
       "url": "http://nikolaswrobel.com/profile",
-      "title": "nikolaswrobel.com"
+      "title": "nikolaswrobel.com",
+      "type": "designer website"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-10-08",
   "verification_status": "needs_verification",
   "external_ids": {
     "wikidata_qid": "Q124381786"

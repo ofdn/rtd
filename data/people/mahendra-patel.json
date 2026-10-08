@@ -15,11 +15,11 @@
   "external_ids": { "wikidata_qid": "Q113568531", "viaf": "13573709", "isni": "0000000024231285", "lc_naf": "n78075115" },
   "sources": [
     { "url": "https://www.gutenberg-gesellschaft.de/en/gutenberg-prize/former-prize-winners/2010-mahendra-patel", "title": "2010 Mahendra Patel - Gutenberg-Gesellschaft" },
-    { "url": "https://dsource.in/showcase/mahendra-patel/biography", "title": "Mahendra Patel - D'Source Biography" },
-    { "url": "https://www.printweek.in/features/mahendra-patel-understanding-typefaces-29204", "title": "Understanding typefaces - PrintWeek India" }
+    { "url": "https://dsource.in/showcase/mahendra-patel/biography", "title": "Mahendra Patel - D'Source Biography", "type": "reference website", "publisher": "D'source" },
+    { "url": "https://www.printweek.in/features/mahendra-patel-understanding-typefaces-29204", "title": "Understanding typefaces - PrintWeek India", "type": "newspaper or magazine", "publisher": "PrintWeek India" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-10-08"
 }

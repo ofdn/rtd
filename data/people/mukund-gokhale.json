@@ -12,7 +12,9 @@
   "sources": [
     {
       "url": "http://www.ektype.in",
-      "title": "www.ektype.in"
+      "title": "www.ektype.in",
+      "type": "foundry or publisher page",
+      "publisher": "Ek Type"
     },
     {
       "url": "http://www.google.com/get/noto/",
@@ -22,6 +24,6 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-10-08",
   "verification_status": "needs_verification"
 }

@@ -12,7 +12,9 @@
   "sources": [
     {
       "url": "http://www.linotypelibrary.com",
-      "title": "www.linotypelibrary.com"
+      "title": "www.linotypelibrary.com",
+      "type": "foundry or publisher page",
+      "publisher": "Linotype"
     },
     {
       "url": "http://www.heise.de/newsticker/meldung/Es-gibt-keine-Entschuldigung-fuer-schlechte-Typographie-zum-Tode-von-Hermann-Zapf-2681823.html",
@@ -20,17 +22,21 @@
     },
     {
       "url": "https://rkd.nl/artists/269414",
-      "title": "RKD Artists"
+      "title": "RKD Artists",
+      "type": "archive or museum record",
+      "publisher": "RKD"
     },
     {
       "url": "https://snaccooperative.org/ark:/99166/w6s58zt2",
-      "title": "SNAC"
+      "title": "SNAC",
+      "type": "archive or museum record",
+      "publisher": "SNAC"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-18",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q60302",
     "viaf": "74000639",

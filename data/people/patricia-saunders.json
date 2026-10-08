@@ -12,11 +12,15 @@
   "sources": [
     {
       "url": "http://www.monotype.com/html/designer/des_index.html",
-      "title": "www.monotype.com"
+      "title": "www.monotype.com",
+      "type": "foundry or publisher page",
+      "publisher": "Monotype"
     },
     {
       "url": "http://www.monotype.com/html/mtname/ms_welcome.html",
-      "title": "www.monotype.com"
+      "title": "www.monotype.com",
+      "type": "foundry or publisher page",
+      "publisher": "Monotype"
     },
     {
       "url": "https://research.reading.ac.uk/women-in-type/patricia-saunders-1933-2019/",
@@ -26,7 +30,7 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-12",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q30065540",
     "gnd": "1399648284"

@@ -26,15 +26,19 @@
   "sources": [
     {
       "url": "https://fontsinuse.com/typefaces/4198/kepler",
-      "title": "Kepler in use - Fonts In Use"
+      "title": "Kepler in use - Fonts In Use",
+      "type": "reference website",
+      "publisher": "Fonts In Use"
     },
     {
       "url": "https://blog.typekit.com/2012/03/02/robert-slimbach-25-years/",
-      "title": "Robert Slimbach's 25 Years of Type at Adobe - Typekit Blog"
+      "title": "Robert Slimbach's 25 Years of Type at Adobe - Typekit Blog",
+      "type": "foundry or publisher page",
+      "publisher": "Typekit"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-10",
-  "updated_at": "2026-08-10"
+  "updated_at": "2026-10-08"
 }

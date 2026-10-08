@@ -14,10 +14,10 @@
   "external_ids": { "wikidata_qid": "Q62109294" },
   "sources": [
     { "url": "https://www.idc.iitb.ac.in/people/faculty/dalvi-girish", "title": "Girish Dalvi - IDC School of Design, IIT Bombay" },
-    { "url": "https://fonts.adobe.com/designers/girish-dalvi", "title": "Girish Dalvi - Adobe Fonts" }
+    { "url": "https://fonts.adobe.com/designers/girish-dalvi", "title": "Girish Dalvi - Adobe Fonts", "type": "font catalogue", "publisher": "Adobe Fonts" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-10-08"
 }

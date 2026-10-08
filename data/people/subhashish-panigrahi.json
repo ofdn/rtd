@@ -11,11 +11,11 @@
   "scripts": ["Odia", "Ol Chiki"],
   "external_ids": { "wikidata_qid": "Q28469412", "viaf": "2637162669526055500002", "isni": "0000000501801034", "lc_naf": "n2022242804", "gnd": "1265482411" },
   "sources": [
-    { "url": "https://github.com/ofdn/Chapakala", "title": "Chapakala: Revival Odia typeface family, GitHub" },
-    { "url": "https://theofdn.org/activities/type/", "title": "Type design activities, O Foundation" }
+    { "url": "https://github.com/ofdn/Chapakala", "title": "Chapakala: Revival Odia typeface family, GitHub", "type": "software repository" },
+    { "url": "https://theofdn.org/activities/type/", "title": "Type design activities, O Foundation", "type": "foundry or publisher page", "publisher": "O Foundation" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-12"
+  "updated_at": "2026-10-08"
 }

@@ -14,10 +14,10 @@
   "description": "A free ASCII-encoded Odia (Oriya) font by Janmeja Singh Johal, part of a set of early Indian-script fonts he released in 1997.",
   "external_ids": { "wikidata_qid": "Q123057535" },
   "sources": [
-    { "url": "https://luc.devroye.org/punjabi.html", "title": "Punjabi and Gurmukhi fonts - Luc Devroye" }
+    { "url": "https://luc.devroye.org/punjabi.html", "title": "Punjabi and Gurmukhi fonts - Luc Devroye", "type": "reference website", "publisher": "Luc Devroye" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07"
+  "updated_at": "2026-10-08"
 }

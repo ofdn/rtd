@@ -14,10 +14,10 @@
   "era": "digital",
   "description": "A rounded display typeface family, part of the multi-script Baloo project spanning Latin, Bangla, and Gujarati.",
   "sources": [
-    { "url": "https://fontsinuse.com/type_designers/4301/noopur-datye", "title": "Noopur Datye - Fonts In Use" }
+    { "url": "https://fontsinuse.com/type_designers/4301/noopur-datye", "title": "Noopur Datye - Fonts In Use", "type": "reference website", "publisher": "Fonts In Use" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-10-08"
 }

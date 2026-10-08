@@ -9,10 +9,10 @@
   "era": "digital",
   "description": "A multiscript typeface family for Devanagari, Bengali, and Telugu, permanently exhibited at London's Design Museum since 2016 as part of Designer Maker User.",
   "sources": [
-    { "url": "https://thebetterindia.com/98296/indian-type-foundry-satya-rajpurohit/", "title": "Indian Type Foundry Makes Fonts for Global Brands - The Better India" }
+    { "url": "https://thebetterindia.com/98296/indian-type-foundry-satya-rajpurohit/", "title": "Indian Type Foundry Makes Fonts for Global Brands - The Better India", "type": "newspaper or magazine", "publisher": "The Better India" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-07"
+  "updated_at": "2026-10-08"
 }

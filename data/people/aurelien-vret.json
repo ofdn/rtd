@@ -14,7 +14,9 @@
   "sources": [
     {
       "url": "https://fonts.adobe.com/designers/aurelien-vret",
-      "title": "fonts.adobe.com"
+      "title": "fonts.adobe.com",
+      "type": "font catalogue",
+      "publisher": "Adobe Fonts"
     },
     {
       "url": "https://www.gazette-drouot.com/lots/8109940-aurelien-vret-1987---carbone----",
@@ -30,7 +32,9 @@
     },
     {
       "url": "https://catalogue.bnf.fr/ark:/12148/cb47117524w",
-      "title": "catalogue.bnf.fr"
+      "title": "catalogue.bnf.fr",
+      "type": "archive or museum record",
+      "publisher": "Bibliothèque nationale de France"
     },
     {
       "url": "https://bnf.hypotheses.org/14546",
@@ -38,7 +42,8 @@
     },
     {
       "url": "https://aurelien-vret.fr/",
-      "title": "aurelien-vret.fr"
+      "title": "aurelien-vret.fr",
+      "type": "designer website"
     },
     {
       "url": "https://actions-recherche.bnf.fr/bnf/anirw3.nsf/IX01/E2022000003_vret-aurelien",
@@ -46,25 +51,32 @@
     },
     {
       "url": "https://typofonderie.com/fr/fonts/prosaic/details",
-      "title": "Prosaic - Fonts - Typofonderie"
+      "title": "Prosaic - Fonts - Typofonderie",
+      "type": "foundry or publisher page",
+      "publisher": "Typofonderie"
     },
     {
       "url": "http://www.sudoc.fr/268785724",
-      "title": "Typophilie [catalogue no. 307] / Librairie Paul Jammes - Sudoc"
+      "title": "Typophilie [catalogue no. 307] / Librairie Paul Jammes - Sudoc",
+      "type": "archive or museum record"
     },
     {
       "url": "https://catalogue.bnf.fr/ark:/12148/cb176650896",
-      "title": "BnF authorities"
+      "title": "BnF authorities",
+      "type": "archive or museum record",
+      "publisher": "Bibliothèque nationale de France"
     },
     {
       "url": "https://catalogue.bnf.fr/ark:/12148/cb47684342v",
-      "title": "BnF general catalogue"
+      "title": "BnF general catalogue",
+      "type": "archive or museum record",
+      "publisher": "Bibliothèque nationale de France"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-18",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q137908997",
     "viaf": "5174410436408500178",

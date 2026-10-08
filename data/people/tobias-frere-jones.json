@@ -14,17 +14,21 @@
   "sources": [
     {
       "url": "https://frerejones.com",
-      "title": "frerejones.com"
+      "title": "frerejones.com",
+      "type": "foundry or publisher page",
+      "publisher": "Frere-Jones Type"
     },
     {
       "url": "https://rkd.nl/artists/342751",
-      "title": "RKD Artists"
+      "title": "RKD Artists",
+      "type": "archive or museum record",
+      "publisher": "RKD"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-18",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q257862",
     "viaf": "8464835",

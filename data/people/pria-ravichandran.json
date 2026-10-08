@@ -28,11 +28,15 @@
     },
     {
       "url": "https://typenetwork.com/font-designers/pria-ravichandran",
-      "title": "Pria Ravichandran - Type Network"
+      "title": "Pria Ravichandran - Type Network",
+      "type": "font catalogue",
+      "publisher": "Type Network"
     },
     {
       "url": "https://fontsinuse.com/type_designers/5463/pria-ravichandran",
-      "title": "Pria Ravichandran - Fonts In Use"
+      "title": "Pria Ravichandran - Fonts In Use",
+      "type": "reference website",
+      "publisher": "Fonts In Use"
     },
     {
       "url": "https://www.facebook.com/priaadireddi/about_contact_and_basic_info",
@@ -44,7 +48,9 @@
     },
     {
       "url": "https://luc.devroye.org/fonts-80349.html",
-      "title": "Pria Ravichandran - Luc Devroye's Type Design Information"
+      "title": "Pria Ravichandran - Luc Devroye's Type Design Information",
+      "type": "reference website",
+      "publisher": "Luc Devroye"
     },
     {
       "url": "https://centaur.reading.ac.uk/99826/",
@@ -54,7 +60,7 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-12",
+  "updated_at": "2026-10-08",
   "birth_year": "1984-05-22",
   "place_of_birth": "Tirunelveli",
   "gender": "female",

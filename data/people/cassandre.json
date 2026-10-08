@@ -15,7 +15,9 @@
   "sources": [
     {
       "url": "https://www.boijmans.nl/en/collection/artworks/83455/poster-for-the-etoile-du-nord",
-      "title": "www.boijmans.nl"
+      "title": "www.boijmans.nl",
+      "type": "archive or museum record",
+      "publisher": "Museum Boijmans Van Beuningen"
     },
     {
       "url": "https://theaterencyclopedie.nl/wiki/Adolphe_Mouron_Cassandre",
@@ -31,21 +33,27 @@
     },
     {
       "url": "https://collectie.nieuweinstituut.nl/detail/people/10496",
-      "title": "Cassandre - Nieuwe Instituut Collectieplatform"
+      "title": "Cassandre - Nieuwe Instituut Collectieplatform",
+      "type": "archive or museum record",
+      "publisher": "Het Nieuwe Instituut"
     },
     {
       "url": "https://rkd.nl/artists/15770",
-      "title": "RKD Artists"
+      "title": "RKD Artists",
+      "type": "archive or museum record",
+      "publisher": "RKD"
     },
     {
       "url": "https://collecties.stadsarchief.rotterdam.nl/detail.php?id=143239245",
-      "title": "Rotterdam City Archives actor ID"
+      "title": "Rotterdam City Archives actor ID",
+      "type": "archive or museum record",
+      "publisher": "Stadsarchief Rotterdam"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-18",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q278945",
     "viaf": "44324012",

@@ -23,7 +23,8 @@
   "sources": [
     {
       "url": "https://urdufonts.com/story-of-jameel-noori-nastaleeq/",
-      "title": "The Legacy of Jameel Noori Nastaliq - Shaping Urdu Typography"
+      "title": "The Legacy of Jameel Noori Nastaliq - Shaping Urdu Typography",
+      "type": "font catalogue"
     },
     {
       "url": "https://www.folkloristan.com/post/nastaliq-typography-and-typefaces",
@@ -31,12 +32,14 @@
     },
     {
       "url": "https://www.express.pk/story/197175/",
-      "title": "Mirza Ahmad Jamil profile - Daily Express"
+      "title": "Mirza Ahmad Jamil profile - Daily Express",
+      "type": "newspaper or magazine",
+      "publisher": "Express"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-12",
+  "updated_at": "2026-10-08",
   "place_of_birth": "Delhi"
 }

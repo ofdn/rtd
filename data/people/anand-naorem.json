@@ -14,12 +14,12 @@
   "bio": "Co-leads the typeface studio AlterType, designing typefaces across brand identity and editorial contexts. Graduate of NID and the Type@Cooper program at Cooper Union; visiting faculty in Communication Design at NID.",
   "external_ids": { "wikidata_qid": "Q123057044" },
   "sources": [
-    { "url": "https://typenetwork.com/font-designers/andy-naorem", "title": "Anand Naorem - Type Network" },
-    { "url": "https://www.typotheque.com/authors/anand-naorem", "title": "Anand Naorem - Typotheque" },
+    { "url": "https://typenetwork.com/font-designers/andy-naorem", "title": "Anand Naorem - Type Network", "type": "font catalogue", "publisher": "Type Network" },
+    { "url": "https://www.typotheque.com/authors/anand-naorem", "title": "Anand Naorem - Typotheque", "type": "foundry or publisher page", "publisher": "Typotheque" },
     { "url": "https://www.brandnewtype.co/about", "title": "About - Brand New Type / AlterType" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-10-08"
 }

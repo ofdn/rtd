@@ -18,16 +18,20 @@
   "sources": [
     {
       "url": "https://luc.devroye.org/fonts-55419.html",
-      "title": "Sridhar Murthy Srikantham - Luc Devroye"
+      "title": "Sridhar Murthy Srikantham - Luc Devroye",
+      "type": "reference website",
+      "publisher": "Luc Devroye"
     },
     {
       "url": "https://www.andhrajyothy.com/2023/telangana/hyderabad/fonts-designer-srikantham-sridhara-murthy-is-no-more-1033977.html",
-      "title": "Fonts designer Srikantham Sridhara Murthy is no more - Andhra Jyothy"
+      "title": "Fonts designer Srikantham Sridhara Murthy is no more - Andhra Jyothy",
+      "type": "newspaper or magazine",
+      "publisher": "Andhra Jyothy"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-12",
+  "updated_at": "2026-10-08",
   "death_year": "2023-03-19"
 }

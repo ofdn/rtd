@@ -26,7 +26,9 @@
   "sources": [
     {
       "url": "https://www.dib.ie/biography/o-lochlainn-colm-a6392",
-      "title": "Ó Lochlainn, Colm - Dictionary of Irish Biography"
+      "title": "Ó Lochlainn, Colm - Dictionary of Irish Biography",
+      "type": "reference website",
+      "publisher": "Dictionary of Irish Biography"
     },
     {
       "url": "https://uwmspeccoll.tumblr.com/post/625544781339279360/typography-tuesday-the-colum-cille-irish-type",
@@ -36,5 +38,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-10",
-  "updated_at": "2026-08-10"
+  "updated_at": "2026-10-08"
 }

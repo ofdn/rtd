@@ -700,7 +700,10 @@ export function sourcesList(sources) {
   const items = sources
     .map((s) => {
       const lang = s.language && !s.language.startsWith("en") ? ` <span class="role">${escapeHtml(languageLabel(s.language))}</span>` : "";
-      return `<li>${linkTag(s.url, escapeHtml(s.title))}${lang}</li>`;
+      const archived = s.archive_url
+        ? ` (${linkTag(s.archive_url, "archived copy", `aria-label="Archived copy of ${escapeHtml(s.title)}"`)})`
+        : "";
+      return `<li>${linkTag(s.url, escapeHtml(s.title))}${lang}${archived}</li>`;
     })
     .join("\n");
   return `<h2>Sources</h2>\n<ul class="plain-list">\n${items}\n</ul>`;

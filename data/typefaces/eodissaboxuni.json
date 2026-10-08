@@ -13,11 +13,11 @@
   "description": "A shareware Odia (Oriya) font by Subhashish Panigrahi, part of the eOdissa font set.",
   "external_ids": { "wikidata_qid": "Q123086328" },
   "sources": [
-    { "url": "https://www.onlinewebfonts.com/tag/eOdissa", "title": "eOdissa Fonts Downloads - OnlineWebFonts.COM" }
+    { "url": "https://www.onlinewebfonts.com/tag/eOdissa", "title": "eOdissa Fonts Downloads - OnlineWebFonts.COM", "type": "font catalogue" }
   ],
   "verification_status": "needs_verification",
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07"
+  "updated_at": "2026-10-08"
 }

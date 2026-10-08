@@ -30,23 +30,33 @@
     },
     {
       "url": "https://www.peopleofprint.com/best-of/free-and-open-source-fonts-selected-by-filippos-fragkogiannis",
-      "title": "Free and Open Source Fonts Selected by Filippos Fragkogiannis"
+      "title": "Free and Open Source Fonts Selected by Filippos Fragkogiannis",
+      "type": "reference website",
+      "publisher": "People of Print"
     },
     {
       "url": "https://www.peopleofprint.com/best-of/pop-member-showcase-9-graphic-designers",
-      "title": "POP Member Showcase: 9 Graphic Designers"
+      "title": "POP Member Showcase: 9 Graphic Designers",
+      "type": "reference website",
+      "publisher": "People of Print"
     },
     {
       "url": "https://www.peopleofprint.com/product/pop-member-showcase-10-stickers",
-      "title": "POP Member Showcase: 10 Stickers"
+      "title": "POP Member Showcase: 10 Stickers",
+      "type": "reference website",
+      "publisher": "People of Print"
     },
     {
       "url": "https://www.peopleofprint.com/shop/pop-member-showcase-20-posters",
-      "title": "POP Member Showcase: 20 Posters"
+      "title": "POP Member Showcase: 20 Posters",
+      "type": "reference website",
+      "publisher": "People of Print"
     },
     {
       "url": "https://www.peopleofprint.com/pop/pop-member-showcase-monochrome-prints",
-      "title": "POP Member Showcase: 11 Monochrome Prints"
+      "title": "POP Member Showcase: 11 Monochrome Prints",
+      "type": "reference website",
+      "publisher": "People of Print"
     },
     {
       "url": "https://publicartfestival.gr",
@@ -58,7 +68,9 @@
     },
     {
       "url": "https://fontsinuse.com/contributors/20220/filipposfragkogiannis",
-      "title": "fontsinuse.com"
+      "title": "fontsinuse.com",
+      "type": "reference website",
+      "publisher": "Fonts In Use"
     },
     {
       "url": "https://www.corporatevision-news.com/winners/filippos-fragkogiannis",
@@ -74,7 +86,9 @@
     },
     {
       "url": "https://www.tovima.gr/2024/11/16/society/pos-to-logotypo-gia-to-metro-thessalonikis-metatrapike-se-komodia-tou-syrmou",
-      "title": "Πώς το λογότυπο για το μετρό Θεσσαλονίκης μετατράπηκε σε κωμωδία του συρμού"
+      "title": "Πώς το λογότυπο για το μετρό Θεσσαλονίκης μετατράπηκε σε κωμωδία του συρμού",
+      "type": "newspaper or magazine",
+      "publisher": "To Vima"
     },
     {
       "url": "https://www.webguruawards.com/sites/filippos-fragkogiannis",
@@ -110,11 +124,13 @@
     },
     {
       "url": "https://filipposfragkogiannis.com",
-      "title": "filipposfragkogiannis.com"
+      "title": "filipposfragkogiannis.com",
+      "type": "designer website"
     },
     {
       "url": "https://filipposfragkogiannis.com/about",
-      "title": "filipposfragkogiannis.com"
+      "title": "filipposfragkogiannis.com",
+      "type": "designer website"
     },
     {
       "url": "https://www.graphis.com/bio/filippos-fragkogiannis",
@@ -128,7 +144,7 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-12",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q122351689"
   },

@@ -12,21 +12,27 @@
   "sources": [
     {
       "url": "http://www.microsoft.com/typography/",
-      "title": "www.microsoft.com"
+      "title": "www.microsoft.com",
+      "type": "foundry or publisher page",
+      "publisher": "Microsoft"
     },
     {
       "url": "http://www.microsoft.com",
-      "title": "www.microsoft.com"
+      "title": "www.microsoft.com",
+      "type": "foundry or publisher page",
+      "publisher": "Microsoft"
     },
     {
       "url": "https://pic.nypl.org/constituents/389241",
-      "title": "Photographers' Identities Catalog (NYPL)"
+      "title": "Photographers' Identities Catalog (NYPL)",
+      "type": "archive or museum record",
+      "publisher": "New York Public Library"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-18",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q2434645",
     "viaf": "169272616",

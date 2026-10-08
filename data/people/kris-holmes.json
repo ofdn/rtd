@@ -12,17 +12,21 @@
   "sources": [
     {
       "url": "http://www.bigelowandholmes.com",
-      "title": "www.bigelowandholmes.com"
+      "title": "www.bigelowandholmes.com",
+      "type": "foundry or publisher page",
+      "publisher": "Bigelow & Holmes"
     },
     {
       "url": "http://www.agfamonotype.com",
-      "title": "www.agfamonotype.com"
+      "title": "www.agfamonotype.com",
+      "type": "foundry or publisher page",
+      "publisher": "Agfa Monotype"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q253622",
     "viaf": "80543833",

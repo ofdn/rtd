@@ -16,13 +16,15 @@
     },
     {
       "url": "https://catalogue.bnf.fr/ark:/12148/cb13484802s",
-      "title": "BnF authorities"
+      "title": "BnF authorities",
+      "type": "archive or museum record",
+      "publisher": "Bibliothèque nationale de France"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-18",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q18922365",
     "viaf": "116296597",

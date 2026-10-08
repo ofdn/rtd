@@ -13,12 +13,12 @@
   "description": "A simple, non-Unicode, phonetic-input Odia (Oriya) font by Subhashish Panigrahi, part of the eOdissa font set.",
   "external_ids": { "wikidata_qid": "Q123086334" },
   "sources": [
-    { "url": "https://blogfonts.com/eodissa-anamana.font", "title": "eOdissa Anamana Windows font - BlogFonts" },
-    { "url": "https://www.wfonts.com/font/eodissa-anamana", "title": "eOdissa Anamana - wFonts" }
+    { "url": "https://blogfonts.com/eodissa-anamana.font", "title": "eOdissa Anamana Windows font - BlogFonts", "type": "font catalogue" },
+    { "url": "https://www.wfonts.com/font/eodissa-anamana", "title": "eOdissa Anamana - wFonts", "type": "font catalogue" }
   ],
   "verification_status": "needs_verification",
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07"
+  "updated_at": "2026-10-08"
 }

@@ -13,10 +13,10 @@
   "bio": "Creative Type Director at Monotype, based in Bangalore, specializing in multi-script font design and in restoring and digitizing manuscripts for Indian scripts.",
   "external_ids": { "wikidata_qid": "Q113557723" },
   "sources": [
-    { "url": "https://www.monotype.com/studio/vaishnavi-murthy-yerkadithaya", "title": "Vaishnavi Murthy Yerkadithaya - Monotype" }
+    { "url": "https://www.monotype.com/studio/vaishnavi-murthy-yerkadithaya", "title": "Vaishnavi Murthy Yerkadithaya - Monotype", "type": "foundry or publisher page", "publisher": "Monotype" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-10-08"
 }
