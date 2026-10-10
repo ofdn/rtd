@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000200",
+  "slug": "purushoth-kumar-guttula",
+  "name": {
+    "preferred": "Purushoth Kumar Guttula",
+    "alternates": []
+  },
+  "roles": ["type designer"],
+  "scripts": ["Telugu"],
+  "bio": "Type designer who has designed several Telugu typefaces, including Dhurjati, Gidugu, Gurajada and Mallanna.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Gurajada/about", "title": "Gurajada - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" },
+    { "url": "https://fonts.google.com/specimen/Mallanna/about", "title": "Mallanna - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

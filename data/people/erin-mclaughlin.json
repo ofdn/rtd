@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000217",
+  "slug": "erin-mclaughlin",
+  "name": {
+    "preferred": "Erin McLaughlin",
+    "alternates": []
+  },
+  "countries": ["United States"],
+  "roles": ["type designer"],
+  "scripts": ["Devanagari", "Gurmukhi", "Kannada"],
+  "bio": "Multi-script font designer who has worked with Universal Thirst, TypeTogether, Adobe, IBM, Microsoft and Google. Designed Hubballi and Khula.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Hubballi/about", "title": "Hubballi - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" },
+    { "url": "https://fonts.google.com/specimen/Khula/about", "title": "Khula - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

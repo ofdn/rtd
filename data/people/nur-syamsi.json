@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000195",
+  "slug": "nur-syamsi",
+  "name": {
+    "preferred": "Nur Syamsi",
+    "alternates": []
+  },
+  "countries": ["Indonesia"],
+  "roles": ["type designer"],
+  "scripts": ["Arabic"],
+  "bio": "Graphic designer and founder of NamelaType in Indonesia. Studied Arabic calligraphy at an Islamic boarding school. Co-designed the Marhey typeface.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Marhey/about", "title": "Marhey - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

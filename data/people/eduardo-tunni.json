@@ -1,0 +1,22 @@
+{
+  "id": "rtd-p-000184",
+  "slug": "eduardo-tunni",
+  "name": {
+    "preferred": "Eduardo Tunni",
+    "alternates": []
+  },
+  "birth_year": "1963",
+  "place_of_birth": "Buenos Aires",
+  "countries": ["Argentina"],
+  "roles": ["type designer"],
+  "scripts": ["Devanagari", "Arabic", "Latin"],
+  "bio": "Studied graphic design at the University of Buenos Aires and co-founded the type foundry Tipo. Designed the Amita, Arya and Changa typefaces.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Arya/about", "title": "Arya - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" },
+    { "url": "https://fonts.google.com/specimen/Changa/about", "title": "Changa - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

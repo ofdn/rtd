@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000188",
+  "slug": "khajag-apelian",
+  "name": {
+    "preferred": "Khajag Apelian",
+    "alternates": []
+  },
+  "countries": ["Lebanon"],
+  "roles": ["type designer"],
+  "scripts": ["Arabic", "Armenian"],
+  "bio": "Type designer based in Beirut, specialising in Arabic and Armenian type. Co-designed IBM Plex Sans Arabic.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/IBM+Plex+Sans+Arabic/about", "title": "IBM Plex Sans Arabic - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

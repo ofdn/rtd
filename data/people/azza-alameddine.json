@@ -1,0 +1,18 @@
+{
+  "id": "rtd-p-000178",
+  "slug": "azza-alameddine",
+  "name": {
+    "preferred": "Azza Alameddine",
+    "alternates": []
+  },
+  "roles": ["type designer"],
+  "scripts": ["Arabic"],
+  "bio": "Graphic and type designer who has worked in Lebanon and the UK. Holds an MA in Typeface Design from the University of Reading. Designed Playpen Sans Arabic.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Playpen+Sans+Arabic/about", "title": "Playpen Sans Arabic - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

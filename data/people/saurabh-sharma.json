@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000205",
+  "slug": "saurabh-sharma",
+  "name": {
+    "preferred": "Saurabh Sharma",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "scripts": ["Devanagari", "Latin"],
+  "bio": "Developer and graphic designer based in Udaipur, Rajasthan. Designed the Gajraj One and Kumbh Sans typefaces.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Gajraj+One/about", "title": "Gajraj One - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

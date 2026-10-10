@@ -1,0 +1,21 @@
+{
+  "id": "rtd-p-000190",
+  "slug": "mohamed-gaber",
+  "name": {
+    "preferred": "Mohamed Gaber",
+    "alternates": []
+  },
+  "birth_year": "1986",
+  "place_of_birth": "Cairo",
+  "roles": ["type designer"],
+  "scripts": ["Arabic"],
+  "bio": "Type designer and artist born in Cairo and based in Amsterdam. Founded Kief Type Foundry for open-source Arabic fonts. Designed the Alexandria and Blaka typefaces.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Alexandria/about", "title": "Alexandria - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" },
+    { "url": "https://fonts.google.com/specimen/Blaka/about", "title": "Blaka - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

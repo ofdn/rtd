@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000175",
+  "slug": "amin-abedi",
+  "name": {
+    "preferred": "Amin Abedi",
+    "alternates": []
+  },
+  "place_of_birth": "Tabriz",
+  "countries": ["Iran"],
+  "roles": ["type designer"],
+  "scripts": ["Arabic"],
+  "bio": "Self-taught type designer and font developer from Tabriz. Founded Fontamin, a digital type foundry for Persian typography, and designed the Estedad typeface.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Estedad/about", "title": "Estedad - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

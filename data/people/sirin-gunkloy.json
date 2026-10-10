@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000206",
+  "slug": "sirin-gunkloy",
+  "name": {
+    "preferred": "Sirin Gunkloy",
+    "alternates": []
+  },
+  "countries": ["Thailand"],
+  "roles": ["type designer"],
+  "scripts": ["Thai", "Latin"],
+  "bio": "Graphic and typeface designer based in Bangkok, specialising in Thai and Latin typography. Designed Playpen Sans Thai.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Playpen+Sans+Thai/about", "title": "Playpen Sans Thai - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

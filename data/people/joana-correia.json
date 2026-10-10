@@ -1,0 +1,18 @@
+{
+  "id": "rtd-p-000221",
+  "slug": "joana-correia",
+  "name": {
+    "preferred": "Joana Correia",
+    "alternates": []
+  },
+  "roles": ["type designer"],
+  "scripts": ["Malayalam", "Tamil"],
+  "bio": "Type designer based in Porto with an MA in Typeface Design from the University of Reading. Designs typefaces for Indic scripts. Co-designed Arima.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Arima/about", "title": "Arima - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "rtd-p-000196",
+  "slug": "omaima-dajani",
+  "name": {
+    "preferred": "Omaima Dajani",
+    "alternates": []
+  },
+  "roles": ["type designer"],
+  "scripts": ["Arabic"],
+  "bio": "Type and graphic designer, archivist and educator with a Masters in Type Design from KABK. Won a TDC award for her typeface Lifta. Co-designed Rubik.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Rubik/about", "title": "Rubik - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000212",
+  "slug": "wael-morcos",
+  "name": {
+    "preferred": "Wael Morcos",
+    "alternates": []
+  },
+  "countries": ["Lebanon"],
+  "roles": ["type designer"],
+  "scripts": ["Arabic"],
+  "bio": "Graphic and type designer from Beirut, and a partner at the design studio Morcos Key. Co-designed IBM Plex Sans Arabic and Kufam.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Kufam/about", "title": "Kufam - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" },
+    { "url": "https://fonts.google.com/specimen/IBM+Plex+Sans+Arabic/about", "title": "IBM Plex Sans Arabic - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

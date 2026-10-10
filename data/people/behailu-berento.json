@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000179",
+  "slug": "behailu-berento",
+  "name": {
+    "preferred": "Behailu Berento",
+    "alternates": []
+  },
+  "countries": ["Ethiopia"],
+  "roles": ["type designer"],
+  "scripts": ["Ethiopic"],
+  "bio": "Typeface and graphic designer based in Addis Ababa. Founded TypeHabesha, a foundry for multi-script branding, and co-designed the Hibur Mono typeface for Ethiopic.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Hibur+Mono/about", "title": "Hibur Mono - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

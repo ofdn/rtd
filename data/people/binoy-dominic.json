@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000180",
+  "slug": "binoy-dominic",
+  "name": {
+    "preferred": "Binoy Dominic",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "scripts": ["Malayalam"],
+  "bio": "Graphic designer working on Malayalam lettering, typesetting and logos. Designed the Gayathri Malayalam typeface with Swathanthra Malayalam Computing.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Gayathri/about", "title": "Gayathri - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

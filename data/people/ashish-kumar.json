@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000177",
+  "slug": "ashish-kumar",
+  "name": {
+    "preferred": "Ashish Kumar",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "scripts": ["Gurmukhi", "Devanagari"],
+  "bio": "Multidisciplinary designer who designs multi-script fonts for Indian languages. Designed his first Devanagari typeface in 2017 and the Braah One typeface for Gurmukhi.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Braah+One/about", "title": "Braah One - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

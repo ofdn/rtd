@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000215",
+  "slug": "john-hudson",
+  "name": {
+    "preferred": "John Hudson",
+    "alternates": []
+  },
+  "countries": ["Canada"],
+  "roles": ["type designer"],
+  "scripts": ["Bangla", "Devanagari", "Gurmukhi", "Kannada", "Telugu"],
+  "bio": "Type designer and font maker who co-founded Tiro Typeworks in 1994. Co-designed the Tiro Indic typefaces.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Tiro+Bangla/about", "title": "Tiro Bangla - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" },
+    { "url": "https://fonts.google.com/specimen/Tiro+Telugu/about", "title": "Tiro Telugu - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000189",
+  "slug": "khaled-hosny",
+  "name": {
+    "preferred": "Khaled Hosny",
+    "alternates": []
+  },
+  "countries": ["Egypt"],
+  "roles": ["type designer"],
+  "scripts": ["Arabic"],
+  "bio": "Type designer and software developer specialising in Arabic type, font engineering and text layout. Designed the Amiri typeface and worked on Aref Ruqaa.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Amiri/about", "title": "Amiri - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" },
+    { "url": "https://fonts.google.com/specimen/Aref+Ruqaa/about", "title": "Aref Ruqaa - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

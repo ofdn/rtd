@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000211",
+  "slug": "vaishnavi-murthy",
+  "name": {
+    "preferred": "Vaishnavi Murthy",
+    "alternates": []
+  },
+  "roles": ["type designer"],
+  "scripts": ["Kannada", "Telugu"],
+  "bio": "Typeface designer for Indic scripts who also conserves books and manuscripts. Co-designed Akaya Kanadaka and Akaya Telivigala.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Akaya+Kanadaka/about", "title": "Akaya Kanadaka - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" },
+    { "url": "https://fonts.google.com/specimen/Akaya+Telivigala/about", "title": "Akaya Telivigala - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

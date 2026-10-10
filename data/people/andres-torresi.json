@@ -1,0 +1,18 @@
+{
+  "id": "rtd-p-000176",
+  "slug": "andres-torresi",
+  "name": {
+    "preferred": "Andres Torresi",
+    "alternates": []
+  },
+  "roles": ["type designer"],
+  "scripts": ["Devanagari", "Latin"],
+  "bio": "Type designer and font developer working since 2009. Studied at Universidad Nacional de Cuyo and Universidad de Buenos Aires. Co-designed the Sarala typeface for Devanagari.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Sarala/about", "title": "Sarala - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

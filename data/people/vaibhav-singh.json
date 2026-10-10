@@ -1,0 +1,18 @@
+{
+  "id": "rtd-p-000210",
+  "slug": "vaibhav-singh",
+  "name": {
+    "preferred": "Vaibhav Singh",
+    "alternates": []
+  },
+  "roles": ["type designer"],
+  "scripts": ["Devanagari", "Latin"],
+  "bio": "Typographer and typeface designer for Indian scripts, with an MA and PhD from the University of Reading. Edits the journal Contextual Alternate. Designed Eczar.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Eczar/about", "title": "Eczar - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000218",
+  "slug": "borna-izadpanah",
+  "name": {
+    "preferred": "Borna Izadpanah",
+    "alternates": []
+  },
+  "roles": ["type designer"],
+  "scripts": ["Arabic"],
+  "bio": "Lecturer in Typography at the University of Reading whose PhD studied early Persian typography. Designed Lalezar and co-designed Markazi Text and Gulzar.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Lalezar/about", "title": "Lalezar - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" },
+    { "url": "https://fonts.google.com/specimen/Markazi+Text/about", "title": "Markazi Text - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

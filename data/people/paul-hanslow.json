@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000223",
+  "slug": "paul-hanslow",
+  "name": {
+    "preferred": "Paul Hanslow",
+    "alternates": []
+  },
+  "countries": ["Australia"],
+  "roles": ["type designer"],
+  "scripts": ["Devanagari", "Gurmukhi"],
+  "bio": "Typeface designer working at Tiro Typeworks in Vancouver. Co-designed the Tiro Devanagari and Tiro Gurmukhi typefaces.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Tiro+Devanagari+Hindi/about", "title": "Tiro Devanagari Hindi - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" },
+    { "url": "https://fonts.google.com/specimen/Tiro+Gurmukhi/about", "title": "Tiro Gurmukhi - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

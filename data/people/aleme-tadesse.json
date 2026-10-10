@@ -1,0 +1,18 @@
+{
+  "id": "rtd-p-000174",
+  "slug": "aleme-tadesse",
+  "name": {
+    "preferred": "Aleme Tadesse",
+    "alternates": []
+  },
+  "roles": ["type designer"],
+  "scripts": ["Ethiopic"],
+  "bio": "Designed the Menbere typeface for the Ethiopic script and Nigus, which follows traditional church manuscript writing. He is also a graphic designer, printer and painter.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Menbere/about", "title": "Menbere - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000207",
+  "slug": "suon-may-sophanith",
+  "name": {
+    "preferred": "Suon May Sophanith",
+    "alternates": []
+  },
+  "countries": ["Cambodia"],
+  "roles": ["type designer"],
+  "scripts": ["Khmer"],
+  "bio": "Typeface and graphic designer based in Phnom Penh, designing type since 2015. Shares his Khmer fonts freely. Designed Konkhmer Sleokchher.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Konkhmer+Sleokchher/about", "title": "Konkhmer Sleokchher - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

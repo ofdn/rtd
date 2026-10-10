@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000181",
+  "slug": "bustanul-arifin",
+  "name": {
+    "preferred": "Bustanul Arifin",
+    "alternates": []
+  },
+  "countries": ["Indonesia"],
+  "roles": ["type designer"],
+  "scripts": ["Arabic"],
+  "bio": "Graphic and type designer at NamelaType in Indonesia, interested in lettering and handwriting scripts. Co-designed the Marhey typeface for Arabic and Latin.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Marhey/about", "title": "Marhey - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

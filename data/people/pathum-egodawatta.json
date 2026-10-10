@@ -1,0 +1,18 @@
+{
+  "id": "rtd-p-000198",
+  "slug": "pathum-egodawatta",
+  "name": {
+    "preferred": "Pathum Egodawatta",
+    "alternates": []
+  },
+  "roles": ["type designer"],
+  "scripts": ["Sinhala"],
+  "bio": "Type designer who co-designed the Maname typeface for the Sinhala script.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Maname/about", "title": "Maname - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

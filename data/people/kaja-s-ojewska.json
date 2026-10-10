@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000220",
+  "slug": "kaja-s-ojewska",
+  "name": {
+    "preferred": "Kaja Słojewska",
+    "alternates": []
+  },
+  "roles": ["type designer"],
+  "scripts": ["Kannada", "Tamil", "Telugu"],
+  "bio": "Type designer who co-designed the Tiro Kannada, Tiro Tamil and Tiro Telugu typefaces.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Tiro+Kannada/about", "title": "Tiro Kannada - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" },
+    { "url": "https://fonts.google.com/specimen/Tiro+Telugu/about", "title": "Tiro Telugu - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

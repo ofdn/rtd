@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000183",
+  "slug": "danh-hong",
+  "name": {
+    "preferred": "Danh Hong",
+    "alternates": []
+  },
+  "roles": ["type designer"],
+  "scripts": ["Khmer", "Lao"],
+  "bio": "Has created fonts for Khmer and other Southeast Asian languages for many years, and works with the KhmerOS project. Designed Angkor, Battambang, Bayon and other Khmer typefaces.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Battambang/about", "title": "Battambang - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" },
+    { "url": "https://fonts.google.com/specimen/Angkor/about", "title": "Angkor - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

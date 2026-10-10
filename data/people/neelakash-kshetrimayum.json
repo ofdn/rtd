@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000194",
+  "slug": "neelakash-kshetrimayum",
+  "name": {
+    "preferred": "Neelakash Kshetrimayum",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "scripts": ["Bangla"],
+  "bio": "Typeface and graphic designer from Manipur and co-founder of Brand New Type. Has developed typefaces for Adobe, Google, Microsoft and Monotype, including Tiro Bangla.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Tiro+Bangla/about", "title": "Tiro Bangla - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "rtd-p-000219",
+  "slug": "fernando-mello",
+  "name": {
+    "preferred": "Fernando Mello",
+    "alternates": []
+  },
+  "roles": ["type designer"],
+  "scripts": ["Tamil", "Latin"],
+  "bio": "Type designer who worked for 13 years at Fontsmith and Monotype, and on Tamil fonts with Tiro, Adobe and Microsoft. Co-designed Tiro Tamil.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Tiro+Tamil/about", "title": "Tiro Tamil - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

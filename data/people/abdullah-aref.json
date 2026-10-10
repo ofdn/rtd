@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000173",
+  "slug": "abdullah-aref",
+  "name": {
+    "preferred": "Abdullah Aref",
+    "alternates": []
+  },
+  "countries": ["Egypt"],
+  "roles": ["type designer"],
+  "scripts": ["Arabic"],
+  "bio": "Art teacher, calligrapher and Arabic type designer. Designed the Aref Ruqaa typeface, based on the Ruqaa style of Arabic calligraphy.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Aref+Ruqaa/about", "title": "Aref Ruqaa - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

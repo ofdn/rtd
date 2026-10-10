@@ -1,0 +1,18 @@
+{
+  "id": "rtd-p-000191",
+  "slug": "mohamad-dakak",
+  "name": {
+    "preferred": "Mohamad Dakak",
+    "alternates": []
+  },
+  "roles": ["type designer"],
+  "scripts": [],
+  "bio": "Type designer credited on the Cascadia Code and Cascadia Mono typefaces.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Cascadia+Code/about", "title": "Cascadia Code - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

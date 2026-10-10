@@ -1,0 +1,18 @@
+{
+  "id": "rtd-p-000182",
+  "slug": "carolina-giovagnoli",
+  "name": {
+    "preferred": "Carolina Giovagnoli",
+    "alternates": []
+  },
+  "roles": ["type designer"],
+  "scripts": ["Devanagari"],
+  "bio": "Typeface and book designer, editor, teacher and researcher who studied in Argentina. Her work promotes linguistic diversity. Designed the Sura typeface for Devanagari.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Sura/about", "title": "Sura - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}

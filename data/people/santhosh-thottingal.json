@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000203",
+  "slug": "santhosh-thottingal",
+  "name": {
+    "preferred": "Santhosh Thottingal",
+    "alternates": []
+  },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "scripts": ["Malayalam"],
+  "bio": "Typeface designer and software engineer who contributes to Swathanthra Malayalam Computing. Designed the Manjari and Chilanka Malayalam typefaces.",
+  "sources": [
+    { "url": "https://fonts.google.com/specimen/Manjari/about", "title": "Manjari - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" },
+    { "url": "https://fonts.google.com/specimen/Chilanka/about", "title": "Chilanka - Google Fonts", "type": "font catalogue", "language": "en", "publisher": "Google Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-10",
+  "updated_at": "2026-10-10"
+}
