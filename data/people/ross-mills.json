@@ -15,13 +15,15 @@
       "url": "http://www.tiro.com",
       "title": "www.tiro.com",
       "type": "foundry or publisher page",
-      "publisher": "Tiro Typeworks"
+      "publisher": "Tiro Typeworks",
+      "archive_url": "https://web.archive.org/web/20261002032220/http://www.tiro.com"
     },
     {
       "url": "http://www.tiro.com/syllabics",
       "title": "www.tiro.com",
       "type": "foundry or publisher page",
-      "publisher": "Tiro Typeworks"
+      "publisher": "Tiro Typeworks",
+      "archive_url": "https://web.archive.org/web/20241224202842/http://www.tiro.com/syllabics"
     }
   ],
   "record_status": "active",

@@ -13,8 +13,8 @@
   "bio": "Graphic designer who began developing her first typeface during a 2013 internship at the Indian Type Foundry. Designed Tarsus, a Latin-script text serif typeface published by ITF in 2015.",
   "external_ids": { "wikidata_qid": "Q125430725" },
   "sources": [
-    { "url": "https://www.indiantypefoundry.com/designers/khyati-trehan", "title": "Khyati Trehan - Indian Type Foundry designer profile", "type": "foundry or publisher page", "publisher": "Indian Type Foundry" },
-    { "url": "https://khyatitrehan.com/tarsus-typeface", "title": "Tarsus Typeface - Khyati Trehan", "type": "designer website" }
+    { "url": "https://www.indiantypefoundry.com/designers/khyati-trehan", "title": "Khyati Trehan - Indian Type Foundry designer profile", "type": "foundry or publisher page", "publisher": "Indian Type Foundry", "archive_url": "https://web.archive.org/web/20251012081929/https://www.indiantypefoundry.com/designers/khyati-trehan" },
+    { "url": "https://khyatitrehan.com/tarsus-typeface", "title": "Tarsus Typeface - Khyati Trehan", "type": "designer website", "archive_url": "https://web.archive.org/web/20231207095703/https://khyatitrehan.com/tarsus-typeface" }
   ],
   "record_status": "active",
   "superseded_by": null,

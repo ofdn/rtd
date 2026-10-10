@@ -13,8 +13,8 @@
   ],
   "bio": "Designed Baloo Devanagari, Gotu, Modak, and the Gurmukhi components of Anek and Naatak at Ek Type, the Indian-script foundry he co-founded in 2013. First Indian member of Alliance Graphique Internationale.",
   "sources": [
-    { "url": "https://a-g-i.org/user/SarangKulkarni/", "title": "Sarang Kulkarni - Alliance Graphique Internationale (AGI)", "type": "reference website", "publisher": "Alliance Graphique Internationale" },
-    { "url": "https://elle.in/article/sarang-kulkarni/", "title": "Sarang Kulkarni is leading the renaissance of Indian typography with Ek Type - Elle India" }
+    { "url": "https://a-g-i.org/user/SarangKulkarni/", "title": "Sarang Kulkarni - Alliance Graphique Internationale (AGI)", "type": "reference website", "publisher": "Alliance Graphique Internationale", "archive_url": "https://web.archive.org/web/20250926094841/https://a-g-i.org/user/SarangKulkarni/" },
+    { "url": "https://elle.in/article/sarang-kulkarni/", "title": "Sarang Kulkarni is leading the renaissance of Indian typography with Ek Type - Elle India", "archive_url": "https://web.archive.org/web/20221006170252/https://elle.in/article/sarang-kulkarni/" }
   ],
   "record_status": "active",
   "superseded_by": null,

@@ -16,10 +16,10 @@
   "era": "digital",
   "description": "A sans-serif typeface family intended for modern graphic design projects across web, mobile, and print.",
   "sources": [
-    { "url": "https://weandthecolor.com/volte-font-family-from-indian-type-foundry/53003", "title": "Volte Font Family from Indian Type Foundry - WeAndTheColor" }
+    { "url": "https://weandthecolor.com/volte-font-family-from-indian-type-foundry/53003", "title": "Volte Font Family from Indian Type Foundry - WeAndTheColor", "archive_url": "https://web.archive.org/web/20250911054004/https://weandthecolor.com/volte-font-family-from-indian-type-foundry/53003" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-10-08"
 }

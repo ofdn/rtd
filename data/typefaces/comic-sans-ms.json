@@ -18,13 +18,15 @@
       "url": "http://www.microsoft.com/typography/",
       "title": "www.microsoft.com",
       "type": "foundry or publisher page",
-      "publisher": "Microsoft"
+      "publisher": "Microsoft",
+      "archive_url": "https://web.archive.org/web/20230513234543/http://www.microsoft.com/typography/"
     },
     {
       "url": "http://www.microsoft.com",
       "title": "www.microsoft.com",
       "type": "foundry or publisher page",
-      "publisher": "Microsoft"
+      "publisher": "Microsoft",
+      "archive_url": "https://web.archive.org/web/20261006193403/http://www.microsoft.com"
     }
   ],
   "record_status": "active",

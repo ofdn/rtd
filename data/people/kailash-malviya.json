@@ -9,7 +9,7 @@
   "roles": ["type designer"],
   "bio": "Type designer who co-designed Gotu, a Devanagari and Latin display typeface, with Sarang Kulkarni at Ek Type.",
   "sources": [
-    { "url": "https://ektype.in/gotu.html", "title": "Gotu - Ek Type", "type": "foundry or publisher page", "publisher": "Ek Type" }
+    { "url": "https://ektype.in/gotu.html", "title": "Gotu - Ek Type", "type": "foundry or publisher page", "publisher": "Ek Type", "archive_url": "https://web.archive.org/web/20260603135426/https://ektype.in/gotu.html" }
   ],
   "record_status": "active",
   "superseded_by": null,

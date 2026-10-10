@@ -15,7 +15,7 @@
   "era": "digital",
   "description": "The Gurmukhi member of Naatak, an informal, retro-inspired uniwidth type family influenced by local street lettering and handwritten comics.",
   "sources": [
-    { "url": "https://fontstand.com/fonts/naatak-gurmukhi", "title": "Naatak Gurmukhi - Fontstand", "type": "font catalogue", "publisher": "Fontstand" }
+    { "url": "https://fontstand.com/fonts/naatak-gurmukhi", "title": "Naatak Gurmukhi - Fontstand", "type": "font catalogue", "publisher": "Fontstand", "archive_url": "https://web.archive.org/web/20240911042653/https://fontstand.com/fonts/naatak-gurmukhi" }
   ],
   "record_status": "active",
   "superseded_by": null,

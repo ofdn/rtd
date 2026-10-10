@@ -14,32 +14,38 @@
   "sources": [
     {
       "url": "https://typography.guru/list-entries/brusseline-r276/",
-      "title": "Brusseline"
+      "title": "Brusseline",
+      "archive_url": "https://web.archive.org/web/20260106053404/https://typography.guru/list-entries/brusseline-r276/"
     },
     {
       "url": "https://deberranger.fr/brusseline",
       "title": "Brusseline",
-      "type": "designer website"
+      "type": "designer website",
+      "archive_url": "https://web.archive.org/web/20260519062221/https://deberranger.fr/brusseline"
     },
     {
       "url": "https://www.minaledesignstrategy.com/project/stib-mivb",
-      "title": "STIB MIVB"
+      "title": "STIB MIVB",
+      "archive_url": "https://web.archive.org/web/20211024161816/https://www.minaledesignstrategy.com/project/stib-mivb"
     },
     {
       "url": "https://luc.devroye.org/fonts-46367.html",
       "title": "Brusseline",
       "type": "reference website",
-      "publisher": "Luc Devroye"
+      "publisher": "Luc Devroye",
+      "archive_url": "https://web.archive.org/web/20250331075601/https://luc.devroye.org/fonts-46367.html"
     },
     {
       "url": "https://www.behance.net/gallery/32534207/Brusseline",
-      "title": "Brusseline"
+      "title": "Brusseline",
+      "archive_url": "https://web.archive.org/web/20250120122308/https://www.behance.net/gallery/32534207/Brusseline"
     },
     {
       "url": "https://www.klingspor-museum.de/KlingsporKuenstler/Schriftdesigner/Berranger/EricdeBerranger.pdf",
       "title": "Éric de Berranger",
       "type": "archive or museum record",
-      "publisher": "Klingspor Museum"
+      "publisher": "Klingspor Museum",
+      "archive_url": "https://web.archive.org/web/20240415181359/https://www.klingspor-museum.de/KlingsporKuenstler/Schriftdesigner/Berranger/EricdeBerranger.pdf"
     }
   ],
   "contributed_by": [

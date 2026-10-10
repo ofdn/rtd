@@ -7,11 +7,11 @@
   "scripts": ["Malayalam"],
   "bio": "Malayalam calligrapher, the first in Kerala formally designated as such, working since 1982. Designed RIT Chingam and RIT Karuna with the Rachana Institute of Typography.",
   "sources": [
-    { "url": "https://rachana.org.in/fonts.html", "title": "Fonts - Rachana Institute of Typography" },
-    { "url": "https://kachatathapa.com/", "title": "KaChaTaThaPa Foundation" }
+    { "url": "https://rachana.org.in/fonts.html", "title": "Fonts - Rachana Institute of Typography", "archive_url": "https://web.archive.org/web/20260219202830/https://rachana.org.in/fonts.html" },
+    { "url": "https://kachatathapa.com/", "title": "KaChaTaThaPa Foundation", "archive_url": "https://web.archive.org/web/20260812013319/https://kachatathapa.com/" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-19",
-  "updated_at": "2026-08-19"
+  "updated_at": "2026-10-08"
 }

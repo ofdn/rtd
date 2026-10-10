@@ -15,16 +15,18 @@
   "sources": [
     {
       "url": "http://www.kokonor.com/shojiro/",
-      "title": "www.kokonor.com"
+      "title": "www.kokonor.com",
+      "archive_url": "https://web.archive.org/web/20230328025611/http://www.kokonor.com/shojiro/"
     },
     {
       "url": "http://www.kokonor.com/",
-      "title": "www.kokonor.com"
+      "title": "www.kokonor.com",
+      "archive_url": "https://web.archive.org/web/20260926135925/http://www.kokonor.com/"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-10-08",
   "verification_status": "needs_verification"
 }

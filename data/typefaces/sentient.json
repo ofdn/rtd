@@ -17,7 +17,7 @@
   "description": "A serif text typeface based on old-style forms, drawing on the principles of humanist calligraphy, with five weights and matching italics.",
   "sources": [
     { "url": "https://www.noopurchoksi.com/design/sentient-typeface", "title": "Sentient Typeface - Noopur Choksi", "type": "designer website" },
-    { "url": "https://pimpmytype.com/font/sentient/", "title": "Sentient - Pimp my Type" }
+    { "url": "https://pimpmytype.com/font/sentient/", "title": "Sentient - Pimp my Type", "archive_url": "https://web.archive.org/web/20260514045210/https://pimpmytype.com/font/sentient/" }
   ],
   "record_status": "active",
   "superseded_by": null,

@@ -9,7 +9,7 @@
   "description": "A seven-style Latin-script typeface published by the Indian Type Foundry, featured on MyFonts' hot new fonts list.",
   "sources": [
     { "url": "https://www.myfonts.com/collections/sijya-gupta", "title": "Sijya Gupta - MyFonts", "type": "font catalogue", "publisher": "MyFonts" },
-    { "url": "https://www.indiantypefoundry.com/designers/sijya-gupta", "title": "Sijya Gupta - Indian Type Foundry", "type": "foundry or publisher page", "publisher": "Indian Type Foundry" }
+    { "url": "https://www.indiantypefoundry.com/designers/sijya-gupta", "title": "Sijya Gupta - Indian Type Foundry", "type": "foundry or publisher page", "publisher": "Indian Type Foundry", "archive_url": "https://web.archive.org/web/20251012082855/https://www.indiantypefoundry.com/designers/sijya-gupta" }
   ],
   "record_status": "active",
   "superseded_by": null,

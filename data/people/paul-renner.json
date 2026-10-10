@@ -14,7 +14,8 @@
       "url": "http://www.neufville.com",
       "title": "www.neufville.com",
       "type": "foundry or publisher page",
-      "publisher": "Neufville Digital"
+      "publisher": "Neufville Digital",
+      "archive_url": "https://web.archive.org/web/20141225050026/http://www.neufville.com"
     },
     {
       "url": "https://d-nb.info/gnd/118744542",
@@ -26,7 +27,8 @@
       "url": "https://catalogue.bnf.fr/ark:/12148/cb13607933r",
       "title": "BnF authorities",
       "type": "archive or museum record",
-      "publisher": "Bibliothèque nationale de France"
+      "publisher": "Bibliothèque nationale de France",
+      "archive_url": "https://web.archive.org/web/20251029001950/https://catalogue.bnf.fr/ark:/12148/cb13607933r"
     }
   ],
   "record_status": "active",

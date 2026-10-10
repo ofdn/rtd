@@ -16,7 +16,7 @@
   "design_year": "2022",
   "description": "The Gurmukhi member of Anek, Google's variable multiscript font family.",
   "sources": [
-    { "url": "https://ektype.in/anek-gurmukhi.html", "title": "Anek Gurmukhi - Ek Type", "type": "foundry or publisher page", "publisher": "Ek Type" }
+    { "url": "https://ektype.in/anek-gurmukhi.html", "title": "Anek Gurmukhi - Ek Type", "type": "foundry or publisher page", "publisher": "Ek Type", "archive_url": "https://web.archive.org/web/20260603135426/https://ektype.in/anek-gurmukhi.html" }
   ],
   "record_status": "active",
   "superseded_by": null,

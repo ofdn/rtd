@@ -14,13 +14,14 @@
   "sources": [
     {
       "url": "https://type-department.com/collections/sans-serif-fonts/products/t1-korium",
-      "title": "type-department.com"
+      "title": "type-department.com",
+      "archive_url": "https://web.archive.org/web/20240911100408/https://type-department.com/collections/sans-serif-fonts/products/t1-korium"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-12",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q123819179"
   }

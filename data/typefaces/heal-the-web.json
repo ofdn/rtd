@@ -16,12 +16,14 @@
   "sources": [
     {
       "url": "https://healtheweb.site/",
-      "title": "Heal the Web"
+      "title": "Heal the Web",
+      "archive_url": "https://web.archive.org/web/20260606134036/https://healtheweb.site/"
     },
     {
       "url": "https://github.com/rainbowunicornstudio/healtheweb-typeface",
       "title": "Rainbow Unicorn Studio: Heal the Web (repository)",
-      "type": "software repository"
+      "type": "software repository",
+      "archive_url": "https://web.archive.org/web/20251204153045/https://github.com/rainbowunicornstudio/healtheweb-typeface"
     }
   ],
   "record_status": "active",

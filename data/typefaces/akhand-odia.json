@@ -17,7 +17,7 @@
   "description": "A sans-serif Odia typeface by Jyotish Sonowal, released by the Indian Type Foundry.",
   "external_ids": { "wikidata_qid": "Q125400371" },
   "sources": [
-    { "url": "https://www.indiantypefoundry.com/designers/jyotish-sonowal", "title": "Jyotish Sonowal - Indian Type Foundry", "type": "foundry or publisher page", "publisher": "Indian Type Foundry" }
+    { "url": "https://www.indiantypefoundry.com/designers/jyotish-sonowal", "title": "Jyotish Sonowal - Indian Type Foundry", "type": "foundry or publisher page", "publisher": "Indian Type Foundry", "archive_url": "https://web.archive.org/web/20191014003536/https://www.indiantypefoundry.com/designers/jyotish-sonowal" }
   ],
   "record_status": "active",
   "superseded_by": null,

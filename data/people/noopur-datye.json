@@ -13,9 +13,9 @@
   "bio": "Type designer and calligrapher, co-founder of Ek Type. Designed custom typefaces for Star Jalsa and LifeOk, plus open-source typefaces Mukta Vaani, Mukta Mahee, Modak, and the Baloo family.",
   "external_ids": { "wikidata_qid": "Q125430734" },
   "sources": [
-    { "url": "https://fontsinuse.com/type_designers/4301/noopur-datye", "title": "Noopur Datye - Fonts In Use", "type": "reference website", "publisher": "Fonts In Use" },
-    { "url": "https://www.dandad.org/profiles/person/284573/noopur-datye/", "title": "Noopur Datye - D&AD" },
-    { "url": "https://typographica.org/category/designer/noopur-datye/", "title": "Noopur Datye - Typographica", "type": "newspaper or magazine", "publisher": "Typographica" }
+    { "url": "https://fontsinuse.com/type_designers/4301/noopur-datye", "title": "Noopur Datye - Fonts In Use", "type": "reference website", "publisher": "Fonts In Use", "archive_url": "https://web.archive.org/web/20250418001031/https://fontsinuse.com/type_designers/4301/noopur-datye" },
+    { "url": "https://www.dandad.org/profiles/person/284573/noopur-datye/", "title": "Noopur Datye - D&AD", "archive_url": "https://web.archive.org/web/20221007035117/https://www.dandad.org/profiles/person/284573/noopur-datye/" },
+    { "url": "https://typographica.org/category/designer/noopur-datye/", "title": "Noopur Datye - Typographica", "type": "newspaper or magazine", "publisher": "Typographica", "archive_url": "https://web.archive.org/web/20260114012348/https://typographica.org/category/designer/noopur-datye/" }
   ],
   "record_status": "active",
   "superseded_by": null,

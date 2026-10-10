@@ -13,9 +13,9 @@
   "bio": "Designed typefaces including Kalam, Tillana, Pancho Devanagari, and Ikat, working with the Indian Type Foundry since 2013. Independent type designer bringing Indic scripts into contemporary digital type design.",
   "external_ids": { "wikidata_qid": "Q113686608" },
   "sources": [
-    { "url": "https://www.indiantypefoundry.com/designers/lipi-raval", "title": "Lipi Raval - Indian Type Foundry designer profile", "type": "foundry or publisher page", "publisher": "Indian Type Foundry" },
-    { "url": "https://fontsinuse.com/type_designers/5023/lipi-raval", "title": "Lipi Raval - Fonts In Use", "type": "reference website", "publisher": "Fonts In Use" },
-    { "url": "https://www.platform-mag.com/design/lipi-raval.html", "title": "Lipi Raval - Platform Magazine" }
+    { "url": "https://www.indiantypefoundry.com/designers/lipi-raval", "title": "Lipi Raval - Indian Type Foundry designer profile", "type": "foundry or publisher page", "publisher": "Indian Type Foundry", "archive_url": "https://web.archive.org/web/20260904221630/https://www.indiantypefoundry.com/designers/lipi-raval" },
+    { "url": "https://fontsinuse.com/type_designers/5023/lipi-raval", "title": "Lipi Raval - Fonts In Use", "type": "reference website", "publisher": "Fonts In Use", "archive_url": "https://web.archive.org/web/20260710230447/https://fontsinuse.com/type_designers/5023/lipi-raval" },
+    { "url": "https://www.platform-mag.com/design/lipi-raval.html", "title": "Lipi Raval - Platform Magazine", "archive_url": "https://web.archive.org/web/20220925051058/https://www.platform-mag.com/design/lipi-raval.html" }
   ],
   "record_status": "active",
   "superseded_by": null,

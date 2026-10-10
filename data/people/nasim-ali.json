@@ -10,9 +10,9 @@
   "bio": "Designed Chapakala20, extending the Chapakala Odia revival family to 20th-century letterpress forms. Led font engineering and overall direction on Chapakala19, working across the Odia letterpress era.",
   "external_ids": { "wikidata_qid": "Q123082919" },
   "sources": [
-    { "url": "https://typedrawers.com/discussion/4584/suggestion-for-a-font-serif-with-slanted-e", "title": "Suggestion for a font (serif with slanted 'e') - TypeDrawers" },
+    { "url": "https://typedrawers.com/discussion/4584/suggestion-for-a-font-serif-with-slanted-e", "title": "Suggestion for a font (serif with slanted 'e') - TypeDrawers", "archive_url": "https://web.archive.org/web/20260711200427/https://typedrawers.com/discussion/4584/suggestion-for-a-font-serif-with-slanted-e" },
     { "url": "https://theofdn.org/activities/type/", "title": "Type design activities, O Foundation", "type": "foundry or publisher page", "publisher": "O Foundation" },
-    { "url": "https://github.com/ofdn/Chapakala", "title": "Chapakala: Revival Odia typeface family, GitHub", "type": "software repository" }
+    { "url": "https://github.com/ofdn/Chapakala", "title": "Chapakala: Revival Odia typeface family, GitHub", "type": "software repository", "archive_url": "https://web.archive.org/web/20260526085051/https://github.com/ofdn/Chapakala" }
   ],
   "record_status": "active",
   "superseded_by": null,

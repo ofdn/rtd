@@ -18,19 +18,22 @@
   "sources": [
     {
       "url": "https://www.typeoff.de/2021/04/victor-hammer-and-punchcutting/",
-      "title": "Victor Hammer and punchcutting - TypeOff."
+      "title": "Victor Hammer and punchcutting - TypeOff.",
+      "archive_url": "https://web.archive.org/web/20260410165330/https://www.typeoff.de/2021/04/victor-hammer-and-punchcutting/"
     },
     {
       "url": "https://fontsinuse.com/typefaces/890/american-uncial",
       "title": "American Uncial in use - Fonts In Use",
       "type": "reference website",
-      "publisher": "Fonts In Use"
+      "publisher": "Fonts In Use",
+      "archive_url": "https://web.archive.org/web/20260829201617/https://fontsinuse.com/typefaces/890/american-uncial"
     },
     {
       "url": "https://id.loc.gov/authorities/names/n79027216.html",
       "title": "Hammer, Victor, 1882-1967 - LC Linked Data Service",
       "type": "archive or museum record",
-      "publisher": "Library of Congress"
+      "publisher": "Library of Congress",
+      "archive_url": "https://web.archive.org/web/20251208083654/https://id.loc.gov/authorities/names/n79027216.html"
     }
   ],
   "record_status": "active",

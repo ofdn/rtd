@@ -22,23 +22,27 @@
       "url": "http://www.agfamonotype.com",
       "title": "www.agfamonotype.com",
       "type": "foundry or publisher page",
-      "publisher": "Agfa Monotype"
+      "publisher": "Agfa Monotype",
+      "archive_url": "https://web.archive.org/web/20260606163631/http://www.agfamonotype.com"
     },
     {
       "url": "http://www.monotypeimaging.com/ProductsServices/TypeDesignerShowcase",
       "title": "www.monotypeimaging.com",
       "type": "foundry or publisher page",
-      "publisher": "Monotype Imaging"
+      "publisher": "Monotype Imaging",
+      "archive_url": "https://web.archive.org/web/20140625125055/http://www.monotypeimaging.com/ProductsServices/TypeDesignerShowcase"
     },
     {
       "url": "http://www.monotypeimaging.com",
       "title": "www.monotypeimaging.com",
       "type": "foundry or publisher page",
-      "publisher": "Monotype Imaging"
+      "publisher": "Monotype Imaging",
+      "archive_url": "https://web.archive.org/web/20150905064801/http://www.monotypeimaging.com"
     },
     {
       "url": "https://www.workwithdata.com/person/eric-gill-1882",
-      "title": "Eric Gill (1882) - WorkWithData"
+      "title": "Eric Gill (1882) - WorkWithData",
+      "archive_url": "https://web.archive.org/web/20250809004740/https://www.workwithdata.com/person/eric-gill-1882"
     },
     {
       "url": "https://d-nb.info/gnd/118694936",
@@ -50,7 +54,8 @@
       "url": "https://catalogue.bnf.fr/ark:/12148/cb120352046",
       "title": "BnF authorities",
       "type": "archive or museum record",
-      "publisher": "Bibliothèque nationale de France"
+      "publisher": "Bibliothèque nationale de France",
+      "archive_url": "https://web.archive.org/web/20230410000141/https://catalogue.bnf.fr/ark:/12148/cb120352046"
     }
   ],
   "record_status": "active",

@@ -24,19 +24,22 @@
       "url": "http://www.agfamonotype.com",
       "title": "www.agfamonotype.com",
       "type": "foundry or publisher page",
-      "publisher": "Agfa Monotype"
+      "publisher": "Agfa Monotype",
+      "archive_url": "https://web.archive.org/web/20260606163631/http://www.agfamonotype.com"
     },
     {
       "url": "http://www.monotypeimaging.com/ProductsServices/TypeDesignerShowcase",
       "title": "www.monotypeimaging.com",
       "type": "foundry or publisher page",
-      "publisher": "Monotype Imaging"
+      "publisher": "Monotype Imaging",
+      "archive_url": "https://web.archive.org/web/20140625125055/http://www.monotypeimaging.com/ProductsServices/TypeDesignerShowcase"
     },
     {
       "url": "http://www.monotypeimaging.com",
       "title": "www.monotypeimaging.com",
       "type": "foundry or publisher page",
-      "publisher": "Monotype Imaging"
+      "publisher": "Monotype Imaging",
+      "archive_url": "https://web.archive.org/web/20150905064801/http://www.monotypeimaging.com"
     }
   ],
   "record_status": "active",

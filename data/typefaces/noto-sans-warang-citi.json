@@ -17,8 +17,8 @@
   "description": "A sans-serif typeface for the Warang Citi (Ho) script, part of Google's Noto font project.",
   "external_ids": { "wikidata_qid": "Q75928634" },
   "sources": [
-    { "url": "https://fonts.google.com/noto/specimen/Noto+Sans+Warang+Citi", "title": "Noto Sans Warang Citi - Google Fonts", "type": "font catalogue", "publisher": "Google Fonts" },
-    { "url": "https://notofonts.github.io/warang-citi/", "title": "Noto Warang Citi - Noto Fonts project" }
+    { "url": "https://fonts.google.com/noto/specimen/Noto+Sans+Warang+Citi", "title": "Noto Sans Warang Citi - Google Fonts", "type": "font catalogue", "publisher": "Google Fonts", "archive_url": "https://web.archive.org/web/20260529235040/https://fonts.google.com/noto/specimen/Noto+Sans+Warang+Citi" },
+    { "url": "https://notofonts.github.io/warang-citi/", "title": "Noto Warang Citi - Noto Fonts project", "archive_url": "https://web.archive.org/web/20260826155544/https://notofonts.github.io/warang-citi/" }
   ],
   "record_status": "active",
   "superseded_by": null,

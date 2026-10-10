@@ -16,13 +16,15 @@
       "url": "https://www.babelstone.co.uk/",
       "title": "www.babelstone.co.uk",
       "type": "reference website",
-      "publisher": "BabelStone"
+      "publisher": "BabelStone",
+      "archive_url": "https://web.archive.org/web/20260925214848/https://www.babelstone.co.uk/"
     },
     {
       "url": "https://corp.unicode.org/pipermail/unicode/2025-July/011467.html",
       "title": "Andrew C. West 1960-2025 - Unicode mailing list",
       "type": "standards document",
-      "publisher": "Unicode Consortium"
+      "publisher": "Unicode Consortium",
+      "archive_url": "https://web.archive.org/web/20260804220005/https://corp.unicode.org/pipermail/unicode/2025-July/011467.html"
     },
     {
       "url": "https://id.loc.gov/authorities/nr93032921",

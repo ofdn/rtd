@@ -10,7 +10,7 @@
   "scripts": ["Odia"],
   "bio": "Designed VEGESIGNES, a large multi-script open-source font built with FontStruct covering Oriya alongside numerous other writing systems.",
   "sources": [
-    { "url": "https://fontlibrary.org/en/font/vegesignes", "title": "VEGESIGNES - Font Library", "type": "font catalogue", "publisher": "Font Library" }
+    { "url": "https://fontlibrary.org/en/font/vegesignes", "title": "VEGESIGNES - Font Library", "type": "font catalogue", "publisher": "Font Library", "archive_url": "https://web.archive.org/web/20260828144010/https://fontlibrary.org/en/font/vegesignes" }
   ],
   "verification_status": "needs_verification",
   "record_status": "active",

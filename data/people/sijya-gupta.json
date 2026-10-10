@@ -7,8 +7,8 @@
   "bio": "Designed Hedra, a seven-style typeface published by the Indian Type Foundry. NID Ahmedabad graduate; independent designer working across identity, motion graphics, and digital art in New Delhi.",
   "external_ids": { "wikidata_qid": "Q125430700" },
   "sources": [
-    { "url": "https://www.indiantypefoundry.com/designers/sijya-gupta", "title": "Sijya Gupta - Indian Type Foundry", "type": "foundry or publisher page", "publisher": "Indian Type Foundry" },
-    { "url": "https://thedesignkids.org/interviews/sijya-gupta/", "title": "Sijya Gupta - The Design Kids" }
+    { "url": "https://www.indiantypefoundry.com/designers/sijya-gupta", "title": "Sijya Gupta - Indian Type Foundry", "type": "foundry or publisher page", "publisher": "Indian Type Foundry", "archive_url": "https://web.archive.org/web/20251012082855/https://www.indiantypefoundry.com/designers/sijya-gupta" },
+    { "url": "https://thedesignkids.org/interviews/sijya-gupta/", "title": "Sijya Gupta - The Design Kids", "archive_url": "https://web.archive.org/web/20240527225912/https://thedesignkids.org/interviews/sijya-gupta/" }
   ],
   "record_status": "active",
   "superseded_by": null,

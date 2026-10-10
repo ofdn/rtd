@@ -14,11 +14,13 @@
       "url": "http://www.jamra-patel.com",
       "title": "www.jamra-patel.com",
       "type": "foundry or publisher page",
-      "publisher": "Jamra Patel"
+      "publisher": "Jamra Patel",
+      "archive_url": "https://web.archive.org/web/20260917193813/http://www.jamra-patel.com"
     },
     {
       "url": "http://www.google.com/get/noto/",
-      "title": "www.google.com"
+      "title": "www.google.com",
+      "archive_url": "https://web.archive.org/web/20210921082914/http://www.google.com/get/noto/"
     }
   ],
   "record_status": "deprecated",

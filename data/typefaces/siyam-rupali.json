@@ -8,7 +8,7 @@
   "era": "digital",
   "description": "A free Bangla display typeface with a handwritten rhythm, rounded and flowing letterforms with compact, gently swelling strokes, developed under the Avro Free Bangla font project.",
   "sources": [
-    { "url": "https://luc.devroye.org/bangladesh.html", "title": "Typefaces from and for Bangladesh - Luc Devroye", "type": "reference website", "publisher": "Luc Devroye" }
+    { "url": "https://luc.devroye.org/bangladesh.html", "title": "Typefaces from and for Bangladesh - Luc Devroye", "type": "reference website", "publisher": "Luc Devroye", "archive_url": "https://web.archive.org/web/20260511020917/https://luc.devroye.org/bangladesh.html" }
   ],
   "record_status": "active",
   "superseded_by": null,

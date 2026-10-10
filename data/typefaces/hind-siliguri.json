@@ -15,7 +15,7 @@
   "era": "digital",
   "description": "A Bengali and Latin typeface family developed at the Indian Type Foundry.",
   "sources": [
-    { "url": "https://online-fonts.com/fonts/hind-siliguri", "title": "Hind Siliguri - Online Fonts", "type": "font catalogue" }
+    { "url": "https://online-fonts.com/fonts/hind-siliguri", "title": "Hind Siliguri - Online Fonts", "type": "font catalogue", "archive_url": "https://web.archive.org/web/20250613133446/https://online-fonts.com/fonts/hind-siliguri" }
   ],
   "record_status": "active",
   "superseded_by": null,

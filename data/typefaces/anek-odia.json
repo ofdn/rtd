@@ -17,8 +17,8 @@
   "description": "The Odia component of Anek, Google's variable multiscript font family, designed by Mahesh Sahu and Yesha Goshar at Ek Type.",
   "external_ids": { "wikidata_qid": "Q123056303" },
   "sources": [
-    { "url": "https://ektype.in/ek-odia.html", "title": "Ek Odia - Ek Type", "type": "foundry or publisher page", "publisher": "Ek Type" },
-    { "url": "https://design.google/library/anek-multiscript", "title": "Anek: a new variable multiscript typeface - Google Design", "type": "foundry or publisher page", "publisher": "Google Design" }
+    { "url": "https://ektype.in/ek-odia.html", "title": "Ek Odia - Ek Type", "type": "foundry or publisher page", "publisher": "Ek Type", "archive_url": "https://web.archive.org/web/20260515173657/https://ektype.in/ek-odia.html" },
+    { "url": "https://design.google/library/anek-multiscript", "title": "Anek: a new variable multiscript typeface - Google Design", "type": "foundry or publisher page", "publisher": "Google Design", "archive_url": "https://web.archive.org/web/20260925030005/https://design.google/library/anek-multiscript" }
   ],
   "record_status": "active",
   "superseded_by": null,

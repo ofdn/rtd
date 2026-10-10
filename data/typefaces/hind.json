@@ -15,7 +15,7 @@
   "era": "digital",
   "description": "A Devanagari and Latin sans-serif typeface family.",
   "sources": [
-    { "url": "https://www.indiantypefoundry.com/designers/manushi-parikh", "title": "Manushi Parikh - Indian Type Foundry designer profile", "type": "foundry or publisher page", "publisher": "Indian Type Foundry" }
+    { "url": "https://www.indiantypefoundry.com/designers/manushi-parikh", "title": "Manushi Parikh - Indian Type Foundry designer profile", "type": "foundry or publisher page", "publisher": "Indian Type Foundry", "archive_url": "https://web.archive.org/web/20260904221630/https://www.indiantypefoundry.com/designers/manushi-parikh" }
   ],
   "record_status": "active",
   "superseded_by": null,

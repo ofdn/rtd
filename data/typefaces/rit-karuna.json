@@ -13,10 +13,10 @@
   "era": "digital",
   "description": "A display style font for the Malayalam traditional script, designed by calligrapher Narayana Bhattathiri as homage to the titling style of painter C. N. Karunakaran.",
   "sources": [
-    { "url": "https://rachana.org.in/fonts.html", "title": "Fonts - Rachana Institute of Typography" }
+    { "url": "https://rachana.org.in/fonts.html", "title": "Fonts - Rachana Institute of Typography", "archive_url": "https://web.archive.org/web/20260219202830/https://rachana.org.in/fonts.html" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-19",
-  "updated_at": "2026-08-19"
+  "updated_at": "2026-10-08"
 }

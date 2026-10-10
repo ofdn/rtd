@@ -13,11 +13,11 @@
   "bio": "Visual designer who has worked as a type designer at the Indian Type Foundry, with a focus on Devanagari typography and calligraphy.",
   "external_ids": { "wikidata_qid": "Q125430710" },
   "sources": [
-    { "url": "https://www.behance.net/parvezansari", "title": "Parvez Ansari - Behance" },
+    { "url": "https://www.behance.net/parvezansari", "title": "Parvez Ansari - Behance", "archive_url": "https://web.archive.org/web/20230205182813/https://www.behance.net/parvezansari" },
     { "url": "https://theorg.com/org/dehaat/org-chart/parvez-ansari", "title": "Parvez Ansari - The Org" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-10-08"
 }

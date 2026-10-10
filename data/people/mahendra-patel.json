@@ -14,9 +14,9 @@
   "bio": "Type designer and retired NID Ahmedabad faculty. Worked in Adrian Frutiger's Paris workshop in 1971, developing a modern Devanagari design across multiple Indian scripts. Awarded the 2010 Gutenberg Prize.",
   "external_ids": { "wikidata_qid": "Q113568531", "viaf": "13573709", "isni": "0000000024231285", "lc_naf": "n78075115" },
   "sources": [
-    { "url": "https://www.gutenberg-gesellschaft.de/en/gutenberg-prize/former-prize-winners/2010-mahendra-patel", "title": "2010 Mahendra Patel - Gutenberg-Gesellschaft" },
-    { "url": "https://dsource.in/showcase/mahendra-patel/biography", "title": "Mahendra Patel - D'Source Biography", "type": "reference website", "publisher": "D'source" },
-    { "url": "https://www.printweek.in/features/mahendra-patel-understanding-typefaces-29204", "title": "Understanding typefaces - PrintWeek India", "type": "newspaper or magazine", "publisher": "PrintWeek India" }
+    { "url": "https://www.gutenberg-gesellschaft.de/en/gutenberg-prize/former-prize-winners/2010-mahendra-patel", "title": "2010 Mahendra Patel - Gutenberg-Gesellschaft", "archive_url": "https://web.archive.org/web/20251109194217/https://www.gutenberg-gesellschaft.de/en/gutenberg-prize/former-prize-winners/2010-mahendra-patel" },
+    { "url": "https://dsource.in/showcase/mahendra-patel/biography", "title": "Mahendra Patel - D'Source Biography", "type": "reference website", "publisher": "D'source", "archive_url": "https://web.archive.org/web/20240914114258/https://dsource.in/showcase/mahendra-patel/biography" },
+    { "url": "https://www.printweek.in/features/mahendra-patel-understanding-typefaces-29204", "title": "Understanding typefaces - PrintWeek India", "type": "newspaper or magazine", "publisher": "PrintWeek India", "archive_url": "https://web.archive.org/web/20260213170657/https://www.printweek.in/features/mahendra-patel-understanding-typefaces-29204" }
   ],
   "record_status": "active",
   "superseded_by": null,

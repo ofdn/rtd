@@ -19,8 +19,8 @@
   "unicode_compliant": true,
   "description": "A sans-serif Unicode typeface for the Ol Chiki script, part of Google's Noto font project, designed by the Monotype design team.",
   "sources": [
-    { "url": "https://fonts.google.com/noto/specimen/Noto+Sans+Ol+Chiki", "title": "Noto Sans Ol Chiki - Google Fonts", "type": "font catalogue", "publisher": "Google Fonts" },
-    { "url": "https://notofonts.github.io/ol-chiki/", "title": "Noto Sans Ol Chiki - Noto Fonts project" }
+    { "url": "https://fonts.google.com/noto/specimen/Noto+Sans+Ol+Chiki", "title": "Noto Sans Ol Chiki - Google Fonts", "type": "font catalogue", "publisher": "Google Fonts", "archive_url": "https://web.archive.org/web/20260612022636/https://fonts.google.com/noto/specimen/Noto+Sans+Ol+Chiki" },
+    { "url": "https://notofonts.github.io/ol-chiki/", "title": "Noto Sans Ol Chiki - Noto Fonts project", "archive_url": "https://web.archive.org/web/20260613144521/https://notofonts.github.io/ol-chiki/" }
   ],
   "record_status": "active",
   "superseded_by": null,

@@ -16,19 +16,22 @@
       "url": "http://www.carterandcone.com/",
       "title": "www.carterandcone.com",
       "type": "foundry or publisher page",
-      "publisher": "Carter & Cone"
+      "publisher": "Carter & Cone",
+      "archive_url": "https://web.archive.org/web/20260613022731/http://www.carterandcone.com/"
     },
     {
       "url": "http://www.microsoft.com/typography",
       "title": "www.microsoft.com",
       "type": "foundry or publisher page",
-      "publisher": "Microsoft"
+      "publisher": "Microsoft",
+      "archive_url": "https://web.archive.org/web/20230513234543/http://www.microsoft.com/typography"
     },
     {
       "url": "https://www.moma.org/artists/32468",
       "title": "MoMA online collection",
       "type": "archive or museum record",
-      "publisher": "Museum of Modern Art"
+      "publisher": "Museum of Modern Art",
+      "archive_url": "https://web.archive.org/web/20250115103338/https://www.moma.org/artists/32468"
     }
   ],
   "record_status": "active",

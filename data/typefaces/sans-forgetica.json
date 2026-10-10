@@ -26,13 +26,15 @@
   "sources": [
     {
       "url": "https://www.rmit.edu.au/news/media-releases-and-expert-comments/2018/oct/sans-forgetica-media-release",
-      "title": "Sans Forgetica: RMIT creates typeface designed to help students study - RMIT"
+      "title": "Sans Forgetica: RMIT creates typeface designed to help students study - RMIT",
+      "archive_url": "https://web.archive.org/web/20260420101345/https://www.rmit.edu.au/news/media-releases-and-expert-comments/2018/oct/sans-forgetica-media-release"
     },
     {
       "url": "https://eyeondesign.aiga.org/sans-forgetica-a-typeface-to-remember/",
       "title": "Can \"Bad\" Type Design Help Readers Absorb and Remember Information? - AIGA Eye on Design",
       "type": "newspaper or magazine",
-      "publisher": "AIGA Eye on Design"
+      "publisher": "AIGA Eye on Design",
+      "archive_url": "https://web.archive.org/web/20260721182639/https://eyeondesign.aiga.org/sans-forgetica-a-typeface-to-remember/"
     }
   ],
   "record_status": "active",

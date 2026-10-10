@@ -17,7 +17,7 @@
   "era": "digital",
   "description": "A geometric sans-serif typeface family; Devanagari design by Ninad Kale, Latin by Jonny Pinhorn.",
   "sources": [
-    { "url": "https://fontsinuse.com/typefaces/45323/poppins", "title": "Poppins - Fonts In Use", "type": "reference website", "publisher": "Fonts In Use" }
+    { "url": "https://fontsinuse.com/typefaces/45323/poppins", "title": "Poppins - Fonts In Use", "type": "reference website", "publisher": "Fonts In Use", "archive_url": "https://web.archive.org/web/20260912055722/https://fontsinuse.com/typefaces/45323/poppins" }
   ],
   "record_status": "active",
   "superseded_by": null,

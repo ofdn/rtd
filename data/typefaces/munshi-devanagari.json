@@ -15,10 +15,10 @@
   "era": "digital",
   "description": "A Devanagari typeface for immersive reading, with dramatic contrast between lighter and bolder weights.",
   "sources": [
-    { "url": "https://www.behance.net/gallery/32904337/Munshi-Devanagari-Typeface", "title": "Munshi Devanagari Typeface - Ninad Kale, Behance" }
+    { "url": "https://www.behance.net/gallery/32904337/Munshi-Devanagari-Typeface", "title": "Munshi Devanagari Typeface - Ninad Kale, Behance", "archive_url": "https://web.archive.org/web/20190918020709/https://www.behance.net/gallery/32904337/Munshi-Devanagari-Typeface" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-10-08"
 }

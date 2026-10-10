@@ -8,8 +8,8 @@
   "bio": "Type designer at Ek Type. Designed the Gurmukhi component of Baloo 2 and co-designed the Kannada component with Divya Kowshik, plus Mukta Mahee with Noopur Datye.",
   "external_ids": { "wikidata_qid": "Q123056365" },
   "sources": [
-    { "url": "https://github.com/EkType/Baloo2", "title": "EkType/Baloo2 - GitHub", "type": "software repository" },
-    { "url": "https://www.fontsquirrel.com/fonts/mukta", "title": "Mukta Font Free by EK Type - Font Squirrel", "type": "font catalogue", "publisher": "Font Squirrel" }
+    { "url": "https://github.com/EkType/Baloo2", "title": "EkType/Baloo2 - GitHub", "type": "software repository", "archive_url": "https://web.archive.org/web/20260711082142/https://github.com/EkType/Baloo2" },
+    { "url": "https://www.fontsquirrel.com/fonts/mukta", "title": "Mukta Font Free by EK Type - Font Squirrel", "type": "font catalogue", "publisher": "Font Squirrel", "archive_url": "https://web.archive.org/web/20240324161749/https://www.fontsquirrel.com/fonts/mukta" }
   ],
   "record_status": "active",
   "superseded_by": null,

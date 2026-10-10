@@ -10,9 +10,9 @@
   "roles": ["script inventor"],
   "bio": "Devised the Sorang Sompeng script for the Sora language in 1936, its 24 letters named for deities in the Sora pantheon, resolving a dispute over which script to use.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/sorangsompeng.htm", "title": "Sorang Sompeng script - Omniglot", "type": "reference website", "publisher": "Omniglot" },
-    { "url": "https://www.endangeredalphabets.net/alphabets/sorang-sompeng/", "title": "Sora Sompeng - Atlas of Endangered Alphabets" },
-    { "url": "https://ci.nii.ac.jp/ncid/BB2058942X?l=en", "title": "Asoka Kumara Dasababu, Guru Mangei Gamango (Academy of Tribal Dialects & Culture, 1996) — CiNii catalogue record giving lifespan 1916-1980" }
+    { "url": "https://www.omniglot.com/writing/sorangsompeng.htm", "title": "Sorang Sompeng script - Omniglot", "type": "reference website", "publisher": "Omniglot", "archive_url": "https://web.archive.org/web/20260906145928/https://www.omniglot.com/writing/sorangsompeng.htm" },
+    { "url": "https://www.endangeredalphabets.net/alphabets/sorang-sompeng/", "title": "Sora Sompeng - Atlas of Endangered Alphabets", "archive_url": "https://web.archive.org/web/20260415043217/https://www.endangeredalphabets.net/alphabets/sorang-sompeng/" },
+    { "url": "https://ci.nii.ac.jp/ncid/BB2058942X?l=en", "title": "Asoka Kumara Dasababu, Guru Mangei Gamango (Academy of Tribal Dialects & Culture, 1996) — CiNii catalogue record giving lifespan 1916-1980", "archive_url": "https://web.archive.org/web/20250120102533/https://ci.nii.ac.jp/ncid/BB2058942X?l=en" }
   ],
   "record_status": "active",
   "superseded_by": null,

@@ -11,7 +11,8 @@
   "sources": [
     {
       "url": "https://healtheweb.site/",
-      "title": "https://healtheweb.site/"
+      "title": "https://healtheweb.site/",
+      "archive_url": "https://web.archive.org/web/20260606134036/https://healtheweb.site/"
     }
   ],
   "record_status": "active",
@@ -24,5 +25,5 @@
   ],
   "bio": "German type and graphic designer. Created Heal the Web for Rainbow Unicorn, which was commissioned to create Mozilla’s Internet Health Report 2020.",
   "created_at": "2026-08-12",
-  "updated_at": "2026-08-12"
+  "updated_at": "2026-10-08"
 }

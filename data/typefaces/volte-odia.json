@@ -16,7 +16,7 @@
   "description": "An Odia typeface by Anurag Gautam, released by the Indian Type Foundry.",
   "external_ids": { "wikidata_qid": "Q125400255" },
   "sources": [
-    { "url": "https://www.myfonts.com/collections/anurag-gautam", "title": "Anurag Gautam - MyFonts", "type": "font catalogue", "publisher": "MyFonts" }
+    { "url": "https://www.myfonts.com/collections/anurag-gautam", "title": "Anurag Gautam - MyFonts", "type": "font catalogue", "publisher": "MyFonts", "archive_url": "https://web.archive.org/web/20251103070709/https://www.myfonts.com/collections/anurag-gautam" }
   ],
   "record_status": "active",
   "superseded_by": null,

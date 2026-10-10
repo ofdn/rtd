@@ -16,8 +16,8 @@
   "era": "digital",
   "description": "The Indian Type Foundry's first commercial Odia typeface, designed for long-form reading with multiple weights and kerning.",
   "sources": [
-    { "url": "https://typographica.org/typeface-reviews/ashoka-odia/", "title": "Ashoka Odia - Typographica", "type": "newspaper or magazine", "publisher": "Typographica" },
-    { "url": "https://odishachannel.com/index.php/6946/new-odia-typeface-ashoka-odia-designed-by-pratyush-das-released/", "title": "New Odia typeface Ashoka Odia designed by Pratyush Das released - OdishaChannel.com" }
+    { "url": "https://typographica.org/typeface-reviews/ashoka-odia/", "title": "Ashoka Odia - Typographica", "type": "newspaper or magazine", "publisher": "Typographica", "archive_url": "https://web.archive.org/web/20251114064508/https://typographica.org/typeface-reviews/ashoka-odia/" },
+    { "url": "https://odishachannel.com/index.php/6946/new-odia-typeface-ashoka-odia-designed-by-pratyush-das-released/", "title": "New Odia typeface Ashoka Odia designed by Pratyush Das released - OdishaChannel.com", "archive_url": "https://web.archive.org/web/20260429053214/https://odishachannel.com/index.php/6946/new-odia-typeface-ashoka-odia-designed-by-pratyush-das-released/" }
   ],
   "record_status": "active",
   "superseded_by": null,

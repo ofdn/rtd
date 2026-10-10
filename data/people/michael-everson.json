@@ -12,13 +12,14 @@
   "sources": [
     {
       "url": "http://www.evertype.com",
-      "title": "www.evertype.com"
+      "title": "www.evertype.com",
+      "archive_url": "https://web.archive.org/web/20260920232852/http://www.evertype.com"
     }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-10-08",
   "external_ids": {
     "wikidata_qid": "Q285609",
     "viaf": "78071374",

@@ -10,10 +10,10 @@
   "scripts": ["Borama"],
   "bio": "Created the Borama (Gadabuursi) alphabet for Somali in 1933. He was a Qur'anic teacher in Borama.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/borama.htm", "title": "Borama / Gadabuursi alphabet", "type": "reference website", "language": "en", "publisher": "Omniglot" }
+    { "url": "https://www.omniglot.com/writing/borama.htm", "title": "Borama / Gadabuursi alphabet", "type": "reference website", "language": "en", "publisher": "Omniglot", "archive_url": "https://web.archive.org/web/20260712025327/https://www.omniglot.com/writing/borama.htm" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-07"
+  "updated_at": "2026-10-08"
 }

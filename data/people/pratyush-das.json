@@ -13,8 +13,8 @@
   "bio": "Odisha-born type designer focused on Odia typefaces. Designed Ashoka Odia, the Indian Type Foundry's first commercial Odia typeface and the first Odia text typeface to apply Latin-style stroke contrast.",
   "external_ids": { "wikidata_qid": "Q123056432" },
   "sources": [
-    { "url": "https://www.typotheque.com/authors/pratyush-das", "title": "Pratyush Das - Typotheque", "type": "foundry or publisher page", "publisher": "Typotheque" },
-    { "url": "https://typographica.org/typeface-reviews/ashoka-odia/", "title": "Ashoka Odia - Typographica", "type": "newspaper or magazine", "publisher": "Typographica" }
+    { "url": "https://www.typotheque.com/authors/pratyush-das", "title": "Pratyush Das - Typotheque", "type": "foundry or publisher page", "publisher": "Typotheque", "archive_url": "https://web.archive.org/web/20260525065553/https://www.typotheque.com/authors/pratyush-das" },
+    { "url": "https://typographica.org/typeface-reviews/ashoka-odia/", "title": "Ashoka Odia - Typographica", "type": "newspaper or magazine", "publisher": "Typographica", "archive_url": "https://web.archive.org/web/20251114064508/https://typographica.org/typeface-reviews/ashoka-odia/" }
   ],
   "record_status": "active",
   "superseded_by": null,

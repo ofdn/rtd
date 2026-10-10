@@ -13,9 +13,9 @@
   "bio": "Type designer working across Latin, Devanagari, and Gurmukhi scripts. Has contributed to font suites for Google, Instagram, and Samsung. Designed the Volte typeface family (2015), along with Biblio and Splinter.",
   "external_ids": { "wikidata_qid": "Q125430719" },
   "sources": [
-    { "url": "https://typenetwork.com/font-designers/namrata-goyal", "title": "Namrata Goyal - Type Network", "type": "font catalogue", "publisher": "Type Network" },
-    { "url": "https://www.futurefonts.com/namrata-goyal", "title": "Namrata Goyal - Future Fonts", "type": "font catalogue", "publisher": "Future Fonts" },
-    { "url": "https://namratagoyal.in/", "title": "Namrata Goyal - personal website", "type": "designer website" }
+    { "url": "https://typenetwork.com/font-designers/namrata-goyal", "title": "Namrata Goyal - Type Network", "type": "font catalogue", "publisher": "Type Network", "archive_url": "https://web.archive.org/web/20250318194108/https://typenetwork.com/font-designers/namrata-goyal" },
+    { "url": "https://www.futurefonts.com/namrata-goyal", "title": "Namrata Goyal - Future Fonts", "type": "font catalogue", "publisher": "Future Fonts", "archive_url": "https://web.archive.org/web/20260903230056/https://www.futurefonts.com/namrata-goyal" },
+    { "url": "https://namratagoyal.in/", "title": "Namrata Goyal - personal website", "type": "designer website", "archive_url": "https://web.archive.org/web/20251124114203/https://namratagoyal.in/" }
   ],
   "record_status": "active",
   "superseded_by": null,

@@ -24,19 +24,22 @@
   "sources": [
     {
       "url": "https://foundryfivetype.com/about-us/",
-      "title": "About Foundry5"
+      "title": "About Foundry5",
+      "archive_url": "https://web.archive.org/web/20260712142600/https://foundryfivetype.com/about-us/"
     },
     {
       "url": "https://typenetwork.com/font-designers/pria-ravichandran",
       "title": "Pria Ravichandran - Type Network",
       "type": "font catalogue",
-      "publisher": "Type Network"
+      "publisher": "Type Network",
+      "archive_url": "https://web.archive.org/web/20250518045817/https://typenetwork.com/font-designers/pria-ravichandran"
     },
     {
       "url": "https://fontsinuse.com/type_designers/5463/pria-ravichandran",
       "title": "Pria Ravichandran - Fonts In Use",
       "type": "reference website",
-      "publisher": "Fonts In Use"
+      "publisher": "Fonts In Use",
+      "archive_url": "https://web.archive.org/web/20250321174806/https://fontsinuse.com/type_designers/5463/pria-ravichandran"
     },
     {
       "url": "https://www.facebook.com/priaadireddi/about_contact_and_basic_info",
@@ -44,17 +47,20 @@
     },
     {
       "url": "https://about.me/priaravichandran",
-      "title": "Pria Ravichandran - about.me"
+      "title": "Pria Ravichandran - about.me",
+      "archive_url": "https://web.archive.org/web/20260410091136/https://about.me/priaravichandran"
     },
     {
       "url": "https://luc.devroye.org/fonts-80349.html",
       "title": "Pria Ravichandran - Luc Devroye's Type Design Information",
       "type": "reference website",
-      "publisher": "Luc Devroye"
+      "publisher": "Luc Devroye",
+      "archive_url": "https://web.archive.org/web/20250907051535/https://luc.devroye.org/fonts-80349.html"
     },
     {
       "url": "https://centaur.reading.ac.uk/99826/",
-      "title": "The development of typographic forms for the Kannada and Telugu scripts (1801-1900) - CentAUR, University of Reading"
+      "title": "The development of typographic forms for the Kannada and Telugu scripts (1801-1900) - CentAUR, University of Reading",
+      "archive_url": "https://web.archive.org/web/20250118063037/https://centaur.reading.ac.uk/99826/"
     }
   ],
   "record_status": "active",

@@ -7,7 +7,7 @@
   "era": "digital",
   "description": "The first Devanagari typeface designed for OpenType, containing over 700 glyphs and composition-rule tables for rendering the script's complex conjuncts and ligatures.",
   "sources": [
-    { "url": "https://letterformarchive.org/news/the-multilinguascriptic-life-of-r-k-joshi/", "title": "The Multilinguascriptic Life of R. K. Joshi - Letterform Archive", "type": "archive or museum record", "publisher": "Letterform Archive" }
+    { "url": "https://letterformarchive.org/news/the-multilinguascriptic-life-of-r-k-joshi/", "title": "The Multilinguascriptic Life of R. K. Joshi - Letterform Archive", "type": "archive or museum record", "publisher": "Letterform Archive", "archive_url": "https://web.archive.org/web/20260609051310/https://letterformarchive.org/news/the-multilinguascriptic-life-of-r-k-joshi/" }
   ],
   "record_status": "active",
   "superseded_by": null,

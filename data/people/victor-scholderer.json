@@ -12,13 +12,15 @@
   "sources": [
     {
       "url": "https://www.scholderer.org/web_data/p81558.htm",
-      "title": "www.scholderer.org"
+      "title": "www.scholderer.org",
+      "archive_url": "https://web.archive.org/web/20250528204923/https://www.scholderer.org/web_data/p81558.htm"
     },
     {
       "url": "https://catalogue.bnf.fr/ark:/12148/cb13484802s",
       "title": "BnF authorities",
       "type": "archive or museum record",
-      "publisher": "Bibliothèque nationale de France"
+      "publisher": "Bibliothèque nationale de France",
+      "archive_url": "https://web.archive.org/web/20220403215705/https://catalogue.bnf.fr/ark:/12148/cb13484802s"
     }
   ],
   "record_status": "active",

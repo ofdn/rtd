@@ -17,7 +17,7 @@
   "design_year": "2020",
   "description": "The Devanagari member of the Baloo 2 rounded display typeface family.",
   "sources": [
-    { "url": "https://ektype.in/baloo-devanagari.html", "title": "Baloo Devanagari - Ek Type", "type": "foundry or publisher page", "publisher": "Ek Type" }
+    { "url": "https://ektype.in/baloo-devanagari.html", "title": "Baloo Devanagari - Ek Type", "type": "foundry or publisher page", "publisher": "Ek Type", "archive_url": "https://web.archive.org/web/20260603135426/https://ektype.in/baloo-devanagari.html" }
   ],
   "record_status": "active",
   "superseded_by": null,

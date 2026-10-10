@@ -10,10 +10,10 @@
   "scripts": ["Nyiakeng Puachue Hmong"],
   "bio": "Created the Nyiakeng Puachue Hmong alphabet in the 1980s for White and Green Hmong, for use in his United Christians Liberty Evangelical Church.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/nyiakengpuachuehmong.htm", "title": "Nyiakeng Puachue Hmong alphabet", "type": "reference website", "language": "en", "publisher": "Omniglot" }
+    { "url": "https://www.omniglot.com/writing/nyiakengpuachuehmong.htm", "title": "Nyiakeng Puachue Hmong alphabet", "type": "reference website", "language": "en", "publisher": "Omniglot", "archive_url": "https://web.archive.org/web/20260819081553/https://www.omniglot.com/writing/nyiakengpuachuehmong.htm" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-07"
+  "updated_at": "2026-10-08"
 }

@@ -11,7 +11,7 @@
   "era": "digital",
   "description": "A typeface awarded a Certificate of Excellence by the Type Directors Club (TDC67).",
   "sources": [
-    { "url": "https://tdc.org/work/kimya-gandhi/", "title": "Kimya Gandhi - The Type Directors Club", "type": "foundry or publisher page", "publisher": "Type Directors Club" }
+    { "url": "https://tdc.org/work/kimya-gandhi/", "title": "Kimya Gandhi - The Type Directors Club", "type": "foundry or publisher page", "publisher": "Type Directors Club", "archive_url": "https://web.archive.org/web/20240912013633/https://tdc.org/work/kimya-gandhi/" }
   ],
   "record_status": "active",
   "superseded_by": null,

@@ -11,8 +11,8 @@
   "bio": "Developed the Wancho script for the Wancho language between 2001 and 2012, publishing a teaching textbook in 2013; the script entered Unicode in 2019.",
   "sources": [
     { "url": "https://www.deccanherald.com/india/arunachal-man-scripts-history-with-new-tribal-alphabet-753893", "title": "Arunachal man scripts history with new tribal alphabet - Deccan Herald", "type": "newspaper or magazine", "publisher": "Deccan Herald" },
-    { "url": "https://nenow.in/literature/arunachals-banwang-losu-develops-new-script-for-wancho-community.html", "title": "Arunachal's Banwang Losu develops new script for Wancho community - NE Now", "type": "newspaper or magazine", "publisher": "Northeast Now" },
-    { "url": "https://www.omniglot.com/writing/wanchoscript.htm", "title": "Wancho script - Omniglot", "type": "reference website", "publisher": "Omniglot" }
+    { "url": "https://nenow.in/literature/arunachals-banwang-losu-develops-new-script-for-wancho-community.html", "title": "Arunachal's Banwang Losu develops new script for Wancho community - NE Now", "type": "newspaper or magazine", "publisher": "Northeast Now", "archive_url": "https://web.archive.org/web/20211022104956/https://nenow.in/literature/arunachals-banwang-losu-develops-new-script-for-wancho-community.html" },
+    { "url": "https://www.omniglot.com/writing/wanchoscript.htm", "title": "Wancho script - Omniglot", "type": "reference website", "publisher": "Omniglot", "archive_url": "https://web.archive.org/web/20260412234512/https://www.omniglot.com/writing/wanchoscript.htm" }
   ],
   "record_status": "active",
   "superseded_by": null,

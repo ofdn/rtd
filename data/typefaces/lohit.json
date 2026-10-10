@@ -15,10 +15,10 @@
   "era": "digital",
   "description": "An open-source font family commissioned by Red Hat, supporting Indian scripts and shipped as the default Indian-language fonts in Fedora.",
   "sources": [
-    { "url": "https://fedoraproject.org/wiki/Lohit", "title": "Lohit - Fedora Project Wiki" }
+    { "url": "https://fedoraproject.org/wiki/Lohit", "title": "Lohit - Fedora Project Wiki", "archive_url": "https://web.archive.org/web/20260728223800/https://fedoraproject.org/wiki/Lohit" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-07"
+  "updated_at": "2026-10-08"
 }

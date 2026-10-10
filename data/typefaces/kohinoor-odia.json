@@ -18,7 +18,7 @@
   "external_ids": { "wikidata_qid": "Q123086322" },
   "sources": [
     { "url": "https://www.myfonts.com/collections/kohinoor-odia-font-indian-type-foundry", "title": "Kohinoor Odia Font - MyFonts", "type": "font catalogue", "publisher": "MyFonts" },
-    { "url": "https://www.indiantypefoundry.com/fonts/kohinoor", "title": "Kohinoor styles - Indian Type Foundry", "type": "foundry or publisher page", "publisher": "Indian Type Foundry" }
+    { "url": "https://www.indiantypefoundry.com/fonts/kohinoor", "title": "Kohinoor styles - Indian Type Foundry", "type": "foundry or publisher page", "publisher": "Indian Type Foundry", "archive_url": "https://web.archive.org/web/20251127084453/https://www.indiantypefoundry.com/fonts/kohinoor" }
   ],
   "record_status": "active",
   "superseded_by": null,

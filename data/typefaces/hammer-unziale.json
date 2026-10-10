@@ -26,13 +26,15 @@
   "sources": [
     {
       "url": "https://www.typeoff.de/2021/04/victor-hammer-and-gebr-klingspor/",
-      "title": "Victor Hammer and Gebr. Klingspor - TypeOff."
+      "title": "Victor Hammer and Gebr. Klingspor - TypeOff.",
+      "archive_url": "https://web.archive.org/web/20260521010602/https://www.typeoff.de/2021/04/victor-hammer-and-gebr-klingspor/"
     },
     {
       "url": "https://fontsinuse.com/typefaces/890/american-uncial",
       "title": "American Uncial in use - Fonts In Use",
       "type": "reference website",
-      "publisher": "Fonts In Use"
+      "publisher": "Fonts In Use",
+      "archive_url": "https://web.archive.org/web/20260829201617/https://fontsinuse.com/typefaces/890/american-uncial"
     }
   ],
   "record_status": "active",

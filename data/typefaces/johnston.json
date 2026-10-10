@@ -22,25 +22,29 @@
       "url": "https://www.ltmuseum.co.uk/collections/stories/people/edward-johnston-man-behind-londons-lettering",
       "title": "Edward Johnston: the man behind London’s lettering",
       "type": "archive or museum record",
-      "publisher": "London Transport Museum"
+      "publisher": "London Transport Museum",
+      "archive_url": "https://web.archive.org/web/20240614214853/https://www.ltmuseum.co.uk/collections/stories/people/edward-johnston-man-behind-londons-lettering"
     },
     {
       "url": "https://luc.devroye.org/fonts-66504.html",
       "title": "Johnston's Underground Type [Edward Johnston]",
       "type": "reference website",
-      "publisher": "Luc Devroye"
+      "publisher": "Luc Devroye",
+      "archive_url": "https://web.archive.org/web/20260203105803/https://luc.devroye.org/fonts-66504.html"
     },
     {
       "url": "https://www.colophon.co.uk/typography/font-id-how-johnstons-underground-bridged-the-class-gap/",
       "title": "FONT ID – How Johnston’s Underground bridged the class gap",
       "type": "foundry or publisher page",
-      "publisher": "Colophon Foundry"
+      "publisher": "Colophon Foundry",
+      "archive_url": "https://web.archive.org/web/20260609143118/https://www.colophon.co.uk/typography/font-id-how-johnstons-underground-bridged-the-class-gap/"
     },
     {
       "url": "https://www.bbc.com/news/magazine-35916807",
       "title": "Johnston Sans: The Tube typeface that changed everything",
       "type": "newspaper or magazine",
-      "publisher": "BBC"
+      "publisher": "BBC",
+      "archive_url": "https://web.archive.org/web/20260522205035/https://www.bbc.com/news/magazine-35916807"
     }
   ],
   "contributed_by": [

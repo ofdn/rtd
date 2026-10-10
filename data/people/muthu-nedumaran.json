@@ -14,8 +14,8 @@
   ],
   "bio": "Founder of Murasu Systems. Designed typefaces and input methods for Tamil and other Indic scripts since the 1980s, including Oriya Sangam MN, bundled into Apple's operating systems.",
   "sources": [
-    { "url": "https://murasu.com/", "title": "Murasu.Com", "type": "foundry or publisher page", "publisher": "Murasu" },
-    { "url": "https://fontsinuse.com/type_designers/3652/muthu-nedumaran", "title": "Muthu Nedumaran - Fonts In Use", "type": "reference website", "publisher": "Fonts In Use" }
+    { "url": "https://murasu.com/", "title": "Murasu.Com", "type": "foundry or publisher page", "publisher": "Murasu", "archive_url": "https://web.archive.org/web/20260821154346/https://murasu.com/" },
+    { "url": "https://fontsinuse.com/type_designers/3652/muthu-nedumaran", "title": "Muthu Nedumaran - Fonts In Use", "type": "reference website", "publisher": "Fonts In Use", "archive_url": "https://web.archive.org/web/20260420215529/https://fontsinuse.com/type_designers/3652/muthu-nedumaran" }
   ],
   "record_status": "active",
   "superseded_by": null,

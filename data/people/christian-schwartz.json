@@ -13,8 +13,8 @@
   ],
   "bio": "Designed Graphik and co-designed Guardian Egyptian with Paul Barnes, at Commercial Type, the foundry they co-founded in 2007. Won the Prix Charles Peignot in 2007.",
   "sources": [
-    { "url": "https://commercialtype.com/about/christian_schwartz", "title": "Christian Schwartz - Commercial Type", "type": "foundry or publisher page", "publisher": "Commercial Type" },
-    { "url": "https://type.today/en/designer/christianschwartz", "title": "Christian Schwartz - Type.Today" }
+    { "url": "https://commercialtype.com/about/christian_schwartz", "title": "Christian Schwartz - Commercial Type", "type": "foundry or publisher page", "publisher": "Commercial Type", "archive_url": "https://web.archive.org/web/20260421074037/https://commercialtype.com/about/christian_schwartz" },
+    { "url": "https://type.today/en/designer/christianschwartz", "title": "Christian Schwartz - Type.Today", "archive_url": "https://web.archive.org/web/20260415123123/https://type.today/en/designer/christianschwartz" }
   ],
   "record_status": "active",
   "superseded_by": null,

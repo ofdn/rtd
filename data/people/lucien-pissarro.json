@@ -22,19 +22,22 @@
       "url": "https://www.meermanno.nl/matrices-of-the-zilverdistel-press",
       "title": "Matrices of the Zilverdistel Press - Meermanno",
       "type": "archive or museum record",
-      "publisher": "Museum Meermanno"
+      "publisher": "Museum Meermanno",
+      "archive_url": "https://web.archive.org/web/20191020095741/https://www.meermanno.nl/matrices-of-the-zilverdistel-press"
     },
     {
       "url": "https://resources.huygens.knaw.nl/bwn1880-2000/lemmata/bwn2/royen",
       "title": "Roijen, Jean François van (1878-1942) - Biografisch Woordenboek Nederland, Huygens Institute",
       "type": "reference website",
-      "publisher": "Huygens Institute"
+      "publisher": "Huygens Institute",
+      "archive_url": "https://web.archive.org/web/20240910052139/https://resources.huygens.knaw.nl/bwn1880-2000/lemmata/bwn2/royen"
     },
     {
       "url": "https://id.loc.gov/authorities/names/n50010996.html",
       "title": "Pissarro, Lucien, 1863-1944 - LC Linked Data Service",
       "type": "archive or museum record",
-      "publisher": "Library of Congress"
+      "publisher": "Library of Congress",
+      "archive_url": "https://web.archive.org/web/20260425144318/https://id.loc.gov/authorities/names/n50010996.html"
     }
   ],
   "record_status": "active",

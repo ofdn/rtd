@@ -11,10 +11,10 @@
   "scripts": ["Kpelle"],
   "bio": "Invented the Kpelle syllabary in the 1930s as a chief of Sanoyea in Bong County, Liberia.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/kpelle.htm", "title": "Kpelle language and syllabary", "type": "reference website", "language": "en", "publisher": "Omniglot" }
+    { "url": "https://www.omniglot.com/writing/kpelle.htm", "title": "Kpelle language and syllabary", "type": "reference website", "language": "en", "publisher": "Omniglot", "archive_url": "https://web.archive.org/web/20260808161110/https://www.omniglot.com/writing/kpelle.htm" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-07"
+  "updated_at": "2026-10-08"
 }

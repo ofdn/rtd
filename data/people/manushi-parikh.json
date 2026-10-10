@@ -13,9 +13,9 @@
   "bio": "Type designer at the Indian Type Foundry since 2014. Designed typefaces including Hind, Begum, Nippo, Chillax, Sarpanch, Teko, and Torrent.",
   "external_ids": { "wikidata_qid": "Q125430723" },
   "sources": [
-    { "url": "https://www.indiantypefoundry.com/designers/manushi-parikh", "title": "Manushi Parikh - Indian Type Foundry designer profile", "type": "foundry or publisher page", "publisher": "Indian Type Foundry" },
-    { "url": "https://fontsinuse.com/type_designers/3041/manushi-parikh", "title": "Manushi Parikh - Fonts In Use", "type": "reference website", "publisher": "Fonts In Use" },
-    { "url": "https://fonts.adobe.com/designers/manushi-parikh", "title": "Manushi Parikh - Adobe Fonts", "type": "font catalogue", "publisher": "Adobe Fonts" }
+    { "url": "https://www.indiantypefoundry.com/designers/manushi-parikh", "title": "Manushi Parikh - Indian Type Foundry designer profile", "type": "foundry or publisher page", "publisher": "Indian Type Foundry", "archive_url": "https://web.archive.org/web/20260904221630/https://www.indiantypefoundry.com/designers/manushi-parikh" },
+    { "url": "https://fontsinuse.com/type_designers/3041/manushi-parikh", "title": "Manushi Parikh - Fonts In Use", "type": "reference website", "publisher": "Fonts In Use", "archive_url": "https://web.archive.org/web/20260417175657/https://fontsinuse.com/type_designers/3041/manushi-parikh" },
+    { "url": "https://fonts.adobe.com/designers/manushi-parikh", "title": "Manushi Parikh - Adobe Fonts", "type": "font catalogue", "publisher": "Adobe Fonts", "archive_url": "https://web.archive.org/web/20260606111326/https://fonts.adobe.com/designers/manushi-parikh" }
   ],
   "record_status": "active",
   "superseded_by": null,

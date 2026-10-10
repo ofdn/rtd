@@ -9,8 +9,8 @@
   "bio": "Designed Raghu, the first Devanagari typeface built for OpenType, and core Indian-script fonts for Microsoft Windows. Trained as a calligrapher, reframing Indic typography as rigorous design infrastructure.",
   "external_ids": { "wikidata_qid": "Q7278200", "viaf": "11790875", "lc_naf": "n2008207746", "gnd": "1205918434" },
   "sources": [
-    { "url": "https://letterformarchive.org/news/the-multilinguascriptic-life-of-r-k-joshi/", "title": "The Multilinguascriptic Life of R. K. Joshi - Letterform Archive", "type": "archive or museum record", "publisher": "Letterform Archive" },
-    { "url": "https://homegrown.co.in/homegrown-creators/hand-letter-form-the-many-lives-afterlives-of-indian-typography", "title": "From Hand-Painted Signboards To Contemporary Typefaces - Homegrown India" }
+    { "url": "https://letterformarchive.org/news/the-multilinguascriptic-life-of-r-k-joshi/", "title": "The Multilinguascriptic Life of R. K. Joshi - Letterform Archive", "type": "archive or museum record", "publisher": "Letterform Archive", "archive_url": "https://web.archive.org/web/20260609051310/https://letterformarchive.org/news/the-multilinguascriptic-life-of-r-k-joshi/" },
+    { "url": "https://homegrown.co.in/homegrown-creators/hand-letter-form-the-many-lives-afterlives-of-indian-typography", "title": "From Hand-Painted Signboards To Contemporary Typefaces - Homegrown India", "archive_url": "https://web.archive.org/web/20260717112208/https://homegrown.co.in/homegrown-creators/hand-letter-form-the-many-lives-afterlives-of-indian-typography" }
   ],
   "record_status": "active",
   "superseded_by": null,

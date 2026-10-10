@@ -18,11 +18,13 @@
       "url": "http://www.ektype.in",
       "title": "www.ektype.in",
       "type": "foundry or publisher page",
-      "publisher": "Ek Type"
+      "publisher": "Ek Type",
+      "archive_url": "https://web.archive.org/web/20260913201532/http://www.ektype.in"
     },
     {
       "url": "http://www.google.com/get/noto/",
-      "title": "www.google.com"
+      "title": "www.google.com",
+      "archive_url": "https://web.archive.org/web/20210921082914/http://www.google.com/get/noto/"
     }
   ],
   "record_status": "active",

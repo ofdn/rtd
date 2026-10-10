@@ -14,19 +14,22 @@
       "url": "http://www.microsoft.com/typography/",
       "title": "www.microsoft.com",
       "type": "foundry or publisher page",
-      "publisher": "Microsoft"
+      "publisher": "Microsoft",
+      "archive_url": "https://web.archive.org/web/20230513234543/http://www.microsoft.com/typography/"
     },
     {
       "url": "http://www.microsoft.com",
       "title": "www.microsoft.com",
       "type": "foundry or publisher page",
-      "publisher": "Microsoft"
+      "publisher": "Microsoft",
+      "archive_url": "https://web.archive.org/web/20261006193403/http://www.microsoft.com"
     },
     {
       "url": "https://pic.nypl.org/constituents/389241",
       "title": "Photographers' Identities Catalog (NYPL)",
       "type": "archive or museum record",
-      "publisher": "New York Public Library"
+      "publisher": "New York Public Library",
+      "archive_url": "https://web.archive.org/web/20260114045140/https://pic.nypl.org/constituents/389241"
     }
   ],
   "record_status": "active",

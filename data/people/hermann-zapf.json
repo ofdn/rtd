@@ -14,11 +14,13 @@
       "url": "http://www.linotypelibrary.com",
       "title": "www.linotypelibrary.com",
       "type": "foundry or publisher page",
-      "publisher": "Linotype"
+      "publisher": "Linotype",
+      "archive_url": "https://web.archive.org/web/20180314195329/http://www.linotypelibrary.com"
     },
     {
       "url": "http://www.heise.de/newsticker/meldung/Es-gibt-keine-Entschuldigung-fuer-schlechte-Typographie-zum-Tode-von-Hermann-Zapf-2681823.html",
-      "title": "Es gibt keine Entschuldigung fuer schlechte Typographie: zum Tode von Hermann Zapf - heise online"
+      "title": "Es gibt keine Entschuldigung fuer schlechte Typographie: zum Tode von Hermann Zapf - heise online",
+      "archive_url": "https://web.archive.org/web/20220605193813/http://www.heise.de/newsticker/meldung/Es-gibt-keine-Entschuldigung-fuer-schlechte-Typographie-zum-Tode-von-Hermann-Zapf-2681823.html"
     },
     {
       "url": "https://rkd.nl/artists/269414",
@@ -30,7 +32,8 @@
       "url": "https://snaccooperative.org/ark:/99166/w6s58zt2",
       "title": "SNAC",
       "type": "archive or museum record",
-      "publisher": "SNAC"
+      "publisher": "SNAC",
+      "archive_url": "https://web.archive.org/web/20260825231706/https://snaccooperative.org/ark:/99166/w6s58zt2"
     }
   ],
   "record_status": "active",

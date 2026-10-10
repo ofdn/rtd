@@ -18,19 +18,22 @@
       "url": "https://eyemagazine.com/feature/article/reputations-fred-smeijers",
       "title": "Reputations: Fred Smeijers - Eye Magazine",
       "type": "newspaper or magazine",
-      "publisher": "Eye"
+      "publisher": "Eye",
+      "archive_url": "https://web.archive.org/web/20260811032818/https://eyemagazine.com/feature/article/reputations-fred-smeijers"
     },
     {
       "url": "https://ilovetypography.com/2008/02/14/typeface-review-arnhem/",
       "title": "Typeface Review: Arnhem - I Love Typography",
       "type": "newspaper or magazine",
-      "publisher": "I Love Typography"
+      "publisher": "I Love Typography",
+      "archive_url": "https://web.archive.org/web/20260823190956/https://ilovetypography.com/2008/02/14/typeface-review-arnhem/"
     },
     {
       "url": "https://id.loc.gov/authorities/names/nr98000097.html",
       "title": "Smeijers, Fred - LC Linked Data Service",
       "type": "archive or museum record",
-      "publisher": "Library of Congress"
+      "publisher": "Library of Congress",
+      "archive_url": "https://web.archive.org/web/20250319042701/https://id.loc.gov/authorities/names/nr98000097.html"
     }
   ],
   "record_status": "active",

@@ -16,7 +16,7 @@
   "description": "An Odia typeface family by Pratyush Das, released with Compressed and Condensed variants.",
   "external_ids": { "wikidata_qid": "Q123057561" },
   "sources": [
-    { "url": "https://www.typotheque.com/authors/pratyush-das", "title": "Pratyush Das - Typotheque", "type": "foundry or publisher page", "publisher": "Typotheque" }
+    { "url": "https://www.typotheque.com/authors/pratyush-das", "title": "Pratyush Das - Typotheque", "type": "foundry or publisher page", "publisher": "Typotheque", "archive_url": "https://web.archive.org/web/20260525065553/https://www.typotheque.com/authors/pratyush-das" }
   ],
   "record_status": "active",
   "superseded_by": null,

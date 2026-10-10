@@ -13,10 +13,10 @@
   "scripts": ["Mundari Bani"],
   "bio": "Created the Mundari Bani alphabet for the Mundari language between 1949 and 1953. He was a Mundari linguist from Mayurbhanj, Odisha.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/mundaribani.htm", "title": "Mundari Bani alphabet", "type": "reference website", "language": "en", "publisher": "Omniglot" }
+    { "url": "https://www.omniglot.com/writing/mundaribani.htm", "title": "Mundari Bani alphabet", "type": "reference website", "language": "en", "publisher": "Omniglot", "archive_url": "https://web.archive.org/web/20260922213306/https://www.omniglot.com/writing/mundaribani.htm" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-07"
+  "updated_at": "2026-10-08"
 }

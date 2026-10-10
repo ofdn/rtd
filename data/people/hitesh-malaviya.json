@@ -14,9 +14,9 @@
   "bio": "Designed the Devanagari component of the Laila typeface. Joined the Indian Type Foundry in 2014, working on Devanagari, Gujarati, Bengali, Kannada, Malayalam, Tamil, and Thai. Now teaches type design independently.",
   "external_ids": { "wikidata_qid": "Q125430730" },
   "sources": [
-    { "url": "https://www.indiantypefoundry.com/designers/hitesh-malaviya", "title": "Hitesh Malaviya (Rocky) - Indian Type Foundry designer profile", "type": "foundry or publisher page", "publisher": "Indian Type Foundry" },
-    { "url": "https://commercialtype.com/about/rocky_malaviya", "title": "Hitesh Malaviya - Commercial Type", "type": "foundry or publisher page", "publisher": "Commercial Type" },
-    { "url": "https://www.typotheque.com/authors/hitesh-malaviya", "title": "Hitesh Malaviya - Typotheque", "type": "foundry or publisher page", "publisher": "Typotheque" }
+    { "url": "https://www.indiantypefoundry.com/designers/hitesh-malaviya", "title": "Hitesh Malaviya (Rocky) - Indian Type Foundry designer profile", "type": "foundry or publisher page", "publisher": "Indian Type Foundry", "archive_url": "https://web.archive.org/web/20260904221630/https://www.indiantypefoundry.com/designers/hitesh-malaviya" },
+    { "url": "https://commercialtype.com/about/rocky_malaviya", "title": "Hitesh Malaviya - Commercial Type", "type": "foundry or publisher page", "publisher": "Commercial Type", "archive_url": "https://web.archive.org/web/20260413072742/https://commercialtype.com/about/rocky_malaviya" },
+    { "url": "https://www.typotheque.com/authors/hitesh-malaviya", "title": "Hitesh Malaviya - Typotheque", "type": "foundry or publisher page", "publisher": "Typotheque", "archive_url": "https://web.archive.org/web/20240908185920/https://www.typotheque.com/authors/hitesh-malaviya" }
   ],
   "record_status": "active",
   "superseded_by": null,

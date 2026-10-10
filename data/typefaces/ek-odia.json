@@ -15,7 +15,7 @@
   "era": "digital",
   "description": "An Odia-script typeface developed as part of the Ek multi-script type design initiative.",
   "sources": [
-    { "url": "https://ektype.in/ek-odia.html", "title": "Ek Odia - Ek Type", "type": "foundry or publisher page", "publisher": "Ek Type" }
+    { "url": "https://ektype.in/ek-odia.html", "title": "Ek Odia - Ek Type", "type": "foundry or publisher page", "publisher": "Ek Type", "archive_url": "https://web.archive.org/web/20260515173657/https://ektype.in/ek-odia.html" }
   ],
   "record_status": "active",
   "superseded_by": null,

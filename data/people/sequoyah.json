@@ -14,11 +14,11 @@
   "scripts": ["Cherokee"],
   "bio": "Created the Cherokee syllabary in the early 19th century. His original letters were later modified to make them easier to print.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/cherokee.htm", "title": "Cherokee language and alphabet", "type": "reference website", "language": "en", "publisher": "Omniglot" },
-    { "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-20/", "title": "The Unicode Standard, Version 17.0, Chapter 20", "type": "standards document", "language": "en", "publisher": "Unicode Consortium", "date": "2025-09" }
+    { "url": "https://www.omniglot.com/writing/cherokee.htm", "title": "Cherokee language and alphabet", "type": "reference website", "language": "en", "publisher": "Omniglot", "archive_url": "https://web.archive.org/web/20260926233945/https://www.omniglot.com/writing/cherokee.htm" },
+    { "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-20/", "title": "The Unicode Standard, Version 17.0, Chapter 20", "type": "standards document", "language": "en", "date": "2025-09", "publisher": "Unicode Consortium", "archive_url": "https://web.archive.org/web/20260603003009/https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-20/" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-07"
+  "updated_at": "2026-10-08"
 }

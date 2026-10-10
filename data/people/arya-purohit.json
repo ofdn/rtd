@@ -10,9 +10,9 @@
   "scripts": ["Devanagari", "Gujarati", "Bangla", "Tamil", "Malayalam", "Latin"],
   "bio": "Designed the Devanagari and Tamil versions of Typotheque's November and October type families, his first official typeface releases, plus Graphik Bangla for Commercial Type.",
   "sources": [
-    { "url": "https://www.typotheque.com/authors/arya-purohit", "title": "Arya Purohit - Typotheque", "type": "foundry or publisher page", "publisher": "Typotheque" },
-    { "url": "https://www.typotheque.com/blog/november-october-support-extended-to-devanagari-and-tamil", "title": "November / October support extended to Devanagari and Tamil - Typotheque", "type": "foundry or publisher page", "publisher": "Typotheque" },
-    { "url": "https://commercialtype.com/about/arya_purohit", "title": "Arya Purohit - Commercial Type", "type": "foundry or publisher page", "publisher": "Commercial Type" }
+    { "url": "https://www.typotheque.com/authors/arya-purohit", "title": "Arya Purohit - Typotheque", "type": "foundry or publisher page", "publisher": "Typotheque", "archive_url": "https://web.archive.org/web/20251027223954/https://www.typotheque.com/authors/arya-purohit" },
+    { "url": "https://www.typotheque.com/blog/november-october-support-extended-to-devanagari-and-tamil", "title": "November / October support extended to Devanagari and Tamil - Typotheque", "type": "foundry or publisher page", "publisher": "Typotheque", "archive_url": "https://web.archive.org/web/20250831005822/https://www.typotheque.com/blog/november-october-support-extended-to-devanagari-and-tamil" },
+    { "url": "https://commercialtype.com/about/arya_purohit", "title": "Arya Purohit - Commercial Type", "type": "foundry or publisher page", "publisher": "Commercial Type", "archive_url": "https://web.archive.org/web/20251119073748/https://commercialtype.com/about/arya_purohit" }
   ],
   "record_status": "active",
   "superseded_by": null,

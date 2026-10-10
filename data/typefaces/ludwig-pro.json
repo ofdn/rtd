@@ -26,13 +26,15 @@
   "sources": [
     {
       "url": "https://hyphenpress.co.uk/journal/article/ludwig",
-      "title": "Ludwig - Hyphen Press"
+      "title": "Ludwig - Hyphen Press",
+      "archive_url": "https://web.archive.org/web/20210818035519/https://hyphenpress.co.uk/journal/article/ludwig"
     },
     {
       "url": "https://fontsinuse.com/typefaces/5236/ludwig",
       "title": "Ludwig in use - Fonts In Use",
       "type": "reference website",
-      "publisher": "Fonts In Use"
+      "publisher": "Fonts In Use",
+      "archive_url": "https://web.archive.org/web/20251023113605/https://fontsinuse.com/typefaces/5236/ludwig"
     }
   ],
   "record_status": "active",

@@ -11,7 +11,7 @@
   "scripts": ["Odia"],
   "bio": "Computer scientist and long-time Project Gutenberg volunteer. Created the Oriya-TeX package's METAFONT-based Odia fonts, including Or10, with Anshuman Pandey, 1996-2003.",
   "sources": [
-    { "url": "https://ctan.org/pkg/oriya?lang=en", "title": "Oriya-TeX package - CTAN", "type": "software repository", "publisher": "CTAN" },
+    { "url": "https://ctan.org/pkg/oriya?lang=en", "title": "Oriya-TeX package - CTAN", "type": "software repository", "publisher": "CTAN", "archive_url": "https://web.archive.org/web/20150907044954/https://ctan.org/pkg/oriya?lang=en" },
     { "url": "https://ctan.org/author/hellingman?lang=en", "title": "Contributor: Jeroen Hellingman - CTAN", "type": "software repository", "publisher": "CTAN" }
   ],
   "record_status": "active",

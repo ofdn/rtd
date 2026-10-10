@@ -12,11 +12,11 @@
   "scripts": ["Pau Cin Hau"],
   "bio": "Created the Pau Cin Hau script in 1902 to convey the teachings of the Laipian tradition he founded in the Chin Hills of present-day Myanmar.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/paucinhau.htm", "title": "Pau Cin Hau script", "type": "reference website", "language": "en", "publisher": "Omniglot" },
-    { "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-16/", "title": "The Unicode Standard, Version 17.0, Chapter 16", "type": "standards document", "language": "en", "publisher": "Unicode Consortium", "date": "2025-09" }
+    { "url": "https://www.omniglot.com/writing/paucinhau.htm", "title": "Pau Cin Hau script", "type": "reference website", "language": "en", "publisher": "Omniglot", "archive_url": "https://web.archive.org/web/20260820193543/https://www.omniglot.com/writing/paucinhau.htm" },
+    { "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-16/", "title": "The Unicode Standard, Version 17.0, Chapter 16", "type": "standards document", "language": "en", "date": "2025-09", "publisher": "Unicode Consortium", "archive_url": "https://web.archive.org/web/20261005084936/https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-16/" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-07"
+  "updated_at": "2026-10-08"
 }

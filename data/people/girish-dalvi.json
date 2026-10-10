@@ -13,8 +13,8 @@
   "bio": "IIT Bombay faculty with a PhD on theoretical modeling of Devanagari typefaces. Co-created the Ek multi-script family, Ek Mukta, LifeOk Devanagari, and Star Bengali, and contributed to Baloo 2 Devanagari.",
   "external_ids": { "wikidata_qid": "Q62109294" },
   "sources": [
-    { "url": "https://www.idc.iitb.ac.in/people/faculty/dalvi-girish", "title": "Girish Dalvi - IDC School of Design, IIT Bombay" },
-    { "url": "https://fonts.adobe.com/designers/girish-dalvi", "title": "Girish Dalvi - Adobe Fonts", "type": "font catalogue", "publisher": "Adobe Fonts" }
+    { "url": "https://www.idc.iitb.ac.in/people/faculty/dalvi-girish", "title": "Girish Dalvi - IDC School of Design, IIT Bombay", "archive_url": "https://web.archive.org/web/20250517085853/https://www.idc.iitb.ac.in/people/faculty/dalvi-girish" },
+    { "url": "https://fonts.adobe.com/designers/girish-dalvi", "title": "Girish Dalvi - Adobe Fonts", "type": "font catalogue", "publisher": "Adobe Fonts", "archive_url": "https://web.archive.org/web/20260420063456/https://fonts.adobe.com/designers/girish-dalvi" }
   ],
   "record_status": "active",
   "superseded_by": null,

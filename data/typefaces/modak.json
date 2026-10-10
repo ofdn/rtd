@@ -18,7 +18,7 @@
   "era": "digital",
   "description": "A Devanagari and Latin display typeface designed by Sarang Kulkarni, Maithili Shingre, and Noopur Datye at Ek Type.",
   "sources": [
-    { "url": "https://ektype.in/modak.html", "title": "Modak - Ek Type", "type": "foundry or publisher page", "publisher": "Ek Type" }
+    { "url": "https://ektype.in/modak.html", "title": "Modak - Ek Type", "type": "foundry or publisher page", "publisher": "Ek Type", "archive_url": "https://web.archive.org/web/20260416200148/https://ektype.in/modak.html" }
   ],
   "record_status": "active",
   "superseded_by": null,

@@ -20,19 +20,22 @@
       "url": "http://www.agfamonotype.com",
       "title": "www.agfamonotype.com",
       "type": "foundry or publisher page",
-      "publisher": "Agfa Monotype"
+      "publisher": "Agfa Monotype",
+      "archive_url": "https://web.archive.org/web/20260606163631/http://www.agfamonotype.com"
     },
     {
       "url": "https://catalogue.bnf.fr/ark:/12148/cb12573554s",
       "title": "BnF authorities",
       "type": "archive or museum record",
-      "publisher": "Bibliothèque nationale de France"
+      "publisher": "Bibliothèque nationale de France",
+      "archive_url": "https://web.archive.org/web/20260413201609/https://catalogue.bnf.fr/ark:/12148/cb12573554s"
     },
     {
       "url": "https://www.britannica.com/biography/John-Baskerville",
       "title": "Encyclopaedia Britannica Online",
       "type": "reference website",
-      "publisher": "Encyclopaedia Britannica"
+      "publisher": "Encyclopaedia Britannica",
+      "archive_url": "https://web.archive.org/web/20260722115422/https://www.britannica.com/biography/John-Baskerville"
     }
   ],
   "record_status": "active",

@@ -12,9 +12,9 @@
   "bio": "Designs typefaces in Gujarati, Devanagari, and Gurmukhi. Runs Gunjan Font Foundry; has worked at Indian Type Foundry, Ek Type (Nandinagari script), and Universal Thirst.",
   "external_ids": { "wikidata_qid": "Q125430736" },
   "sources": [
-    { "url": "https://www.myfonts.com/collections/gunjan-foundry", "title": "Gunjan Font Foundry - MyFonts", "type": "font catalogue", "publisher": "MyFonts" },
-    { "url": "https://fontsinuse.com/type_designers/5936/gunjan-panchal", "title": "Gunjan Panchal - Fonts In Use", "type": "reference website", "publisher": "Fonts In Use" },
-    { "url": "https://fonts.adobe.com/designers/gunjan-panchal", "title": "Gunjan Panchal - Adobe Fonts", "type": "font catalogue", "publisher": "Adobe Fonts" }
+    { "url": "https://www.myfonts.com/collections/gunjan-foundry", "title": "Gunjan Font Foundry - MyFonts", "type": "font catalogue", "publisher": "MyFonts", "archive_url": "https://web.archive.org/web/20251130154727/https://www.myfonts.com/collections/gunjan-foundry" },
+    { "url": "https://fontsinuse.com/type_designers/5936/gunjan-panchal", "title": "Gunjan Panchal - Fonts In Use", "type": "reference website", "publisher": "Fonts In Use", "archive_url": "https://web.archive.org/web/20250319222720/https://fontsinuse.com/type_designers/5936/gunjan-panchal" },
+    { "url": "https://fonts.adobe.com/designers/gunjan-panchal", "title": "Gunjan Panchal - Adobe Fonts", "type": "font catalogue", "publisher": "Adobe Fonts", "archive_url": "https://web.archive.org/web/20260607054549/https://fonts.adobe.com/designers/gunjan-panchal" }
   ],
   "record_status": "active",
   "superseded_by": null,

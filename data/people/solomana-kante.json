@@ -12,10 +12,10 @@
   "scripts": ["N'Ko"],
   "bio": "Invented the N'Ko alphabet in 1949 to write Manding languages, now used for Maninka, Bambara and Dyula in Guinea, Côte d'Ivoire and Mali.",
   "sources": [
-    { "url": "https://www.omniglot.com/writing/nko.htm", "title": "N'Ko alphabet", "type": "reference website", "language": "en", "publisher": "Omniglot" }
+    { "url": "https://www.omniglot.com/writing/nko.htm", "title": "N'Ko alphabet", "type": "reference website", "language": "en", "publisher": "Omniglot", "archive_url": "https://web.archive.org/web/20260824224442/https://www.omniglot.com/writing/nko.htm" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-07"
+  "updated_at": "2026-10-08"
 }

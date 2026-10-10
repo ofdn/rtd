@@ -18,11 +18,13 @@
       "url": "http://www.bitstream.com/font_rendering/products/dev_fonts/vera.html",
       "title": "www.bitstream.com",
       "type": "foundry or publisher page",
-      "publisher": "Bitstream"
+      "publisher": "Bitstream",
+      "archive_url": "https://web.archive.org/web/20091014062608/http://www.bitstream.com/font_rendering/products/dev_fonts/vera.html"
     },
     {
       "url": "http://www.gnome.org/contact/",
-      "title": "www.gnome.org"
+      "title": "www.gnome.org",
+      "archive_url": "https://web.archive.org/web/20210306041553/http://www.gnome.org/contact/"
     }
   ],
   "record_status": "active",

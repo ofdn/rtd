@@ -14,13 +14,15 @@
   "sources": [
     {
       "url": "https://jonathanhoefler.com/",
-      "title": "jonathanhoefler.com"
+      "title": "jonathanhoefler.com",
+      "archive_url": "https://web.archive.org/web/20260912021254/https://jonathanhoefler.com/"
     },
     {
       "url": "http://www.typography.com/",
       "title": "www.typography.com",
       "type": "foundry or publisher page",
-      "publisher": "Hoefler&Co."
+      "publisher": "Hoefler&Co.",
+      "archive_url": "https://web.archive.org/web/20261003125729/http://www.typography.com/"
     }
   ],
   "record_status": "active",

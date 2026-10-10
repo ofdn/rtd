@@ -10,8 +10,8 @@
   "bio": "Known for Telugu and Kannada Unicode typefaces released as open-source fonts. Hyderabad-based type designer and digital media professional with over three decades in advertising, printing, and publishing.",
   "external_ids": { "wikidata_qid": "Q96621737" },
   "sources": [
-    { "url": "https://fonts.google.com/specimen/Ramaraja", "title": "Ramaraja - Google Fonts", "type": "font catalogue", "publisher": "Google Fonts" },
-    { "url": "https://online-fonts.com/designers/appaji-ambarisha-darbha", "title": "Appaji Ambarisha Darbha - Online Fonts", "type": "font catalogue" }
+    { "url": "https://fonts.google.com/specimen/Ramaraja", "title": "Ramaraja - Google Fonts", "type": "font catalogue", "publisher": "Google Fonts", "archive_url": "https://web.archive.org/web/20260308080521/https://fonts.google.com/specimen/Ramaraja" },
+    { "url": "https://online-fonts.com/designers/appaji-ambarisha-darbha", "title": "Appaji Ambarisha Darbha - Online Fonts", "type": "font catalogue", "archive_url": "https://web.archive.org/web/20250710051236/https://online-fonts.com/designers/appaji-ambarisha-darbha" }
   ],
   "record_status": "active",
   "superseded_by": null,

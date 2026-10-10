@@ -12,7 +12,7 @@
   "era": "digital",
   "description": "A serif typeface with an old-style design feeling, published on Google Fonts.",
   "sources": [
-    { "url": "https://fonts.google.com/specimen/Ramaraja", "title": "Ramaraja - Google Fonts", "type": "font catalogue", "publisher": "Google Fonts" }
+    { "url": "https://fonts.google.com/specimen/Ramaraja", "title": "Ramaraja - Google Fonts", "type": "font catalogue", "publisher": "Google Fonts", "archive_url": "https://web.archive.org/web/20260308080521/https://fonts.google.com/specimen/Ramaraja" }
   ],
   "record_status": "active",
   "superseded_by": null,
