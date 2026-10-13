@@ -10,6 +10,13 @@ const RELATION_LABELS = {
   companion_to: "Companion to",
 };
 
+const LICENSE_LABELS = {
+  open: "Open licence",
+  proprietary: "Proprietary",
+  "public-domain": "Public domain",
+  unstated: "No licence stated",
+};
+
 const ATTRIBUTION_LABELS = {
   unknown: "No individual designer known",
   anonymous: "Anonymous",
@@ -81,6 +88,7 @@ ${record.design_year || record.release_year ? `<dt>Year</dt><dd>${escapeHtml(rec
 ${record.commissioned_by?.length ? `<dt>Commissioned by</dt><dd>${record.commissioned_by.map((c) => (c.url ? linkTag(c.url, escapeHtml(c.name)) : escapeHtml(c.name))).join(", ")}</dd>` : ""}
 ${record.era ? `<dt>Era</dt><dd>${escapeHtml(eraLabel(record.era))}</dd>` : ""}
 ${record.classification ? `<dt>Classification</dt><dd>${escapeHtml(record.classification)}</dd>` : ""}
+${record.license ? `<dt>Font licence</dt><dd>${linkTag(record.license.url, escapeHtml(LICENSE_LABELS[record.license.status] + (record.license.spdx ? ` (${record.license.spdx})` : "")))}</dd>` : ""}
 ${record.scripts?.length ? `<dt>Scripts</dt><dd>${scriptBadges(record.scripts)}</dd>` : ""}
 ${record.languages?.length ? `<dt>Languages</dt><dd>${escapeHtml(record.languages.map((l) => l.name).join(", "))}</dd>` : ""}
 ${relations.map((r) => `<dt>${RELATION_LABELS[r.relation]}</dt><dd><a href="../../typefaces/${escapeHtml(r.slug)}/">${escapeHtml(r.name)}</a></dd>`).join("\n")}
