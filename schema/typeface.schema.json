@@ -162,6 +162,29 @@
       "type": "boolean",
       "description": "False for digital fonts that map a script's glyphs onto non-standard code points (plain ASCII, PUA, or another script's block) instead of the script's real Unicode block, common in fonts made before a script was encoded. Omit when not established either way, don't assume true by default."
     },
+    "license": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "url"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["open", "proprietary", "public-domain", "unstated"],
+          "description": "open: a free licence that allows redistribution and web embedding (OFL, Apache, UFL, GPL with font exception). proprietary: a commercial or restrictive licence. public-domain: dedicated to or fallen into the public domain. unstated: the font is distributed but no licence could be found."
+        },
+        "spdx": {
+          "type": "string",
+          "minLength": 1,
+          "description": "SPDX licence identifier, e.g. OFL-1.1, Apache-2.0, UFL-1.0. Required when status is open (enforced by scripts/validate.js)."
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Where the licence for this typeface is stated, e.g. the OFL.txt in the font's repository or the foundry's licence page."
+        }
+      },
+      "description": "Licence of the digital font. Decides whether the site may host the font file and render a live text sample: only open and public-domain fonts may be rendered live. Omit when not established, never guess."
+    },
     "description": {
       "type": "string",
       "maxLength": 1000

@@ -1,5 +1,6 @@
 {
   "id": "rtd-t-000154",
+  "license": { "status": "open", "spdx": "OFL-1.1", "url": "https://github.com/google/fonts/blob/main/ofl/notosansolchiki/OFL.txt" },
   "external_ids": { "wikidata_qid": "Q75880507" },
   "slug": "noto-sans-ol-chiki",
   "name": {
@@ -25,5 +26,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-11",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-14"
 }

@@ -13,6 +13,7 @@
   ],
   "scripts": ["Bangla", "Devanagari", "Odia"],
   "era": "digital",
+  "license": { "status": "open", "spdx": "OFL-1.1", "url": "https://github.com/google/fonts/blob/main/ofl/alkatra/OFL.txt" },
   "description": "A multi-script display typeface by Suman Bhandary covering Bengali, Devanagari, and Odia, released as a Google Font and used in the opening titles of the Netflix film Mission Raniganj.",
   "external_ids": { "wikidata_qid": "Q123056277" },
   "sources": [
@@ -22,5 +23,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-14"
 }

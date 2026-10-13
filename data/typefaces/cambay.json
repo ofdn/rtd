@@ -10,6 +10,7 @@
   ],
   "scripts": ["Devanagari", "Latin"],
   "era": "digital",
+  "license": { "status": "open", "spdx": "OFL-1.1", "url": "https://github.com/google/fonts/blob/main/ofl/cambay/OFL.txt" },
   "description": "A libre Devanagari typeface family designed to match the Latin Cantarell, in Regular and Bold weights with upright and oblique styles.",
   "sources": [
     { "url": "https://www.fontshmonts.com/text-fonts/cambay/", "title": "Cambay - Fonts Shmonts" }
@@ -17,5 +18,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-10-14"
 }

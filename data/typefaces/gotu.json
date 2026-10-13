@@ -16,6 +16,7 @@
   "classification": "display",
   "era": "digital",
   "design_year": "2020",
+  "license": { "status": "open", "spdx": "OFL-1.1", "url": "https://github.com/google/fonts/blob/main/ofl/gotu/OFL.txt" },
   "description": "A high-contrast display typeface with rotund curves and large loops, reimagining Devanagari calligraphy alongside a matching Latin.",
   "sources": [
     { "url": "https://ektype.in/gotu.html", "title": "Gotu - Ek Type", "type": "foundry or publisher page", "publisher": "Ek Type", "archive_url": "https://web.archive.org/web/20260603135426/https://ektype.in/gotu.html" }
@@ -23,5 +24,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-19",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-14"
 }

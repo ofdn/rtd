@@ -175,6 +175,14 @@ export function validateRoot(rootDir) {
     }
   }
 
+  // An open licence must name the licence, since live samples are only
+  // rendered for open fonts and the site links the licence text.
+  for (const { file, record } of typefaces) {
+    if (record.license?.status === 'open' && !record.license.spdx) {
+      errors.push(`${file}: license.status is open but license.spdx is missing, e.g. OFL-1.1`);
+    }
+  }
+
   // Redirect stubs (see scripts/build.js) are generated at each entry in
   // previous_slugs, so a collision here would mean two records fighting
   // over the same URL, or a redirect silently shadowing a real page.

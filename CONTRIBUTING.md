@@ -86,6 +86,28 @@ way to skip crediting a designer who *is* identifiable; only use it when
 there's genuinely no one to name. The issue form has the same escape
 hatch (leave Designer(s) blank, fill in the reason field instead).
 
+## Font licence
+
+Add `license` to a digital typeface when its licence is stated
+somewhere you can link to:
+
+```json
+"license": {
+  "status": "open",
+  "spdx": "OFL-1.1",
+  "url": "https://github.com/google/fonts/blob/main/ofl/alkatra/OFL.txt"
+}
+```
+
+`status` is one of `open`, `proprietary`, `public-domain` or `unstated`
+(the font is distributed but no licence can be found). `spdx` is the
+[SPDX identifier](https://spdx.org/licenses/) and is required for
+`open`. `url` points at the licence text or the foundry's licence page.
+
+When the site adds live text samples, it will render them only for
+`open` and `public-domain` fonts. Do not guess a licence. Leave the field out until you can link
+to one.
+
 ## Renaming a record (changing its slug)
 
 The `id` never changes, but `slug` can, if a record needs a better URL
@@ -365,7 +387,7 @@ linked from the record's own page next to the existing "JSON" link.
 
 ## Schema versioning
 
-`schema/VERSION` is the schema's own semantic version (currently 1.1.0),
+`schema/VERSION` is the schema's own semantic version (currently 1.1.1),
 shown in the site footer. It's separate from `package.json`'s version,
 which tracks the site/tooling, not the data shape. Bump it when you
 change `schema/*.schema.json`:

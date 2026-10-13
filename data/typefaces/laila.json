@@ -10,6 +10,7 @@
   ],
   "scripts": ["Devanagari", "Latin"],
   "era": "digital",
+  "license": { "status": "open", "spdx": "OFL-1.1", "url": "https://github.com/google/fonts/blob/main/ofl/laila/OFL.txt" },
   "description": "A Devanagari and Latin typeface family; the Devanagari component was designed by Hitesh Malaviya.",
   "sources": [
     { "url": "https://fonts.adobe.com/fonts/laila", "title": "Laila - Adobe Fonts", "type": "font catalogue", "publisher": "Adobe Fonts", "archive_url": "https://web.archive.org/web/20260311095508/https://fonts.adobe.com/fonts/laila" }
@@ -17,5 +18,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-14"
 }

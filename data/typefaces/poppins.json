@@ -1,5 +1,6 @@
 {
   "id": "rtd-t-000021",
+  "license": { "status": "open", "spdx": "OFL-1.1", "url": "https://github.com/google/fonts/blob/main/ofl/poppins/OFL.txt" },
   "external_ids": { "wikidata_qid": "Q123397776" },
   "slug": "poppins",
   "name": {
@@ -22,5 +23,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-14"
 }

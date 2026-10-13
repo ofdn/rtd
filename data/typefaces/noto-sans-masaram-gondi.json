@@ -1,5 +1,6 @@
 {
   "id": "rtd-t-000102",
+  "license": { "status": "open", "spdx": "OFL-1.1", "url": "https://github.com/google/fonts/blob/main/ofl/notosansmasaramgondi/OFL.txt" },
   "external_ids": { "wikidata_qid": "Q75916496" },
   "slug": "noto-sans-masaram-gondi",
   "name": {
@@ -30,6 +31,6 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-10-08",
+  "updated_at": "2026-10-14",
   "verification_status": "needs_verification"
 }

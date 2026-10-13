@@ -11,6 +11,7 @@
   "classification": "display",
   "scripts": ["Telugu"],
   "era": "digital",
+  "license": { "status": "open", "spdx": "OFL-1.1", "url": "https://github.com/google/fonts/blob/main/ofl/timmana/OFL.txt" },
   "description": "A Telugu display typeface suited to headings, posters, and decorative invitations.",
   "sources": [
     { "url": "https://www.fontshmonts.com/display-fonts/timmana/", "title": "Timmana - Fonts Shmonts" }
@@ -18,5 +19,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-08-05"
+  "updated_at": "2026-10-14"
 }
