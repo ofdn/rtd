@@ -97,6 +97,10 @@ function formatDate(iso) {
 // standing in for the retrieval date, since a static site can't know when
 // a given reader is actually viewing the page; citationBlock()'s inline
 // script fills that token in client-side with the visitor's local date.
+const SITE_PUBLISHER = "O Foundation";
+const SITE_PLACE = "Bhubaneswar";
+const SITE_LICENCE = "CC BY-SA 4.0";
+
 export function buildCitations(record, { canonicalUrl, arkUrl }) {
   const title = record.name.preferred;
   const year = (record.updated_at || "").slice(0, 4);
@@ -120,6 +124,39 @@ export function buildCitations(record, { canonicalUrl, arkUrl }) {
     vancouver: `${authorInitial} ${title} [Internet]. Registry of Type Design. O Foundation; ${year} [cited __ACCESSED__]. Available from: ${canonicalUrl}`,
     bibtex: `@misc{${record.id},\n  author       = {${author}},\n  title        = {{${title}}},\n  howpublished = {Registry of Type Design},\n  publisher    = {O Foundation},\n  year         = {${year}},\n  url          = {${canonicalUrl}},\n  urldate      = {__ACCESSED__},\n  note         = {ARK: ${arkUrl}}\n}`,
   };
+}
+
+// For Zotero, Mendeley and other reference managers: Highwire Press and
+// Dublin Core tags, same set as theofdn.org. The report institution tag
+// makes Zotero save a record as a Report rather than a Web Page. No
+// <link rel="schema.DC"> lines: if Cloudflare rewrites their http:// to
+// https://, Zotero ignores the DC and eprints tags, and it assumes these
+// schemas by default anyway.
+export function citationMeta(record, { canonicalUrl, arkUrl, abstract }) {
+  const title = escapeHtml(record.name.preferred);
+  const author = escapeHtml(record.contributed_by?.[0]?.name || "Panigrahi, Subhashish");
+  const tags = [
+    ["citation_title", title],
+    ["citation_author", author],
+    ["citation_publication_date", record.created_at.replaceAll("-", "/")],
+    ["citation_online_date", record.updated_at.replaceAll("-", "/")],
+    ["citation_publisher", SITE_PUBLISHER],
+    ["citation_technical_report_institution", SITE_PUBLISHER],
+    ["citation_technical_report_number", record.id],
+    ["citation_language", "en"],
+    ["citation_public_url", escapeHtml(canonicalUrl)],
+    ["DC.title", title],
+    ["DC.creator", author],
+    ["DC.date", record.created_at],
+    ["DC.publisher", SITE_PUBLISHER],
+    ["DC.rights", SITE_LICENCE],
+    ["eprints.place_of_pub", SITE_PLACE],
+    ["DC.language", "en"],
+    ["DC.identifier", escapeHtml(canonicalUrl)],
+    ["DC.identifier", escapeHtml(arkUrl)],
+  ];
+  if (abstract) tags.push(["DC.description", escapeHtml(abstract)]);
+  return tags.map(([name, content]) => `<meta name="${name}" content="${content}">`).join("\n");
 }
 
 const DOWNLOAD_ICON = `<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>`;
@@ -230,6 +267,7 @@ export function pageShell({
   homePath = "",
   showHeaderSearch = true,
   schemaVersion,
+  headMeta = "",
 }) {
   return `<!doctype html>
 <html lang="en">
@@ -255,6 +293,7 @@ export function pageShell({
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${escapeHtml(homePath)}styles.css${cssVersion ? `?v=${cssVersion}` : ""}">
+${headMeta}
 ${jsonLd ? jsonLdScript(jsonLd) : ""}
 </head>
 <body>

@@ -1,4 +1,4 @@
-import { allNames, nativeNamesFact, escapeHtml, pageShell, sourcesList, sameAsUris, identifiersList, nationalityLabel, copyableId, arkPermalink, citationBlock, printButton, scriptBadges } from "./shared.js";
+import { citationMeta, allNames, nativeNamesFact, escapeHtml, pageShell, sourcesList, sameAsUris, identifiersList, nationalityLabel, copyableId, arkPermalink, citationBlock, printButton, scriptBadges } from "./shared.js";
 
 // `works` is the computed reverse index (typefaces this person is credited
 // on), passed in by build.js, it is never stored on the person record
@@ -71,6 +71,7 @@ ${citationBlock(record, { canonicalUrl, arkUrl })}
     body,
     homePath: "../../",
     schemaVersion,
+    headMeta: citationMeta(record, { canonicalUrl, arkUrl, abstract: record.bio }),
   });
 }
 

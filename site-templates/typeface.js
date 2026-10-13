@@ -1,4 +1,4 @@
-import { allNames, nativeNamesFact, eraLabel, linkTag, escapeHtml, pageShell, sourcesList, sameAsUris, identifiersList, copyableId, arkPermalink, citationBlock, printButton, scriptBadges } from "./shared.js";
+import { citationMeta, allNames, nativeNamesFact, eraLabel, linkTag, escapeHtml, pageShell, sourcesList, sameAsUris, identifiersList, copyableId, arkPermalink, citationBlock, printButton, scriptBadges } from "./shared.js";
 
 // `designers` is the input record's designers[] enriched with each
 // person's current name/slug (resolved by build.js), so the page can link
@@ -110,5 +110,6 @@ ${citationBlock(record, { canonicalUrl, arkUrl })}
     body,
     homePath: "../../",
     schemaVersion,
+    headMeta: citationMeta(record, { canonicalUrl, arkUrl, abstract: record.description }),
   });
 }
