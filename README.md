@@ -1,5 +1,7 @@
 # Registry of Type Design
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23471285.svg)](https://doi.org/10.5281/zenodo.23471285)
+
 A global, human- and machine-readable registry of typefaces and the people
 who made them - digital and pre-digital, in any script or writing system.
 
