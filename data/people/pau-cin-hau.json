@@ -8,6 +8,7 @@
   },
   "birth_year": "1859",
   "death_year": "1948",
+  "countries": ["Myanmar"],
   "roles": ["script inventor"],
   "scripts": ["Pau Cin Hau"],
   "bio": "Created the Pau Cin Hau script in 1902 to convey the teachings of the Laipian tradition he founded in the Chin Hills of present-day Myanmar.",
@@ -18,5 +19,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

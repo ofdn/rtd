@@ -6,8 +6,7 @@
     "alternates": []
   },
   "countries": [
-    "France",
-    "Russian Empire"
+    "France"
   ],
   "roles": [
     "type designer"
@@ -58,7 +57,7 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-10-08",
+  "updated_at": "2026-10-19",
   "external_ids": {
     "wikidata_qid": "Q278945",
     "viaf": "44324012",

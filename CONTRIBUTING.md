@@ -348,6 +348,17 @@ there rather than writing the adjective into the bio, and only add a
 compound (like `Indo-Canadian`) if it's an unambiguous, well-established
 term, not a guessed combination.
 
+Use present-day country names in `countries[]`. Do not use historical
+states such as British India, the Russian Empire or Yugoslavia.
+
+- When the person's present-day country existed in their lifetime, list
+  the countries where they held citizenship or permanent residency.
+  Studying or working abroad does not count.
+- For a time before that country existed, use the present-day country
+  where they lived and worked. A punchcutter in Bombay in 1920 is India.
+  So is a type founder in Goa in 1950, although Goa was then Portuguese.
+- Leave `countries[]` empty when no source gives a place.
+
 ## What's deliberately out of scope
 
 The schema intentionally has no field for images, no dedicated
