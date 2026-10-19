@@ -311,6 +311,7 @@ function build(dataDir, outDir) {
       peopleCount: people.filter((p) => p.record_status === "active").length,
       typefacesCount: typefaces.filter((t) => t.record_status === "active").length,
       scriptsCount: activeScripts.size,
+      organisationsCount: organisations.filter((o) => o.record_status === "active").length,
       schemaVersion,
       arkNaan: ARK_NAAN,
     })
@@ -763,6 +764,7 @@ function build(dataDir, outDir) {
     peopleCount: peopleApiIndex.filter((p) => p.record_status === "active").length,
     typefacesCount: typefacesApiIndex.filter((t) => t.record_status === "active").length,
     scriptsCount: activeScripts.size,
+    organisationsCount: organisations.filter((o) => o.record_status === "active").length,
     schemaVersion,
   });
   writeFile(outDir, "index.html", homeHtml);
