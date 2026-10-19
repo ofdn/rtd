@@ -1,0 +1,42 @@
+{
+  "title": "Registry of Type Design",
+  "upload_type": "dataset",
+  "description": "<p>An open registry of typefaces, the people who made them and the type foundries behind them, digital and pre-digital, across scripts and geographies. Every record has a permanent identifier and an ARK, and is published as a citable page with JSON, Dublin Core, CSV and NDJSON data. Browse it at <a href=\"https://rtd.theofdn.org/\">rtd.theofdn.org</a>.</p>",
+  "creators": [
+    {
+      "name": "Panigrahi, Subhashish",
+      "affiliation": "O Foundation",
+      "orcid": "0000-0002-3665-8184"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Kentin, Joey",
+      "type": "DataCollector"
+    }
+  ],
+  "license": "cc-by-sa-4.0",
+  "keywords": [
+    "typography",
+    "type design",
+    "typefaces",
+    "type foundries",
+    "type history",
+    "South Asian scripts",
+    "open data",
+    "linked data"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://rtd.theofdn.org/",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    }
+  ],
+  "communities": [
+    {
+      "identifier": "ofdn"
+    }
+  ],
+  "language": "eng"
+}

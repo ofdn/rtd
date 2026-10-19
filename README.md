@@ -8,6 +8,8 @@ who made them - digital and pre-digital, in any script or writing system.
 - `data/people/*.json` - one file per person (type designers and other
   professionals involved in creating typefaces).
 - `data/typefaces/*.json` - one file per typeface.
+- `data/organisations/*.json` - one file per type foundry, press, font publisher
+  or institution that published type.
 - `schema/` - the JSON Schema each record must validate against.
 
 These JSON files are the source of truth and are edited directly via pull
@@ -18,7 +20,7 @@ GitHub Pages.
 ## Identifiers
 
 Every record has a permanent, opaque id (`rtd-p-000001` for people,
-`rtd-t-000001` for typefaces) that never changes, separate from its
+`rtd-t-000001` for typefaces, `rtd-o-000001` for organisations) that never changes, separate from its
 filename/slug (which can change if a record is renamed). Old ids are never
 deleted or reused; merged/deprecated records resolve to a tombstone page
 pointing at the current record.
