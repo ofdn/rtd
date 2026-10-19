@@ -3,7 +3,7 @@
   "slug": "narayan-sonu",
   "name": { "preferred": "Narayan Sonu", "alternates": [] },
   "external_ids": { "wikidata_qid": "Q123385418" },
-  "countries": [],
+  "countries": ["India"],
   "roles": ["punchcutter"],
   "scripts": ["Devanagari"],
   "affiliations": [

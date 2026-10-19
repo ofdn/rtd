@@ -3,7 +3,7 @@
   "slug": "anant-chari",
   "name": { "preferred": "Anant Chari", "alternates": [] },
   "external_ids": { "wikidata_qid": "Q123385499" },
-  "countries": [],
+  "countries": ["India"],
   "roles": ["punchcutter"],
   "scripts": ["Devanagari"],
   "affiliations": [

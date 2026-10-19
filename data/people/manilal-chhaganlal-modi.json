@@ -2,7 +2,7 @@
   "id": "rtd-p-000229",
   "slug": "manilal-chhaganlal-modi",
   "name": { "preferred": "Manilal Chhaganlal Modi", "alternates": [] },
-  "countries": [],
+  "countries": ["India"],
   "roles": ["type director"],
   "affiliations": [
     { "name": "Gujarati Type Foundry" }

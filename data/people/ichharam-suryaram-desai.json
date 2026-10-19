@@ -3,7 +3,7 @@
   "slug": "ichharam-suryaram-desai",
   "name": { "preferred": "Ichharam Suryaram Desai", "alternates": ["Ichharam Desai"] },
   "external_ids": { "wikidata_qid": "Q2724598" },
-  "countries": [],
+  "countries": ["India"],
   "roles": ["type founder", "editor"],
   "scripts": ["Devanagari", "Gujarati"],
   "place_of_birth": "Surat",
