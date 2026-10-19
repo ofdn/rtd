@@ -1,19 +1,19 @@
 {
   "id": "rtd-p-000227",
   "slug": "anant-salaskar",
-  "name": { "preferred": "Anant Salaskar", "alternates": [] },
+  "name": { "preferred": "Anant Salaskar", "alternates": ["Anant Ganesh Salaskar"] },
   "external_ids": { "wikidata_qid": "Q123385508" },
   "countries": ["India"],
-  "roles": ["type designer"],
+  "roles": ["type designer", "punchcutter"],
   "scripts": ["Devanagari"],
   "affiliations": [
     { "name": "Gujarati Type Foundry" }
   ],
-  "bio": "Designed the 18-point Devanagari typeface New Style Anant at the Gujarati Type Foundry in Bombay in the 1930s.",
+  "bio": "Designed the 18-point Devanagari typeface New Style Anant for Marathi at the Gujarati Type Foundry in Bombay between 1932 and 1937. Also cut 20-point italic faces.",
   "sources": [
-    { "url": "https://letterformarchive.org/news/gujarati-type-foundry-specimen/", "title": "From the Collection: Gujarati Type Foundry’s 1937 Specimen Book - Letterform Archive", "type": "archive or museum record", "publisher": "Letterform Archive", "date": "2021-10-24", "archive_url": "https://web.archive.org/web/20260629074542/https://letterformarchive.org/news/gujarati-type-foundry-specimen/" }
+    { "url": "https://letterformarchive.org/news/gujarati-type-foundry-specimen/", "title": "From the Collection: Gujarati Type Foundry’s 1937 Specimen Book - Letterform Archive", "type": "archive or museum record", "publisher": "Letterform Archive", "date": "2021-10-24", "archive_url": "https://web.archive.org/web/20260629074542/https://letterformarchive.org/news/gujarati-type-foundry-specimen/" },
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume One, pp. 314–316 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" }
   ],
-  "verification_status": "needs_verification",
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-19",

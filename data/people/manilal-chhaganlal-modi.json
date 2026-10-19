@@ -2,16 +2,20 @@
   "id": "rtd-p-000229",
   "slug": "manilal-chhaganlal-modi",
   "name": { "preferred": "Manilal Chhaganlal Modi", "alternates": [] },
+  "birth_year": "1883",
+  "death_year": "c. 1950",
   "countries": ["India"],
   "roles": ["type director"],
+  "alma_mater": ["Kala Bhavan, Baroda"],
   "affiliations": [
-    { "name": "Gujarati Type Foundry" }
+    { "name": "Gujarati Type Foundry", "start_year": "1906" }
   ],
-  "bio": "Directed new type styles with the craftsmen of the Gujarati Type Foundry in Bombay, and led the making of its specimen book of about 1937.",
+  "bio": "Directed new type styles with the Gujarati Type Foundry's craftsmen in Bombay after joining in 1906. Widened its range between 1932 and 1937 and led its specimen book.",
   "sources": [
-    { "url": "https://letterformarchive.org/news/gujarati-type-foundry-specimen/", "title": "From the Collection: Gujarati Type Foundry’s 1937 Specimen Book - Letterform Archive", "type": "archive or museum record", "publisher": "Letterform Archive", "date": "2021-10-24", "archive_url": "https://web.archive.org/web/20260629074542/https://letterformarchive.org/news/gujarati-type-foundry-specimen/" }
+    { "url": "https://letterformarchive.org/news/gujarati-type-foundry-specimen/", "title": "From the Collection: Gujarati Type Foundry’s 1937 Specimen Book - Letterform Archive", "type": "archive or museum record", "publisher": "Letterform Archive", "date": "2021-10-24", "archive_url": "https://web.archive.org/web/20260629074542/https://letterformarchive.org/news/gujarati-type-foundry-specimen/" },
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume One, pp. 314–316 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" },
+    { "url": "https://www.printweek.in/features/print-history-gujarati-type-foundry-print-patriots-58626", "title": "Print History: Gujarati Type Foundry - Print Patriots (Murali Ranganathan)", "type": "newspaper or magazine", "publisher": "PrintWeek India", "date": "2024-02-29", "language": "en", "archive_url": "https://web.archive.org/web/20260215041427/https://www.printweek.in/features/print-history-gujarati-type-foundry-print-patriots-58626" }
   ],
-  "verification_status": "needs_verification",
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-19",
