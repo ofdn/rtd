@@ -20,7 +20,7 @@
   "sources": [
     { "url": "https://github.com/ofdn/Chapakala", "title": "Chapakala: Revival Odia typeface family, GitHub", "type": "software repository", "archive_url": "https://web.archive.org/web/20260526085051/https://github.com/ofdn/Chapakala" },
     { "url": "https://doi.org/10.5281/zenodo.17051926", "title": "Chapakala (Zenodo DOI)" },
-    { "url": "https://theofdn.org/activities/type/", "title": "Type design activities, O Foundation", "type": "foundry or publisher page", "publisher": "O Foundation" }
+    { "url": "https://theofdn.org/type/", "title": "Type Design - O Foundation", "type": "foundry or publisher page", "publisher": "O Foundation" }
   ],
   "record_status": "active",
   "superseded_by": null,
