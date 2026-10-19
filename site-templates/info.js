@@ -18,6 +18,7 @@ export function renderInfoPage({ canonicalUrl, peopleCount, typefacesCount, scri
 
 <h2 id="contributors">Contributors ${sectionAnchor("contributors")}</h2>
 <p class="description">Most existing records were researched and entered directly by the registry's maintainers. Anyone else who submits a record - via a <a href="../">New person or New typeface issue form</a> or a direct pull request - is credited by name on that record's own "Cite this record" section instead, and listed on the <a href="../contributors/">Contributors</a> page. Contributors can be individuals or institutions.</p>
+<p class="description">As an open data project, we publicly credit everyone who contributes code or data, in the source code and in the data. Our contributors are volunteers. We moderate every contribution and check it for accuracy. Contributing to the registry does not, by itself, amount to a conflict of interest.</p>
 
 <h2 id="licensing">Licensing ${sectionAnchor("licensing")}</h2>
 <p class="description">Site and data are licensed under ${linkTag("https://creativecommons.org/licenses/by-sa/4.0/", "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)")}: reuse, adaptation, and redistribution are permitted with attribution to Registry of Type Design and a link to the license.</p>
