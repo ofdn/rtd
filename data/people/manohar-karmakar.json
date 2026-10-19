@@ -9,7 +9,7 @@
   "countries": ["India"],
   "roles": ["punchcutter", "type designer"],
   "affiliations": [
-    { "name": "Serampore Mission Press" }
+    { "name": "Serampore Mission Press", "id": "rtd-o-000034" }
   ],
   "bio": "Punchcutter and son-in-law of Panchanan Karmakar, continuing his work at the Serampore Mission Press. Designed the 19th-century Odia typeface used by the Orissa Mission Press, digitally revived as Chapakala19.",
   "sources": [
@@ -19,5 +19,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

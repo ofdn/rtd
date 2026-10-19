@@ -8,7 +8,7 @@
   "countries": ["India"],
   "roles": ["type designer"],
   "affiliations": [
-    { "name": "Indian Type Foundry", "start_year": "2014" }
+    { "name": "Indian Type Foundry", "id": "rtd-o-000017", "start_year": "2014" }
   ],
   "bio": "Designed Ennore, a five-weight Latin-script serif typeface with clear stroke contrast, published by the Indian Type Foundry. Graphic design student at Pearl Academy, New Delhi, associated with ITF since 2014.",
   "external_ids": { "wikidata_qid": "Q125430713" },
@@ -19,5 +19,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

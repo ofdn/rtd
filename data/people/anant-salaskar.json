@@ -7,7 +7,7 @@
   "roles": ["type designer", "punchcutter"],
   "scripts": ["Devanagari"],
   "affiliations": [
-    { "name": "Gujarati Type Foundry" }
+    { "name": "Gujarati Type Foundry", "id": "rtd-o-000015" }
   ],
   "bio": "Designed the 18-point Devanagari typeface New Style Anant for Marathi at the Gujarati Type Foundry in Bombay between 1932 and 1937. Also cut 20-point italic faces.",
   "sources": [

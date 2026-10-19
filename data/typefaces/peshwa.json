@@ -4,7 +4,7 @@
   "name": { "preferred": "Peshwa", "alternates": [] },
   "designers": [],
   "attribution": { "status": "unknown", "note": "No designer is named in the sources." },
-  "foundry": [{ "name": "Gujarati Type Foundry" }],
+  "foundry": [{ "name": "Gujarati Type Foundry", "id": "rtd-o-000015" }],
   "design_year": "1932–1937",
   "scripts": ["Devanagari"],
   "languages": [{ "name": "Marathi", "code": "mar" }],

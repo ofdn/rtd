@@ -7,7 +7,7 @@
   "birth_year": "1936",
   "place_of_birth": "Sangli",
   "affiliations": [
-    { "name": "Industrial Design Centre, IIT Bombay", "start_year": "1983", "end_year": "1996" },
+    { "name": "Industrial Design Centre, IIT Bombay", "id": "rtd-o-000018", "start_year": "1983", "end_year": "1996" },
     { "name": "Centre for Development of Advanced Computing (C-DAC)", "id": "rtd-o-000004" }
   ],
   "death_year": "2008",

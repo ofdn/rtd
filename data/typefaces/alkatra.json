@@ -9,7 +9,7 @@
     { "id": "rtd-p-000050", "role": "designer" }
   ],
   "foundry": [
-    { "name": "Google Fonts", "url": "https://fonts.google.com/specimen/Alkatra" }
+    { "name": "Google Fonts", "id": "rtd-o-000013", "url": "https://fonts.google.com/specimen/Alkatra" }
   ],
   "scripts": ["Bangla", "Devanagari", "Odia"],
   "era": "digital",
@@ -23,5 +23,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-10-14"
+  "updated_at": "2026-10-19"
 }

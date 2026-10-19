@@ -7,7 +7,7 @@
   "roles": ["punchcutter"],
   "scripts": ["Devanagari"],
   "affiliations": [
-    { "name": "Gujarati Type Foundry" }
+    { "name": "Gujarati Type Foundry", "id": "rtd-o-000015" }
   ],
   "bio": "Punchcutter at the Gujarati Type Foundry in Bombay who introduced shaded Devanagari type around 1917–18. The typeface Anant Shaded is named after him.",
   "sources": [

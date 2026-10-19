@@ -1,0 +1,14 @@
+{
+  "id": "rtd-o-000031",
+  "slug": "rainbow-unicorn",
+  "name": { "preferred": "Rainbow Unicorn", "alternates": [] },
+  "kind": "foundry",
+  "description": "Design studio that made the open-source typeface Heal the Web for Mozilla's Internet Health Report 2020.",
+  "sources": [
+    { "url": "https://healtheweb.site/", "title": "Heal the Web", "type": "designer website", "publisher": "Rainbow Unicorn", "archive_url": "https://web.archive.org/web/20260606134036/https://healtheweb.site/" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

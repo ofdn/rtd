@@ -10,7 +10,7 @@
   "roles": ["type designer"],
   "scripts": ["Tamil", "Odia"],
   "affiliations": [
-    { "name": "Murasu Systems" }
+    { "name": "Murasu Systems", "id": "rtd-o-000024" }
   ],
   "bio": "Founder of Murasu Systems. Designed typefaces and input methods for Tamil and other Indic scripts since the 1980s, including Oriya Sangam MN, bundled into Apple's operating systems.",
   "sources": [
@@ -20,5 +20,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

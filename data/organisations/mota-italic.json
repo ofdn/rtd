@@ -1,0 +1,14 @@
+{
+  "id": "rtd-o-000023",
+  "slug": "mota-italic",
+  "name": { "preferred": "Mota Italic", "alternates": [] },
+  "kind": "foundry",
+  "description": "Type foundry run by Kimya Gandhi and Rob Keller, designing custom and retail typefaces.",
+  "sources": [
+    { "url": "https://kimyagandhi.com/", "title": "Kimya Gandhi", "type": "designer website", "publisher": "Kimya Gandhi", "archive_url": "https://web.archive.org/web/20260925075809/https://kimyagandhi.com/" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

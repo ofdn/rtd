@@ -1,0 +1,21 @@
+{
+  "id": "rtd-o-000015",
+  "slug": "gujarati-type-foundry",
+  "name": { "preferred": "Gujarati Type Foundry", "alternates": ["GTF"] },
+  "external_ids": { "wikidata_qid": "Q123385330" },
+  "kind": "foundry",
+  "countries": ["India"],
+  "location": "Mumbai",
+  "founded_year": "1900",
+  "description": "Metal type foundry in Bombay, founded in October 1900 by Ichharam Suryaram Desai and Maganlal Thakordas Modi, casting Indian-script types.",
+  "sources": [
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume One, pp. 314–316 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" },
+    { "url": "https://www.printweek.in/features/print-history-gujarati-type-foundry-print-patriots-58626", "title": "Print History: Gujarati Type Foundry - Print Patriots (Murali Ranganathan)", "type": "newspaper or magazine", "publisher": "PrintWeek India", "date": "2024-02-29", "archive_url": "https://web.archive.org/web/20260215041427/https://www.printweek.in/features/print-history-gujarati-type-foundry-print-patriots-58626" },
+    { "url": "https://letterformarchive.org/news/gujarati-type-foundry-specimen/", "title": "From the Collection: Gujarati Type Foundry’s 1937 Specimen Book - Letterform Archive", "type": "archive or museum record", "publisher": "Letterform Archive", "date": "2021-10-24", "archive_url": "https://web.archive.org/web/20260629074542/https://letterformarchive.org/news/gujarati-type-foundry-specimen/" },
+    { "url": "https://gazette.universalthirst.com/home/samples-of-gujarati-type-gujarati-type-foundry", "title": "Samples of Gujarati Type - Gujarati Type Foundry (Salomi Desai) - The Universal Thirst Gazette", "type": "newspaper or magazine", "publisher": "Universal Thirst", "archive_url": "https://web.archive.org/web/20260603143128/https://gazette.universalthirst.com/home/samples-of-gujarati-type-gujarati-type-foundry" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

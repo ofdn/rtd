@@ -1,0 +1,17 @@
+{
+  "id": "rtd-o-000037",
+  "slug": "whitecrow",
+  "name": { "preferred": "WhiteCrow", "alternates": [] },
+  "kind": "foundry",
+  "countries": ["India"],
+  "location": "Mumbai",
+  "founded_year": "2005",
+  "description": "Type foundry and design studio in Mumbai, founded in 2005 by Sarang Kulkarni.",
+  "sources": [
+    { "url": "https://ektype.in/about.html", "title": "About - Ek Type", "type": "foundry or publisher page", "publisher": "Ek Type", "archive_url": "https://web.archive.org/web/20260214204429/https://ektype.in/about.html" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

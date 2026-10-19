@@ -9,7 +9,7 @@
   "roles": ["type designer", "educator"],
   "birth_year": "1943",
   "affiliations": [
-    { "name": "National Institute of Design, Ahmedabad" }
+    { "name": "National Institute of Design, Ahmedabad", "id": "rtd-o-000025" }
   ],
   "bio": "Type designer and retired NID Ahmedabad faculty. Worked in Adrian Frutiger's Paris workshop in 1971, developing a modern Devanagari design across multiple Indian scripts. Awarded the 2010 Gutenberg Prize.",
   "external_ids": { "wikidata_qid": "Q113568531", "viaf": "13573709", "isni": "0000000024231285", "lc_naf": "n78075115" },
@@ -21,5 +21,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

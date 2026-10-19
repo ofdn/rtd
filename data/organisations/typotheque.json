@@ -1,0 +1,19 @@
+{
+  "id": "rtd-o-000035",
+  "slug": "typotheque",
+  "name": { "preferred": "Typotheque", "alternates": [] },
+  "external_ids": { "wikidata_qid": "Q7861410" },
+  "kind": "foundry",
+  "countries": ["Netherlands"],
+  "location": "The Hague",
+  "founded_year": "1999",
+  "website": "https://www.typotheque.com/",
+  "description": "Type foundry and design studio in The Hague, founded in 1999.",
+  "sources": [
+    { "url": "https://www.typotheque.com/about", "title": "About - Typotheque", "type": "foundry or publisher page", "publisher": "Typotheque", "archive_url": "https://web.archive.org/web/20260908204143/https://www.typotheque.com/about" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

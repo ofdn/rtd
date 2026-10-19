@@ -1,0 +1,16 @@
+{
+  "id": "rtd-o-000024",
+  "slug": "murasu-systems",
+  "name": { "preferred": "Murasu Systems", "alternates": ["Murasu"] },
+  "external_ids": { "wikidata_qid": "Q123084568" },
+  "kind": "foundry",
+  "website": "https://murasu.com/",
+  "description": "Type company of Muthu Nedumaran, whose digital typefaces moved Tamil newspapers, magazines and books in Malaysia and Singapore to digital type.",
+  "sources": [
+    { "url": "https://murasu.com/", "title": "Murasu - The Art & Science of Type", "type": "foundry or publisher page", "publisher": "Murasu", "archive_url": "https://web.archive.org/web/20260821154346/https://murasu.com/" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

@@ -8,8 +8,8 @@
   "countries": ["India"],
   "roles": ["type designer", "graphic designer"],
   "affiliations": [
-    { "name": "Indian Type Foundry", "start_year": "2014" },
-    { "name": "Universal Thirst", "start_year": "2019", "end_year": "2022" }
+    { "name": "Indian Type Foundry", "id": "rtd-o-000017", "start_year": "2014" },
+    { "name": "Universal Thirst", "id": "rtd-o-000036", "start_year": "2019", "end_year": "2022" }
   ],
   "bio": "Designed the Devanagari component of the Laila typeface. Joined the Indian Type Foundry in 2014, working on Devanagari, Gujarati, Bengali, Kannada, Malayalam, Tamil, and Thai. Now teaches type design independently.",
   "external_ids": { "wikidata_qid": "Q125430730" },
@@ -21,5 +21,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

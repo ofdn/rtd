@@ -8,7 +8,7 @@
   "scripts": ["Devanagari", "Gujarati"],
   "place_of_birth": "Surat",
   "affiliations": [
-    { "name": "Gujarati Type Foundry", "start_year": "1900" }
+    { "name": "Gujarati Type Foundry", "id": "rtd-o-000015", "start_year": "1900" }
   ],
   "bio": "Founded the Gujarati Type Foundry in Bombay in 1900 and introduced slanted italic type for Devanagari and Gujarati. Author and editor of the magazine Gujarati.",
   "sources": [

@@ -14,7 +14,7 @@
   ],
   "foundry": [
     {
-      "name": "Klingspor",
+      "name": "Klingspor", "id": "rtd-o-000020",
       "url": "https://www.typeoff.de/2021/04/victor-hammer-and-gebr-klingspor/"
     }
   ],
@@ -40,5 +40,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-10",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

@@ -5,7 +5,7 @@
   "designers": [
     { "id": "rtd-p-000226", "role": "designer" }
   ],
-  "foundry": [{ "name": "Gujarati Type Foundry" }],
+  "foundry": [{ "name": "Gujarati Type Foundry", "id": "rtd-o-000015" }],
   "design_year": "1917–1918",
   "scripts": ["Devanagari"],
   "era": "metal",

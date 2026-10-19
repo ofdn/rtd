@@ -12,7 +12,7 @@
   "scripts": ["Bangla", "Devanagari", "Arabic", "Persian", "Telugu", "Burmese", "Chinese"],
   "affiliations": [
     { "name": "East India Company Press, Kolkata", "id": "rtd-o-000009", "start_year": "1779", "end_year": "1799" },
-    { "name": "Serampore Mission Press", "start_year": "1799" }
+    { "name": "Serampore Mission Press", "id": "rtd-o-000034", "start_year": "1799" }
   ],
   "bio": "Punchcutter who created the first Bengali typeface in 1778 under Charles Wilkins, then the first Nagari (Devanagari) type in 1803 at the Serampore Mission Press, cutting type for 14 languages.",
   "external_ids": { "wikidata_qid": "Q23614810" },

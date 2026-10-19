@@ -3,7 +3,7 @@
   "slug": "hedra",
   "name": { "preferred": "Hedra", "alternates": [] },
   "designers": [{ "id": "rtd-p-000048", "role": "designer" }],
-  "foundry": [{ "name": "Indian Type Foundry" }],
+  "foundry": [{ "name": "Indian Type Foundry", "id": "rtd-o-000017" }],
   "scripts": ["Latin"],
   "era": "digital",
   "description": "A seven-style Latin-script typeface published by the Indian Type Foundry, featured on MyFonts' hot new fonts list.",
@@ -14,5 +14,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

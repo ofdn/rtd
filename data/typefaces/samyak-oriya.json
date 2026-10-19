@@ -12,7 +12,7 @@
     { "id": "rtd-p-000057", "role": "designer" }
   ],
   "foundry": [
-    { "name": "Homi Bhabha Centre for Science Education, TIFR" }
+    { "name": "Homi Bhabha Centre for Science Education, TIFR", "id": "rtd-o-000016" }
   ],
   "scripts": ["Odia"],
   "release_year": "2006",
@@ -27,5 +27,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

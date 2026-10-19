@@ -8,7 +8,7 @@
   "countries": ["India"],
   "roles": ["type designer"],
   "affiliations": [
-    { "name": "Indian Type Foundry", "start_year": "2013" }
+    { "name": "Indian Type Foundry", "id": "rtd-o-000017", "start_year": "2013" }
   ],
   "bio": "Designed typefaces including Kalam, Tillana, Pancho Devanagari, and Ikat, working with the Indian Type Foundry since 2013. Independent type designer bringing Indic scripts into contemporary digital type design.",
   "external_ids": { "wikidata_qid": "Q113686608" },
@@ -20,5 +20,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

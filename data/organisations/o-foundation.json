@@ -1,0 +1,18 @@
+{
+  "id": "rtd-o-000027",
+  "slug": "o-foundation",
+  "name": { "preferred": "O Foundation", "alternates": ["OFDN"] },
+  "external_ids": { "wikidata_qid": "Q140936769" },
+  "kind": "institution",
+  "countries": ["India"],
+  "website": "https://theofdn.org/",
+  "description": "Indian foundation that studies type history and maintains open-source typefaces, including the Odia revival Chapakala 19. It publishes the Registry of Type Design.",
+  "sources": [
+    { "url": "https://theofdn.org/type/", "title": "Type Design - O Foundation", "type": "foundry or publisher page", "publisher": "O Foundation" },
+    { "url": "https://github.com/ofdn/Chapakala", "title": "Chapakala: Revival Odia typeface family, GitHub", "type": "software repository", "publisher": "O Foundation", "archive_url": "https://web.archive.org/web/20260526085051/https://github.com/ofdn/Chapakala" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

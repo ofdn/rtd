@@ -8,7 +8,7 @@
   "countries": ["India"],
   "roles": ["type designer"],
   "affiliations": [
-    { "name": "Indian Type Foundry", "start_year": "2014" }
+    { "name": "Indian Type Foundry", "id": "rtd-o-000017", "start_year": "2014" }
   ],
   "bio": "Type designer working across Latin, Devanagari, and Gurmukhi scripts. Has contributed to font suites for Google, Instagram, and Samsung. Designed the Volte typeface family (2015), along with Biblio and Splinter.",
   "external_ids": { "wikidata_qid": "Q125430719" },
@@ -20,5 +20,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

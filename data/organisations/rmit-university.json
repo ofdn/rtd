@@ -1,0 +1,17 @@
+{
+  "id": "rtd-o-000033",
+  "slug": "rmit-university",
+  "name": { "preferred": "RMIT University", "alternates": ["RMIT"] },
+  "external_ids": { "wikidata_qid": "Q1057890" },
+  "kind": "institution",
+  "countries": ["Australia"],
+  "location": "Melbourne",
+  "description": "University in Melbourne whose researchers and academics designed the typeface Sans Forgetica, released in 2018.",
+  "sources": [
+    { "url": "https://www.rmit.edu.au/news/media-releases-and-expert-comments/2018/oct/sans-forgetica-media-release", "title": "Sans Forgetica: RMIT creates typeface designed to help students study - RMIT University", "type": "foundry or publisher page", "publisher": "RMIT University" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

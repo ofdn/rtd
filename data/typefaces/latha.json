@@ -5,7 +5,7 @@
   "designers": [
     { "id": "rtd-p-000043", "role": "designer" }
   ],
-  "foundry": [{ "name": "Microsoft" }],
+  "foundry": [{ "name": "Microsoft", "id": "rtd-o-000021" }],
   "scripts": ["Tamil"],
   "era": "digital",
   "license": { "status": "proprietary", "url": "https://learn.microsoft.com/en-us/typography/fonts/font-faq" },

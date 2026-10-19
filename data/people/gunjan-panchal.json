@@ -5,9 +5,9 @@
   "countries": ["India"],
   "roles": ["type designer", "graphic designer", "calligrapher"],
   "affiliations": [
-    { "name": "Indian Type Foundry", "start_year": "2016" },
+    { "name": "Indian Type Foundry", "id": "rtd-o-000017", "start_year": "2016" },
     { "name": "Ek Type", "id": "rtd-o-000010", "start_year": "2020" },
-    { "name": "Universal Thirst", "start_year": "2021" }
+    { "name": "Universal Thirst", "id": "rtd-o-000036", "start_year": "2021" }
   ],
   "bio": "Designs typefaces in Gujarati, Devanagari, and Gurmukhi. Runs Gunjan Font Foundry; has worked at Indian Type Foundry, Ek Type (Nandinagari script), and Universal Thirst.",
   "external_ids": { "wikidata_qid": "Q125430736" },

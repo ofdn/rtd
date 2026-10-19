@@ -8,7 +8,7 @@
   "countries": ["India"],
   "roles": ["type designer", "graphic designer", "3D artist"],
   "affiliations": [
-    { "name": "Indian Type Foundry", "start_year": "2013" }
+    { "name": "Indian Type Foundry", "id": "rtd-o-000017", "start_year": "2013" }
   ],
   "bio": "Graphic designer who began developing her first typeface during a 2013 internship at the Indian Type Foundry. Designed Tarsus, a Latin-script text serif typeface published by ITF in 2015.",
   "external_ids": { "wikidata_qid": "Q125430725" },
@@ -19,5 +19,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

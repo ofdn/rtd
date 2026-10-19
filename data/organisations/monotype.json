@@ -1,0 +1,17 @@
+{
+  "id": "rtd-o-000022",
+  "slug": "monotype",
+  "name": { "preferred": "Monotype", "alternates": ["Monotype Corporation"] },
+  "external_ids": { "wikidata_qid": "Q1583606" },
+  "kind": "foundry",
+  "website": "https://www.monotype.com/",
+  "description": "Typesetting and font company. Mirza Ahmad Jamil made Noori Nastaliq with Monotype, and its studio designs fonts for Indian scripts.",
+  "sources": [
+    { "url": "https://www.monotype.com/studio/vaishnavi-murthy-yerkadithaya", "title": "Vaishnavi Murthy Yerkadithaya - Monotype", "type": "foundry or publisher page", "publisher": "Monotype", "archive_url": "https://web.archive.org/web/20260510114453/https://www.monotype.com/studio/vaishnavi-murthy-yerkadithaya" },
+    { "url": "https://urdufonts.com/story-of-jameel-noori-nastaleeq/", "title": "Story of Jameel Noori Nastaleeq - Urdu Fonts", "type": "reference website", "publisher": "Urdu Fonts" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

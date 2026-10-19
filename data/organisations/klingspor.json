@@ -1,0 +1,17 @@
+{
+  "id": "rtd-o-000020",
+  "slug": "klingspor",
+  "name": { "preferred": "Klingspor", "alternates": ["Gebr. Klingspor"] },
+  "external_ids": { "wikidata_qid": "Q430021" },
+  "kind": "foundry",
+  "countries": ["Germany"],
+  "location": "Offenbach am Main",
+  "description": "Type foundry in Offenbach am Main, owned in 1911 by the brothers Karl and Wilhelm Klingspor.",
+  "sources": [
+    { "url": "https://www.typeoff.de/2021/04/victor-hammer-and-gebr-klingspor/", "title": "Victor Hammer and Gebr. Klingspor - TypeOff", "type": "reference website", "publisher": "TypeOff" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

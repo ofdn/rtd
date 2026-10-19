@@ -5,7 +5,7 @@
   "countries": ["India"],
   "roles": ["type designer", "graphic designer"],
   "affiliations": [
-    { "name": "November", "start_year": "2018" }
+    { "name": "November", "id": "rtd-o-000026", "start_year": "2018" }
   ],
   "bio": "Co-founded design studio November with Juhi Vishnani in 2018. Designed Labyrinth, a Kufic-inspired typeface with Typotheque and Tal Leming, and Calcula. Typefaces published by Indian Type Foundry and Commercial Type.",
   "external_ids": { "wikidata_qid": "Q125430702" },
@@ -18,5 +18,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

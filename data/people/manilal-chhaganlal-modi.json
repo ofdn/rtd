@@ -8,7 +8,7 @@
   "roles": ["type director"],
   "alma_mater": ["Kala Bhavan, Baroda"],
   "affiliations": [
-    { "name": "Gujarati Type Foundry", "start_year": "1906" }
+    { "name": "Gujarati Type Foundry", "id": "rtd-o-000015", "start_year": "1906" }
   ],
   "bio": "Directed new type styles with the Gujarati Type Foundry's craftsmen in Bombay after joining in 1906. Widened its range between 1932 and 1937 and led its specimen book.",
   "sources": [

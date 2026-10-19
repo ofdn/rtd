@@ -9,7 +9,7 @@
     { "id": "rtd-p-000037", "role": "designer" }
   ],
   "foundry": [
-    { "name": "Orissa Mission Press" }
+    { "name": "Orissa Mission Press", "id": "rtd-o-000028" }
   ],
   "scripts": ["Odia"],
   "era": "metal",
@@ -20,5 +20,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

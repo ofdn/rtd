@@ -1,0 +1,20 @@
+{
+  "id": "rtd-o-000034",
+  "slug": "serampore-mission-press",
+  "name": { "preferred": "Serampore Mission Press", "alternates": [] },
+  "external_ids": { "wikidata_qid": "Q17089298" },
+  "kind": "press",
+  "countries": ["India"],
+  "location": "Serampore",
+  "founded_year": "1800",
+  "closed_year": "1855",
+  "description": "Baptist mission press in Serampore, 1800–1855, where Panchanan Karmakar cut type for Bengali, Devanagari and other Indian scripts.",
+  "sources": [
+    { "url": "https://en.banglapedia.org/index.php/Serampore_Mission_Press", "title": "Serampore Mission Press - Banglapedia", "type": "reference website", "publisher": "Banglapedia", "archive_url": "https://web.archive.org/web/20260809164742/https://en.banglapedia.org/index.php/Serampore_Mission_Press" },
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume One, pp. 271–276 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

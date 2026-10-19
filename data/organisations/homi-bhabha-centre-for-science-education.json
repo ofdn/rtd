@@ -1,0 +1,17 @@
+{
+  "id": "rtd-o-000016",
+  "slug": "homi-bhabha-centre-for-science-education",
+  "name": { "preferred": "Homi Bhabha Centre for Science Education", "alternates": ["HBCSE", "Homi Bhabha Centre for Science Education, TIFR"] },
+  "external_ids": { "wikidata_qid": "Q5890751" },
+  "kind": "institution",
+  "countries": ["India"],
+  "location": "Mumbai",
+  "description": "Centre of the Tata Institute of Fundamental Research in Mumbai, copyright holder of the Samyak fonts.",
+  "sources": [
+    { "url": "https://launchpad.net/debian/squeeze/+source/ttf-indic-fonts/+copyright", "title": "ttf-indic-fonts copyright - Launchpad", "type": "software repository", "publisher": "Launchpad" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

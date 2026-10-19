@@ -5,7 +5,7 @@
   "designers": [
     { "id": "rtd-p-000227", "role": "designer" }
   ],
-  "foundry": [{ "name": "Gujarati Type Foundry" }],
+  "foundry": [{ "name": "Gujarati Type Foundry", "id": "rtd-o-000015" }],
   "design_year": "1932–1937",
   "scripts": ["Devanagari"],
   "languages": [{ "name": "Marathi", "code": "mar" }],

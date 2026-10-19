@@ -9,7 +9,7 @@
     { "id": "rtd-p-000033", "role": "designer" }
   ],
   "foundry": [
-    { "name": "Red Hat" }
+    { "name": "Red Hat", "id": "rtd-o-000032" }
   ],
   "scripts": ["Devanagari", "Bangla", "Gujarati", "Kannada", "Malayalam", "Odia", "Gurmukhi", "Tamil", "Telugu"],
   "era": "digital",
@@ -20,5 +20,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

@@ -1,0 +1,15 @@
+{
+  "id": "rtd-o-000029",
+  "slug": "ourtype",
+  "name": { "preferred": "OurType", "alternates": [] },
+  "kind": "foundry",
+  "founded_year": "2003",
+  "description": "Type foundry founded by Fred Smeijers in 2003, whose releases include his Fresco and Peter Verheul's Versa.",
+  "sources": [
+    { "url": "https://eyemagazine.com/feature/article/reputations-fred-smeijers", "title": "Reputations: Fred Smeijers - Eye Magazine", "type": "newspaper or magazine", "publisher": "Eye Magazine", "archive_url": "https://web.archive.org/web/20260811032818/https://eyemagazine.com/feature/article/reputations-fred-smeijers" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

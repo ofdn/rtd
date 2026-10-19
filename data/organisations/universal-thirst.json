@@ -1,0 +1,18 @@
+{
+  "id": "rtd-o-000036",
+  "slug": "universal-thirst",
+  "name": { "preferred": "Universal Thirst", "alternates": [] },
+  "kind": "foundry",
+  "countries": ["India", "Iceland"],
+  "location": "Bangalore, Reykjavik",
+  "founded_year": "2016",
+  "website": "https://universalthirst.com/",
+  "description": "Type foundry based in Bangalore and Reykjavik, founded in 2016 by Kalapi Gajjar-Bordawekar and Gunnar Vilhjálmsson.",
+  "sources": [
+    { "url": "https://www.itsnicethat.com/articles/universal-thirst-graphic-design-141119", "title": "Meet Universal Thirst - It's Nice That", "type": "newspaper or magazine", "publisher": "It's Nice That", "archive_url": "https://web.archive.org/web/20241108153505/https://www.itsnicethat.com/articles/universal-thirst-graphic-design-141119" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

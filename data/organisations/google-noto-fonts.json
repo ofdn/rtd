@@ -1,0 +1,17 @@
+{
+  "id": "rtd-o-000014",
+  "slug": "google-noto-fonts",
+  "name": { "preferred": "Google Noto Fonts", "alternates": ["Noto"] },
+  "external_ids": { "wikidata_qid": "Q16948181" },
+  "kind": "publisher",
+  "website": "https://notofonts.github.io/",
+  "description": "Google's open-source Noto font project, with fonts for scripts including Ol Chiki and Warang Citi.",
+  "sources": [
+    { "url": "https://notofonts.github.io/ol-chiki/", "title": "Noto Ol Chiki - Noto fonts", "type": "software repository", "publisher": "Google", "archive_url": "https://web.archive.org/web/20260613144521/https://notofonts.github.io/ol-chiki/" },
+    { "url": "https://notofonts.github.io/warang-citi/", "title": "Noto Warang Citi - Noto fonts", "type": "software repository", "publisher": "Google" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

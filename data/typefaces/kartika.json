@@ -6,7 +6,7 @@
     { "id": "rtd-p-000043", "role": "type director" },
     { "id": "rtd-p-000232", "role": "designer" }
   ],
-  "foundry": [{ "name": "Microsoft" }],
+  "foundry": [{ "name": "Microsoft", "id": "rtd-o-000021" }],
   "scripts": ["Malayalam"],
   "era": "digital",
   "license": { "status": "proprietary", "url": "https://learn.microsoft.com/en-us/typography/fonts/font-faq" },

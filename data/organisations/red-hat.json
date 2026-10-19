@@ -1,0 +1,16 @@
+{
+  "id": "rtd-o-000032",
+  "slug": "red-hat",
+  "name": { "preferred": "Red Hat", "alternates": [] },
+  "external_ids": { "wikidata_qid": "Q485593" },
+  "kind": "publisher",
+  "countries": ["United States"],
+  "description": "Software company that released the Lohit fonts for Indian languages as open source in 2004.",
+  "sources": [
+    { "url": "https://fedoraproject.org/wiki/Lohit", "title": "Lohit - Fedora Project Wiki", "type": "software repository", "publisher": "Fedora Project", "archive_url": "https://web.archive.org/web/20260728223800/https://fedoraproject.org/wiki/Lohit" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

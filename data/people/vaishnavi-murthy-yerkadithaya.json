@@ -8,7 +8,7 @@
   "countries": ["India"],
   "roles": ["type designer"],
   "affiliations": [
-    { "name": "Monotype" }
+    { "name": "Monotype", "id": "rtd-o-000022" }
   ],
   "bio": "Creative Type Director at Monotype, based in Bangalore, specializing in multi-script font design and in restoring and digitizing manuscripts for Indian scripts.",
   "external_ids": { "wikidata_qid": "Q113557723" },
@@ -18,5 +18,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

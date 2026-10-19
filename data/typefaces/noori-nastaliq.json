@@ -3,7 +3,7 @@
   "slug": "noori-nastaliq",
   "name": { "preferred": "Noori Nastaliq", "alternates": [] },
   "designers": [{ "id": "rtd-p-000042", "role": "designer" }],
-  "foundry": [{ "name": "Monotype" }],
+  "foundry": [{ "name": "Monotype", "id": "rtd-o-000022" }],
   "design_year": "1981",
   "scripts": ["Arabic"],
   "era": "digital",
@@ -15,5 +15,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

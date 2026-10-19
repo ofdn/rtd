@@ -1,0 +1,17 @@
+{
+  "id": "rtd-o-000026",
+  "slug": "november",
+  "name": { "preferred": "November", "alternates": [] },
+  "kind": "foundry",
+  "countries": ["India"],
+  "location": "Mumbai",
+  "founded_year": "2018",
+  "description": "Design studio in Mumbai co-founded in 2018 by Shiva Nallaperumal and Juhi Vishnani.",
+  "sources": [
+    { "url": "https://www.creativereview.co.uk/shiva-nallaperumal-november-design-india/", "title": "Shiva Nallaperumal on India's evolving design scene - Creative Review", "type": "newspaper or magazine", "publisher": "Creative Review", "date": "2025-02-13", "archive_url": "https://web.archive.org/web/20250217041640/https://www.creativereview.co.uk/shiva-nallaperumal-november-design-india/" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

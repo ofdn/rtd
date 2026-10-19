@@ -7,7 +7,7 @@
   "roles": ["punchcutter"],
   "scripts": ["Devanagari"],
   "affiliations": [
-    { "name": "Gujarati Type Foundry" }
+    { "name": "Gujarati Type Foundry", "id": "rtd-o-000015" }
   ],
   "bio": "Punchcutter at the Gujarati Type Foundry in Bombay for about 25 years, cutting 45 typefaces, 15 of them original designs. Trained as a goldsmith.",
   "sources": [

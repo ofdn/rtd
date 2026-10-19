@@ -4,7 +4,7 @@
   "name": { "preferred": "Narmad Initials", "alternates": [] },
   "designers": [],
   "attribution": { "status": "unknown", "note": "No designer is named in the source." },
-  "foundry": [{ "name": "Gujarati Type Foundry" }],
+  "foundry": [{ "name": "Gujarati Type Foundry", "id": "rtd-o-000015" }],
   "scripts": ["Gujarati"],
   "languages": [{ "name": "Gujarati", "code": "guj" }],
   "era": "metal",
