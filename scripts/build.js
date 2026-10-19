@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Compiles data/people/*.json and data/typefaces/*.json into the published
+// Compiles data/people, data/typefaces and data/organisations into the published
 // static site: human pages (with embedded JSON-LD), a canonical JSON API,
 // CSV/NDJSON bulk dumps, and a client-side search index.
 //
@@ -24,6 +24,7 @@ import { renderHomePage } from "../site-templates/home.js";
 import { renderInfoPage } from "../site-templates/info.js";
 import { renderScriptPage, renderScriptsIndexPage } from "../site-templates/script.js";
 import { renderContributorsPage } from "../site-templates/contributors.js";
+import { renderOrganisationPage, renderOrganisationsIndexPage } from "../site-templates/organisation.js";
 import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion, escapeHtml, linkTag, allNames, eraLabel, scriptLabel, canonicalScriptName, scriptSlug } from "../site-templates/shared.js";
 import { buildPersonDc, buildTypefaceDc } from "./lib/dublin-core.js";
 import { buildPersonMarc } from "./lib/marc-authority.js";
@@ -103,8 +104,19 @@ function build(dataDir, outDir) {
   const schemaVersion = readFileSync(join(repoRoot, "schema/VERSION"), "utf8").trim();
   const people = listRecords(join(dataDir, "people"));
   const typefaces = listRecords(join(dataDir, "typefaces"));
+  const organisations = listRecords(join(dataDir, "organisations"));
 
   const personById = new Map(people.map((p) => [p.id, p]));
+  const organisationById = new Map(organisations.map((o) => [o.id, o]));
+
+  // foundry[] and affiliations[] entries with their organisation's current
+  // slug, so pages can link without copying names into the org record.
+  function withOrganisation(entries) {
+    return (entries ?? []).map((e) => {
+      const org = e.id ? organisationById.get(e.id) : null;
+      return { ...e, slug: org?.record_status === "active" ? org.slug : undefined };
+    });
+  }
   const typefaceById = new Map(typefaces.map((t) => [t.id, t]));
 
   // Reverse index: person id -> typefaces they're credited on. Computed
@@ -254,7 +266,7 @@ function build(dataDir, outDir) {
 <h1>Preservation and persistence</h1>
 <p class="description">Registry of Type Design commits to best-effort persistent access to its identifiers and data.</p>
 <ul class="plain-list">
-<li>Ids (<code>rtd-p-</code>/<code>rtd-t-</code>, and the ARK identifiers built on them) are never reused or reassigned once published. A merged or deprecated record keeps its id and gets a redirect to wherever it lives now, it never gets deleted or handed to a different record.</li>
+<li>Ids (<code>rtd-p-</code>/<code>rtd-t-</code>/<code>rtd-o-</code>, and the ARK identifiers built on them) are never reused or reassigned once published. A merged or deprecated record keeps its id and gets a redirect to wherever it lives now, it never gets deleted or handed to a different record.</li>
 <li>All data is openly licensed (${linkTag("https://creativecommons.org/licenses/by-sa/4.0/", "CC BY-SA 4.0")}) and published as bulk CSV/NDJSON dumps, for anyone who wants to mirror the data independently of this site.</li>
 <li>The full source and edit history is public on ${linkTag("https://github.com/ofdn/rtd", "GitHub")}. Anyone who has cloned the repository already holds a complete, independently usable copy of the registry and its history.</li>
 </ul>
@@ -318,6 +330,7 @@ function build(dataDir, outDir) {
       const html = renderPersonPage(record, {
         canonicalUrl,
         works,
+        affiliations: withOrganisation(record.affiliations),
         demonyms,
         related: relatedPeople(record),
         schemaVersion,
@@ -405,6 +418,7 @@ function build(dataDir, outDir) {
       const html = renderTypefacePage(record, {
         canonicalUrl,
         designers,
+        foundries: withOrganisation(record.foundry),
         related: relatedTypefaces(record),
         relations: (record.related_typefaces ?? [])
           .map((rel) => ({ rel, t: typefaceById.get(rel.id) }))
@@ -469,6 +483,73 @@ function build(dataDir, outDir) {
     outDir,
     "api/typefaces.json",
     JSON.stringify(typefacesApiIndex, null, 2)
+  );
+
+  // --- Organisations ---
+  const organisationsApiIndex = [];
+  const linked = (records, field, id) =>
+    records
+      .filter((r) => r.record_status === "active" && (r[field] ?? []).some((e) => e.id === id))
+      .map((r) => ({ slug: r.slug, name: r.name.preferred }))
+      .sort((a, b) => a.name.localeCompare(b.name));
+  for (const record of organisations) {
+    const canonicalUrl = `${SITE_URL}organisations/${record.slug}/`;
+    const apiUrl = `${SITE_URL}api/organisations/${record.id}.json`;
+    const arkUrl = `https://n2t.net/ark:${ARK_NAAN}/${record.id}`;
+    const orgTypefaces = linked(typefaces, "foundry", record.id);
+    const orgPeople = linked(people, "affiliations", record.id);
+
+    if (record.record_status === "active") {
+      writeFile(
+        outDir,
+        `organisations/${record.slug}/index.html`,
+        renderOrganisationPage(record, { canonicalUrl, typefaces: orgTypefaces, people: orgPeople, schemaVersion, arkUrl })
+      );
+    } else {
+      const target = record.superseded_by ? organisationById.get(record.superseded_by) : null;
+      writeFile(
+        outDir,
+        `organisations/${record.slug}/index.html`,
+        renderTombstonePage(record, { canonicalUrl, targetSlug: target?.slug, schemaVersion })
+      );
+    }
+    writeFile(
+      outDir,
+      `api/organisations/${record.id}.json`,
+      JSON.stringify({ ...record, canonical_url: canonicalUrl, api_url: apiUrl, typefaces: orgTypefaces, people: orgPeople }, null, 2)
+    );
+    writeSlugRedirects(outDir, "organisations", record, canonicalUrl);
+    writeArkRedirect(outDir, record, canonicalUrl);
+    writeBareIdRedirect(outDir, record, canonicalUrl);
+
+    organisationsApiIndex.push({
+      id: record.id,
+      slug: record.slug,
+      name: record.name.preferred,
+      alternates: allNames(record.name),
+      kind: record.kind,
+      record_status: record.record_status,
+      api_url: apiUrl,
+      canonical_url: canonicalUrl,
+      external_ids: record.external_ids,
+      typefacesCount: orgTypefaces.length,
+      peopleCount: orgPeople.length,
+    });
+  }
+  organisationsApiIndex.sort((a, b) => a.name.localeCompare(b.name));
+  writeFile(
+    outDir,
+    "api/organisations.json",
+    JSON.stringify(organisationsApiIndex.map(({ typefacesCount, peopleCount, ...o }) => o), null, 2)
+  );
+  writeFile(
+    outDir,
+    "organisations/index.html",
+    renderOrganisationsIndexPage({
+      canonicalUrl: `${SITE_URL}organisations/`,
+      organisations: organisationsApiIndex.filter((o) => o.record_status === "active"),
+      schemaVersion,
+    })
   );
 
   // --- Scripts (tag pages: one per script, plus an index of all of them) ---
@@ -574,6 +655,10 @@ function build(dataDir, outDir) {
     { loc: `${SITE_URL}scripts/`, lastmod: today },
     ...scriptsForIndex.map((s) => ({ loc: `${SITE_URL}scripts/${s.slug}/`, lastmod: today })),
     { loc: `${SITE_URL}contributors/`, lastmod: today },
+    { loc: `${SITE_URL}organisations/`, lastmod: today },
+    ...organisationsApiIndex
+      .filter((o) => o.record_status === "active")
+      .map((o) => ({ loc: o.canonical_url, lastmod: organisationById.get(o.id)?.updated_at ?? today })),
     ...peopleApiIndex
       .filter((p) => p.record_status === "active")
       .map((p) => ({ loc: p.canonical_url, lastmod: personById.get(p.id)?.updated_at ?? today })),
@@ -685,6 +770,7 @@ function build(dataDir, outDir) {
   return {
     peopleCount: people.length,
     typefacesCount: typefaces.length,
+    organisationsCount: organisations.length,
   };
 }
 
@@ -696,9 +782,9 @@ function main() {
     ? resolve(process.cwd(), process.argv[3])
     : join(repoRoot, "dist");
 
-  const { peopleCount, typefacesCount } = build(dataDir, outDir);
+  const { peopleCount, typefacesCount, organisationsCount } = build(dataDir, outDir);
   console.log(
-    `Built ${peopleCount} people and ${typefacesCount} typefaces into ${outDir}`
+    `Built ${peopleCount} people, ${typefacesCount} typefaces and ${organisationsCount} organisations into ${outDir}`
   );
 }
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Validates data/people/*.json and data/typefaces/*.json against the JSON
+// Validates data/people, data/typefaces and data/organisations against the JSON
 // schemas, plus rules a JSON Schema can't express on its own: filename/slug
 // match, id uniqueness, cross-entity referential integrity, and the
 // no-Wikimedia-project-as-a-source rule.
@@ -59,14 +59,19 @@ export function validateRoot(rootDir) {
   const typefaceSchema = loadJson(
     join(repoRoot, "schema/typeface.schema.json")
   );
+  const organisationSchema = loadJson(
+    join(repoRoot, "schema/organisation.schema.json")
+  );
   const validatePerson = ajv.compile(personSchema);
   const validateTypeface = ajv.compile(typefaceSchema);
+  const validateOrganisation = ajv.compile(organisationSchema);
 
   const peopleDir = join(rootDir, "people");
   const typefacesDir = join(rootDir, "typefaces");
 
   const peopleFiles = listRecords(peopleDir);
   const typefaceFiles = listRecords(typefacesDir);
+  const organisationFiles = listRecords(join(rootDir, "organisations"));
 
   const allIds = new Map(); // id -> file (across both types, since a collision either way is a bug)
   const personIds = new Set();
@@ -92,6 +97,12 @@ export function validateRoot(rootDir) {
         allIds.set(record.id, file);
       }
       if (kind === "person") personIds.add(record.id);
+    }
+    if (kind === "organisation" && record.description) {
+      const wordCount = record.description.trim().split(/\s+/).filter(Boolean).length;
+      if (wordCount > 30) {
+        errors.push(`${file}: description is ${wordCount} words, over the 30-word limit`);
+      }
     }
     // Bio style convention, see CONTRIBUTING.md: a bio is a short lead,
     // not a biography, capped at 30 words so every record reads at a
@@ -127,6 +138,30 @@ export function validateRoot(rootDir) {
     const record = loadJson(file);
     checkSlugAndSchema(file, record, validateTypeface, "typeface");
     typefaces.push({ file, record });
+  }
+
+  const organisations = [];
+  for (const file of organisationFiles) {
+    const record = loadJson(file);
+    checkSlugAndSchema(file, record, validateOrganisation, "organisation");
+    organisations.push({ file, record });
+  }
+
+  // foundry[].id and affiliations[].id must point at known organisation ids.
+  const organisationIds = new Set(organisations.map(({ record }) => record.id));
+  for (const { file, record } of typefaces) {
+    for (const f of record.foundry ?? []) {
+      if (f.id && !organisationIds.has(f.id)) {
+        errors.push(`${file}: foundry references unknown organisation id "${f.id}"`);
+      }
+    }
+  }
+  for (const { file, record } of people) {
+    for (const a of record.affiliations ?? []) {
+      if (a.id && !organisationIds.has(a.id)) {
+        errors.push(`${file}: affiliations references unknown organisation id "${a.id}"`);
+      }
+    }
   }
 
   // Referential integrity: every typeface.designers[].id must be a known person id.
@@ -208,6 +243,7 @@ export function validateRoot(rootDir) {
   }
   checkPreviousSlugs(people, "person");
   checkPreviousSlugs(typefaces, "typeface");
+  checkPreviousSlugs(organisations, "organisation");
 
   // Non-fatal: more than one active record sharing a preferred name. Two
   // real people (or two real typefaces) can legitimately share a name, so
@@ -239,12 +275,14 @@ export function validateRoot(rootDir) {
   }
   checkNameCollisions(people, "person");
   checkNameCollisions(typefaces, "typeface");
+  checkNameCollisions(organisations, "organisation");
 
   return {
     errors,
     warnings,
     peopleCount: people.length,
     typefacesCount: typefaces.length,
+    organisationsCount: organisations.length,
   };
 }
 
@@ -253,7 +291,7 @@ function main() {
     ? resolve(process.cwd(), process.argv[2])
     : join(repoRoot, "data");
 
-  const { errors, warnings, peopleCount, typefacesCount } = validateRoot(rootDir);
+  const { errors, warnings, peopleCount, typefacesCount, organisationsCount } = validateRoot(rootDir);
 
   if (warnings.length > 0) {
     console.warn(`Warnings (${warnings.length}, non-fatal):\n`);
@@ -268,7 +306,7 @@ function main() {
   }
 
   console.log(
-    `Validation passed: ${peopleCount} people, ${typefacesCount} typefaces.`
+    `Validation passed: ${peopleCount} people, ${typefacesCount} typefaces, ${organisationsCount} organisations.`
   );
 }
 

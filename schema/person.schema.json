@@ -105,7 +105,8 @@
         "properties": {
           "name": { "type": "string", "minLength": 1 },
           "start_year": { "type": "string" },
-          "end_year": { "type": "string" }
+          "end_year": { "type": "string" },
+          "id": { "type": "string", "pattern": "^rtd-o-[0-9]{6}$", "description": "The organisation record, when there is one." }
         }
       }
     },

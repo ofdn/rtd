@@ -8,6 +8,7 @@ import { join } from "node:path";
 export const KIND_CONFIG = {
   person: { dir: "data/people", prefix: "rtd-p-" },
   typeface: { dir: "data/typefaces", prefix: "rtd-t-" },
+  organisation: { dir: "data/organisations", prefix: "rtd-o-" },
 };
 
 export function slugify(name) {

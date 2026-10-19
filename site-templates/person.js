@@ -3,7 +3,7 @@ import { citationMeta, allNames, nativeNamesFact, escapeHtml, pageShell, sources
 // `works` is the computed reverse index (typefaces this person is credited
 // on), passed in by build.js, it is never stored on the person record
 // itself, to avoid the same relationship being hand-maintained in two files.
-export function renderPersonPage(record, { canonicalUrl, works, demonyms, related, schemaVersion, arkUrl }) {
+export function renderPersonPage(record, { canonicalUrl, works, affiliations = [], demonyms, related, schemaVersion, arkUrl }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -53,6 +53,7 @@ ${record.roles?.length ? `<dt>Roles</dt><dd>${escapeHtml(record.roles.join(", ")
 ${record.birth_year || record.death_year ? `<dt>Dates</dt><dd>${escapeHtml(record.birth_year ?? "?")} – ${escapeHtml(record.death_year ?? "")}</dd>` : ""}
 ${record.countries?.length ? `<dt>Nationality</dt><dd>${escapeHtml(nationalityLabel(record.countries, demonyms))}</dd>` : ""}
 ${record.scripts?.length ? `<dt>Scripts</dt><dd>${scriptBadges(record.scripts)}</dd>` : ""}
+${affiliations.some((a) => a.slug) ? `<dt>Organisations</dt><dd>${affiliations.filter((a) => a.slug).map((a) => `<a href="../../organisations/${escapeHtml(a.slug)}/">${escapeHtml(a.name)}</a>`).join(", ")}</dd>` : ""}
 </dl>
 ${record.bio ? `<p class="bio">${escapeHtml(record.bio)}</p>` : ""}
 ${worksHtml}

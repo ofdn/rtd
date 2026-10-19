@@ -100,7 +100,8 @@
         "required": ["name"],
         "properties": {
           "name": { "type": "string", "minLength": 1 },
-          "url": { "type": "string", "format": "uri" }
+          "url": { "type": "string", "format": "uri" },
+          "id": { "type": "string", "pattern": "^rtd-o-[0-9]{6}$", "description": "The organisation record for this foundry, when there is one." }
         }
       }
     },

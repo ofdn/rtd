@@ -1,0 +1,19 @@
+{
+  "id": "rtd-o-000005",
+  "slug": "centre-for-internet-and-society",
+  "name": { "preferred": "Centre for Internet and Society", "alternates": ["CIS", "CIS-A2K"] },
+  "external_ids": { "wikidata_qid": "Q2801619" },
+  "kind": "institution",
+  "countries": ["India"],
+  "location": "Bangalore",
+  "website": "https://cis-india.org/",
+  "description": "Non-profit research organisation in Bangalore working on accessibility, openness and access to knowledge, including through its Access to Knowledge (A2K) programme.",
+  "sources": [
+    { "url": "https://cis-india.org/about", "title": "About Us - Centre for Internet and Society", "type": "foundry or publisher page", "publisher": "Centre for Internet and Society", "archive_url": "https://web.archive.org/web/20260615145505/https://cis-india.org/about" },
+    { "url": "https://eyeondesign.aiga.org/guru-gomke-is-a-stylish-ol-chiki-typeface-for-indias-santali-speakers/", "title": "Guru Gomke Is a Stylish Ol Chiki Typeface for India's Santali Speakers - AIGA Eye on Design", "type": "newspaper or magazine", "publisher": "AIGA Eye on Design", "archive_url": "https://web.archive.org/web/20250304212223/https://eyeondesign.aiga.org/guru-gomke-is-a-stylish-ol-chiki-typeface-for-indias-santali-speakers/" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

@@ -14,7 +14,7 @@
   ],
   "foundry": [
     {
-      "name": "Bauer Type Foundry",
+      "name": "Bauer Type Foundry", "id": "rtd-o-000003",
       "url": "https://bauertypes.com/history/"
     }
   ],
@@ -42,5 +42,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-10",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

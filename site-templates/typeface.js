@@ -26,7 +26,7 @@ const ATTRIBUTION_LABELS = {
 };
 
 // `relations` is related_typefaces[] resolved by build.js to {relation, name, slug}.
-export function renderTypefacePage(record, { canonicalUrl, designers, related, relations = [], schemaVersion, arkUrl }) {
+export function renderTypefacePage(record, { canonicalUrl, designers, foundries = [], related, relations = [], schemaVersion, arkUrl }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
@@ -83,7 +83,7 @@ ${printButton()}
 ${arkPermalink(arkUrl)}
 <dl class="facts">
 ${nativeNamesFact(record.name)}
-${record.foundry?.length ? `<dt>Foundry</dt><dd>${escapeHtml(record.foundry.map((f) => f.name).join(", "))}</dd>` : ""}
+${foundries.length ? `<dt>Foundry</dt><dd>${foundries.map((f) => (f.slug ? `<a href="../../organisations/${escapeHtml(f.slug)}/">${escapeHtml(f.name)}</a>` : escapeHtml(f.name))).join(", ")}</dd>` : ""}
 ${record.design_year || record.release_year ? `<dt>Year</dt><dd>${escapeHtml(record.design_year ?? "?")} (designed) / ${escapeHtml(record.release_year ?? "?")} (released)</dd>` : ""}
 ${record.commissioned_by?.length ? `<dt>Commissioned by</dt><dd>${record.commissioned_by.map((c) => (c.url ? linkTag(c.url, escapeHtml(c.name)) : escapeHtml(c.name))).join(", ")}</dd>` : ""}
 ${record.era ? `<dt>Era</dt><dd>${escapeHtml(eraLabel(record.era))}</dd>` : ""}

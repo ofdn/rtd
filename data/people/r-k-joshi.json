@@ -8,7 +8,7 @@
   "place_of_birth": "Sangli",
   "affiliations": [
     { "name": "Industrial Design Centre, IIT Bombay", "start_year": "1983", "end_year": "1996" },
-    { "name": "Centre for Development of Advanced Computing (C-DAC)" }
+    { "name": "Centre for Development of Advanced Computing (C-DAC)", "id": "rtd-o-000004" }
   ],
   "death_year": "2008",
   "bio": "Designed Raghu, the first Devanagari typeface built for OpenType, and core Indian-script fonts for Microsoft Windows. Trained as a calligrapher, reframing Indic typography as rigorous design infrastructure.",

@@ -238,6 +238,18 @@ person or typeface directly.
 Foundry and company names belong in a typeface's `foundry` field, not in
 a person record.
 
+### Organisations
+
+Type foundries, font publishers, presses and institutions have their own
+records in `data/organisations/`, with ids starting `rtd-o-`. Set `kind`
+to `foundry`, `publisher`, `press` or `institution`. Keep the
+`description` to 30 words.
+
+To link a typeface or a person to one, add its id next to the name:
+`"foundry": [{ "name": "Bauer Type Foundry", "id": "rtd-o-000003" }]`.
+A typeface can list more than one foundry. Mint a new id with
+`node scripts/mint-id.js organisation "Name"`.
+
 ### Describing a source
 
 Each `sources[]` entry needs `url` and `title`. These optional fields

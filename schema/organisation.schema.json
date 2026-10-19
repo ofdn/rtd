@@ -1,0 +1,284 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.org/schema/organisation.schema.json",
+  "title": "Organisation",
+  "description": "A type foundry, font publisher, press or institution linked to typefaces or people in the registry.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "slug",
+    "name",
+    "kind",
+    "sources",
+    "record_status",
+    "created_at",
+    "updated_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^rtd-o-[0-9]{6}$",
+      "description": "Permanent opaque identifier. Never reused, never changed once assigned."
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "URL/filename-friendly slug. May change if a record is renamed; id does not."
+    },
+    "previous_slugs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "default": [],
+      "description": "Slugs this record used to have before being renamed. The build emits a redirect stub page at each old URL pointing at the current one, so old links keep working. Append the old slug here whenever you change `slug`, never remove an entry once added."
+    },
+    "name": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "preferred"
+      ],
+      "properties": {
+        "preferred": {
+          "type": "string",
+          "minLength": 1
+        },
+        "alternates": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "default": []
+        },
+        "native": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "value",
+              "script"
+            ],
+            "properties": {
+              "value": {
+                "type": "string",
+                "minLength": 1
+              },
+              "script": {
+                "type": "string",
+                "minLength": 1
+              },
+              "language": {
+                "type": "string",
+                "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$"
+              }
+            }
+          },
+          "description": "The name written in its own script(s), as found in a source."
+        }
+      }
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "foundry",
+        "publisher",
+        "press",
+        "institution"
+      ],
+      "description": "foundry: makes and sells type. publisher: issues fonts as part of a wider business. press: a printing press that cut or cast its own type. institution: a university, research body or non-profit."
+    },
+    "countries": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "location": {
+      "type": "string",
+      "minLength": 1,
+      "description": "City or place, as stated in a source."
+    },
+    "founded_year": {
+      "type": "string"
+    },
+    "closed_year": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string",
+      "format": "uri"
+    },
+    "description": {
+      "type": "string"
+    },
+    "external_ids": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "wikidata_qid": {
+          "type": "string",
+          "pattern": "^Q[0-9]+$"
+        },
+        "viaf": {
+          "type": "string",
+          "description": "VIAF cluster id, digits only."
+        },
+        "isni": {
+          "type": "string",
+          "description": "ISNI, 16 digits, spaces optional."
+        },
+        "lc_naf": {
+          "type": "string",
+          "description": "Library of Congress/NACO Authority File id, e.g. 'n79021164'."
+        },
+        "gnd": {
+          "type": "string",
+          "description": "GND (Gemeinsame Normdatei / Deutsche Nationalbibliothek) id."
+        },
+        "worldcat_entity": {
+          "type": "string",
+          "description": "OCLC WorldCat Entity id, the string after id.oclc.org/worldcat/entity/. Note: the WorldCat.org detail page for an entity currently prompts for a library-affiliated login to view, unlike the other authority files here, still worth recording as a cross-reference even though the page itself isn't always freely browsable."
+        },
+        "ulan": {
+          "type": "string",
+          "pattern": "^[0-9]+$",
+          "description": "Getty Union List of Artist Names (ULAN) numeric id, e.g. '500104874'. A cross-reference only. A ULAN record page may also be cited in sources[]."
+        }
+      },
+      "description": "Informational cross-references only, one per authority file. Never usable as a sources entry."
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "url",
+          "title"
+        ],
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "book",
+              "book chapter",
+              "journal article",
+              "thesis",
+              "conference paper",
+              "newspaper or magazine",
+              "interview",
+              "type specimen",
+              "foundry or publisher page",
+              "font catalogue",
+              "designer website",
+              "archive or museum record",
+              "standards document",
+              "reference website",
+              "government document",
+              "community publication",
+              "audio or video",
+              "software repository",
+              "other"
+            ],
+            "description": "What kind of document this is. Descriptive only."
+          },
+          "language": {
+            "type": "string",
+            "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$",
+            "description": "Language of the source, as a BCP 47 tag (e.g. en, or, sat, hi, ar)."
+          },
+          "date": {
+            "type": "string",
+            "description": "Publication date as given by the source (YYYY, YYYY-MM or YYYY-MM-DD)."
+          },
+          "publisher": {
+            "type": "string",
+            "minLength": 1
+          },
+          "archive_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "An archived copy of url, e.g. on web.archive.org."
+          }
+        }
+      },
+      "description": "Independent, verifiable sources. Must never be Wikidata, Wikipedia, or any Wikimedia project, enforced by scripts/validate.js.",
+      "minItems": 1
+    },
+    "contributed_by": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "individual",
+              "institution"
+            ],
+            "default": "individual"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      },
+      "description": "Who submitted or substantially contributed this record's entry - distinct from the record's own subject. The first entry is treated as the record's citation author (see site-templates/shared.js buildCitations). Auto-filled with the submitter's GitHub username for issue-form submissions; add by hand when opening a PR directly, see CONTRIBUTING.md. Also powers the /contributors/ page. Omit entirely for records researched and entered by the registry's own maintainers - the citation falls back to the default maintainer credit in that case."
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "verified",
+        "needs_verification"
+      ],
+      "default": "verified"
+    },
+    "record_status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "merged",
+        "deprecated"
+      ]
+    },
+    "superseded_by": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^rtd-o-[0-9]{6}$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date"
+    }
+  }
+}

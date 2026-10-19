@@ -1,0 +1,16 @@
+{
+  "id": "rtd-o-000002",
+  "slug": "altertype",
+  "name": { "preferred": "AlterType", "alternates": ["Altertype"] },
+  "kind": "foundry",
+  "website": "https://typenetwork.com/type-foundries/altertype",
+  "description": "Typeface studio co-led by Anand Naorem, designing typefaces for brand identities and editorial use.",
+  "sources": [
+    { "url": "https://typenetwork.com/type-foundries/altertype", "title": "Altertype - Type Network", "type": "foundry or publisher page", "publisher": "Type Network", "archive_url": "https://web.archive.org/web/20250705013821/https://typenetwork.com/type-foundries/altertype" },
+    { "url": "https://www.typotheque.com/authors/anand-naorem", "title": "Anand Naorem - Typotheque", "type": "foundry or publisher page", "publisher": "Typotheque" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

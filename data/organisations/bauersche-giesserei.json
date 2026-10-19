@@ -1,0 +1,20 @@
+{
+  "id": "rtd-o-000003",
+  "slug": "bauersche-giesserei",
+  "name": { "preferred": "Bauersche Gießerei", "alternates": ["Bauer Type Foundry", "Bauersche Giesserei"] },
+  "external_ids": { "wikidata_qid": "Q287627" },
+  "kind": "foundry",
+  "countries": ["Germany"],
+  "location": "Frankfurt am Main",
+  "founded_year": "1837",
+  "closed_year": "1972",
+  "website": "https://bauertypes.com/",
+  "description": "Type foundry in Frankfurt am Main. Its New York branch, opened in 1927 as the Bauer Type Foundry, sold its typefaces in North America.",
+  "sources": [
+    { "url": "https://bauertypes.com/history/", "title": "History - Bauer Types", "type": "foundry or publisher page", "publisher": "Bauer Types", "archive_url": "https://web.archive.org/web/20261002040910/https://bauertypes.com/history/" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "rtd-o-000004",
+  "slug": "centre-for-development-of-advanced-computing",
+  "name": { "preferred": "Centre for Development of Advanced Computing", "alternates": ["C-DAC"] },
+  "external_ids": { "wikidata_qid": "Q3519908" },
+  "kind": "institution",
+  "countries": ["India"],
+  "founded_year": "1988",
+  "website": "https://www.cdac.in/",
+  "description": "Indian government research society set up in 1988. Its GIST group worked on script technology for Indian languages.",
+  "sources": [
+    { "url": "https://www.cdac.in/index.aspx?id=about", "title": "About C-DAC", "type": "government document", "publisher": "C-DAC", "archive_url": "https://web.archive.org/web/20261008091319/https://www.cdac.in/index.aspx?id=about" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

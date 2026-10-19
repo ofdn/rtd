@@ -41,6 +41,17 @@ function buildStub(kind, id, slug, name, today) {
       updated_at: today,
     };
   }
+  if (kind === "organisation") {
+    return {
+      ...base,
+      kind: "foundry",
+      sources: [],
+      record_status: "active",
+      superseded_by: null,
+      created_at: today,
+      updated_at: today,
+    };
+  }
   return {
     ...base,
     designers: [],
@@ -58,7 +69,7 @@ function main() {
 
   if (!kindArg || !KIND_CONFIG[kindArg] || !nameArg) {
     console.error(
-      'Usage: node scripts/mint-id.js <person|typeface> "Full Name" [--write]'
+      'Usage: node scripts/mint-id.js <person|typeface|organisation> "Full Name" [--write]'
     );
     process.exit(1);
   }

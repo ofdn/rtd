@@ -14,7 +14,7 @@
   ],
   "foundry": [
     {
-      "name": "Adobe",
+      "name": "Adobe", "id": "rtd-o-000001",
       "url": "https://fonts.adobe.com/fonts/kepler"
     }
   ],
@@ -42,5 +42,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-10",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }
