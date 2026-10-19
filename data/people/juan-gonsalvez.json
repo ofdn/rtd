@@ -1,0 +1,18 @@
+{
+  "id": "rtd-p-000254",
+  "slug": "juan-gonsalvez",
+  "name": { "preferred": "Juan Gonsalvez", "alternates": ["João Gonçalves", "Juan Gonsalves"] },
+  "birth_year": "1525",
+  "countries": ["Spain"],
+  "roles": ["punchcutter"],
+  "scripts": ["Tamil"],
+  "bio": "Jesuit lay brother and blacksmith who cut the Malabar types used to print a Tamil catechism in 1577–78, among the first printing in an Indian script.",
+  "sources": [
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume One, pp. 228–230 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

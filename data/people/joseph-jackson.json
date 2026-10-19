@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000253",
+  "slug": "joseph-jackson",
+  "name": { "preferred": "Joseph Jackson", "alternates": [] },
+  "birth_year": "1733",
+  "death_year": "1792",
+  "countries": ["United Kingdom"],
+  "roles": ["punchcutter", "type founder"],
+  "scripts": ["Bangla", "Devanagari"],
+  "bio": "London punchcutter and type founder who cut early Bangla types around 1773 and a Devanagari fount under the direction of William Kirkpatrick.",
+  "sources": [
+    { "url": "https://www.thedailystar.net/slow-reads/focus/news/the-early-history-bengali-printing-1976265", "title": "The Early History of Bengali Printing: A Historical Overview - The Daily Star", "type": "newspaper or magazine", "publisher": "The Daily Star", "language": "en", "archive_url": "https://web.archive.org/web/20260518053225/https://www.thedailystar.net/slow-reads/focus/news/the-early-history-bengali-printing-1976265" },
+    { "url": "https://www.gutenberg.org/cache/epub/54365/pg54365-images.html", "title": "A History of the Old English Letter Foundries (Talbot Baines Reed) - Project Gutenberg", "type": "book", "publisher": "Project Gutenberg", "language": "en", "archive_url": "https://web.archive.org/web/20260219231613/https://www.gutenberg.org/cache/epub/54365/pg54365-images.html" },
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume One, p. 247 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}
