@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000235",
+  "slug": "thomas-graham",
+  "name": { "preferred": "Thomas Graham", "alternates": [] },
+  "countries": ["India"],
+  "roles": ["punchcutter"],
+  "scripts": ["Devanagari"],
+  "affiliations": [
+    { "name": "American Mission Press, Bombay" }
+  ],
+  "bio": "Cut the punches for the American Mission Press's Devanagari type in Bombay in the 1830s, the 'Bombay' degree type, and trained Javaji Dadaji and Ganpat Krishnaji.",
+  "sources": [
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume One, pp. 297–299 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" },
+    { "url": "https://www.typotheque.com/research/devanagari-the-makings-of-a-national-character", "title": "Devanagari: the makings of a national character - Typotheque", "type": "foundry or publisher page", "publisher": "Typotheque", "language": "en", "archive_url": "https://web.archive.org/web/20260904214118/https://www.typotheque.com/research/devanagari-the-makings-of-a-national-character" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

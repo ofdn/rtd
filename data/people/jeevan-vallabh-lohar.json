@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000236",
+  "slug": "jeevan-vallabh-lohar",
+  "name": { "preferred": "Jeevan Vallabh Lohar", "alternates": [] },
+  "countries": ["India"],
+  "roles": ["punchcutter"],
+  "scripts": ["Gujarati"],
+  "affiliations": [
+    { "name": "American Mission Press, Bombay" }
+  ],
+  "bio": "Punchcutter who worked with Thomas Graham at the American Mission Press in Bombay, cutting Gujarati types.",
+  "sources": [
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume One, p. 297 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

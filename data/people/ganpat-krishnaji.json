@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000237",
+  "slug": "ganpat-krishnaji",
+  "name": { "preferred": "Ganpat Krishnaji", "alternates": ["Ganapat Krishnaji", "Ganpat Krushnaji"] },
+  "external_ids": { "wikidata_qid": "Q110118693" },
+  "birth_year": "1800",
+  "countries": ["India"],
+  "roles": ["printer", "punchcutter"],
+  "scripts": ["Devanagari", "Gujarati"],
+  "bio": "Printer who learnt type-making from Thomas Graham and cut Marathi and Gujarati types, casting his own Devanagari font around 1846 at his press in Bombay.",
+  "sources": [
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume One, pp. 297, 307–308 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" },
+    { "url": "https://www.typotheque.com/research/devanagari-the-makings-of-a-national-character", "title": "Devanagari: the makings of a national character - Typotheque", "type": "foundry or publisher page", "publisher": "Typotheque", "language": "en", "archive_url": "https://web.archive.org/web/20260904214118/https://www.typotheque.com/research/devanagari-the-makings-of-a-national-character" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

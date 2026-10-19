@@ -1,0 +1,23 @@
+{
+  "id": "rtd-p-000238",
+  "slug": "javaji-dadaji-chaudhari",
+  "name": { "preferred": "Javaji Dadaji Chaudhari", "alternates": ["Jaoji Dadaji", "Jawaji Dadaji Chaudhari", "Javaji Dadaji"] },
+  "external_ids": { "wikidata_qid": "Q31738846" },
+  "birth_year": "1839",
+  "death_year": "1892",
+  "countries": ["India"],
+  "roles": ["type founder", "punchcutter"],
+  "scripts": ["Devanagari", "Gujarati"],
+  "affiliations": [
+    { "name": "Nirnaya Sagar Press", "start_year": "1869" }
+  ],
+  "bio": "Founded a type foundry in Bombay in 1864 and the Nirnaya Sagar Press in 1869, cutting punches himself. His foundry issued twenty Marathi, fifteen Gujarati and forty English heading founts.",
+  "sources": [
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume One, pp. 307–314 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" },
+    { "url": "https://www.typotheque.com/research/devanagari-the-makings-of-a-national-character", "title": "Devanagari: the makings of a national character - Typotheque", "type": "foundry or publisher page", "publisher": "Typotheque", "language": "en", "archive_url": "https://web.archive.org/web/20260904214118/https://www.typotheque.com/research/devanagari-the-makings-of-a-national-character" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "rtd-p-000234",
+  "slug": "behramjee-jeejeebhoy",
+  "name": { "preferred": "Behramjee Jeejeebhoy", "alternates": ["Behramji Jeejibhoy", "Behramjee Jeejibhoy Chhapghar"] },
+  "place_of_birth": "Surat",
+  "countries": ["India"],
+  "roles": ["punchcutter", "type founder"],
+  "scripts": ["Gujarati", "Malayalam", "Modi"],
+  "affiliations": [
+    { "name": "Bombay Courier Press" }
+  ],
+  "bio": "Designed and cast the first Gujarati type in Bombay in 1796, at the Bombay Courier press, and cast Malayalam and Modi types by 1799.",
+  "sources": [
+    { "url": "https://www.printweek.in/Features/print-history-going-strong-at-225-celebrating-indian-print-55424", "title": "Print History: Going strong at 225 Celebrating Indian print (Murali Ranganathan)", "type": "newspaper or magazine", "publisher": "PrintWeek India", "date": "2021-11-27", "language": "en", "archive_url": "https://web.archive.org/web/20260213101918/https://www.printweek.in/Features/print-history-going-strong-at-225-celebrating-indian-print-55424" },
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume One, pp. 282–283 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}
