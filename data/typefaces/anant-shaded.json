@@ -1,0 +1,21 @@
+{
+  "id": "rtd-t-000168",
+  "slug": "anant-shaded",
+  "name": { "preferred": "Anant Shaded", "alternates": [] },
+  "designers": [
+    { "id": "rtd-p-000226", "role": "designer" }
+  ],
+  "foundry": [{ "name": "Gujarati Type Foundry" }],
+  "design_year": "c. 1917",
+  "scripts": ["Devanagari"],
+  "era": "metal",
+  "description": "Shaded Devanagari metal type cut by Anant Chari at the Gujarati Type Foundry around 1917–18, among the first shaded designs for the script.",
+  "sources": [
+    { "url": "https://letterformarchive.org/news/gujarati-type-foundry-specimen/", "title": "From the Collection: Gujarati Type Foundry’s 1937 Specimen Book - Letterform Archive", "type": "archive or museum record", "publisher": "Letterform Archive", "date": "2021-10-24", "archive_url": "https://web.archive.org/web/20260629074542/https://letterformarchive.org/news/gujarati-type-foundry-specimen/" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

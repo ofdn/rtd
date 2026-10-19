@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000229",
+  "slug": "manilal-chhaganlal-modi",
+  "name": { "preferred": "Manilal Chhaganlal Modi", "alternates": [] },
+  "countries": [],
+  "roles": ["type director"],
+  "affiliations": [
+    { "name": "Gujarati Type Foundry" }
+  ],
+  "bio": "Directed new type styles with the craftsmen of the Gujarati Type Foundry in Bombay, and led the making of its specimen book of about 1937.",
+  "sources": [
+    { "url": "https://letterformarchive.org/news/gujarati-type-foundry-specimen/", "title": "From the Collection: Gujarati Type Foundry’s 1937 Specimen Book - Letterform Archive", "type": "archive or museum record", "publisher": "Letterform Archive", "date": "2021-10-24", "archive_url": "https://web.archive.org/web/20260629074542/https://letterformarchive.org/news/gujarati-type-foundry-specimen/" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

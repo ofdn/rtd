@@ -23,14 +23,9 @@ import { parseDump } from "./parse-wikidata-fonts.js";
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const repoRoot = join(__dirname, "..");
 
-// Names already independently researched and confirmed to have zero
-// independent sources or Wikidata claim references anywhere (South Asia
-// occupation expansion session, see handoff "Remaining work"). Re-listed
-// here so the dedup report doesn't send these back through research again;
-// update this list if a name is ever re-checked and found sourceable.
-// (Sandeep Shedmake was on this list until 2026-08-07, when an independent
-// font-catalog credit for Samyak Oriya surfaced him as a real co-creator,
-// see data/people/sandeep-shedmake.json.)
+// Researched with no independent source or Wikidata claim reference found.
+// Listed so the dedup report does not send them back for research. Remove a
+// name if a source turns up.
 const KNOWN_UNSOURCEABLE = new Set([
   "Sujata Patel",
   "Sushant Dash",

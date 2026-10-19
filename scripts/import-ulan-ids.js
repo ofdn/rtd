@@ -31,16 +31,10 @@ const RECONCILE_URL = "https://services.getty.edu/vocab/reconcile";
 const PLAUSIBLE_ROLE_HINTS =
   /typograph|type designer|calligraph|graphic design|engrav|punchcut|letterer|printer|font design|book design|illustrat|artist|designer/i;
 
-// Confirmed-wrong matches found during manual review of the first run
-// (2026-08-07): score gap + exact name match + a generic ULAN "artist"
-// role tag isn't always enough. "Mirjam Somers" scored a decisive gap
-// (46.8 vs runner-up 16.2) and an exact name match, but the ULAN record
-// (500531706) is a Dutch video artist with zero connection to
-// typography/calligraphy/DecoType in its bio, unlike genuinely-correct
-// same-shaped matches (Hoefler/Frere-Jones/Makela) where the person is
-// distinctive enough that a coincidental second real person is
-// implausible. Keyed by RTD person id, not name, so a same-named
-// different RTD record later isn't accidentally caught by this.
+// Wrong matches found by hand. An exact name, a clear score gap and a
+// generic "artist" role can still be a namesake: Mirjam Somers scored 46.8
+// against 16.2, but ULAN 500531706 is a Dutch video artist. Keyed by RTD
+// id so a later record with the same name is not caught.
 const MANUAL_EXCLUDE_RTD_IDS = new Set([
   "rtd-p-000091", // Mirjam Somers -> wrong ULAN 500531706 (Dutch video artist)
 ]);

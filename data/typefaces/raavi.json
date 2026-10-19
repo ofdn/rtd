@@ -1,0 +1,22 @@
+{
+  "id": "rtd-t-000176",
+  "slug": "raavi",
+  "name": { "preferred": "Raavi", "alternates": [] },
+  "designers": [
+    { "id": "rtd-p-000043", "role": "designer" }
+  ],
+  "foundry": [{ "name": "Microsoft" }],
+  "scripts": ["Gurmukhi"],
+  "languages": [{ "name": "Punjabi", "code": "pan" }],
+  "era": "digital",
+  "license": { "status": "proprietary", "url": "https://learn.microsoft.com/en-us/typography/fonts/font-faq" },
+  "description": "Gurmukhi font for Microsoft Windows, made mainly for Punjabi, designed by R K Joshi. Its Latin characters were adapted from Microsoft Sans Serif.",
+  "sources": [
+    { "url": "https://learn.microsoft.com/en-us/typography/font-list/raavi", "title": "Raavi font family - Typography | Microsoft Learn", "type": "foundry or publisher page", "publisher": "Microsoft", "archive_url": "https://web.archive.org/web/20260809082556/https://learn.microsoft.com/en-us/typography/font-list/raavi" },
+    { "url": "https://letterformarchive.org/news/the-multilinguascriptic-life-of-r-k-joshi/", "title": "The Multilinguascriptic Life of R. K. Joshi - Letterform Archive", "type": "archive or museum record", "publisher": "Letterform Archive", "date": "2023-11-28", "archive_url": "https://web.archive.org/web/20260609051310/https://letterformarchive.org/news/the-multilinguascriptic-life-of-r-k-joshi/" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

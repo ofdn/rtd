@@ -2,11 +2,8 @@
 // No dependencies: the dataset is small enough that a hand-rolled bigram
 // similarity is simpler than pulling in a fuzzy-matching library.
 
-// Same diacritic-stripping approach as scripts/mint-id.js's slugify(), but
-// keeps spaces (a slug isn't useful for comparing "Aditi Pimprikar" against
-// itself token-by-token). Periods/commas are stripped too, since initials
-// are the main place this matters ("R.K. Joshi" / "R. K. Joshi" both need
-// to land on the same normalized form as "R K Joshi").
+// Like slugify() in scripts/mint-id.js, but keeps spaces. Drops periods and
+// commas so "R.K. Joshi" and "R. K. Joshi" both become "r k joshi".
 export function normalize(text) {
   return text
     .normalize("NFD")
@@ -17,11 +14,7 @@ export function normalize(text) {
     .replace(/\s+/g, " ");
 }
 
-// Whitespace-free form, used as a second-pass equality check for spacing
-// variants normalize() alone can't fix: "RK Joshi" vs "R K Joshi" isn't a
-// punctuation difference, it's a token-boundary one, so a plain string
-// comparison after normalize() still fails even though a human reads them
-// as the same name.
+// Matches "RK Joshi" to "R K Joshi", which normalize() leaves apart.
 function compact(normalized) {
   return normalized.replace(/\s+/g, "");
 }
@@ -49,11 +42,8 @@ function diceCoefficient(a, b) {
   return (2 * matches) / (bigramsA.length + bigramsB.length);
 }
 
-// 100 for an exact normalized match, 96 when the only difference is
-// spacing around initials ("RK Joshi" vs "R K Joshi"), 70-95 for a
-// substring match (scaled by how much of the longer string the shorter
-// one covers), otherwise a Dice bigram-coefficient similarity capped
-// below the substring band so a loose match never outranks a real one.
+// 100 exact, 96 spacing-only, 70-95 substring (by coverage), else a Dice
+// bigram score kept below the substring band.
 export function scoreMatch(query, candidate) {
   const q = normalize(query);
   const c = normalize(candidate);
@@ -67,8 +57,7 @@ export function scoreMatch(query, candidate) {
   return Math.round(diceCoefficient(q, c) * 65);
 }
 
-// Best score across a record's preferred name and any alternates, since a
-// query might match an alternate spelling rather than the preferred form.
+// Best score across the preferred name and alternates.
 export function bestScore(query, record) {
   const names = [record.name, ...(record.alternates ?? [])];
   let best = 0;

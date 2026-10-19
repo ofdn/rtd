@@ -1,0 +1,22 @@
+{
+  "id": "rtd-p-000228",
+  "slug": "ichharam-suryaram-desai",
+  "name": { "preferred": "Ichharam Suryaram Desai", "alternates": ["Ichharam Desai"] },
+  "external_ids": { "wikidata_qid": "Q2724598" },
+  "countries": [],
+  "roles": ["type founder", "editor"],
+  "scripts": ["Devanagari", "Gujarati"],
+  "place_of_birth": "Surat",
+  "affiliations": [
+    { "name": "Gujarati Type Foundry", "start_year": "1900" }
+  ],
+  "bio": "Founded the Gujarati Type Foundry in Bombay in 1900 and introduced slanted italic type for Devanagari and Gujarati. Author and editor of the magazine Gujarati.",
+  "sources": [
+    { "url": "https://letterformarchive.org/news/gujarati-type-foundry-specimen/", "title": "From the Collection: Gujarati Type Foundry’s 1937 Specimen Book - Letterform Archive", "type": "archive or museum record", "publisher": "Letterform Archive", "date": "2021-10-24", "archive_url": "https://web.archive.org/web/20260629074542/https://letterformarchive.org/news/gujarati-type-foundry-specimen/" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

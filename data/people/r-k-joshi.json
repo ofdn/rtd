@@ -3,8 +3,13 @@
   "slug": "r-k-joshi",
   "name": { "preferred": "R K Joshi", "alternates": ["Raghunath Krishna Joshi"] },
   "countries": ["India"],
-  "roles": ["type designer", "typographer", "educator"],
+  "roles": ["type designer", "typographer", "calligrapher", "educator"],
   "birth_year": "1936",
+  "place_of_birth": "Sangli",
+  "affiliations": [
+    { "name": "Industrial Design Centre, IIT Bombay", "start_year": "1983", "end_year": "1996" },
+    { "name": "Centre for Development of Advanced Computing (C-DAC)" }
+  ],
   "death_year": "2008",
   "bio": "Designed Raghu, the first Devanagari typeface built for OpenType, and core Indian-script fonts for Microsoft Windows. Trained as a calligrapher, reframing Indic typography as rigorous design infrastructure.",
   "external_ids": { "wikidata_qid": "Q7278200", "viaf": "11790875", "lc_naf": "n2008207746", "gnd": "1205918434" },
@@ -15,5 +20,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

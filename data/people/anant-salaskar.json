@@ -1,0 +1,21 @@
+{
+  "id": "rtd-p-000227",
+  "slug": "anant-salaskar",
+  "name": { "preferred": "Anant Salaskar", "alternates": [] },
+  "external_ids": { "wikidata_qid": "Q123385508" },
+  "countries": [],
+  "roles": ["type designer"],
+  "scripts": ["Devanagari"],
+  "affiliations": [
+    { "name": "Gujarati Type Foundry" }
+  ],
+  "bio": "Designed the 18-point Devanagari typeface New Style Anant at the Gujarati Type Foundry in Bombay in the 1930s.",
+  "sources": [
+    { "url": "https://letterformarchive.org/news/gujarati-type-foundry-specimen/", "title": "From the Collection: Gujarati Type Foundry’s 1937 Specimen Book - Letterform Archive", "type": "archive or museum record", "publisher": "Letterform Archive", "date": "2021-10-24", "archive_url": "https://web.archive.org/web/20260629074542/https://letterformarchive.org/news/gujarati-type-foundry-specimen/" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

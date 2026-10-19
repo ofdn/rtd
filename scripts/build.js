@@ -78,7 +78,7 @@ function writeSlugRedirects(outDir, kindDir, record, canonicalUrl) {
 // not a plain `/ark/<id>/` path, and N2T strips hyphens from the local id
 // before forwarding (ARK spec: hyphens are structural, insignificant,
 // readability-only). Confirmed by resolving ark:54728/rtd-p-000001 through
-// n2t.net and inspecting the actual redirect chain, 2026-08-05.
+// n2t.net and following the redirect chain.
 function writeArkRedirect(outDir, record, canonicalUrl) {
   const html = renderRedirectPage({
     name: record.name?.preferred ?? record.id,
