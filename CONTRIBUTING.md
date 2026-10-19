@@ -195,11 +195,7 @@ foundry specimens/catalogs, museum or archive records, newspaper or
 magazine coverage, academic papers, and similar.
 
 **Wikidata, Wikipedia, and any other Wikimedia project may never be used
-as a source.** If the only place a fact currently appears is a Wikipedia
-article, that's a sign the fact needs an independent source before it
-belongs here, not a reason to cite Wikipedia. Wikimedia projects are
-themselves compiled from other sources, so RTD cites the original
-source instead. CI rejects any `sources[].url` on a Wikimedia-project
+as a source.** CI rejects any `sources[].url` on a Wikimedia-project
 domain automatically.
 
 `external_ids` (`wikidata_qid`, `viaf`, `isni`, `lc_naf`, `gnd`,
@@ -238,10 +234,6 @@ person or typeface directly.
 - Omniglot.
 - The Unicode Standard core specification and Unicode script proposals.
 - Google Fonts and Adobe Fonts family and designer pages.
-
-Luc Devroye's type design pages are a comprehensive resource. One person
-maintains them and some entries are out of date, so check facts from them
-against another source where you can.
 
 Foundry and company names belong in a typeface's `foundry` field, not in
 a person record.

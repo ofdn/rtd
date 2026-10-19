@@ -1,15 +1,8 @@
 #!/usr/bin/env node
 // Backfills external_ids.ulan (Getty Union List of Artist Names) by
 // querying Getty's own reconciliation API locally, for every person
-// record that doesn't already have one. As reliable an authority file as
-// VIAF/ISNI/LC-NAF/GND (see schema/person.schema.json), so it gets the
-// same "just a cross-reference, still needs its own confidence gate"
-// treatment as scripts/backfill-new-candidate-ids.js used for Wikidata:
-// require a decisive score gap over the runner-up AND a plausible
-// occupation showing in Getty's own "Roles" field for that record, not
-// just a name match, since ULAN's name index has plenty of unrelated
-// people (there is more than one "Hermann Zapf"-shaped name possible in
-// principle).
+// record that doesn't already have one. A match needs a clear score gap
+// over the runner-up and a matching occupation in Getty's "Roles" field.
 //
 // Getty's LOD/SPARQL endpoint (vocab.getty.edu) has been unreliable; the
 // reconciliation API (services.getty.edu) and preview endpoint used here

@@ -12,10 +12,7 @@ import addFormats from "ajv-formats";
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const repoRoot = join(__dirname, "..");
 
-// Domains that can never appear in a `sources[].url`, see the
-// registry-sourcing-policy memory: citing Wikidata/Wikipedia/any Wikimedia
-// project here would create a circular-sourcing loop and block Wikidata
-// from ever citing this registry back.
+// Domains that can never appear in a `sources[].url`.
 const BLOCKED_SOURCE_DOMAINS = [
   "wikipedia.org",
   "wikidata.org",
