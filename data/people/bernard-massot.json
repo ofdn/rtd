@@ -1,0 +1,17 @@
+{
+  "id": "rtd-p-000256",
+  "slug": "bernard-massot",
+  "name": { "preferred": "Bernard Massot", "alternates": [] },
+  "countries": [],
+  "roles": ["font engineer"],
+  "scripts": ["Devanagari"],
+  "bio": "Font engineer who contributed patches to the Lohit fonts in 2011, fixing outlines and OpenType features, and built the Gargi Devanagari font.",
+  "sources": [
+    { "url": "https://github.com/pravins/lohit/blob/master/ChangeLog", "title": "Lohit ChangeLog - GitHub", "type": "software repository", "publisher": "Lohit Fonts Project", "language": "en" },
+    { "url": "https://sourceforge.net/p/fontforge/mailman/message/27655984/", "title": "Re: [Fontforge-users] fixing missing points at extrema - FontForge mailing list", "type": "community publication", "publisher": "SourceForge", "language": "en" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

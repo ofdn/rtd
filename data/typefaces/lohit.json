@@ -6,20 +6,31 @@
     "alternates": []
   },
   "designers": [
-    { "id": "rtd-p-000033", "role": "project leader" },
+    { "id": "rtd-p-000033", "role": "project leader, OpenType tables" },
+    { "id": "rtd-p-000261", "role": "OpenType tables" },
+    { "id": "rtd-p-000259", "role": "OpenType tables" },
+    { "id": "rtd-p-000184", "role": "Latin glyphs, Lohit Devanagari" },
+    { "id": "rtd-p-000260", "role": "glyph contributions" },
+    { "id": "rtd-p-000257", "role": "glyph contributions" },
     { "id": "rtd-p-000055", "role": "contributor" },
-    { "id": "rtd-p-000056", "role": "contributor" }
+    { "id": "rtd-p-000056", "role": "contributor" },
+    { "id": "rtd-p-000258", "role": "font configuration" },
+    { "id": "rtd-p-000256", "role": "outline and feature fixes" }
   ],
   "foundry": [
+    { "name": "Automatic Control Equipments", "id": "rtd-o-000038" },
+    { "name": "Modular Infotech", "id": "rtd-o-000039" },
     { "name": "Red Hat", "id": "rtd-o-000032" }
   ],
   "scripts": ["Devanagari", "Bangla", "Gujarati", "Kannada", "Malayalam", "Odia", "Gurmukhi", "Tamil", "Telugu"],
   "era": "digital",
   "license": { "status": "open", "spdx": "OFL-1.1", "url": "https://github.com/pravins/lohit/blob/master/OFL.txt" },
-  "description": "Open-source font family for 21 Indian languages, released by Red Hat in 2004 under the GPL and relicensed under the SIL Open Font License in 2011.",
+  "description": "Open-source font family for 21 Indian languages. The first fonts were made by Automatic Control Equipments and Modular Infotech in Pune; Red Hat released them under the GPL in 2004 and relicensed them under the SIL Open Font License in 2011.",
   "sources": [
     { "url": "https://fedoraproject.org/wiki/Lohit", "title": "Lohit - Fedora Project Wiki", "archive_url": "https://web.archive.org/web/20260728223800/https://fedoraproject.org/wiki/Lohit" },
-    { "url": "https://pagure.io/lohit", "title": "Lohit - Pagure", "type": "software repository", "publisher": "Fedora Project", "archive_url": "https://web.archive.org/web/20261009220613/https://pagure.io/lohit" }
+    { "url": "https://pagure.io/lohit", "title": "Lohit - Pagure", "type": "software repository", "publisher": "Fedora Project", "archive_url": "https://web.archive.org/web/20261009220613/https://pagure.io/lohit" },
+    { "url": "https://snapshot.debian.org/package/ttf-indic-fonts/", "title": "ttf-indic-fonts source packages 0.3.9 (2005) and 0.4.9 (2007): Lohit font files and copyright - Debian snapshot archive", "type": "software repository", "publisher": "Debian", "language": "en" },
+    { "url": "https://github.com/pravins/lohit", "title": "Lohit fonts family project - GitHub", "type": "software repository", "publisher": "Lohit Fonts Project", "language": "en", "archive_url": "https://web.archive.org/web/20260211095601/https://github.com/pravins/lohit" }
   ],
   "record_status": "active",
   "superseded_by": null,

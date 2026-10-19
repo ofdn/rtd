@@ -1,0 +1,21 @@
+{
+  "id": "rtd-o-000039",
+  "slug": "modular-infotech",
+  "name": { "preferred": "Modular Infotech", "alternates": ["Modular InfoTech", "Modular Infotech Pvt. Ltd."] },
+  "external_ids": { "wikidata_qid": "Q20726207" },
+  "kind": "foundry",
+  "countries": ["India"],
+  "location": "Pune",
+  "founded_year": "1983",
+  "website": "https://www.modular-infotech.com/",
+  "description": "Indian-language computing company in Pune, founded in 1983, publisher of the Shree-Lipi fonts and maker of the original Lohit Kannada, Odia and Telugu fonts.",
+  "sources": [
+    { "url": "https://www.modular-infotech.com/html/index.html", "title": "Modular Infotech, Pune", "type": "foundry or publisher page", "publisher": "Modular Infotech", "language": "en", "archive_url": "https://web.archive.org/web/20260511141209/https://www.modular-infotech.com/html/index.html" },
+    { "url": "https://www.myfonts.com/collections/modularinfotech-foundry/", "title": "Modular InfoTech Font Foundry - MyFonts", "type": "font catalogue", "publisher": "MyFonts", "language": "en", "archive_url": "https://web.archive.org/web/20260620151723/https://www.myfonts.com/collections/modularinfotech-foundry/" },
+    { "url": "https://snapshot.debian.org/package/ttf-indic-fonts/", "title": "ttf-indic-fonts source packages 0.3.9 (2005) and 0.4.9 (2007): Lohit font files and copyright - Debian snapshot archive", "type": "software repository", "publisher": "Debian", "language": "en" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

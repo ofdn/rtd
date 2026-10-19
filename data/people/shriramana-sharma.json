@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000260",
+  "slug": "shriramana-sharma",
+  "name": { "preferred": "Shriramana Sharma", "alternates": [] },
+  "external_ids": { "wikidata_qid": "Q56593723" },
+  "countries": [],
+  "roles": ["font engineer", "Unicode proposal author"],
+  "scripts": ["Tamil", "Grantha", "Devanagari", "Bangla"],
+  "bio": "Contributed glyph shapes to the Lohit fonts, including Lohit Tamil, and wrote Unicode proposals for the Grantha script and Tamil fractions and symbols.",
+  "sources": [
+    { "url": "https://www.unicode.org/L2/L2013/13047-tamil-frac-rev.pdf", "title": "Revised proposal to encode Tamil fractions and symbols - Unicode", "type": "standards document", "publisher": "Unicode Consortium", "language": "en", "archive_url": "https://web.archive.org/web/20261011005327/https://www.unicode.org/L2/L2013/13047-tamil-frac-rev.pdf" },
+    { "url": "https://www.unicode.org/L2/L2010/10426-grantha-proposal.pdf", "title": "Proposal to encode the Grantha script in Unicode", "type": "standards document", "publisher": "Unicode Consortium", "language": "en", "archive_url": "https://web.archive.org/web/20261011010235/https://www.unicode.org/L2/L2010/10426-grantha-proposal.pdf" },
+    { "url": "https://github.com/pravins/lohit/blob/master/ChangeLog", "title": "Lohit ChangeLog - GitHub", "type": "software repository", "publisher": "Lohit Fonts Project", "language": "en" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

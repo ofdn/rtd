@@ -1,0 +1,16 @@
+{
+  "id": "rtd-p-000258",
+  "slug": "parag-nemade",
+  "name": { "preferred": "Parag Nemade", "alternates": [] },
+  "countries": [],
+  "roles": ["font engineer"],
+  "bio": "Font engineer at Red Hat who contributed configuration files to the Lohit fonts and worked on font packaging and default font handling in Fedora.",
+  "sources": [
+    { "url": "https://fedoraproject.org/wiki/User:Pnemade", "title": "User:Pnemade - Fedora Project Wiki", "type": "community publication", "publisher": "Fedora Project", "language": "en", "archive_url": "https://web.archive.org/web/20260417190224/https://fedoraproject.org/wiki/User:Pnemade" },
+    { "url": "https://github.com/pravins/lohit/blob/master/ChangeLog", "title": "Lohit ChangeLog - GitHub", "type": "software repository", "publisher": "Lohit Fonts Project", "language": "en" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "rtd-o-000038",
+  "slug": "automatic-control-equipments",
+  "name": { "preferred": "Automatic Control Equipments", "alternates": ["ACE"] },
+  "kind": "foundry",
+  "countries": ["India"],
+  "location": "Pune",
+  "description": "Pune firm that made the original Lohit fonts for Bangla, Hindi, Gujarati, Punjabi and Tamil, copyrighted 2001–03 and released under the GPL. It also built the BRAILLE-MITRA reader.",
+  "sources": [
+    { "url": "https://snapshot.debian.org/package/ttf-indic-fonts/", "title": "ttf-indic-fonts source packages 0.3.9 (2005) and 0.4.9 (2007): Lohit font files and copyright - Debian snapshot archive", "type": "software repository", "publisher": "Debian", "language": "en" },
+    { "url": "https://fonts.maateen.me/lohit-bengali/", "title": "Lohit Bengali - Bangla Web Fonts", "type": "font catalogue", "publisher": "Bangla Web Fonts", "language": "en", "archive_url": "https://web.archive.org/web/20260112081217/https://fonts.maateen.me/lohit-bengali/" },
+    { "url": "https://www.digit.in/news/general/multilingual-braille-reader-launched-by-city-firm-2088.html", "title": "Multilingual Braille Reader launched by City Firm - Digit", "type": "newspaper or magazine", "publisher": "Digit", "language": "en" },
+    { "url": "https://timesofindia.indiatimes.com/city/pune/two-city-institutes-to-get-braille-libraries/articleshow/4262242.cms", "title": "Two city institutes to get Braille libraries - Times of India", "type": "newspaper or magazine", "publisher": "The Times of India", "language": "en" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}
