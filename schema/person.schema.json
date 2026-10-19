@@ -61,7 +61,7 @@
     },
     "sort_name": {
       "type": "string",
-      "description": "Name form used for alphabetical listing, useful for non-Latin or family-name-first names."
+      "description": "Name form used for alphabetical listing, useful for names written in other scripts or family-name-first names."
     },
     "birth_year": {
       "type": "string",
