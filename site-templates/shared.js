@@ -55,6 +55,13 @@ let siteVersion = "";
 export function setSiteVersion(version) {
   siteVersion = version;
 }
+let schemaVersionForCitations = "";
+export function setSchemaVersion(version) {
+  schemaVersionForCitations = version;
+}
+
+// Zenodo concept DOI: resolves to the latest release of the whole registry.
+const DATASET_DOI = "10.5281/zenodo.23471285";
 
 const COPY_ICON = `<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>`;
 
@@ -117,12 +124,15 @@ export function buildCitations(record, { canonicalUrl, arkUrl }) {
   const author = contributorName || "Panigrahi, Subhashish";
   const authorInitial = contributorName || "Panigrahi, S.";
 
+  const edition = `Version ${siteVersion}, schema ${schemaVersionForCitations}`;
+  const doiUrl = `https://doi.org/${DATASET_DOI}`;
+
   return {
-    apa: `${authorInitial} (${year}). ${title}. Registry of Type Design. O Foundation. ${canonicalUrl}`,
-    chicago: `${author}. "${title}." Registry of Type Design. O Foundation. Last modified ${updated}. Accessed __ACCESSED__. ${canonicalUrl}.`,
-    mla: `${author}. "${title}." Registry of Type Design, O Foundation, ${updated}, ${canonicalUrl}. Accessed __ACCESSED__.`,
-    vancouver: `${authorInitial} ${title} [Internet]. Registry of Type Design. O Foundation; ${year} [cited __ACCESSED__]. Available from: ${canonicalUrl}`,
-    bibtex: `@misc{${record.id},\n  author       = {${author}},\n  title        = {{${title}}},\n  howpublished = {Registry of Type Design},\n  publisher    = {O Foundation},\n  year         = {${year}},\n  url          = {${canonicalUrl}},\n  urldate      = {__ACCESSED__},\n  note         = {ARK: ${arkUrl}}\n}`,
+    apa: `${authorInitial} (${year}). ${title}. In Registry of Type Design (${edition}). O Foundation. ${doiUrl}. ${canonicalUrl}`,
+    chicago: `${author}. "${title}." Registry of Type Design, ${edition}. O Foundation. Last modified ${updated}. Accessed __ACCESSED__. ${doiUrl}. ${canonicalUrl}.`,
+    mla: `${author}. "${title}." Registry of Type Design, ${edition}, O Foundation, ${updated}, ${doiUrl}, ${canonicalUrl}. Accessed __ACCESSED__.`,
+    vancouver: `${authorInitial} ${title} [Internet]. Registry of Type Design (${edition}). O Foundation; ${year} [cited __ACCESSED__]. doi:${DATASET_DOI}. Available from: ${canonicalUrl}`,
+    bibtex: `@misc{${record.id},\n  author       = {${author}},\n  title        = {{${title}}},\n  howpublished = {Registry of Type Design},\n  publisher    = {O Foundation},\n  year         = {${year}},\n  version      = {${siteVersion}},\n  doi          = {${DATASET_DOI}},\n  url          = {${canonicalUrl}},\n  urldate      = {__ACCESSED__},\n  note         = {Schema ${schemaVersionForCitations}. ARK: ${arkUrl}}\n}`,
   };
 }
 

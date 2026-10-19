@@ -25,7 +25,7 @@ import { renderInfoPage } from "../site-templates/info.js";
 import { renderScriptPage, renderScriptsIndexPage } from "../site-templates/script.js";
 import { renderContributorsPage } from "../site-templates/contributors.js";
 import { renderOrganisationPage, renderOrganisationsIndexPage, KIND_LABELS } from "../site-templates/organisation.js";
-import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion, escapeHtml, linkTag, allNames, eraLabel, scriptLabel, canonicalScriptName, scriptSlug } from "../site-templates/shared.js";
+import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion, setSchemaVersion, escapeHtml, linkTag, allNames, eraLabel, scriptLabel, canonicalScriptName, scriptSlug } from "../site-templates/shared.js";
 import { buildPersonDc, buildTypefaceDc } from "./lib/dublin-core.js";
 import { buildPersonMarc } from "./lib/marc-authority.js";
 
@@ -221,6 +221,7 @@ function build(dataDir, outDir) {
 
   const pkgVersion = loadJson(join(repoRoot, "package.json")).version;
   setSiteVersion(pkgVersion);
+  setSchemaVersion(schemaVersion);
   writeFile(outDir, "logo-black.svg", readFileSync(join(repoRoot, "site-templates/logo-black.svg")));
   writeFile(outDir, "logo-white.svg", readFileSync(join(repoRoot, "site-templates/logo-white.svg")));
   writeFile(outDir, "logo-black-1.svg", readFileSync(join(repoRoot, "site-templates/logo-black-1.svg")));
