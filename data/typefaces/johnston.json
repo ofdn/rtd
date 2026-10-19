@@ -48,7 +48,7 @@
     }
   ],
   "contributed_by": [
-    { "name": "JhowieNitnek", "type": "individual", "url": "https://github.com/JhowieNitnek" }
+    { "name": "Joey Kentin", "username": "JhowieNitnek", "type": "individual", "url": "https://github.com/JhowieNitnek" }
   ],
   "record_status": "active",
   "superseded_by": null,
@@ -63,5 +63,5 @@
     "wikidata_qid": "Q383685"
   },
   "created_at": "2026-08-25",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

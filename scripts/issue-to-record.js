@@ -353,8 +353,14 @@ function main() {
   // the PR on their behalf - see contributed_by[] on both schemas and the
   // citation-author logic in site-templates/shared.js.
   const issueAuthor = (process.env.ISSUE_AUTHOR || "").trim();
+  const issueAuthorName = (process.env.ISSUE_AUTHOR_NAME || "").trim();
   if (issueAuthor) {
-    record.contributed_by = [{ name: issueAuthor, type: "individual", url: `https://github.com/${issueAuthor}` }];
+    record.contributed_by = [{
+      name: issueAuthorName || issueAuthor,
+      username: issueAuthor,
+      type: "individual",
+      url: `https://github.com/${issueAuthor}`,
+    }];
   }
 
   const rawName = record.name.preferred;

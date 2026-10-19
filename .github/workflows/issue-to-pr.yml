@@ -43,7 +43,10 @@ jobs:
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
-        run: node scripts/issue-to-record.js ${{ steps.kind.outputs.kind }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          export ISSUE_AUTHOR_NAME="$(gh api "users/$ISSUE_AUTHOR" --jq '.name // ""' || true)"
+          node scripts/issue-to-record.js ${{ steps.kind.outputs.kind }}
 
       - name: Comment when a record could not be built
         if: steps.build.outputs.created != 'true'
