@@ -1,0 +1,17 @@
+{
+  "id": "rtd-p-000255",
+  "slug": "johann-gottlieb-adler",
+  "name": { "preferred": "Johann Gottlieb Adler", "alternates": ["Johann Adler", "Gottlieb Adler"] },
+  "countries": ["Germany", "India"],
+  "roles": ["type founder"],
+  "scripts": ["Tamil"],
+  "bio": "Crafted Tamil type for the Tranquebar mission press after arriving from Halle in 1713, and set up a type foundry and a paper mill at Porayur, near Tranquebar.",
+  "sources": [
+    { "url": "https://www.ijsr.net/archive/v12i2/SR23213160814.pdf", "title": "Tranquebar Mission and Protestant Missionary Beginnings in India (Thomson Robi) - IJSR", "type": "journal article", "publisher": "International Journal of Science and Research", "language": "en", "archive_url": "https://web.archive.org/web/20250918001504/https://www.ijsr.net/archive/v12i2/SR23213160814.pdf" },
+    { "url": "https://concordiahistoricalinstitute.org/wp-content/uploads/2019/05/1-ZIEGENBALG-HANDOUT.pdf", "title": "Faces of Lutheran Missions in India: Bartholomäus Ziegenbalg - Concordia Historical Institute", "type": "archive or museum record", "publisher": "Concordia Historical Institute", "language": "en", "archive_url": "https://web.archive.org/web/20241212062633/https://concordiahistoricalinstitute.org/wp-content/uploads/2019/05/1-ZIEGENBALG-HANDOUT.pdf" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}
