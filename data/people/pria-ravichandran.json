@@ -14,7 +14,7 @@
   ],
   "affiliations": [
     {
-      "name": "Foundry5"
+      "name": "Foundry5", "id": "rtd-o-000012"
     }
   ],
   "bio": "Designed Catamaran, Palanquin, Neue Frutiger Tamil, and Peridot, supporting Latin and Indic scripts. Type designer and researcher, co-founder of Foundry5, with a PhD on Kannada and Telugu typographic forms.",
@@ -66,7 +66,7 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08",
+  "updated_at": "2026-10-19",
   "birth_year": "1984-05-22",
   "place_of_birth": "Tirunelveli",
   "gender": "female",

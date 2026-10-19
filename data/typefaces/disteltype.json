@@ -14,7 +14,7 @@
   ],
   "foundry": [
     {
-      "name": "De Zilverdistel",
+      "name": "De Zilverdistel", "id": "rtd-o-000008",
       "url": "https://www.meermanno.nl/matrices-of-the-zilverdistel-press"
     }
   ],
@@ -43,5 +43,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-10",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

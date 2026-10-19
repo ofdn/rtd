@@ -7,7 +7,7 @@
   "affiliations": [
     { "name": "Universal Thirst", "start_year": "2016" },
     { "name": "Monotype" },
-    { "name": "Dalton Maag" }
+    { "name": "Dalton Maag", "id": "rtd-o-000007" }
   ],
   "bio": "Type designer and font engineer focused on writing systems of the Indian subcontinent. Worked at Monotype and Dalton Maag before co-founding Universal Thirst with Gunnar Vilhjálmsson in 2016.",
   "external_ids": { "wikidata_qid": "Q113568817" },
@@ -20,5 +20,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

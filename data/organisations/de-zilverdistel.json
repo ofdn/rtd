@@ -1,0 +1,17 @@
+{
+  "id": "rtd-o-000008",
+  "slug": "de-zilverdistel",
+  "name": { "preferred": "De Zilverdistel", "alternates": ["Zilverdistel Press"] },
+  "external_ids": { "wikidata_qid": "Q2497675" },
+  "kind": "press",
+  "countries": ["Netherlands"],
+  "founded_year": "1909",
+  "description": "The first Dutch private press, set up in 1909 by Jan Greshoff, J. C. Bloem and P. N. van Eyck, and later led by Jean François van Royen.",
+  "sources": [
+    { "url": "https://www.meermanno.nl/matrices-of-the-zilverdistel-press", "title": "Matrices of the Zilverdistel Press - Museum Meermanno", "type": "archive or museum record", "publisher": "Museum Meermanno", "archive_url": "https://web.archive.org/web/20191020095741/https://www.meermanno.nl/matrices-of-the-zilverdistel-press" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

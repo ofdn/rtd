@@ -1,0 +1,18 @@
+{
+  "id": "rtd-o-000006",
+  "slug": "commercial-type",
+  "name": { "preferred": "Commercial Type", "alternates": [] },
+  "external_ids": { "wikidata_qid": "Q90745126" },
+  "kind": "foundry",
+  "founded_year": "2007",
+  "website": "https://commercialtype.com/",
+  "description": "Type foundry co-founded in 2007 by Paul Barnes and Christian Schwartz, publisher of Graphik and its Bangla companion.",
+  "sources": [
+    { "url": "https://commercialtype.com/about/christian_schwartz", "title": "Christian Schwartz - Commercial Type", "type": "foundry or publisher page", "publisher": "Commercial Type", "archive_url": "https://web.archive.org/web/20260421074037/https://commercialtype.com/about/christian_schwartz" },
+    { "url": "https://commercialtype.com/catalog/graphik_bangla", "title": "Graphik Bangla - Commercial Type", "type": "foundry or publisher page", "publisher": "Commercial Type", "archive_url": "https://web.archive.org/web/20260929022644/https://commercialtype.com/catalog/graphik_bangla" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

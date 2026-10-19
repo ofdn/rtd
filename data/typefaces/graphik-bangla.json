@@ -8,7 +8,7 @@
     { "id": "rtd-p-000141", "role": "original Latin design" }
   ],
   "foundry": [
-    { "name": "Commercial Type", "url": "https://commercialtype.com" }
+    { "name": "Commercial Type", "id": "rtd-o-000006", "url": "https://commercialtype.com" }
   ],
   "scripts": ["Bangla"],
   "era": "digital",
@@ -19,5 +19,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-19",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }

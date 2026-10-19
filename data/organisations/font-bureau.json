@@ -1,0 +1,16 @@
+{
+  "id": "rtd-o-000011",
+  "slug": "font-bureau",
+  "name": { "preferred": "Font Bureau", "alternates": [] },
+  "external_ids": { "wikidata_qid": "Q996725" },
+  "kind": "foundry",
+  "countries": ["United States"],
+  "description": "Type foundry whose typefaces, designed by David Berlow, were distributed through Type Network from 2016 until 2024.",
+  "sources": [
+    { "url": "https://typenetwork.com/type-foundries/font-bureau", "title": "Farewell, Font Bureau - Type Network", "type": "foundry or publisher page", "publisher": "Type Network", "archive_url": "https://web.archive.org/web/20240702224527/https://typenetwork.com/type-foundries/font-bureau" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

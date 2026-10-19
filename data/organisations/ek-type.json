@@ -1,0 +1,18 @@
+{
+  "id": "rtd-o-000010",
+  "slug": "ek-type",
+  "name": { "preferred": "Ek Type", "alternates": [] },
+  "external_ids": { "wikidata_qid": "Q89462001" },
+  "kind": "foundry",
+  "countries": ["India"],
+  "location": "Mumbai",
+  "website": "https://ektype.in/",
+  "description": "Collaborative type design studio in Mumbai developing fonts across Indian languages, many of them multi-script.",
+  "sources": [
+    { "url": "https://ektype.in/about.html", "title": "About - Ek Type", "type": "foundry or publisher page", "publisher": "Ek Type", "archive_url": "https://web.archive.org/web/20260214204429/https://ektype.in/about.html" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "rtd-o-000012",
+  "slug": "foundry5",
+  "name": { "preferred": "Foundry5", "alternates": [] },
+  "external_ids": { "wikidata_qid": "Q135441992" },
+  "kind": "foundry",
+  "website": "https://foundryfivetype.com/",
+  "description": "Type design studio for world scripts, set up by Kostas Bartsokas, Mohamad Dakak, Jason Harcombe and Pria Ravichandran.",
+  "sources": [
+    { "url": "https://foundryfivetype.com/about-us/", "title": "About Foundry5 | Type Design Studio", "type": "foundry or publisher page", "publisher": "Foundry5", "archive_url": "https://web.archive.org/web/20260712142600/https://foundryfivetype.com/about-us/" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}
