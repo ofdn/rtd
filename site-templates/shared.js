@@ -124,16 +124,16 @@ export function buildCitations(record, { canonicalUrl, arkUrl }) {
   const author = contributorName || "Panigrahi, Subhashish";
   const authorInitial = contributorName || "Panigrahi, S.";
 
-  const edition = `Version ${siteVersion}, schema ${schemaVersionForCitations}`;
-  const doiUrl = `https://doi.org/${DATASET_DOI}`;
+  const edition = `version ${siteVersion}, schema ${schemaVersionForCitations}`;
 
   return {
-    apa: `${authorInitial} (${year}). ${title}. In Registry of Type Design (${edition}). O Foundation. ${doiUrl}. ${canonicalUrl}`,
-    chicago: `${author}. "${title}." Registry of Type Design, ${edition}. O Foundation. Last modified ${updated}. Accessed __ACCESSED__. ${doiUrl}. ${canonicalUrl}.`,
-    mla: `${author}. "${title}." Registry of Type Design, ${edition}, O Foundation, ${updated}, ${doiUrl}, ${canonicalUrl}. Accessed __ACCESSED__.`,
-    vancouver: `${authorInitial} ${title} [Internet]. Registry of Type Design (${edition}). O Foundation; ${year} [cited __ACCESSED__]. doi:${DATASET_DOI}. Available from: ${canonicalUrl}`,
-    bibtex: `@misc{${record.id},\n  author       = {${author}},\n  title        = {{${title}}},\n  howpublished = {Registry of Type Design},\n  publisher    = {O Foundation},\n  year         = {${year}},\n  version      = {${siteVersion}},\n  doi          = {${DATASET_DOI}},\n  url          = {${canonicalUrl}},\n  urldate      = {__ACCESSED__},\n  note         = {Schema ${schemaVersionForCitations}. ARK: ${arkUrl}}\n}`,
+    apa: `${authorInitial} (${year}). ${title}. In Registry of Type Design (${edition}; doi:${DATASET_DOI}). O Foundation. ${arkUrl}`,
+    chicago: `${author}. "${title}." In Registry of Type Design, ${edition} (doi:${DATASET_DOI}). O Foundation. Last modified ${updated}. Accessed __ACCESSED__. ${arkUrl}.`,
+    mla: `${author}. "${title}." Registry of Type Design, ${edition} (doi:${DATASET_DOI}), O Foundation, ${updated}, ${arkUrl}. Accessed __ACCESSED__.`,
+    vancouver: `${authorInitial} ${title} [Internet]. Registry of Type Design, ${edition} (doi:${DATASET_DOI}). O Foundation; ${year} [cited __ACCESSED__]. Available from: ${arkUrl}`,
+    bibtex: `@misc{${record.id},\n  author       = {${author}},\n  title        = {{${title}}},\n  howpublished = {Registry of Type Design},\n  publisher    = {O Foundation},\n  year         = {${year}},\n  version      = {${siteVersion}},\n  doi          = {${DATASET_DOI}},\n  url          = {${arkUrl}},\n  urldate      = {__ACCESSED__},\n  note         = {Schema ${schemaVersionForCitations}. Page: ${canonicalUrl}}\n}`,
   };
+
 }
 
 // For Zotero, Mendeley and other reference managers: Highwire Press and
