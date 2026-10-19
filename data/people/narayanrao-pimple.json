@@ -1,0 +1,17 @@
+{
+  "id": "rtd-p-000241",
+  "slug": "narayanrao-pimple",
+  "name": { "preferred": "Narayanrao Pimple", "alternates": [] },
+  "countries": ["India"],
+  "roles": ["punchcutter"],
+  "scripts": ["Devanagari"],
+  "bio": "Punchcutter who helped N. C. Kelkar improve the Kesari type in Poona. Son of Sahadevrao Pimple, the original punch-maker of the Kesari type foundry.",
+  "sources": [
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume Two, p. 477 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000243",
+  "slug": "hari-govind-govil",
+  "name": { "preferred": "Hari Govind Govil", "alternates": ["Hari G. Govil", "H. G. Govil"] },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "scripts": ["Devanagari"],
+  "bio": "Designed the Devanagari scheme for the Mergenthaler Linotype, launched in 1933 and patented in the US in 1937, splitting characters into combinable segments.",
+  "sources": [
+    { "url": "https://centaur.reading.ac.uk/101230/1/FR_PHS_DevArticle_29Aug21_02.pdf", "title": "Invisible hands: tracing the origins and development of the Devanagari Linotype - University of Reading", "type": "journal article", "publisher": "University of Reading", "language": "en", "archive_url": "https://web.archive.org/web/20251210053832/https://centaur.reading.ac.uk/101230/1/FR_PHS_DevArticle_29Aug21_02.pdf" },
+    { "url": "https://invention.si.edu/invention-stories/devanagari-script-mergenthaler-linotype", "title": "Devanagari Script for the Mergenthaler Linotype - Smithsonian Lemelson Center", "type": "archive or museum record", "publisher": "Smithsonian Institution", "language": "en", "archive_url": "https://web.archive.org/web/20260211075749/https://invention.si.edu/invention-stories/devanagari-script-mergenthaler-linotype" },
+    { "url": "https://patentimages.storage.googleapis.com/cd/50/8a/967d4d8ac5e597/US2074216.pdf", "title": "US Patent 2,074,216, Typographical font, H. G. Govil", "type": "government document", "publisher": "United States Patent Office", "date": "1937-03-16", "language": "en", "archive_url": "https://web.archive.org/web/20250329055446/https://patentimages.storage.googleapis.com/cd/50/8a/967d4d8ac5e597/US2074216.pdf" },
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume Two, pp. 401–403 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "rtd-p-000242",
+  "slug": "sundararao-bhaskar-vaidya",
+  "name": { "preferred": "Sundararao Bhaskar Vaidya", "alternates": [] },
+  "countries": ["India"],
+  "roles": ["engraver", "type designer"],
+  "scripts": ["Devanagari"],
+  "bio": "Artist, engraver, calligrapher and printer who issued a reformed Devanagari fount of 48 types in 1919, proposed with Dattatrya Krishna Devdhar.",
+  "sources": [
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume Two, pp. 489–490 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" },
+    { "url": "https://www.researchgate.net/publication/348215180_DEVANAGARI_A_HISTORICAL_OVERVIEW_AND_A_STUDY_OF_WRITING_STYLE_IN_AGA_KHAN_PALACE_PHOTO_GALLERY", "title": "Devanagari: a historical overview and a study of writing style in Aga Khan Palace photo gallery - ResearchGate", "type": "journal article", "publisher": "ResearchGate", "language": "en" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

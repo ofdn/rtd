@@ -1,0 +1,19 @@
+{
+  "id": "rtd-p-000245",
+  "slug": "shanker-abaji-bhisey",
+  "name": { "preferred": "Shanker Abaji Bhisey", "alternates": ["Shankar Abaji Bhisey", "Shanker Abaji Bhise", "Shankar Abaji Bhise", "Sunker A. Bisey"] },
+  "birth_year": "1867",
+  "death_year": "1935",
+  "place_of_birth": "Bombay",
+  "countries": ["India"],
+  "roles": ["inventor", "type founder"],
+  "bio": "Invented a type-casting and composing machine, provisionally patented in the UK in 1901 and later called the Bhisotype, and the Bhise Ideal Type Caster.",
+  "sources": [
+    { "url": "https://www.printweek.in/features/print-history-bhisotype-bombay-london-new-york-59115", "title": "Print History: Bhisotype - Bombay, London, New York (Murali Ranganathan)", "type": "newspaper or magazine", "publisher": "PrintWeek India", "date": "2024-06-30", "language": "en", "archive_url": "https://web.archive.org/web/20260311160020/https://www.printweek.in/features/print-history-bhisotype-bombay-london-new-york-59115" },
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume Two, pp. 378–382 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}
