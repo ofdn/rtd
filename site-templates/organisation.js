@@ -31,7 +31,7 @@ export function renderOrganisationPage(record, { canonicalUrl, typefaces, people
   const listHtml = (heading, items, dir) =>
     items.length
       ? `<h2>${heading}</h2>\n<ul class="record-list">\n${items
-          .map((i) => `<li><a href="../../${dir}/${escapeHtml(i.slug)}/">${escapeHtml(i.name)}</a></li>`)
+          .map((i) => `<li><a href="../../${dir}/${escapeHtml(i.slug)}/">${escapeHtml(i.name)}</a>${i.role ? `<span class="role">${escapeHtml(i.role)}</span>` : ""}</li>`)
           .join("\n")}\n</ul>`
       : "";
 

@@ -19,7 +19,7 @@ export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount, scri
 <div class="home-hero">
 <p class="tagline">A global registry of typefaces and the people who made them, digital and pre-digital.</p>
 <form id="home-search-form" class="home-search" action="" method="get" role="search">
-<label class="visually-hidden" for="search">Search people and typefaces</label>
+<label class="visually-hidden" for="search">Search people, typefaces and organisations</label>
 <input id="search" type="search" name="q" placeholder="Search by typeface, designer, or foundry&hellip;" autocomplete="off">
 ${SEARCH_ICON}
 </form>
@@ -59,11 +59,13 @@ ${SEARCH_ICON}
   // no known kind (a person and a typeface can share the same trailing
   // number in their own independent sequences), a full "rtd-p-"/"rtd-t-"
   // form does.
+  var ID_KINDS = { p: "person", t: "typeface", o: "organisation" };
+  var KIND_DIRS = { person: "people/", typeface: "typefaces/", organisation: "organisations/" };
   function parseIdQuery(raw) {
     var q = raw.trim();
-    var full = /^rtd-?([pt])-?0*([0-9]+)$/i.exec(q);
+    var full = /^rtd-?([pto])-?0*([0-9]+)$/i.exec(q);
     if (full) {
-      return { kind: full[1].toLowerCase() === "p" ? "person" : "typeface", num: parseInt(full[2], 10) };
+      return { kind: ID_KINDS[full[1].toLowerCase()], num: parseInt(full[2], 10) };
     }
     var bare = /^[0-9]+$/.exec(q);
     if (bare) {
@@ -152,7 +154,7 @@ ${SEARCH_ICON}
       "<ul>" +
       items
         .map(function (m) {
-          var href = (m.kind === "person" ? "people/" : "typefaces/") + m.slug + "/";
+          var href = KIND_DIRS[m.kind] + m.slug + "/";
           return (
             '<li><a href="' + href + '"><span class="name">' + escapeHtml(m.name) + "</span>" +
             (showKindTag ? '<span class="kind-tag">' + m.kind + "</span>" : "") +
@@ -221,12 +223,16 @@ ${SEARCH_ICON}
     var typefaces = matches.filter(function (m) {
       return m.kind === "typeface";
     });
+    var organisations = matches.filter(function (m) {
+      return m.kind === "organisation";
+    });
     results.innerHTML =
       "<h2>" +
       letter +
       "</h2>" +
       (people.length ? "<h3>People</h3>" + renderList(people, false) : "") +
-      (typefaces.length ? "<h3>Typefaces</h3>" + renderList(typefaces, false) : "");
+      (typefaces.length ? "<h3>Typefaces</h3>" + renderList(typefaces, false) : "") +
+      (organisations.length ? "<h3>Organisations</h3>" + renderList(organisations, false) : "");
   }
 
   function runSearch(q) {
@@ -286,7 +292,7 @@ ${SEARCH_ICON}
     loadIndex().then(function (idx) {
       var hit = findDirectMatch(idx, q);
       if (hit) {
-        window.location.href = (hit.kind === "person" ? "people/" : "typefaces/") + hit.slug + "/";
+        window.location.href = KIND_DIRS[hit.kind] + hit.slug + "/";
       }
     });
   });
@@ -297,7 +303,7 @@ ${SEARCH_ICON}
     loadIndex().then(function (idx) {
       var hit = findDirectMatch(idx, initialQuery);
       if (hit) {
-        window.location.href = (hit.kind === "person" ? "people/" : "typefaces/") + hit.slug + "/";
+        window.location.href = KIND_DIRS[hit.kind] + hit.slug + "/";
         return;
       }
       runSearch(initialQuery);

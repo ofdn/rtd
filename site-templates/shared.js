@@ -386,9 +386,9 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
   // literal with no module system on the client side.
   function parseIdQuery(raw) {
     var q = raw.trim();
-    var full = /^rtd-?([pt])-?0*([0-9]+)$/i.exec(q);
+    var full = /^rtd-?([pto])-?0*([0-9]+)$/i.exec(q);
     if (full) {
-      return { kind: full[1].toLowerCase() === "p" ? "person" : "typeface", num: parseInt(full[2], 10) };
+      return { kind: { p: "person", t: "typeface", o: "organisation" }[full[1].toLowerCase()], num: parseInt(full[2], 10) };
     }
     var bare = /^[0-9]+$/.exec(q);
     if (bare) {
@@ -555,7 +555,7 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
     loadIndex().then(function (index) {
       var hit = findDirectMatch(index, q);
       if (hit) {
-        window.location.href = base + (hit.kind === "person" ? "people/" : "typefaces/") + hit.slug + "/";
+        window.location.href = base + { person: "people/", typeface: "typefaces/", organisation: "organisations/" }[hit.kind] + hit.slug + "/";
       } else {
         window.location.href = base + "?q=" + encodeURIComponent(q);
       }

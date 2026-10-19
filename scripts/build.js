@@ -24,7 +24,7 @@ import { renderHomePage } from "../site-templates/home.js";
 import { renderInfoPage } from "../site-templates/info.js";
 import { renderScriptPage, renderScriptsIndexPage } from "../site-templates/script.js";
 import { renderContributorsPage } from "../site-templates/contributors.js";
-import { renderOrganisationPage, renderOrganisationsIndexPage } from "../site-templates/organisation.js";
+import { renderOrganisationPage, renderOrganisationsIndexPage, KIND_LABELS } from "../site-templates/organisation.js";
 import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion, escapeHtml, linkTag, allNames, eraLabel, scriptLabel, canonicalScriptName, scriptSlug } from "../site-templates/shared.js";
 import { buildPersonDc, buildTypefaceDc } from "./lib/dublin-core.js";
 import { buildPersonMarc } from "./lib/marc-authority.js";
@@ -498,7 +498,28 @@ function build(dataDir, outDir) {
     const apiUrl = `${SITE_URL}api/organisations/${record.id}.json`;
     const arkUrl = `https://n2t.net/ark:${ARK_NAAN}/${record.id}`;
     const orgTypefaces = linked(typefaces, "foundry", record.id);
-    const orgPeople = linked(people, "affiliations", record.id);
+    const orgPeople = linked(people, "affiliations", record.id).map((p) => ({ ...p, role: "affiliated" }));
+    for (const tf of typefaces) {
+      if (tf.record_status !== "active" || !(tf.foundry ?? []).some((f) => f.id === record.id)) continue;
+      for (const d of tf.designers ?? []) {
+        const person = personById.get(d.id);
+        if (!person || person.record_status !== "active") continue;
+        let entry = orgPeople.find((p) => p.slug === person.slug);
+        if (!entry) {
+          entry = { slug: person.slug, name: person.name.preferred, role: "" };
+          orgPeople.push(entry);
+        }
+        entry.credits ??= new Map();
+        entry.credits.set(d.role, [...(entry.credits.get(d.role) ?? []), tf.name.preferred]);
+      }
+    }
+    for (const p of orgPeople) {
+      if (!p.credits) continue;
+      const credits = [...p.credits].map(([role, names]) => `${role}: ${names.sort().join(", ")}`).join("; ");
+      p.role = p.role ? `${p.role}; ${credits}` : credits;
+      delete p.credits;
+    }
+    orgPeople.sort((a, b) => a.name.localeCompare(b.name));
 
     if (record.record_status === "active") {
       writeFile(
@@ -527,6 +548,7 @@ function build(dataDir, outDir) {
       id: record.id,
       slug: record.slug,
       name: record.name.preferred,
+      subtitle: [KIND_LABELS[record.kind], record.location].filter(Boolean).join(", "),
       alternates: allNames(record.name),
       kind: record.kind,
       record_status: record.record_status,
@@ -541,7 +563,7 @@ function build(dataDir, outDir) {
   writeFile(
     outDir,
     "api/organisations.json",
-    JSON.stringify(organisationsApiIndex.map(({ typefacesCount, peopleCount, ...o }) => o), null, 2)
+    JSON.stringify(organisationsApiIndex.map(({ typefacesCount, peopleCount, subtitle, ...o }) => o), null, 2)
   );
   writeFile(
     outDir,
@@ -642,6 +664,9 @@ function build(dataDir, outDir) {
     ...typefacesApiIndex
       .filter((t) => t.record_status === "active")
       .map((t) => ({ ...t, kind: "typeface" })),
+    ...organisationsApiIndex
+      .filter((o) => o.record_status === "active")
+      .map(({ typefacesCount, peopleCount, kind, ...o }) => ({ ...o, kind: "organisation" })),
   ];
   writeFile(outDir, "search-index.json", JSON.stringify(searchIndex));
 
