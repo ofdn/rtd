@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000248",
+  "slug": "s-r-ketkar",
+  "name": { "preferred": "S. R. Ketkar", "alternates": [] },
+  "countries": ["India"],
+  "roles": ["engraver"],
+  "scripts": ["Devanagari"],
+  "affiliations": [
+    { "name": "Lokasangrah Press" }
+  ],
+  "bio": "Engraved the matrices for the Lokasangrah type, a 24-point Devanagari face designed by S. K. Sant and introduced by the Lokasangrah Press in Poona in 1941.",
+  "sources": [
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume One, pp. 316–318 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

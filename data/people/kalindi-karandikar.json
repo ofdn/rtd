@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000250",
+  "slug": "kalindi-karandikar",
+  "name": { "preferred": "Kalindi Karandikar", "alternates": [] },
+  "countries": ["India"],
+  "roles": ["type founder"],
+  "scripts": ["Devanagari"],
+  "affiliations": [
+    { "name": "Prakash Type Foundry", "start_year": "1951" }
+  ],
+  "bio": "Co-founded the Prakash Type Foundry in Poona in 1951 with S. B. Joshi. It introduced nineteen Devanagari display designs and exported type to Mauritius, Nepal, East Africa and Burma.",
+  "sources": [
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume One, p. 318 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

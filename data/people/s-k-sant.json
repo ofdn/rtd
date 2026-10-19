@@ -1,0 +1,20 @@
+{
+  "id": "rtd-p-000247",
+  "slug": "s-k-sant",
+  "name": { "preferred": "S. K. Sant", "alternates": [] },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "scripts": ["Devanagari"],
+  "affiliations": [
+    { "name": "Lokasangrah Press" }
+  ],
+  "bio": "Designed the Lokasangrah type, a 24-point Devanagari face introduced by the Lokasangrah Press in Poona in 1941, with uniform stroke stress like a Roman sans serif.",
+  "sources": [
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume One, pp. 316–318 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" }
+  ],
+  "verification_status": "needs_verification",
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

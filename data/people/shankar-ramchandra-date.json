@@ -1,0 +1,22 @@
+{
+  "id": "rtd-p-000246",
+  "slug": "shankar-ramchandra-date",
+  "name": { "preferred": "Shankar Ramchandra Date", "alternates": ["S. R. Date", "Shankar Date"] },
+  "countries": ["India"],
+  "roles": ["type designer"],
+  "scripts": ["Devanagari"],
+  "affiliations": [
+    { "name": "Lokasangrah Press" }
+  ],
+  "bio": "Designed the Monotype Devanagari system and was the first in India to use a pantograph to make Devanagari type, at the Lokasangrah type foundry in Poona.",
+  "sources": [
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume One, pp. 316–318 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" },
+    { "url": "https://archive.org/details/naik-1971", "title": "Typography of Devanagari, Volume Two, p. 393 (Bapurao S. Naik)", "type": "book", "publisher": "Directorate of Languages, Government of Maharashtra", "date": "1971", "language": "en" },
+    { "url": "https://www.typotheque.com/research/devanagari-the-makings-of-a-national-character", "title": "Devanagari: the makings of a national character - Typotheque", "type": "foundry or publisher page", "publisher": "Typotheque", "language": "en", "archive_url": "https://web.archive.org/web/20260904214118/https://www.typotheque.com/research/devanagari-the-makings-of-a-national-character" },
+    { "url": "https://centaur.reading.ac.uk/101230/1/FR_PHS_DevArticle_29Aug21_02.pdf", "title": "Invisible hands: tracing the origins and development of the Devanagari Linotype - University of Reading", "type": "journal article", "publisher": "University of Reading", "language": "en", "archive_url": "https://web.archive.org/web/20251210053832/https://centaur.reading.ac.uk/101230/1/FR_PHS_DevArticle_29Aug21_02.pdf" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}
