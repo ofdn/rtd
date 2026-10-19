@@ -8,7 +8,7 @@
   "countries": ["India"],
   "roles": ["type designer", "calligrapher"],
   "affiliations": [
-    { "name": "WhiteCrow", "id": "rtd-o-000037", "start_year": "2005" },
+    { "name": "WhiteCrow", "start_year": "2005" },
     { "name": "Ek Type", "id": "rtd-o-000010", "start_year": "2013" }
   ],
   "bio": "Designed Baloo Devanagari, Gotu, Modak, and the Gurmukhi components of Anek and Naatak at Ek Type, the Indian-script foundry he co-founded in 2013. First Indian member of Alliance Graphique Internationale.",

@@ -10,7 +10,7 @@
   "sources": [
     { "url": "https://ektype.in/about.html", "title": "About - Ek Type", "type": "foundry or publisher page", "publisher": "Ek Type", "archive_url": "https://web.archive.org/web/20260214204429/https://ektype.in/about.html" }
   ],
-  "record_status": "active",
+  "record_status": "deprecated",
   "superseded_by": null,
   "created_at": "2026-10-19",
   "updated_at": "2026-10-19"

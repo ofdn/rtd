@@ -9,7 +9,7 @@
   "roles": ["type designer", "graphic designer", "educator"],
   "affiliations": [
     { "name": "AlterType", "id": "rtd-o-000002" },
-    { "name": "National Institute of Design", "id": "rtd-o-000025" }
+    { "name": "National Institute of Design" }
   ],
   "bio": "Co-leads the typeface studio AlterType, designing typefaces across brand identity and editorial contexts. Graduate of NID and the Type@Cooper program at Cooper Union; visiting faculty in Communication Design at NID.",
   "external_ids": { "wikidata_qid": "Q123057044" },
