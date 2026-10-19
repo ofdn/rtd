@@ -5,9 +5,10 @@
   "external_ids": { "wikidata_qid": "Q485593" },
   "kind": "publisher",
   "countries": ["United States"],
-  "description": "Software company that released the Lohit fonts for Indian languages as open source in 2004.",
+  "description": "Software company that released the Lohit fonts for Indian languages as open source in 2004, and relicensed them under the SIL Open Font License in 2011.",
   "sources": [
-    { "url": "https://fedoraproject.org/wiki/Lohit", "title": "Lohit - Fedora Project Wiki", "type": "software repository", "publisher": "Fedora Project", "archive_url": "https://web.archive.org/web/20260728223800/https://fedoraproject.org/wiki/Lohit" }
+    { "url": "https://fedoraproject.org/wiki/Lohit", "title": "Lohit - Fedora Project Wiki", "type": "software repository", "publisher": "Fedora Project", "archive_url": "https://web.archive.org/web/20260728223800/https://fedoraproject.org/wiki/Lohit" },
+    { "url": "https://pagure.io/lohit", "title": "Lohit - Pagure", "type": "software repository", "publisher": "Fedora Project", "archive_url": "https://web.archive.org/web/20261009220613/https://pagure.io/lohit" }
   ],
   "record_status": "active",
   "superseded_by": null,

@@ -7,14 +7,15 @@
   },
   "countries": ["India"],
   "roles": ["type designer", "font engineer"],
-  "bio": "Open-source font developer focused on Indian-script typefaces. Designed the Lohit font family, commissioned by Red Hat and shipped as the default Indian-language fonts in Fedora, supporting over 20 Indian languages.",
+  "bio": "Leads the Lohit font project at Red Hat, open-source fonts supporting more than 20 Indian languages and the default Indian-language fonts in Fedora.",
   "external_ids": { "wikidata_qid": "Q123054907" },
   "sources": [
     { "url": "https://fedoraproject.org/wiki/Lohit", "title": "Lohit - Fedora Project Wiki", "archive_url": "https://web.archive.org/web/20260728223800/https://fedoraproject.org/wiki/Lohit" },
-    { "url": "https://github.com/pravins/lohit", "title": "Lohit fonts family project - GitHub", "type": "software repository", "archive_url": "https://web.archive.org/web/20260211095601/https://github.com/pravins/lohit" }
+    { "url": "https://github.com/pravins/lohit", "title": "Lohit fonts family project - GitHub", "type": "software repository", "archive_url": "https://web.archive.org/web/20260211095601/https://github.com/pravins/lohit" },
+    { "url": "https://pagure.io/lohit", "title": "Lohit - Pagure", "type": "software repository", "publisher": "Fedora Project", "archive_url": "https://web.archive.org/web/20261009220613/https://pagure.io/lohit" }
   ],
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-05",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-10-19"
 }
