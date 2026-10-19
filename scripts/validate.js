@@ -147,22 +147,40 @@ export function validateRoot(rootDir) {
     organisations.push({ file, record });
   }
 
-  // foundry[].id and affiliations[].id must point at known organisation ids.
-  const organisationIds = new Set(organisations.map(({ record }) => record.id));
-  for (const { file, record } of typefaces) {
-    for (const f of record.foundry ?? []) {
-      if (f.id && !organisationIds.has(f.id)) {
-        errors.push(`${file}: foundry references unknown organisation id "${f.id}"`);
+  // foundry[].id and affiliations[].id must point at an active organisation,
+  // and a name that belongs to an organisation (its preferred name or any
+  // alternate, such as "Adobe Fonts" for Adobe) must carry that
+  // organisation's id, so brands and old company names resolve to one parent.
+  const organisationById = new Map(organisations.map(({ record }) => [record.id, record]));
+  const organisationByName = new Map();
+  for (const { file, record } of organisations) {
+    if (record.record_status !== "active") continue;
+    for (const name of [record.name.preferred, ...(record.name.alternates ?? [])]) {
+      const key = name.toLowerCase();
+      const owner = organisationByName.get(key);
+      if (owner && owner.id !== record.id) {
+        errors.push(`${file}: name "${name}" is also used by ${owner.id}`);
+      }
+      organisationByName.set(key, record);
+    }
+  }
+  function checkOrgLinks(file, entries, field) {
+    for (const e of entries ?? []) {
+      const linked = e.id ? organisationById.get(e.id) : null;
+      if (e.id && !linked) {
+        errors.push(`${file}: ${field} references unknown organisation id "${e.id}"`);
+      } else if (linked && linked.record_status !== "active") {
+        const hint = linked.superseded_by ? `, use "${linked.superseded_by}"` : "";
+        errors.push(`${file}: ${field} references ${linked.record_status} organisation "${e.id}"${hint}`);
+      }
+      const owner = organisationByName.get(e.name.toLowerCase());
+      if (owner && e.id !== owner.id) {
+        errors.push(`${file}: ${field} "${e.name}" is a name of ${owner.id} (${owner.name.preferred}), add "id": "${owner.id}"`);
       }
     }
   }
-  for (const { file, record } of people) {
-    for (const a of record.affiliations ?? []) {
-      if (a.id && !organisationIds.has(a.id)) {
-        errors.push(`${file}: affiliations references unknown organisation id "${a.id}"`);
-      }
-    }
-  }
+  for (const { file, record } of typefaces) checkOrgLinks(file, record.foundry, "foundry");
+  for (const { file, record } of people) checkOrgLinks(file, record.affiliations, "affiliations");
 
   // Referential integrity: every typeface.designers[].id must be a known person id.
   for (const { file, record } of typefaces) {

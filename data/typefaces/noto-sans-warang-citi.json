@@ -9,7 +9,7 @@
     { "id": "rtd-p-000017", "role": "designer" }
   ],
   "foundry": [
-    { "name": "Google Noto Fonts", "id": "rtd-o-000014", "url": "https://notofonts.github.io/warang-citi/" }
+    { "name": "Google", "id": "rtd-o-000013", "url": "https://notofonts.github.io/warang-citi/" }
   ],
   "scripts": ["Warang Citi"],
   "classification": "sans-serif",

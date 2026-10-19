@@ -11,7 +11,7 @@
     { "id": "rtd-p-000131", "role": "type designer" }
   ],
   "foundry": [
-    { "name": "Google Noto Fonts", "id": "rtd-o-000014", "url": "https://notofonts.github.io/ol-chiki/" }
+    { "name": "Google", "id": "rtd-o-000013", "url": "https://notofonts.github.io/ol-chiki/" }
   ],
   "release_year": "2022",
   "classification": "sans-serif",

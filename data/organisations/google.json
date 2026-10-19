@@ -1,0 +1,20 @@
+{
+  "id": "rtd-o-000013",
+  "slug": "google",
+  "previous_slugs": ["google-fonts"],
+  "name": { "preferred": "Google", "alternates": ["Google Fonts", "Google Noto Fonts", "Google LLC"] },
+  "external_ids": { "wikidata_qid": "Q95" },
+  "kind": "publisher",
+  "countries": ["United States"],
+  "website": "https://fonts.google.com/",
+  "description": "Technology company that publishes open-source fonts through Google Fonts, including the Noto typeface families for many scripts.",
+  "sources": [
+    { "url": "https://design.google/library/new-wave-indian-type-design", "title": "The New Wave of Indian Type Design - Google Design", "type": "foundry or publisher page", "publisher": "Google Design", "archive_url": "https://web.archive.org/web/20260927113617/https://design.google/library/new-wave-indian-type-design" },
+    { "url": "https://notofonts.github.io/ol-chiki/", "title": "Noto Ol Chiki - Noto fonts", "type": "software repository", "publisher": "Google", "archive_url": "https://web.archive.org/web/20260613144521/https://notofonts.github.io/ol-chiki/" },
+    { "url": "https://notofonts.github.io/warang-citi/", "title": "Noto Warang Citi - Noto fonts", "type": "software repository", "publisher": "Google" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-19",
+  "updated_at": "2026-10-19"
+}

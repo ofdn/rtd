@@ -1,7 +1,7 @@
 {
   "id": "rtd-o-000022",
   "slug": "monotype",
-  "name": { "preferred": "Monotype", "alternates": ["Monotype Corporation"] },
+  "name": { "preferred": "Monotype", "alternates": ["Monotype Corporation", "Monotype Corp", "Monotype Imaging", "Lanston Monotype"] },
   "external_ids": { "wikidata_qid": "Q1583606" },
   "kind": "foundry",
   "website": "https://www.monotype.com/",

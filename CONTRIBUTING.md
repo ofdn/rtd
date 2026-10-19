@@ -250,6 +250,13 @@ To link a typeface or a person to one, add its id next to the name:
 A typeface can list more than one foundry. Mint a new id with
 `node scripts/mint-id.js organisation "Name"`.
 
+Brands, products and former company names belong to their parent
+organisation. Add them to the parent's `name.alternates`: "Adobe Fonts"
+goes under Adobe and "Monotype Corporation" under Monotype. Do not create
+a separate record for them. A foundry or affiliation that
+uses one of these names must carry the parent's id. The validator checks
+this.
+
 ### Describing a source
 
 Each `sources[]` entry needs `url` and `title`. These optional fields

@@ -10,8 +10,8 @@
     { "url": "https://notofonts.github.io/ol-chiki/", "title": "Noto Ol Chiki - Noto fonts", "type": "software repository", "publisher": "Google", "archive_url": "https://web.archive.org/web/20260613144521/https://notofonts.github.io/ol-chiki/" },
     { "url": "https://notofonts.github.io/warang-citi/", "title": "Noto Warang Citi - Noto fonts", "type": "software repository", "publisher": "Google" }
   ],
-  "record_status": "active",
-  "superseded_by": null,
+  "record_status": "merged",
+  "superseded_by": "rtd-o-000013",
   "created_at": "2026-10-19",
   "updated_at": "2026-10-19"
 }

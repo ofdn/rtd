@@ -1,7 +1,7 @@
 {
   "id": "rtd-o-000001",
   "slug": "adobe",
-  "name": { "preferred": "Adobe", "alternates": [] },
+  "name": { "preferred": "Adobe", "alternates": ["Adobe Fonts", "Adobe Originals", "Adobe Inc.", "Adobe Systems"] },
   "external_ids": { "wikidata_qid": "Q11463" },
   "kind": "publisher",
   "countries": ["United States"],

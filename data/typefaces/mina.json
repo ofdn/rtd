@@ -3,7 +3,7 @@
   "slug": "mina",
   "name": { "preferred": "Mina", "alternates": [] },
   "designers": [{ "id": "rtd-p-000050", "role": "designer" }],
-  "foundry": [{ "name": "Google Fonts", "id": "rtd-o-000013" }],
+  "foundry": [{ "name": "Google", "id": "rtd-o-000013" }],
   "scripts": ["Bangla"],
   "era": "digital",
   "license": { "status": "open", "spdx": "OFL-1.1", "url": "https://github.com/google/fonts/blob/main/ofl/mina/OFL.txt" },
