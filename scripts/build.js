@@ -228,6 +228,8 @@ function build(dataDir, outDir) {
   writeFile(outDir, "logo-white-1.svg", readFileSync(join(repoRoot, "site-templates/logo-white-1.svg")));
   writeFile(outDir, "halftone-diamond.svg", readFileSync(join(repoRoot, "site-templates/halftone-diamond.svg")));
   writeFile(outDir, "cc-by-sa.svg", readFileSync(join(repoRoot, "site-templates/cc-by-sa.svg")));
+  for (const icon of ["favicon.svg", "favicon.ico", "apple-touch-icon.png"]) writeFile(outDir, icon, readFileSync(join(repoRoot, "site-templates", icon)));
+  writeFile(outDir, "robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}sitemap.xml\n`);
 
   writeFile(
     outDir,
