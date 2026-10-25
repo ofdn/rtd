@@ -17,7 +17,7 @@ import { pageShell, SEARCH_ICON } from "./shared.js";
 export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount, scriptsCount, organisationsCount, schemaVersion }) {
   const body = `
 <div class="home-hero">
-<p class="tagline">A global registry of typefaces and the people who made them, digital and pre-digital.</p>
+<p class="tagline">A global registry of typefaces, the people and the foundries who made them, digital and pre-digital.</p>
 <form id="home-search-form" class="home-search" action="" method="get" role="search">
 <label class="visually-hidden" for="search">Search people, typefaces and organisations</label>
 <input id="search" type="search" name="q" placeholder="Search by typeface, designer, or foundry&hellip;" autocomplete="off">
