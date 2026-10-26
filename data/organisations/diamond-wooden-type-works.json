@@ -1,0 +1,15 @@
+{
+  "id": "rtd-o-000040",
+  "slug": "diamond-wooden-type-works",
+  "name": { "preferred": "Diamond Wooden Type Works", "alternates": [] },
+  "kind": "foundry",
+  "countries": ["India"],
+  "description": "Wood type maker in Meerut that issued Latin, Devanagari, Gujarati, Odia and Bengali display types, with specimen books from about 1975. It closed in the early 2000s.",
+  "sources": [
+    { "url": "https://letterformarchive.org/news/diamond-wooden-type-works/", "title": "This Just In: Diamond Wooden Type Works (Tanya George) - Letterform Archive", "type": "archive or museum record", "publisher": "Letterform Archive", "date": "2024-07-08", "archive_url": "https://web.archive.org/web/20260511000125/https://letterformarchive.org/news/diamond-wooden-type-works/" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-27",
+  "updated_at": "2026-10-27"
+}
