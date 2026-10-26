@@ -316,7 +316,6 @@ ${SEARCH_ICON}
 `;
 
   return pageShell({
-    title: "Registry of Type Design",
     canonicalUrl,
     jsonLd: null,
     body,

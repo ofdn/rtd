@@ -296,7 +296,7 @@ export function pageShell({
   } catch (e) {}
 })();
 </script>
-<title>${escapeHtml(title)}, Registry of Type Design</title>
+<title>${title ? escapeHtml(title) + ", " : ""}Registry of Type Design</title>
 <link rel="canonical" href="${escapeHtml(canonicalUrl)}">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
