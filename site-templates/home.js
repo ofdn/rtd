@@ -1,19 +1,6 @@
 import { pageShell, SEARCH_ICON } from "./shared.js";
 
-// The home page doesn't print full people/typeface lists inline: at
-// registry scale (thousands of entries expected) that would bloat every
-// page load. Instead it fetches search-index.json once and offers two
-// client-side views over the same in-memory data: free-text search, and
-// an A-Z letter picker. Both are driven by escapeHtml'd output built from
-// the index, which is already public JSON, not user input, so no server
-// round trip is needed per interaction.
-//
-// The search box is a plain GET form first (action=""), so pressing Enter
-// works even with JS disabled (it reloads with ?q=..., which the script
-// below reads on load). JS only upgrades this into a live, no-reload
-// filter, it's never required for the search to function at all. This is
-// also the page that a person/typeface page's header search form submits
-// to, landing here with the same ?q= convention.
+// Search and A-Z browse run in the browser over search-index.json.
 export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount, scriptsCount, organisationsCount, schemaVersion }) {
   const body = `
 <div class="home-hero">
@@ -46,19 +33,13 @@ ${SEARCH_ICON}
       .replaceAll('"', "&quot;");
   }
 
-  // Folds an accented first character to its plain base letter (e.g.
-  // "Älvarez" groups under "A") using Unicode NFD decomposition.
+  // "Älvarez" goes under A.
   function foldedFirstLetter(name) {
     var base = name.normalize("NFD").replace(/[\\u0300-\\u036f]/g, "");
     return (base[0] || "").toUpperCase();
   }
 
-  // Recognizes an RTD id typed as-is ("rtd-p-000039"), without hyphens,
-  // or as a bare number ("39", "039", "000039") so searching for an id
-  // works the way searching for a name already does. A bare number has
-  // no known kind (a person and a typeface can share the same trailing
-  // number in their own independent sequences), a full "rtd-p-"/"rtd-t-"
-  // form does.
+  // rtd-p-000123, rtdp123 or a bare 123. A bare number can match any kind.
   var ID_KINDS = { p: "person", t: "typeface", o: "organisation" };
   var KIND_DIRS = { person: "people/", typeface: "typefaces/", organisation: "organisations/" };
   function parseIdQuery(raw) {
@@ -86,14 +67,7 @@ ${SEARCH_ICON}
     return true;
   }
 
-  // Cross-referenced authority identifiers (VIAF, ISNI, LC-NAF, GND,
-  // WorldCat, ULAN, a Wikidata QID) are exact values, not free text, so a
-  // query matching one of them stored on a record is unambiguous. ISNI in
-  // particular gets copied with grouping spaces or hyphens as often as
-  // not ("0000 0003 7140 3942" / "0000-0003-7140-3942"), so both are
-  // stripped before comparing against RTD's own unseparated storage
-  // format. Partial/prefix matches are deliberately not attempted: an
-  // identifier is either the whole thing or it isn't a safe match.
+  // ISNIs are often pasted with spaces or hyphens.
   function identifierMatches(item, rawQuery) {
     if (!item.external_ids) return false;
     var q = rawQuery.trim();
@@ -105,10 +79,7 @@ ${SEARCH_ICON}
     });
   }
 
-  // Order- and punctuation-insensitive: every word in the query has to
-  // appear somewhere in the target, regardless of what order they're
-  // in. Makes "Crouwel,Wim" (last,first, e.g. pasted from a spreadsheet
-  // export) match "Wim Crouwel" the same as typing it the "normal" way.
+  // Word order and commas are ignored, so "Last1,First1" finds First1 Last1.
   function normalizeForSearch(s) {
     return s.toLowerCase().replace(/[.,]/g, " ").replace(/\\s+/g, " ").trim();
   }
@@ -121,12 +92,7 @@ ${SEARCH_ICON}
     });
   }
 
-  // A record's scripts[] stores the writing system ("Ol Chiki"), not the
-  // language it's usually associated with ("Santali"), so a plain
-  // tokenSearchMatch against scripts[] alone would miss a reader who
-  // searches by language. This maps a handful of language names onto the
-  // script they're inseparably tied to in this registry's own data (see
-  // each script's records for the sourced language link).
+  // Language names for scripts the records list by script name.
   var SCRIPT_LANGUAGE_ALIASES = {
     "santali": "Ol Chiki",
     "santhali": "Ol Chiki",
@@ -144,10 +110,6 @@ ${SEARCH_ICON}
     });
   }
 
-  // showKindTag off for the A-Z browse, where results are already split
-  // into their own "People"/"Typefaces" heading, so repeating it on every
-  // row is redundant. Left on for free-text search, which shows a single
-  // mixed list where the tag is the only thing telling entries apart.
   function renderList(items, showKindTag) {
     if (!items.length) return "<p>No entries found.</p>";
     return (
@@ -255,10 +217,6 @@ ${SEARCH_ICON}
       renderList(matches, true);
   }
 
-  // Resolves a query to a single record when it's unambiguously an id
-  // (RTD id, or an exact external identifier like ISNI/VIAF), so submit
-  // and a direct ?q= link can jump straight to the record instead of
-  // leaving it sitting in the results list.
   function findDirectMatch(idx, q) {
     var parsedId = parseIdQuery(q);
     var hits = idx.filter(function (item) {
@@ -278,13 +236,7 @@ ${SEARCH_ICON}
     });
   });
 
-  // The form's plain GET action already works without JS (it reloads with
-  // ?q=...); once JS is running, results appear live as you type, so a
-  // full-page reload on Enter would just be redundant, not broken. The
-  // one thing submit still does on top of that: if the query is
-  // unambiguously an id (a bare number matching exactly one record, or a
-  // full "rtd-p-"/"rtd-t-" form), jump straight to that record's page
-  // instead of just leaving it sitting in the results list.
+  // Enter on an exact id goes straight to the record.
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var q = input.value.trim();
