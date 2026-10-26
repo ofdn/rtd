@@ -1,0 +1,20 @@
+{
+  "id": "rtd-t-000186",
+  "slug": "hindi-marathi-type-no-5",
+  "name": { "preferred": "Hindi-Marathi Type No. 5", "alternates": [] },
+  "designers": [],
+  "attribution": { "status": "foundry-only", "note": "No designer is named in the sources." },
+  "foundry": [{ "name": "Diamond Wooden Type Works", "id": "rtd-o-000040" }],
+  "design_year": "c. 1975",
+  "scripts": ["Devanagari"],
+  "languages": [{ "name": "Hindi", "code": "hin" }, { "name": "Marathi", "code": "mar" }],
+  "era": "wood",
+  "description": "Devanagari wood display type for Hindi and Marathi in the Diamond Wooden Type Works specimens, described by Letterform Archive as a rare sans-serif Devanagari.",
+  "sources": [
+    { "url": "https://letterformarchive.org/news/diamond-wooden-type-works/", "title": "This Just In: Diamond Wooden Type Works (Tanya George) - Letterform Archive", "type": "archive or museum record", "publisher": "Letterform Archive", "date": "2024-07-08", "archive_url": "https://web.archive.org/web/20260511000125/https://letterformarchive.org/news/diamond-wooden-type-works/" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-27",
+  "updated_at": "2026-10-27"
+}

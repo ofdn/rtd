@@ -1,0 +1,21 @@
+{
+  "id": "rtd-t-000185",
+  "slug": "english-type-no-21",
+  "name": { "preferred": "English Type No. 21", "alternates": [] },
+  "designers": [],
+  "attribution": { "status": "foundry-only", "note": "No designer is named in the sources." },
+  "foundry": [{ "name": "Diamond Wooden Type Works", "id": "rtd-o-000040" }],
+  "design_year": "c. 1975",
+  "scripts": ["Latin"],
+  "era": "wood",
+  "description": "Wood type adaptation of Spring, redrawn broader and more open at smaller sizes, in the Diamond Wooden Type Works specimens.",
+  "related_typefaces": [{ "id": "rtd-t-000182", "relation": "adaptation_of" }],
+  "sources": [
+    { "url": "https://letterformarchive.org/news/diamond-wooden-type-works/", "title": "This Just In: Diamond Wooden Type Works (Tanya George) - Letterform Archive", "type": "archive or museum record", "publisher": "Letterform Archive", "date": "2024-07-08", "archive_url": "https://web.archive.org/web/20260511000125/https://letterformarchive.org/news/diamond-wooden-type-works/" },
+    { "url": "https://fontsinuse.com/typefaces/31493/spring", "title": "Spring - Fonts In Use", "type": "reference website", "publisher": "Fonts In Use", "archive_url": "https://web.archive.org/web/20261016143924/https://fontsinuse.com/typefaces/31493/spring" }
+  ],
+  "record_status": "active",
+  "superseded_by": null,
+  "created_at": "2026-10-27",
+  "updated_at": "2026-10-27"
+}
