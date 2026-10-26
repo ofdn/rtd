@@ -1,10 +1,5 @@
 import { pageShell, escapeHtml, linkTag, sectionAnchor } from "./shared.js";
 
-// Static content page, not data-driven, so unlike person.js/typeface.js
-// this has no per-record inputs beyond the counts already computed for
-// the home page. Kept as its own template file (rather than an inline
-// string in build.js like the smaller preservation/servicestatus pages)
-// because it's long enough to be worth editing on its own.
 export function renderInfoPage({ canonicalUrl, peopleCount, typefacesCount, scriptsCount, organisationsCount, schemaVersion, arkNaan }) {
   const body = `
 <main>

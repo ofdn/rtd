@@ -1,10 +1,5 @@
 import { escapeHtml, pageShell } from "./shared.js";
 
-// Single index page, no per-contributor subpage - every contributor
-// (individual or institution) who submitted or substantially contributed a
-// record, with links to what they contributed. Kept as one flat page
-// rather than the /scripts/-style index+subpage pair since a contributor
-// list doesn't need its own permalink yet.
 export function renderContributorsPage({ canonicalUrl, contributors, schemaVersion }) {
   const items = contributors.length
     ? contributors
