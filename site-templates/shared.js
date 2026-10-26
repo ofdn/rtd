@@ -1,6 +1,3 @@
-// Small HTML helpers shared by the record page templates. No templating
-// engine dependency, the dataset is small enough that plain template
-// literals are simpler than pulling in a framework.
 
 export function escapeHtml(value) {
   return String(value)
@@ -14,11 +11,7 @@ export function copyableId(id) {
   return `<button type="button" class="record-id copy-id" data-copy="${escapeHtml(id)}">${escapeHtml(id)}</button>`;
 }
 
-// Every link off rtd.theofdn.org itself (including theofdn.org, the
-// parent O Foundation site, which is a separate site from RTD) opens in
-// a new tab; internal navigation never does. noopener/noreferrer: the
-// new tab shouldn't get a handle back to this page (a real, if minor,
-// security consideration whenever target="_blank" is used).
+// Links off rtd.theofdn.org open in a new tab.
 const SITE_HOSTS = new Set(["rtd.theofdn.org"]);
 export const EXTERNAL_LINK_ATTRS = 'target="_blank" rel="noopener noreferrer"';
 export function isExternalUrl(url) {
@@ -28,29 +21,18 @@ export function isExternalUrl(url) {
     return false; // relative path, e.g. "../people/foo/", always internal
   }
 }
-// `<a>` tag builder used anywhere a URL comes from data (sources[], the
-// identifier authority-file links, search results) rather than being
-// hand-written in a template, so external-ness is decided once per call
-// site instead of copy-pasted attribute strings everywhere.
 export function linkTag(url, innerHtml, extraAttrs = "") {
   const target = isExternalUrl(url) ? ` ${EXTERNAL_LINK_ATTRS}` : "";
   return `<a href="${escapeHtml(url)}"${extraAttrs ? ` ${extraAttrs}` : ""}${target}>${innerHtml}</a>`;
 }
 
-// A hash of styles.css's own content, set once by build.js and appended to
-// the stylesheet link as a cache-buster (`?v=<hash>`). Without this,
-// browsers and the CDN in front of the custom domain hold onto a cached
-// copy for up to their max-age (hours) after every deploy, so a CSS-only
-// change doesn't actually reach visitors until that cache expires or they
-// hard-refresh.
+// Content hash of styles.css, set by build.js, used as ?v= on the stylesheet link.
 let cssVersion = "";
 export function setCssVersion(hash) {
   cssVersion = hash;
 }
 
-// package.json's version, set once by build.js, shown in the footer next
-// to the schema version (a separate number, see CONTRIBUTING.md's
-// "Schema versioning" section for why the two don't move together).
+// Set by build.js. The schema version moves separately, see CONTRIBUTING.md.
 let siteVersion = "";
 export function setSiteVersion(version) {
   siteVersion = version;
@@ -67,20 +49,12 @@ const COPY_ICON = `<svg aria-hidden="true" width="14" height="14" viewBox="0 0 2
 
 const PRINT_ICON = `<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>`;
 
-// Works on any record page (person or typeface), triggers the browser's
-// own print dialog, which already offers "Save as PDF" without RTD needing
-// to generate/host PDF files itself. @media print in styles.css strips the
-// header/footer/controls so the printed page is just the record content.
 export function printButton() {
   return `<button type="button" class="print-btn" onclick="window.print()" aria-label="Print this page" title="Print this page">${PRINT_ICON}</button>`;
 }
 
 const LINK_ICON = `<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>`;
 
-// Permalink icon next to a heading, so a section on a long static page
-// (like /info/) can be linked or cited directly instead of just the
-// page as a whole. Plain anchor jump, no clipboard JS needed, the URL
-// bar/right-click "copy link" already does the rest.
 export function sectionAnchor(id) {
   return `<a class="section-anchor" href="#${escapeHtml(id)}" aria-label="Link to this section" title="Link to this section">${LINK_ICON}</a>`;
 }
@@ -100,10 +74,7 @@ function formatDate(iso) {
   });
 }
 
-// Citation text is generated at build time with an `__ACCESSED__` token
-// standing in for the retrieval date, since a static site can't know when
-// a given reader is actually viewing the page; citationBlock()'s inline
-// script fills that token in client-side with the visitor's local date.
+// __ACCESSED__ is filled in with the reader's date by citationBlock()'s script.
 const SITE_PUBLISHER = "O Foundation";
 const SITE_PLACE = "Bhubaneswar";
 const SITE_LICENCE = "CC BY-SA 4.0";
@@ -113,13 +84,8 @@ export function buildCitations(record, { canonicalUrl, arkUrl }) {
   const year = (record.updated_at || "").slice(0, 4);
   const updated = formatDate(record.updated_at);
 
-  // The citation author defaults to the registry's own maintainer, who
-  // researched and entered most records by hand. A record with a real
-  // contributor (see contributed_by[] in the schema, auto-filled from the
-  // issue-form submitter's GitHub username, or added by hand for a direct
-  // PR) is cited by that contributor's name instead - used as-is in every
-  // format below, not split into last-name/initial, since it may be a
-  // GitHub username or an institution name rather than "First Last".
+  // Cited as the contributor where contributed_by[] has one, else the maintainer.
+  // The name may be a username or an institution, so it is never split.
   const contributorName = record.contributed_by?.[0]?.name;
   const author = contributorName || "Panigrahi, Subhashish";
   const authorInitial = contributorName || "Panigrahi, S.";
@@ -136,12 +102,8 @@ export function buildCitations(record, { canonicalUrl, arkUrl }) {
 
 }
 
-// For Zotero, Mendeley and other reference managers: Highwire Press and
-// Dublin Core tags, same set as theofdn.org. The report institution tag
-// makes Zotero save a record as a Report rather than a Web Page. No
-// <link rel="schema.DC"> lines: if Cloudflare rewrites their http:// to
-// https://, Zotero ignores the DC and eprints tags, and it assumes these
-// schemas by default anyway.
+// Highwire Press and Dublin Core tags for Zotero and Mendeley. No
+// <link rel="schema.DC">: Zotero drops the DC tags if Cloudflare rewrites it to https.
 export function citationMeta(record, { canonicalUrl, arkUrl, abstract }) {
   const title = escapeHtml(record.name.preferred);
   const author = escapeHtml(record.contributed_by?.[0]?.name || "Panigrahi, Subhashish");
@@ -192,19 +154,13 @@ export function citationBlock(record, { canonicalUrl, arkUrl }) {
 </section>`;
 }
 
-// JSON-LD is embedded inside a <script> tag; guard against a source string
-// containing "</script>" from prematurely closing the tag.
+// Stops a "</script>" inside a source string from closing the tag.
 export function jsonLdScript(data) {
   const json = JSON.stringify(data, null, 2).replaceAll("</", "<\\/");
   return `<script type="application/ld+json">\n${json}\n</script>`;
 }
 
-// Static stand-in for an HTTP 301: GitHub Pages serves plain files, there's
-// no server-side redirect config available, so a renamed record's old slug
-// gets a stub page instead. `<link rel="canonical">` tells search engines
-// to consolidate on the new URL, `<meta http-equiv="refresh">` moves a
-// human/browser there immediately, and the visible link is the fallback
-// for anything that honors neither (e.g. curl).
+// GitHub Pages has no redirects, so a renamed slug gets a refresh page.
 export function renderRedirectPage({ name, targetUrl }) {
   return `<!doctype html>
 <html lang="en">
@@ -222,34 +178,13 @@ export function renderRedirectPage({ name, targetUrl }) {
 `;
 }
 
-// Search icon shared by the compact header search and the home page's
-// large hero search, inlined so the site has no icon-font dependency.
 export const SEARCH_ICON = `<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>`;
 
-// Fill colors come from styles.css (.about-link .ring / .glyph), not
-// hardcoded here, so the icon follows the header's light/dark accent
-// tokens instead of being stuck at one fixed color.
 const INFO_ICON = `<svg aria-hidden="true" class="about-icon" viewBox="0 0 24 24"><circle class="ring" cx="12" cy="12" r="12"></circle><rect class="glyph" x="10.6" y="10.2" width="2.8" height="7.4" rx="1"></rect><circle class="glyph" cx="12" cy="6.7" r="1.6"></circle></svg>`;
 
-// Both icons ship in the DOM always; styles.css shows whichever matches
-// the effective theme (see .theme-toggle .icon-sun/.icon-moon), same
-// three-state pattern (system/explicit-light/explicit-dark) as the color
-// tokens at the top of the stylesheet. Icon shown is the mode a click
-// would switch *to*, not the current one.
+// Shows the mode a click switches to.
 const THEME_TOGGLE_ICON = `<svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"></circle><line x1="12" y1="1.5" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22.5"></line><line x1="1.5" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22.5" y2="12"></line><line x1="4.5" y1="4.5" x2="6.2" y2="6.2"></line><line x1="17.8" y1="17.8" x2="19.5" y2="19.5"></line><line x1="4.5" y1="19.5" x2="6.2" y2="17.8"></line><line x1="17.8" y1="6.2" x2="19.5" y2="4.5"></line></svg><svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 1 0 11 11z"></path></svg>`;
 
-// A single GET form works everywhere: on the home page itself, action=""
-// submits back to the same page (progressively enhanced into a live
-// client-side filter by home.js); on a person/typeface page, homePath
-// ("../../") submits to the registry root with the query as ?q=, which
-// home.js reads on load and searches immediately. No JS is required for
-// this to work at all, only for it to avoid a full page reload.
-//
-// `#header-search-results` is the quick-select dropdown (wired up by the
-// inline script in pageShell): as you type, if the query already matches
-// a record in the index, a few candidates appear right there to jump to
-// directly, instead of needing to submit and land on the home page's full
-// results list to find out a record already exists.
 function headerSearchForm(homePath) {
   return `<div class="header-search-wrap">
 <form class="header-search" action="${escapeHtml(homePath)}" method="get" role="search">
@@ -262,11 +197,6 @@ function headerSearchForm(homePath) {
 </div>`;
 }
 
-// `homePath` is the relative path back to the site root from wherever this
-// page lives (`""` for the home page, `"../../"` for a person/typeface
-// page), used for the logo link, the stylesheet, and the search form's
-// fallback target. `showHeaderSearch` is off on the home page, which
-// already has its own large hero search box, see home.js.
 const REPO_URL = "https://github.com/ofdn/rtd";
 
 export function pageShell({
@@ -284,11 +214,7 @@ export function pageShell({
 <head>
 <meta charset="utf-8">
 <script>
-// Runs before the stylesheet loads, so an explicit theme choice applies
-// immediately with no flash of the wrong theme. No explicit choice made
-// yet: leaves data-theme unset entirely and lets the prefers-color-scheme
-// media query in styles.css drive it, same three-state pattern used
-// throughout the CSS.
+// Runs before the stylesheet to avoid a flash of the wrong theme.
 (function () {
   try {
     var t = localStorage.getItem("rtd-theme");
