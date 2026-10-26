@@ -110,7 +110,7 @@ ${SEARCH_ICON}
   // in. Makes "Crouwel,Wim" (last,first, e.g. pasted from a spreadsheet
   // export) match "Wim Crouwel" the same as typing it the "normal" way.
   function normalizeForSearch(s) {
-    return s.toLowerCase().replace(/[.,]/g, " ").replace(/\s+/g, " ").trim();
+    return s.toLowerCase().replace(/[.,]/g, " ").replace(/\\s+/g, " ").trim();
   }
   function tokenSearchMatch(query, target) {
     var qTokens = normalizeForSearch(query).split(" ").filter(Boolean);
