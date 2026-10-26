@@ -292,11 +292,7 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
   });
 });
 
-// Header search quick-select: as-you-type dropdown of existing records
-// matching the query, so a search for something already in the registry
-// doesn't require submitting and landing on the home page's full results
-// list just to find out. No-ops entirely on the home page, which doesn't
-// render this header form (it has its own hero search instead).
+// Header search dropdown. The home page has no header search.
 (function () {
   var input = document.getElementById("header-search-input");
   if (!input) return;
@@ -319,10 +315,7 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
       .replaceAll('"', "&quot;");
   }
 
-  // Same id-query and order/punctuation-insensitive name matching as
-  // home.js's search (see there for the fuller rationale), duplicated
-  // here rather than shared since this whole script is a template
-  // literal with no module system on the client side.
+  // Copies of the matching in home.js.
   function parseIdQuery(raw) {
     var q = raw.trim();
     var full = /^rtd-?([pto])-?0*([0-9]+)$/i.exec(q);
@@ -356,13 +349,6 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
       return normTarget.indexOf(t) !== -1;
     });
   }
-  // A record's scripts[] stores the writing system ("Ol Chiki"), not the
-  // language it's usually associated with ("Santali"), so a plain
-  // tokenSearchMatch against scripts[] alone would miss a reader who
-  // searches by language. This maps a handful of language names onto the
-  // script they're inseparably tied to in this registry's own data (see
-  // each script's records for the sourced language link), same
-  // duplication rationale as the id/identifier helpers above.
   var SCRIPT_LANGUAGE_ALIASES = {
     "santali": "Ol Chiki",
     "santhali": "Ol Chiki",
@@ -379,9 +365,6 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
       return tokenSearchMatch(query, s) || (aliasTarget && s === aliasTarget);
     });
   }
-  // Same exact-value identifier matching as home.js's search (see there
-  // for the fuller rationale), duplicated here for the same reason as
-  // the id-query helpers above: no module system on this inline script.
   function identifierMatches(item, rawQuery) {
     if (!item.external_ids) return false;
     var q = rawQuery.trim();
@@ -482,10 +465,7 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
     if (!wrap.contains(e.target)) hide();
   });
 
-  // Enter still falls through to the plain GET submission (lands on the
-  // home page's own results for a name query, unchanged) unless the
-  // query is unambiguously an id, in which case skip straight to that
-  // record instead of making the reader click through the dropdown.
+  // Enter on an exact id goes straight to the record.
   form.addEventListener("submit", function (e) {
     var q = input.value.trim();
     if (!q) return;
@@ -502,10 +482,6 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
   });
 })();
 
-// Theme toggle: flips between explicit light/dark, persisted to
-// localStorage (read back by the anti-flash script in <head>). With no
-// explicit choice ever made, this never runs and the page just follows
-// the OS via the prefers-color-scheme media queries in styles.css.
 (function () {
   var toggle = document.getElementById("theme-toggle");
   if (!toggle) return;
@@ -536,10 +512,7 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
 `;
 }
 
-// Resolves external_ids into {label, url} pairs, one per authority file
-// that's actually present on the record. Single source of truth for both
-// the visible "Identifiers" list on each page and the JSON-LD sameAs
-// array, so the two can never drift out of sync with each other.
+// Used for both the Identifiers list and JSON-LD sameAs.
 export function identifierLinks(externalIds) {
   if (!externalIds) return [];
   const links = [];
@@ -572,10 +545,6 @@ export function sameAsUris(externalIds) {
   return links.length ? links.map((l) => l.url) : undefined;
 }
 
-// Rendered as bordered label badges (same visual language as the
-// record-id badge next to the page title, see .record-id in styles.css),
-// linking straight out to each authority file rather than printing the
-// raw URL as visible text.
 export function identifiersList(externalIds) {
   const links = identifierLinks(externalIds);
   if (!links.length) return "";
@@ -585,10 +554,7 @@ export function identifiersList(externalIds) {
   return `<h2>Identifiers</h2>\n<div class="identifier-badges">\n${items}\n</div>`;
 }
 
-// Computes a single human-readable nationality label from a countries[]
-// array using the demonym/compound tables in schema/demonyms.json (passed
-// in by build.js). Kept out of hand-written bio text so the wording stays
-// consistent across every record instead of drifting per-author.
+// Tables in schema/demonyms.json.
 export function nationalityLabel(countries, demonymsData) {
   if (!countries || countries.length === 0) return undefined;
   const { demonyms, compounds } = demonymsData;
@@ -602,12 +568,8 @@ export function nationalityLabel(countries, demonymsData) {
   return countries.map((c) => demonyms[c] || c).join(" and ");
 }
 
-// Collapses "Latin" / "Latin script" / "Greek alphabet" style variants
-// recorded across different entries into one canonical display name, so
-// they land on the same /scripts/<slug>/ tag page instead of splitting
-// into near-duplicate tags.
-// Script names are the bare name the script's own community uses
-// ("Bangla", "Latin"), with the Unicode name in brackets where it differs.
+// Folds "Latin script", "Greek alphabet" and the like into one name. Names
+// are the community's own ("Bangla"), with the Unicode name in brackets.
 const SCRIPT_NAME_ALIASES = { Bengali: "Bangla" };
 const SCRIPT_UNICODE_NAMES = { Bangla: "Bengali" };
 
@@ -630,12 +592,6 @@ export function scriptSlug(script) {
     .replace(/^-+|-+$/g, "");
 }
 
-// Renders each of a record's scripts[] as a clickable tag pointing at its
-// /scripts/<slug>/ page (same bordered-badge visual language as
-// identifiersList, see .identifier-badge in styles.css). Person and
-// typeface pages both live two levels deep (people/<slug>/,
-// typefaces/<slug>/), so the relative path back up to /scripts/ is the
-// same from either template.
 export function scriptBadges(scripts) {
   if (!scripts || scripts.length === 0) return "";
   return scripts
@@ -655,8 +611,6 @@ function languageLabel(tag) {
   }
 }
 
-// Preferred-name alternates plus any own-script names, for search,
-// JSON-LD alternateName and authority-record cross-references.
 export function allNames(name) {
   return [...(name?.alternates ?? []), ...(name?.native ?? []).map((n) => n.value)];
 }
