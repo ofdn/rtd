@@ -1,8 +1,6 @@
 import { citationMeta, allNames, nativeNamesFact, escapeHtml, pageShell, sourcesList, sameAsUris, identifiersList, nationalityLabel, copyableId, arkPermalink, citationBlock, printButton, scriptBadges } from "./shared.js";
 
-// `works` is the computed reverse index (typefaces this person is credited
-// on), passed in by build.js, it is never stored on the person record
-// itself, to avoid the same relationship being hand-maintained in two files.
+// `works` is built by build.js from typeface designers[].
 export function renderPersonPage(record, { canonicalUrl, works, affiliations = [], demonyms, related, schemaVersion, arkUrl }) {
   const jsonLd = {
     "@context": "https://schema.org",

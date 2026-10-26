@@ -1,8 +1,6 @@
 import { citationMeta, allNames, nativeNamesFact, eraLabel, linkTag, escapeHtml, pageShell, sourcesList, sameAsUris, identifiersList, copyableId, arkPermalink, citationBlock, printButton, scriptBadges } from "./shared.js";
 
-// `designers` is the input record's designers[] enriched with each
-// person's current name/slug (resolved by build.js), so the page can link
-// to them without duplicating name data into the typeface record itself.
+// `designers` carries each person's name and slug, resolved by build.js.
 const RELATION_LABELS = {
   revival_of: "Revival of",
   digitisation_of: "Digitisation of",

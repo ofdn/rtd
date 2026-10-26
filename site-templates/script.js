@@ -1,8 +1,5 @@
 import { escapeHtml, pageShell } from "./shared.js";
 
-// One page per script, listing every active typeface and person tagged
-// with it, so "what exists for Ol Chiki" is a single click from any
-// record that carries that tag instead of requiring a full-text search.
 export function renderScriptPage({ canonicalUrl, name, typefaces, people, schemaVersion }) {
   const typefacesHtml = typefaces.length
     ? `<h2>Typefaces</h2>\n<ul class="record-list">\n${typefaces
@@ -37,8 +34,6 @@ ${peopleHtml}
   });
 }
 
-// The /scripts/ index: every script tagged anywhere in the registry, with
-// counts, linking into each script's own page above.
 export function renderScriptsIndexPage({ canonicalUrl, scripts, schemaVersion }) {
   const items = scripts
     .map(
