@@ -656,13 +656,12 @@ footer.site-footer p { margin: 0; }
 .script-badge, .identifier-badge, button.copy-icon-btn, button.citation-download, .letters button {
   color: var(--ink-on-tint);
   background-color: var(--tint);
-  border-color: var(--tint-edge);
+  border-color: transparent;
 }
-.script-badge { --tint: #e2e8f0; --tint-edge: transparent; --tint-hover: #b9ceec; }
-.identifier-badge { --tint: #bae6fd; --tint-edge: #9cc1d5; }
-button.copy-icon-btn { --tint: #d1fae5; --tint-edge: #b0d2c0; border: 1px solid var(--tint-edge); }
-button.citation-download { --tint: #ffedd5; --tint-edge: #d6c7b3; }
-.letters button { --tint: #ffe8cc; --tint-edge: #d6c3ab; }
+.script-badge { --tint: #e2e8f0; --tint-hover: #b9ceec; }
+.identifier-badge { --tint: #bae6fd; --tint-hover: #8ad7ff; }
+button.copy-icon-btn { --tint: #d1fae5; --tint-hover: #9effcd; border: 1px solid transparent; }
+button.citation-download { --tint: #ffedd5; --tint-hover: #ffd9a7; }
 .tint-0 { --tint: #ffe8cc; --tint-hover: #ffd39e; }
 .tint-1 { --tint: #d1fae5; --tint-hover: #9effcd; }
 .tint-2 { --tint: #bae6fd; --tint-hover: #8ad7ff; }
@@ -673,16 +672,19 @@ button.citation-download { --tint: #ffedd5; --tint-edge: #d6c7b3; }
 .tint-7 { --tint: #a7f3d0; --tint-hover: #6dffbc; }
 .tint-8 { --tint: #ddd6fe; --tint-hover: #b6a7ff; }
 .tint-9 { --tint: #e2e8f0; --tint-hover: #b9ceec; }
+/* 10 to 13 are extra , beyond Tome's set: lime teal rose and fuchsia */
+.tint-10 { --tint: #ecfccb; --tint-hover: #deff9a; }
+.tint-11 { --tint: #ccfbf1; --tint-hover: #9affea; }
+.tint-12 { --tint: #ffe4e6; --tint-hover: #ffb6bb; }
+.tint-13 { --tint: #fae8ff; --tint-hover: #f0baff; }
+/* no edges on chips; hover takes a stronger shade of the same pastel */
 .script-badge:hover, .identifier-badge:hover, button.copy-icon-btn:hover,
 button.citation-download:hover, .letters button:hover {
   color: var(--ink-on-tint);
-  background-color: var(--tint);
-  border-color: var(--tint-edge);
-  box-shadow: inset 0 0 0 2px #000;
+  background-color: var(--tint-hover);
+  border-color: transparent;
 }
-/* script names have no edge,on hover they take a stronger shade of thier pastel */
-.script-badge:hover { background-color: var(--tint-hover); box-shadow: none; }
-.letters button[aria-current="true"] { background: var(--color-primary); color: var(--color-on-primary); box-shadow: none; }
+.letters button[aria-current="true"] { background: var(--color-primary); color: var(--color-on-primary); }
 
 /* Print */
 @media print {
