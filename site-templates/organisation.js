@@ -37,7 +37,7 @@ export function renderOrganisationPage(record, { canonicalUrl, typefaces, people
 
   const body = `
 <main>
-<nav class="breadcrumb"><a href="../../">Registry Home</a> &rsaquo; <a href="../">Organisations</a> &rsaquo; ${escapeHtml(record.name.preferred)}</nav>
+<nav class="breadcrumb"><a href="../../">Registry home</a> &rsaquo; <a href="../">Organisations</a> &rsaquo; ${escapeHtml(record.name.preferred)}</nav>
 <div class="record-header">
 <h1>${escapeHtml(record.name.preferred)}</h1>
 ${copyableId(record.id)}
@@ -96,7 +96,7 @@ export function renderOrganisationsIndexPage({ canonicalUrl, organisations, sche
 
   const body = `
 <main>
-<nav class="breadcrumb"><a href="../">Registry Home</a> &rsaquo; Organisations</nav>
+<nav class="breadcrumb"><a href="../">Registry home</a> &rsaquo; Organisations</nav>
 <div class="record-header">
 <h1>Organisations</h1>
 </div>
