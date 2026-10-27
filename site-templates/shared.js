@@ -347,12 +347,23 @@ export function scriptSlug(script) {
     .replace(/^-+|-+$/g, "");
 }
 
+// same script same pastel on every page, unless the one next to it already has it
+function scriptTint(script) {
+  let n = 0;
+  for (const ch of scriptSlug(script)) n = (n * 31 + ch.charCodeAt(0)) % 997;
+  return n % 10;
+}
+
 export function scriptBadges(scripts) {
   if (!scripts || scripts.length === 0) return "";
+  let prev = -1;
   return scripts
-    .map((s) =>
-      linkTag(`../../scripts/${scriptSlug(s)}/`, escapeHtml(scriptLabel(s)), 'class="script-badge"')
-    )
+    .map((s) => {
+      let tint = scriptTint(s);
+      if (tint === prev) tint = (tint + 1) % 10;
+      prev = tint;
+      return linkTag(`../../scripts/${scriptSlug(s)}/`, escapeHtml(scriptLabel(s)), `class="script-badge tint-${tint}"`);
+    })
     .join("\n");
 }
 
