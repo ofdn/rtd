@@ -25,7 +25,7 @@ import { renderInfoPage } from "../site-templates/info.js";
 import { renderScriptPage, renderScriptsIndexPage } from "../site-templates/script.js";
 import { renderContributorsPage } from "../site-templates/contributors.js";
 import { renderOrganisationPage, renderOrganisationsIndexPage, KIND_LABELS } from "../site-templates/organisation.js";
-import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setSiteVersion, setSchemaVersion, escapeHtml, linkTag, allNames, eraLabel, scriptLabel, canonicalScriptName, scriptSlug } from "../site-templates/shared.js";
+import { renderRedirectPage, nationalityLabel, pageShell, setCssVersion, setJsVersion, setSiteVersion, setSchemaVersion, escapeHtml, linkTag, allNames, eraLabel, scriptLabel, canonicalScriptName, scriptSlug } from "../site-templates/shared.js";
 import { buildPersonDc, buildTypefaceDc } from "./lib/dublin-core.js";
 import { buildPersonMarc } from "./lib/marc-authority.js";
 
@@ -218,6 +218,9 @@ function build(dataDir, outDir) {
   const cssContent = readFileSync(join(repoRoot, "site-templates/styles.css"), "utf8");
   writeFile(outDir, "styles.css", cssContent);
   setCssVersion(createHash("md5").update(cssContent).digest("hex").slice(0, 8));
+  const jsContent = readFileSync(join(repoRoot, "site-templates/site.js"), "utf8");
+  writeFile(outDir, "site.js", jsContent);
+  setJsVersion(createHash("md5").update(jsContent).digest("hex").slice(0, 8));
 
   const pkgVersion = loadJson(join(repoRoot, "package.json")).version;
   setSiteVersion(pkgVersion);
