@@ -5,7 +5,7 @@
 //
 // Usage: node scripts/build.js [dataDir] [outDir]
 // SITE_URL env var sets the absolute base URL used in canonical links and
-// JSON-LD (defaults to a placeholder until a real domain is chosen).
+// JSON-LD . falls back to https://example.org/ if its unset, deploy workflow sets it
 import {
   readFileSync,
   readdirSync,

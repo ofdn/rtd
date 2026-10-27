@@ -58,7 +58,7 @@ export function renderTypefacePage(record, { canonicalUrl, designers, foundries 
         )
         .join("\n")}\n</ul>`
     : record.attribution
-    ? `<h2>Designers</h2>\n<p class="attribution-unknown">${ATTRIBUTION_LABELS[record.attribution.status ?? "unknown"]}: ${escapeHtml(record.attribution.note)}</p>`
+    ? `<h2>Designers</h2>\n<p class="attribution-unknown">${ATTRIBUTION_LABELS[record.attribution.status ?? "unknown"]}. ${escapeHtml(record.attribution.note)}</p>`
     : "";
 
   const relatedHtml = related?.length
@@ -70,9 +70,14 @@ export function renderTypefacePage(record, { canonicalUrl, designers, foundries 
         .join("\n")}\n</ul>\n</section>`
     : "";
 
+  const years = [
+    record.design_year && `${record.design_year} (designed)`,
+    record.release_year && `${record.release_year} (released)`,
+  ].filter(Boolean);
+
   const body = `
 <main>
-<nav class="breadcrumb"><a href="../../">Registry Home</a> &rsaquo; ${escapeHtml(record.name.preferred)}</nav>
+<nav class="breadcrumb"><a href="../../">Registry home</a> &rsaquo; ${escapeHtml(record.name.preferred)}</nav>
 <div class="record-header">
 <h1>${escapeHtml(record.name.preferred)}</h1>
 ${copyableId(record.id)}
@@ -82,7 +87,7 @@ ${arkPermalink(arkUrl)}
 <dl class="facts">
 ${nativeNamesFact(record.name)}
 ${foundries.length ? `<dt>Foundry</dt><dd>${foundries.map((f) => (f.slug ? `<a href="../../organisations/${escapeHtml(f.slug)}/">${escapeHtml(f.name)}</a>` : escapeHtml(f.name))).join(", ")}</dd>` : ""}
-${record.design_year || record.release_year ? `<dt>Year</dt><dd>${escapeHtml(record.design_year ?? "?")} (designed) / ${escapeHtml(record.release_year ?? "?")} (released)</dd>` : ""}
+${years.length ? `<dt>Year</dt><dd>${escapeHtml(years.join(" / "))}</dd>` : ""}
 ${record.commissioned_by?.length ? `<dt>Commissioned by</dt><dd>${record.commissioned_by.map((c) => (c.url ? linkTag(c.url, escapeHtml(c.name)) : escapeHtml(c.name))).join(", ")}</dd>` : ""}
 ${record.era ? `<dt>Era</dt><dd>${escapeHtml(eraLabel(record.era))}</dd>` : ""}
 ${record.classification ? `<dt>Classification</dt><dd>${escapeHtml(record.classification)}</dd>` : ""}
