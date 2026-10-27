@@ -9,6 +9,7 @@
   --color-primary: #000000;
   --color-on-primary: #ffffff;
   --color-link: #43506a;
+  --color-link-hover: #0000ee;
   --color-outline: #7e7576;
   --color-outline-variant: #d8d2d3;
   --color-callout-bg: #efefef;
@@ -39,6 +40,7 @@
     --color-primary: #ffffff;
     --color-on-primary: #191c1d;
     --color-link: #c6cddb;
+    --color-link-hover: #9cbcff;
     --color-outline: #8f8788;
     --color-outline-variant: #4a4344;
     --color-callout-bg: #3a3536;
@@ -59,6 +61,7 @@
   --color-primary: #ffffff;
   --color-on-primary: #191c1d;
   --color-link: #c6cddb;
+  --color-link-hover: #9cbcff;
   --color-outline: #8f8788;
   --color-outline-variant: #4a4344;
   --color-callout-bg: #3a3536;
@@ -84,6 +87,8 @@ body {
 }
 
 a { color: var(--color-link); }
+/* hover goes to the old browser default blue,like early 2000s pages */
+a:hover { color: var(--color-link-hover); }
 a:focus-visible, button:focus-visible, input:focus-visible {
   outline: 2px solid var(--color-link);
   outline-offset: 2px;
@@ -311,10 +316,6 @@ h2 {
 button.copy-id {
   cursor: pointer;
 }
-button.copy-id:hover {
-  border-color: var(--color-outline);
-  color: var(--color-text);
-}
 button.copy-id.copied {
   border-color: var(--color-info-accent);
   color: var(--color-info-accent);
@@ -409,7 +410,7 @@ ul.record-list li {
 }
 ul.record-list li:last-child { border-bottom: none; }
 ul.record-list a { color: var(--color-text); text-decoration: none; font-weight: 600; }
-ul.record-list a:hover { color: var(--color-link); text-decoration: underline; }
+ul.record-list a:hover { color: var(--color-link-hover); text-decoration: underline; }
 ul.record-list .role { font-size: 0.8rem; color: var(--color-text-muted); text-align: right; white-space: nowrap; }
 .attribution-unknown { font-size: 0.9rem; color: var(--color-text-muted); font-style: italic; }
 
@@ -418,7 +419,7 @@ ul.contributors-list li { padding: 0.6rem 0; border-bottom: 1px solid var(--colo
 ul.contributors-list li:last-child { border-bottom: none; }
 .contributor-name { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; font-weight: 600; }
 .contributor-name a { color: var(--color-text); text-decoration: none; }
-.contributor-name a:hover { color: var(--color-link); text-decoration: underline; }
+.contributor-name a:hover { color: var(--color-link-hover); text-decoration: underline; }
 .contributor-name .role { font-weight: 400; }
 .contributor-records { margin: 0.3rem 0 0; font-size: 0.85rem; color: var(--color-text-muted); }
 .contributor-records a { color: var(--color-link); }
@@ -593,7 +594,7 @@ footer.site-footer p { margin: 0; }
 #results ul { list-style: none; padding: 0; margin: 0 0 2rem; }
 #results li { padding: 0.6rem 0; border-bottom: 1px solid var(--color-outline-variant); text-align: left; }
 #results a { color: var(--color-text); font-weight: 600; text-decoration: none; }
-#results a:hover .name { text-decoration: underline; color: var(--color-link); }
+#results a:hover .name { text-decoration: underline; color: var(--color-link-hover); }
 #results .kind-tag {
   font-size: 0.62rem;
   letter-spacing: 0.05em;
