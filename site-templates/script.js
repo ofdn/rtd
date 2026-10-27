@@ -14,7 +14,7 @@ export function renderScriptPage({ canonicalUrl, name, typefaces, people, schema
 
   const body = `
 <main>
-<nav class="breadcrumb"><a href="../../">Registry Home</a> &rsaquo; <a href="../">Scripts</a> &rsaquo; ${escapeHtml(name)}</nav>
+<nav class="breadcrumb"><a href="../../">Registry home</a> &rsaquo; <a href="../">Scripts</a> &rsaquo; ${escapeHtml(name)}</nav>
 <div class="record-header">
 <h1>${escapeHtml(name)}</h1>
 </div>
@@ -45,7 +45,7 @@ export function renderScriptsIndexPage({ canonicalUrl, scripts, schemaVersion })
 
   const body = `
 <main>
-<nav class="breadcrumb"><a href="../">Registry Home</a> &rsaquo; Scripts</nav>
+<nav class="breadcrumb"><a href="../">Registry home</a> &rsaquo; Scripts</nav>
 <div class="record-header">
 <h1>Scripts</h1>
 </div>

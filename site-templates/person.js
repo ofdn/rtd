@@ -38,7 +38,7 @@ export function renderPersonPage(record, { canonicalUrl, works, affiliations = [
 
   const body = `
 <main>
-<nav class="breadcrumb"><a href="../../">Registry Home</a> &rsaquo; ${escapeHtml(record.name.preferred)}</nav>
+<nav class="breadcrumb"><a href="../../">Registry home</a> &rsaquo; ${escapeHtml(record.name.preferred)}</nav>
 <div class="record-header">
 <h1>${escapeHtml(record.name.preferred)}</h1>
 ${copyableId(record.id)}
@@ -85,7 +85,7 @@ export function renderTombstonePage(record, { canonicalUrl, targetSlug, schemaVe
       : "This record has been deprecated.";
   const body = `
 <main>
-<nav class="breadcrumb"><a href="../../">Registry Home</a> &rsaquo; ${escapeHtml(record.name?.preferred ?? record.id)}</nav>
+<nav class="breadcrumb"><a href="../../">Registry home</a> &rsaquo; ${escapeHtml(record.name?.preferred ?? record.id)}</nav>
 <div class="record-header">
 <h1>${escapeHtml(record.name?.preferred ?? record.id)}</h1>
 ${copyableId(record.id)}
