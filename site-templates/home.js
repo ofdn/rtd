@@ -12,6 +12,8 @@ export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount, scri
   var index = null;
   var indexPromise = null;
   var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+  // a fixed pastel per letter , shuffled so neighbours never match
+  var LETTER_TINTS = [1, 4, 13, 10, 9, 13, 11, 5, 12, 6, 3, 4, 11, 7, 11, 12, 8, 10, 3, 0, 8, 9, 13, 2, 6, 4];
 
   function foldedFirstLetter(name) {
     var base = name.normalize("NFD").replace(/[\\u0300-\\u036f]/g, "");
@@ -59,9 +61,9 @@ export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount, scri
       var key = foldedFirstLetter(item.sort_name || item.name);
       if (key) present[key] = true;
     });
-    lettersNav.innerHTML = ALPHABET.map(function (l) {
+    lettersNav.innerHTML = ALPHABET.map(function (l, i) {
       if (present[l]) {
-        return '<button type="button" data-letter="' + l + '">' + l + "</button>";
+        return '<button type="button" class="tint-' + LETTER_TINTS[i] + '" data-letter="' + l + '">' + l + "</button>";
       }
       return '<span class="letter-disabled" aria-disabled="true">' + l + "</span>";
     }).join("");
