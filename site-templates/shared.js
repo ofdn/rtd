@@ -7,10 +7,6 @@ export function escapeHtml(value) {
     .replaceAll('"', "&quot;");
 }
 
-export function copyableId(id) {
-  return `<button type="button" class="record-id copy-id" data-copy="${escapeHtml(id)}">${escapeHtml(id)}</button>`;
-}
-
 // Links off rtd.theofdn.org open in a new tab.
 const SITE_HOSTS = new Set(["rtd.theofdn.org"]);
 export const EXTERNAL_LINK_ATTRS = 'target="_blank" rel="noopener noreferrer"';

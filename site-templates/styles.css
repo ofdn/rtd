@@ -282,15 +282,6 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
-.record-id {
-  display: inline-block;
-  font-family: var(--font-body);
-  font-size: 0.7rem;
-  letter-spacing: 0.04em;
-  border: 1px solid var(--color-outline-variant);
-  padding: 0.15rem 0.5rem;
-}
-
 .identifier-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .identifier-badge {
   display: inline-block;
@@ -662,13 +653,12 @@ footer.site-footer p { margin: 0; }
 }
 
 /* Tinted chips */
-.script-badge, .record-id, .identifier-badge, button.copy-icon-btn, button.citation-download, .letters button {
+.script-badge, .identifier-badge, button.copy-icon-btn, button.citation-download, .letters button {
   color: var(--ink-on-tint);
   background-color: var(--tint);
   border-color: var(--tint-edge);
 }
 .script-badge { --tint: #e2e8f0; --tint-edge: transparent; --tint-hover: #b9ceec; }
-.record-id { --tint: #fef3c7; --tint-edge: #d5cca7; }
 .identifier-badge { --tint: #bae6fd; --tint-edge: #9cc1d5; }
 button.copy-icon-btn { --tint: #d1fae5; --tint-edge: #b0d2c0; border: 1px solid var(--tint-edge); }
 button.citation-download { --tint: #ffedd5; --tint-edge: #d6c7b3; }
@@ -683,7 +673,7 @@ button.citation-download { --tint: #ffedd5; --tint-edge: #d6c7b3; }
 .tint-7 { --tint: #a7f3d0; --tint-hover: #6dffbc; }
 .tint-8 { --tint: #ddd6fe; --tint-hover: #b6a7ff; }
 .tint-9 { --tint: #e2e8f0; --tint-hover: #b9ceec; }
-.script-badge:hover, .record-id:hover, .identifier-badge:hover, button.copy-icon-btn:hover,
+.script-badge:hover, .identifier-badge:hover, button.copy-icon-btn:hover,
 button.citation-download:hover, .letters button:hover {
   color: var(--ink-on-tint);
   background-color: var(--tint);
