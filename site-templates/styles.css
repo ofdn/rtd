@@ -20,9 +20,9 @@
   --color-header-accent: #2a2a2a;
   /* Same in both themes. */
   --color-accent: #febb54;
-  --font-logo: "Plus Jakarta Sans", sans-serif;
-  --font-heading: "Source Serif 4", Georgia, serif;
-  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-heading: "Urbanist", system-ui, sans-serif;
+  --font-body: "Urbanist", system-ui, -apple-system, sans-serif;
+  --font-prose: "Spectral", Georgia, serif;
   --container-max: 46rem;
 }
 
@@ -402,7 +402,7 @@ dl.facts dt {
 }
 dl.facts dd { margin: 0; font-size: 1rem; }
 
-.bio, .description { font-size: 1.125rem; line-height: 1.65; max-width: 38rem; }
+.bio, .description { font-family: var(--font-prose); font-size: 1.125rem; line-height: 1.65; max-width: 38rem; }
 
 ul.record-list { list-style: none; margin: 0; padding: 0; }
 ul.record-list li {
