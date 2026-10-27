@@ -26,10 +26,14 @@ export function linkTag(url, innerHtml, extraAttrs = "") {
   return `<a href="${escapeHtml(url)}"${extraAttrs ? ` ${extraAttrs}` : ""}${target}>${innerHtml}</a>`;
 }
 
-// Content hash of styles.css, set by build.js, used as ?v= on the stylesheet link.
+// Content hashes of styles.css and site.js, set by build.js, used as ?v= on the links
 let cssVersion = "";
 export function setCssVersion(hash) {
   cssVersion = hash;
+}
+let jsVersion = "";
+export function setJsVersion(hash) {
+  jsVersion = hash;
 }
 
 // Set by build.js. The schema version moves separately, see CONTRIBUTING.md.
