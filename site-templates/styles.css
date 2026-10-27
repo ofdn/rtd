@@ -24,6 +24,8 @@
   --font-body: "Urbanist", system-ui, -apple-system, sans-serif;
   --font-prose: "Spectral", Georgia, serif;
   --container-max: 46rem;
+  /* pastels from Tome , same in both themes with dark ink on top */
+  --ink-on-tint: #1a1a1a;
 }
 
 /* No data-theme follows the OS; data-theme set by the toggle wins. */
@@ -280,8 +282,6 @@ h2 {
   font-family: var(--font-body);
   font-size: 0.7rem;
   letter-spacing: 0.04em;
-  color: var(--color-text-muted);
-  background: transparent;
   border: 1px solid var(--color-outline-variant);
   padding: 0.15rem 0.5rem;
 }
@@ -292,27 +292,21 @@ h2 {
   font-family: var(--font-body);
   font-size: 0.7rem;
   letter-spacing: 0.04em;
-  color: var(--color-text-muted);
-  background: transparent;
   border: 1px solid var(--color-outline-variant);
   padding: 0.15rem 0.5rem;
   text-decoration: none;
 }
-.identifier-badge:hover { border-color: var(--color-outline); color: var(--color-text); }
 
 .script-badge {
   display: inline-block;
   font-family: var(--font-body);
   font-size: 0.7rem;
   letter-spacing: 0.04em;
-  color: var(--color-text-muted);
-  background: transparent;
   border: 1px solid var(--color-outline-variant);
   padding: 0.15rem 0.5rem;
   text-decoration: none;
   margin: 0 0.35rem 0.35rem 0;
 }
-.script-badge:hover { border-color: var(--color-outline); color: var(--color-text); }
 
 button.copy-id {
   cursor: pointer;
@@ -486,13 +480,10 @@ button.citation-download {
   gap: 0.35rem;
   font: inherit;
   font-size: 0.8rem;
-  color: var(--color-text-muted);
-  background: transparent;
   border: 1px solid var(--color-outline-variant);
   padding: 0.3rem 0.6rem;
   cursor: pointer;
 }
-button.citation-download:hover { border-color: var(--color-outline); color: var(--color-text); }
 
 .citation-text {
   font-family: var(--font-body);
@@ -588,8 +579,6 @@ footer.site-footer p { margin: 0; }
   color: var(--color-primary);
 }
 .letters button { cursor: pointer; }
-.letters button:hover { background: var(--color-bg-alt); }
-.letters button[aria-current="true"] { background: var(--color-primary); color: var(--color-on-primary); }
 .letters .letter-disabled { border-color: var(--color-outline-variant); color: var(--color-outline-variant); cursor: default; }
 
 .stat-line { font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-text-muted); margin: 0 0 2rem; }
@@ -670,6 +659,39 @@ footer.site-footer p { margin: 0; }
   ul.record-list li { flex-direction: column; align-items: flex-start; gap: 0.15rem; }
   ul.record-list .role { text-align: left; }
 }
+
+/* Tinted chips */
+.script-badge, .record-id, .identifier-badge, button.copy-icon-btn, button.citation-download, .letters button {
+  color: var(--ink-on-tint);
+  background-color: var(--tint);
+  border-color: var(--tint-edge);
+}
+.script-badge { --tint: #e2e8f0; --tint-edge: transparent; --tint-hover: #b9ceec; }
+.record-id { --tint: #fef3c7; --tint-edge: #d5cca7; }
+.identifier-badge { --tint: #bae6fd; --tint-edge: #9cc1d5; }
+button.copy-icon-btn { --tint: #d1fae5; --tint-edge: #b0d2c0; border: 1px solid var(--tint-edge); }
+button.citation-download { --tint: #ffedd5; --tint-edge: #d6c7b3; }
+.letters button { --tint: #ffe8cc; --tint-edge: #d6c3ab; }
+.tint-0 { --tint: #ffe8cc; --tint-hover: #ffd39e; }
+.tint-1 { --tint: #d1fae5; --tint-hover: #9effcd; }
+.tint-2 { --tint: #bae6fd; --tint-hover: #8ad7ff; }
+.tint-3 { --tint: #e9d5ff; --tint-hover: #d1a7ff; }
+.tint-4 { --tint: #fbcfe8; --tint-hover: #ff9dd5; }
+.tint-5 { --tint: #fef3c7; --tint-hover: #ffea98; }
+.tint-6 { --tint: #ffedd5; --tint-hover: #ffd9a7; }
+.tint-7 { --tint: #a7f3d0; --tint-hover: #6dffbc; }
+.tint-8 { --tint: #ddd6fe; --tint-hover: #b6a7ff; }
+.tint-9 { --tint: #e2e8f0; --tint-hover: #b9ceec; }
+.script-badge:hover, .record-id:hover, .identifier-badge:hover, button.copy-icon-btn:hover,
+button.citation-download:hover, .letters button:hover {
+  color: var(--ink-on-tint);
+  background-color: var(--tint);
+  border-color: var(--tint-edge);
+  box-shadow: inset 0 0 0 2px #000;
+}
+/* script names have no edge,on hover they take a stronger shade of thier pastel */
+.script-badge:hover { background-color: var(--tint-hover); box-shadow: none; }
+.letters button[aria-current="true"] { background: var(--color-primary); color: var(--color-on-primary); box-shadow: none; }
 
 /* Print */
 @media print {
