@@ -1,4 +1,4 @@
-import { citationMeta, allNames, nativeNamesFact, eraLabel, linkTag, escapeHtml, pageShell, sourcesList, sameAsUris, identifiersList, copyableId, arkPermalink, citationBlock, printButton, scriptBadges } from "./shared.js";
+import { citationMeta, allNames, nativeNamesFact, eraLabel, linkTag, escapeHtml, pageShell, sourcesList, sameAsUris, identifiersList, arkPermalink, citationBlock, printButton, scriptBadges } from "./shared.js";
 
 // `designers` carries each person's name and slug, resolved by build.js.
 const RELATION_LABELS = {
@@ -80,7 +80,6 @@ export function renderTypefacePage(record, { canonicalUrl, designers, foundries 
 <nav class="breadcrumb"><a href="../../">Registry home</a> &rsaquo; ${escapeHtml(record.name.preferred)}</nav>
 <div class="record-header">
 <h1>${escapeHtml(record.name.preferred)}</h1>
-${copyableId(record.id)}
 ${printButton()}
 </div>
 ${arkPermalink(arkUrl)}

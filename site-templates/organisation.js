@@ -1,4 +1,4 @@
-import { citationMeta, allNames, nativeNamesFact, linkTag, escapeHtml, pageShell, sourcesList, sameAsUris, identifiersList, copyableId, arkPermalink, citationBlock, printButton } from "./shared.js";
+import { citationMeta, allNames, nativeNamesFact, linkTag, escapeHtml, pageShell, sourcesList, sameAsUris, identifiersList, arkPermalink, citationBlock, printButton } from "./shared.js";
 
 export const KIND_LABELS = {
   foundry: "Type foundry",
@@ -40,7 +40,6 @@ export function renderOrganisationPage(record, { canonicalUrl, typefaces, people
 <nav class="breadcrumb"><a href="../../">Registry home</a> &rsaquo; <a href="../">Organisations</a> &rsaquo; ${escapeHtml(record.name.preferred)}</nav>
 <div class="record-header">
 <h1>${escapeHtml(record.name.preferred)}</h1>
-${copyableId(record.id)}
 ${printButton()}
 </div>
 ${arkPermalink(arkUrl)}
