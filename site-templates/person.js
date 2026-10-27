@@ -1,4 +1,4 @@
-import { citationMeta, allNames, nativeNamesFact, escapeHtml, pageShell, sourcesList, sameAsUris, identifiersList, nationalityLabel, copyableId, arkPermalink, citationBlock, printButton, scriptBadges } from "./shared.js";
+import { citationMeta, allNames, nativeNamesFact, escapeHtml, pageShell, sourcesList, sameAsUris, identifiersList, nationalityLabel, arkPermalink, citationBlock, printButton, scriptBadges } from "./shared.js";
 
 // `works` is built by build.js from typeface designers[].
 export function renderPersonPage(record, { canonicalUrl, works, affiliations = [], demonyms, related, schemaVersion, arkUrl }) {
@@ -41,7 +41,6 @@ export function renderPersonPage(record, { canonicalUrl, works, affiliations = [
 <nav class="breadcrumb"><a href="../../">Registry home</a> &rsaquo; ${escapeHtml(record.name.preferred)}</nav>
 <div class="record-header">
 <h1>${escapeHtml(record.name.preferred)}</h1>
-${copyableId(record.id)}
 ${printButton()}
 </div>
 ${arkPermalink(arkUrl)}
@@ -74,7 +73,7 @@ ${citationBlock(record, { canonicalUrl, arkUrl })}
   });
 }
 
-export function renderTombstonePage(record, { canonicalUrl, targetSlug, schemaVersion }) {
+export function renderTombstonePage(record, { canonicalUrl, targetSlug, schemaVersion, arkUrl }) {
   const message =
     record.record_status === "merged" && targetSlug
       ? `This record has been merged into <a href="../${escapeHtml(
@@ -88,8 +87,8 @@ export function renderTombstonePage(record, { canonicalUrl, targetSlug, schemaVe
 <nav class="breadcrumb"><a href="../../">Registry home</a> &rsaquo; ${escapeHtml(record.name?.preferred ?? record.id)}</nav>
 <div class="record-header">
 <h1>${escapeHtml(record.name?.preferred ?? record.id)}</h1>
-${copyableId(record.id)}
 </div>
+${arkPermalink(arkUrl)}
 <p>${message}</p>
 </main>
 `;

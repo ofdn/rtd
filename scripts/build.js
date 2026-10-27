@@ -361,6 +361,7 @@ function build(dataDir, outDir) {
         canonicalUrl,
         targetSlug: target?.slug,
         schemaVersion,
+        arkUrl,
       });
       writeFile(outDir, `people/${record.slug}/index.html`, html);
       writeFile(
@@ -452,6 +453,7 @@ function build(dataDir, outDir) {
         canonicalUrl,
         targetSlug: target?.slug,
         schemaVersion,
+        arkUrl,
       });
       writeFile(outDir, `typefaces/${record.slug}/index.html`, html);
       writeFile(
