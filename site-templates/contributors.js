@@ -19,7 +19,7 @@ export function renderContributorsPage({ canonicalUrl, contributors, schemaVersi
 
   const body = `
 <main>
-<nav class="breadcrumb"><a href="../">Registry Home</a> &rsaquo; Contributors</nav>
+<nav class="breadcrumb"><a href="../">Registry home</a> &rsaquo; Contributors</nav>
 <div class="record-header">
 <h1>Contributors</h1>
 </div>
