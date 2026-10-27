@@ -315,7 +315,6 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
       .replaceAll('"', "&quot;");
   }
 
-  // Copies of the matching in home.js.
   function parseIdQuery(raw) {
     var q = raw.trim();
     var full = /^rtd-?([pto])-?0*([0-9]+)$/i.exec(q);
