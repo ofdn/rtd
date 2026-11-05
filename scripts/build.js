@@ -678,6 +678,15 @@ function build(dataDir, outDir) {
   ];
   writeFile(outDir, "search-index.json", JSON.stringify(searchIndex));
 
+  // text shown on each page, so a record can be found from a phrase in its bio or description (from the Odissi Archive)
+  const pageText = (r) =>
+    [r.bio, r.description, r.place_of_birth, r.location, r.attribution?.note, ...(r.alma_mater ?? []), ...[...(r.affiliations ?? []), ...(r.foundry ?? []), ...(r.sources ?? [])].map((e) => e.name ?? e.title)].filter((v) => typeof v === "string" && v);
+  const text = [...people, ...typefaces, ...organisations]
+    .filter((r) => r.record_status === "active")
+    .map((r) => ({ id: r.id, lines: pageText(r) }))
+    .filter((r) => r.lines.length);
+  writeFile(outDir, "text.json", JSON.stringify(text));
+
   // --- Sitemap (active content pages only, not redirects/tombstones/API/
   // ARK/bare-id stubs, not useful for search engines to index) ---
   const today = new Date().toISOString().slice(0, 10);

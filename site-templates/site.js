@@ -47,8 +47,9 @@ function identifierMatches(item, rawQuery) {
 }
 
 // word order and commas are ignored, so "Last1,First1" finds First1 Last1.
+// accents are ignored too, so Lohit finds Lōhit
 function normalizeForSearch(s) {
-  return s.toLowerCase().replace(/[.,]/g, " ").replace(/\s+/g, " ").trim();
+  return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[.,]/g, " ").replace(/\s+/g, " ").trim();
 }
 function tokenSearchMatch(query, target) {
   var qTokens = normalizeForSearch(query).split(" ").filter(Boolean);
@@ -75,6 +76,37 @@ function scriptSearchMatch(query, scripts) {
   return scripts.some(function (s) {
     return tokenSearchMatch(query, s) || (aliasTarget && s === aliasTarget);
   });
+}
+
+// page text from text.json, used after names . same idea as the Odissi Archive search
+var textPromise = null;
+function loadText(base) {
+  textPromise = textPromise || fetch(base + "text.json").then(function (r) { return r.json(); });
+  return textPromise;
+}
+
+// records not already in hits that have a line holding every word of q, each with a short piece of that line
+function textHits(q, index, text, hits) {
+  var seen = {};
+  hits.forEach(function (h) { seen[h.id] = true; });
+  var byId = {};
+  index.forEach(function (item) { byId[item.id] = item; });
+  var first = normalizeForSearch(q).split(" ")[0];
+  var found = [];
+  text.forEach(function (rec) {
+    if (seen[rec.id] || !byId[rec.id]) return;
+    var line = rec.lines.find(function (l) { return tokenSearchMatch(q, l); });
+    if (!line) return;
+    var piece = line;
+    if (line.length > 110) {
+      var at = Math.max(0, normalizeForSearch(line).indexOf(first) - 40);
+      if (at) at = line.indexOf(" ", at) + 1;
+      var end = at + 110 < line.length ? line.lastIndexOf(" ", at + 110) : line.length;
+      piece = (at ? "…" : "") + line.slice(at, end) + (end < line.length ? "…" : "");
+    }
+    found.push(Object.assign({}, byId[rec.id], { subtitle: piece }));
+  });
+  return found;
 }
 
 function findDirectMatch(index, q) {
@@ -182,7 +214,9 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
       hide();
       return;
     }
-    loadIndex().then(function (index) {
+    var base = form.getAttribute("action") || "";
+    Promise.all([loadIndex(), loadText(base)]).then(function (got) {
+      var index = got[0];
       var parsedId = parseIdQuery(q);
       var matches = index.filter(function (item) {
         return (
@@ -195,7 +229,7 @@ document.querySelectorAll(".citation-block").forEach(function (block) {
           scriptSearchMatch(q, item.scripts)
         );
       });
-      show(matches, q);
+      if (input.value.trim() === q) show(matches.concat(textHits(q, index, got[1], matches)), q);
     });
   });
 

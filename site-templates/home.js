@@ -11,6 +11,7 @@ export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount, scri
   var lettersNav = document.getElementById("letters");
   var index = null;
   var indexPromise = null;
+  var text = null;
   var ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
   // a fixed pastel per letter , shuffled so neighbours never match
   var LETTER_TINTS = [1, 4, 13, 10, 9, 13, 11, 5, 12, 6, 3, 4, 11, 7, 11, 12, 8, 10, 3, 0, 8, 9, 13, 2, 6, 4];
@@ -50,7 +51,11 @@ export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount, scri
       .then(function (data) {
         index = data;
         renderLetterNav();
-        return data;
+        return loadText("");
+      })
+      .then(function (data) {
+        text = data;
+        return index;
       });
     return indexPromise;
   }
@@ -123,6 +128,7 @@ export function renderHomePage({ canonicalUrl, peopleCount, typefacesCount, scri
         scriptSearchMatch(q, item.scripts)
       );
     });
+    if (text) matches = matches.concat(textHits(q, index, text, matches));
     results.innerHTML =
       '<h2>Results for &ldquo;' + escapeHtml(q) + '&rdquo;</h2>' +
       '<p class="results-meta">Showing ' + matches.length + " cataloged " + (matches.length === 1 ? "entry" : "entries") + ".</p>" +
