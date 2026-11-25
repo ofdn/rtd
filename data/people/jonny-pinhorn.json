@@ -1,5 +1,6 @@
 {
   "id": "rtd-p-000222",
+  "external_ids": { "wikidata_qid": "Q123397792" },
   "slug": "jonny-pinhorn",
   "name": {
     "preferred": "Jonny Pinhorn",
@@ -15,5 +16,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-10",
-  "updated_at": "2026-10-10"
+  "updated_at": "2026-11-25"
 }

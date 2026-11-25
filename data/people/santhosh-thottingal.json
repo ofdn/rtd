@@ -1,5 +1,6 @@
 {
   "id": "rtd-p-000203",
+  "external_ids": { "wikidata_qid": "Q66498265" },
   "slug": "santhosh-thottingal",
   "name": {
     "preferred": "Santhosh Thottingal",
@@ -16,5 +17,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-10",
-  "updated_at": "2026-10-10"
+  "updated_at": "2026-11-25"
 }

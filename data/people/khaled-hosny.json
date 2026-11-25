@@ -1,5 +1,6 @@
 {
   "id": "rtd-p-000189",
+  "external_ids": { "wikidata_qid": "Q43396614" },
   "slug": "khaled-hosny",
   "name": {
     "preferred": "Khaled Hosny",
@@ -16,5 +17,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-10",
-  "updated_at": "2026-10-10"
+  "updated_at": "2026-11-25"
 }

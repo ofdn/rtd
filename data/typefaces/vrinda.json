@@ -1,5 +1,6 @@
 {
   "id": "rtd-t-000179",
+  "external_ids": { "wikidata_qid": "Q7943122" },
   "slug": "vrinda",
   "name": { "preferred": "Vrinda", "alternates": [] },
   "designers": [
@@ -18,5 +19,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-19",
-  "updated_at": "2026-10-19"
+  "updated_at": "2026-11-25"
 }

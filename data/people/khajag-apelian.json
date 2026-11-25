@@ -1,5 +1,6 @@
 {
   "id": "rtd-p-000188",
+  "external_ids": { "wikidata_qid": "Q76157901" },
   "slug": "khajag-apelian",
   "name": {
     "preferred": "Khajag Apelian",
@@ -15,5 +16,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-10",
-  "updated_at": "2026-10-10"
+  "updated_at": "2026-11-25"
 }

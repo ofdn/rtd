@@ -1,5 +1,6 @@
 {
   "id": "rtd-p-000255",
+  "external_ids": { "wikidata_qid": "Q95242288" },
   "slug": "johann-gottlieb-adler",
   "name": { "preferred": "Johann Gottlieb Adler", "alternates": ["Johann Adler", "Gottlieb Adler"] },
   "countries": ["Germany", "India"],
@@ -13,5 +14,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-19",
-  "updated_at": "2026-10-19"
+  "updated_at": "2026-11-25"
 }
