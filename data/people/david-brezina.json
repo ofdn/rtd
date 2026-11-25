@@ -1,5 +1,6 @@
 {
   "id": "rtd-p-000216",
+  "external_ids": { "wikidata_qid": "Q95402934", "isni": "0000000479668344" },
   "slug": "david-brezina",
   "name": {
     "preferred": "David Březina",
@@ -14,5 +15,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-10",
-  "updated_at": "2026-10-10"
+  "updated_at": "2026-11-25"
 }
