@@ -2,7 +2,7 @@
   "id": "rtd-o-000005",
   "slug": "centre-for-internet-and-society",
   "name": { "preferred": "Centre for Internet and Society", "alternates": ["CIS", "CIS-A2K"] },
-  "external_ids": { "wikidata_qid": "Q2801619" },
+  "external_ids": { "wikidata_qid": "Q2801619", "isni": "0000000417727070" },
   "kind": "institution",
   "countries": ["India"],
   "location": "Bangalore",
@@ -15,5 +15,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-19",
-  "updated_at": "2026-10-19"
+  "updated_at": "2026-11-25"
 }

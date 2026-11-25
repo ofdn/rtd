@@ -2,7 +2,7 @@
   "id": "rtd-o-000003",
   "slug": "bauersche-giesserei",
   "name": { "preferred": "Bauersche Gießerei", "alternates": ["Bauer Type Foundry", "Bauersche Giesserei"] },
-  "external_ids": { "wikidata_qid": "Q287627" },
+  "external_ids": { "wikidata_qid": "Q287627", "isni": "000000012006654X" },
   "kind": "foundry",
   "countries": ["Germany"],
   "location": "Frankfurt am Main",
@@ -16,5 +16,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-19",
-  "updated_at": "2026-10-19"
+  "updated_at": "2026-11-25"
 }

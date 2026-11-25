@@ -2,7 +2,7 @@
   "id": "rtd-o-000001",
   "slug": "adobe",
   "name": { "preferred": "Adobe", "alternates": ["Adobe Fonts", "Adobe Originals", "Adobe Inc.", "Adobe Systems"] },
-  "external_ids": { "wikidata_qid": "Q11463" },
+  "external_ids": { "wikidata_qid": "Q11463", "isni": "0000000406200089" },
   "kind": "publisher",
   "countries": ["United States"],
   "website": "https://fonts.adobe.com/foundries/adobe",
@@ -13,5 +13,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-19",
-  "updated_at": "2026-10-19"
+  "updated_at": "2026-11-25"
 }

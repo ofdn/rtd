@@ -2,7 +2,7 @@
   "id": "rtd-o-000004",
   "slug": "centre-for-development-of-advanced-computing",
   "name": { "preferred": "Centre for Development of Advanced Computing", "alternates": ["C-DAC"] },
-  "external_ids": { "wikidata_qid": "Q3519908" },
+  "external_ids": { "wikidata_qid": "Q3519908", "isni": "0000000101436197" },
   "kind": "institution",
   "countries": ["India"],
   "founded_year": "1988",
@@ -14,5 +14,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-19",
-  "updated_at": "2026-10-19"
+  "updated_at": "2026-11-25"
 }

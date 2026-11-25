@@ -2,7 +2,7 @@
   "id": "rtd-o-000032",
   "slug": "red-hat",
   "name": { "preferred": "Red Hat", "alternates": [] },
-  "external_ids": { "wikidata_qid": "Q485593" },
+  "external_ids": { "wikidata_qid": "Q485593", "isni": "0000000122914952" },
   "kind": "publisher",
   "countries": ["United States"],
   "description": "Software company that released the Lohit fonts for Indian languages as open source in 2004, and relicensed them under the SIL Open Font License in 2011.",
@@ -13,5 +13,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-19",
-  "updated_at": "2026-10-19"
+  "updated_at": "2026-11-25"
 }

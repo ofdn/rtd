@@ -2,7 +2,7 @@
   "id": "rtd-o-000033",
   "slug": "rmit-university",
   "name": { "preferred": "RMIT University", "alternates": ["RMIT"] },
-  "external_ids": { "wikidata_qid": "Q1057890" },
+  "external_ids": { "wikidata_qid": "Q1057890", "isni": "0000000121633550" },
   "kind": "institution",
   "countries": ["Australia"],
   "location": "Melbourne",
@@ -13,5 +13,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-19",
-  "updated_at": "2026-10-19"
+  "updated_at": "2026-11-25"
 }

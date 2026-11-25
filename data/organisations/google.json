@@ -3,7 +3,7 @@
   "slug": "google",
   "previous_slugs": ["google-fonts"],
   "name": { "preferred": "Google", "alternates": ["Google Fonts", "Google Noto Fonts", "Google LLC"] },
-  "external_ids": { "wikidata_qid": "Q95" },
+  "external_ids": { "wikidata_qid": "Q95", "isni": "0000000406356729" },
   "kind": "publisher",
   "countries": ["United States"],
   "website": "https://fonts.google.com/",
@@ -16,5 +16,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-19",
-  "updated_at": "2026-10-19"
+  "updated_at": "2026-11-25"
 }
