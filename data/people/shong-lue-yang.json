@@ -1,6 +1,6 @@
 {
   "id": "rtd-p-000159",
-  "external_ids": { "wikidata_qid": "Q1704291" },
+  "external_ids": { "wikidata_qid": "Q1704291", "isni": "0000000078599042" },
   "slug": "shong-lue-yang",
   "name": {
     "preferred": "Shong Lue Yang",
@@ -17,5 +17,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-11-25"
 }

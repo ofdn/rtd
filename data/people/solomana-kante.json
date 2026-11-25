@@ -1,6 +1,6 @@
 {
   "id": "rtd-p-000144",
-  "external_ids": { "wikidata_qid": "Q2996980" },
+  "external_ids": { "wikidata_qid": "Q2996980", "isni": "000000004397325X" },
   "slug": "solomana-kante",
   "name": {
     "preferred": "Solomana Kanté",
@@ -17,5 +17,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-11-25"
 }

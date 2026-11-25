@@ -2,7 +2,7 @@
   "id": "rtd-p-000252",
   "slug": "charles-wilkins",
   "name": { "preferred": "Charles Wilkins", "alternates": ["Sir Charles Wilkins"] },
-  "external_ids": { "wikidata_qid": "Q938060" },
+  "external_ids": { "wikidata_qid": "Q938060", "isni": "0000000111883150" },
   "birth_year": "1749",
   "death_year": "1836",
   "countries": ["United Kingdom"],
@@ -16,5 +16,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-19",
-  "updated_at": "2026-10-19"
+  "updated_at": "2026-11-25"
 }

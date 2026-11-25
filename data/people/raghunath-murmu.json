@@ -1,6 +1,6 @@
 {
   "id": "rtd-p-000130",
-  "external_ids": { "wikidata_qid": "Q2127253" },
+  "external_ids": { "wikidata_qid": "Q2127253", "isni": "000000002168932X" },
   "slug": "raghunath-murmu",
   "name": {
     "preferred": "Raghunath Murmu",
@@ -41,7 +41,7 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-11",
-  "updated_at": "2026-10-08",
+  "updated_at": "2026-11-25",
   "scripts": [
     "Ol Chiki"
   ]

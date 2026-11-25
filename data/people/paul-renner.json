@@ -34,10 +34,11 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-07",
-  "updated_at": "2026-10-08",
+  "updated_at": "2026-11-25",
   "external_ids": {
     "wikidata_qid": "Q552409",
     "viaf": "118204020",
+    "isni": "0000000121488197",
     "lc_naf": "no97024731",
     "gnd": "118744542"
   },

@@ -1,6 +1,6 @@
 {
   "id": "rtd-p-000167",
-  "external_ids": { "wikidata_qid": "Q313595" },
+  "external_ids": { "wikidata_qid": "Q313595", "isni": "0000000021916422" },
   "slug": "sequoyah",
   "name": {
     "preferred": "Sequoyah",
@@ -20,5 +20,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-11-25"
 }

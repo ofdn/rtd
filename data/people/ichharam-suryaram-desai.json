@@ -2,7 +2,7 @@
   "id": "rtd-p-000228",
   "slug": "ichharam-suryaram-desai",
   "name": { "preferred": "Ichharam Suryaram Desai", "alternates": ["Ichharam Desai"] },
-  "external_ids": { "wikidata_qid": "Q2724598" },
+  "external_ids": { "wikidata_qid": "Q2724598", "isni": "000000003296776X" },
   "countries": ["India"],
   "roles": ["type founder", "editor"],
   "scripts": ["Devanagari", "Gujarati"],
@@ -20,5 +20,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-19",
-  "updated_at": "2026-10-19"
+  "updated_at": "2026-11-25"
 }

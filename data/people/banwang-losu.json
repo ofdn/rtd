@@ -1,6 +1,6 @@
 {
   "id": "rtd-p-000134",
-  "external_ids": { "wikidata_qid": "Q105581072" },
+  "external_ids": { "wikidata_qid": "Q105581072", "isni": "0000000496388758" },
   "slug": "banwang-losu",
   "name": {
     "preferred": "Banwang Losu",
@@ -17,5 +17,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-08-11",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-11-25"
 }

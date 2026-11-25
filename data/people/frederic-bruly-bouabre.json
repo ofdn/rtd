@@ -1,6 +1,6 @@
 {
   "id": "rtd-p-000149",
-  "external_ids": { "wikidata_qid": "Q2071033" },
+  "external_ids": { "wikidata_qid": "Q2071033", "isni": "0000000121215439" },
   "slug": "frederic-bruly-bouabre",
   "name": {
     "preferred": "Frédéric Bruly Bouabré",
@@ -15,5 +15,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-11-25"
 }

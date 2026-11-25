@@ -1,6 +1,6 @@
 {
   "id": "rtd-p-000148",
-  "external_ids": { "wikidata_qid": "Q16269525" },
+  "external_ids": { "wikidata_qid": "Q16269525", "isni": "0000000038139535" },
   "slug": "wabeladio-payi",
   "name": {
     "preferred": "Wabeladio Payi",
@@ -16,5 +16,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-11-25"
 }

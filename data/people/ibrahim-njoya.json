@@ -1,6 +1,6 @@
 {
   "id": "rtd-p-000145",
-  "external_ids": { "wikidata_qid": "Q670091" },
+  "external_ids": { "wikidata_qid": "Q670091", "isni": "0000000094535073" },
   "slug": "ibrahim-njoya",
   "name": {
     "preferred": "Ibrahim Njoya",
@@ -17,5 +17,5 @@
   "record_status": "active",
   "superseded_by": null,
   "created_at": "2026-10-06",
-  "updated_at": "2026-10-08"
+  "updated_at": "2026-11-25"
 }
